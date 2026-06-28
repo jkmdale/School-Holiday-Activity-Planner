@@ -5,6 +5,9 @@ dist-ssr
 .DS_Store
 .vite
 
+# Netlify CLI local state (machine-specific, not for the repo)
+.netlify
+
 # Editor
 .vscode/*
 !.vscode/extensions.json
