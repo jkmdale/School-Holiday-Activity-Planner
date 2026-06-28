@@ -6,6 +6,7 @@ import BrowseView from './views/BrowseView.vue'
 import SavedView from './views/SavedView.vue'
 import Icon from './components/Icon.vue'
 import InstallPrompt from './components/InstallPrompt.vue'
+import ActivityDetail from './components/ActivityDetail.vue'
 
 type Tab = 'kids' | 'browse' | 'saved'
 const tab = ref<Tab>('browse')
@@ -74,4 +75,5 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
   </nav>
 
   <InstallPrompt />
+  <ActivityDetail />
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue'
 import { CATEGORIES, type Category, type Cost } from '../types'
-import { state, activeKid, isSaved, toggleSave } from '../store'
+import { state, activeKid, isSaved, toggleSave, openActivity } from '../store'
 import { overlapsBreak, currentOrNextBreak, formatDateRange } from '../utils/dates'
 import { CATEGORY_META, avatarColor, initial } from '../utils/categories'
 import ActivityCard from '../components/ActivityCard.vue'
@@ -209,6 +209,7 @@ function applyUpcoming() {
         :can-save="!!state.activeKidId"
         :saved="!!state.activeKidId && isSaved(state.activeKidId, a.id)"
         @toggle-save="state.activeKidId && toggleSave(state.activeKidId, a.id)"
+        @open="openActivity(a.id)"
       />
     </TransitionGroup>
   </section>

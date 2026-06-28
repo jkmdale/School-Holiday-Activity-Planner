@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { state, activeKid, savedActivitiesFor, toggleSave } from '../store'
+import { state, activeKid, savedActivitiesFor, toggleSave, openActivity } from '../store'
 import { downloadIcs } from '../services/ics'
 import { avatarColor, initial } from '../utils/categories'
 import ActivityCard from '../components/ActivityCard.vue'
@@ -69,6 +69,7 @@ function exportIcs() {
           :activity="a"
           removable
           @remove="kid && toggleSave(kid.id, a.id)"
+          @open="openActivity(a.id)"
         />
       </TransitionGroup>
     </template>

@@ -14,11 +14,12 @@ defineProps<{
   removable?: boolean
 }>()
 
-const emit = defineEmits<{ toggleSave: []; remove: [] }>()
+const emit = defineEmits<{ toggleSave: []; remove: []; open: [] }>()
 </script>
 
 <template>
-  <article class="card activity">
+  <article class="card activity" role="button" tabindex="0"
+    @click="emit('open')" @keydown.enter="emit('open')">
     <div class="card-head">
       <div class="head-text">
         <h2>{{ activity.name }}</h2>
@@ -30,7 +31,7 @@ const emit = defineEmits<{ toggleSave: []; remove: [] }>()
         :class="{ on: saved }"
         :aria-pressed="saved"
         :aria-label="saved ? 'Saved — tap to remove' : 'Save for this kid'"
-        @click="emit('toggleSave')"
+        @click.stop="emit('toggleSave')"
       >
         <Icon name="heart" :size="20" :class="{ filled: saved }" />
       </button>
@@ -72,6 +73,7 @@ const emit = defineEmits<{ toggleSave: []; remove: [] }>()
         target="_blank"
         rel="noopener noreferrer"
         class="reg-link"
+        @click.stop
       >
         Register <Icon name="arrow" :size="14" />
       </a>
@@ -82,7 +84,7 @@ const emit = defineEmits<{ toggleSave: []; remove: [] }>()
         <Icon name="check" :size="14" /> No booking needed
       </span>
 
-      <button v-if="removable" class="remove-btn" @click="emit('remove')">
+      <button v-if="removable" class="remove-btn" @click.stop="emit('remove')">
         Remove
       </button>
     </div>

@@ -22,6 +22,8 @@ interface State {
   saved: SavedItem[]
   /** The kid currently in focus for browsing / saving. */
   activeKidId: string | null
+  /** The activity open in the detail view, if any. */
+  selectedActivityId: string | null
   ready: boolean
 }
 
@@ -31,8 +33,23 @@ export const state = reactive<State>({
   kids: [],
   saved: [],
   activeKidId: null,
+  selectedActivityId: null,
   ready: false
 })
+
+/* --------------------------- Detail view --------------------------- */
+
+export function openActivity(activityId: string): void {
+  state.selectedActivityId = activityId
+}
+
+export function closeActivity(): void {
+  state.selectedActivityId = null
+}
+
+export function selectedActivity(): Activity | null {
+  return state.activities.find((a) => a.id === state.selectedActivityId) ?? null
+}
 
 export async function init(): Promise<void> {
   const [activities, holidaySets, kids, saved] = await Promise.all([
