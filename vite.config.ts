@@ -21,8 +21,8 @@ export default defineConfig({
         short_name: 'Holiday Planner',
         description:
           'Plan Christchurch school holidays: filter activities by your kids, save them, export to your calendar. All data stays on your device.',
-        theme_color: '#14b8a6',
-        background_color: '#fbe8cf',
+        theme_color: '#4f46e5',
+        background_color: '#eef2f8',
         display: 'standalone',
         orientation: 'portrait',
         start_url: base,

@@ -56,13 +56,8 @@ const emit = defineEmits<{ toggleSave: []; remove: []; open: [] }>()
       <span class="class-tag" :class="activity.cost === 'free' ? 'free' : 'paid'">
         {{ activity.cost === 'free' ? 'Free' : `$${activity.price}` }}
       </span>
-      <span
-        v-for="c in activity.categories"
-        :key="c"
-        class="class-tag cat"
-        :style="{ background: CATEGORY_META[c].bg, color: CATEGORY_META[c].color, borderColor: CATEGORY_META[c].color }"
-      >
-        {{ CATEGORY_META[c].icon }} {{ CATEGORY_META[c].label }}
+      <span v-for="c in activity.categories" :key="c" class="class-tag cat">
+        <span class="dot" :style="{ background: CATEGORY_META[c].color }" />{{ CATEGORY_META[c].label }}
       </span>
     </div>
 
