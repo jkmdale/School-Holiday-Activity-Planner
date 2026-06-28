@@ -8,6 +8,9 @@ dist-ssr
 # Netlify CLI local state (machine-specific, not for the repo)
 .netlify
 
+# Generated staging file from the Eventfinda importer (review-then-discard)
+data/eventfinda-suggestions.csv
+
 # Editor
 .vscode/*
 !.vscode/extensions.json

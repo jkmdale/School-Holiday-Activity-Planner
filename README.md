@@ -178,6 +178,41 @@ src/data/activities.json     ← generated; the app consumes this. Don't hand-ed
 `educational`, `performing`, `science`, `social` (kept in sync with
 `src/types.ts`).
 
+### Top-up from Eventfinda (optional, automated)
+
+Eventfinda is the one source with a real API, so there's an importer for it as a
+*top-up* — it never writes your curated data directly. It fetches Christchurch
+kids/holiday events and writes a **staging file** you review:
+
+```
+Eventfinda API → data/eventfinda-suggestions.csv → (you review/tidy) → data/activities.csv → npm run import
+```
+
+1. Get a free API key at <https://www.eventfinda.co.nz/api/v2/index>, then set:
+   ```bash
+   export EVENTFINDA_USERNAME=you
+   export EVENTFINDA_PASSWORD=secret   # never commit these
+   ```
+2. Find the category id once (look for "Children, Kids, Holidays"):
+   ```bash
+   node scripts/import-eventfinda.mjs --categories
+   ```
+3. Fetch suggestions (defaults to Christchurch + the next school break):
+   ```bash
+   npm run import:eventfinda -- --category <id>
+   ```
+   Useful flags: `--dry-run` (print the request, make no call), `--radius <km>`,
+   `--point <lng,lat>`, `--location <id>` (see `--locations Christchurch`),
+   `--q <keyword>`, `--start`/`--end <YYYY-MM-DD>`, `--rows <n>`.
+4. Open `data/eventfinda-suggestions.csv`, **fix `ageMin`/`ageMax` and
+   `categories`** (Eventfinda has no clean age range and a different taxonomy,
+   so these are best-guessed) and add a `price` for paid events. Paste the keepers
+   into `data/activities.csv`, then `npm run import`.
+
+> The staging CSV is git-ignored — it's a scratch file, not a source of truth.
+> `node scripts/import-eventfinda.mjs --selftest` maps a sample event offline if
+> you want to see the output shape without a key.
+
 ### Where the seed data comes from
 
 The starter batch is real Christchurch **KidsFest 2026** winter-break listings
