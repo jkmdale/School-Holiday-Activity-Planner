@@ -1,0 +1,26 @@
+[
+  {
+    "id": "state-moe-2026",
+    "name": "State (MOE)",
+    "schoolType": "State / State-integrated",
+    "notes": "Shared Ministry of Education calendar followed by the large majority of Christchurch state and state-integrated schools. Compiled 28 June 2026. T1 start and T4 end vary by school; secondary often finishes earlier.",
+    "breaks": [
+      { "name": "Autumn", "start": "2026-04-03", "end": "2026-04-19" },
+      { "name": "Winter", "start": "2026-07-04", "end": "2026-07-19" },
+      { "name": "Spring", "start": "2026-09-26", "end": "2026-10-11" },
+      { "name": "Summer", "start": "2026-12-19", "end": "2027-01-31" }
+    ]
+  },
+  {
+    "id": "stac-2026",
+    "name": "St Andrew's College (StAC)",
+    "schoolType": "Independent",
+    "notes": "Independent school with its own calendar. Autumn break runs a week longer than state; winter starts a week earlier. Compiled 28 June 2026.",
+    "breaks": [
+      { "name": "Autumn", "start": "2026-04-03", "end": "2026-04-27" },
+      { "name": "Winter", "start": "2026-06-29", "end": "2026-07-17" },
+      { "name": "Spring", "start": "2026-09-28", "end": "2026-10-09" },
+      { "name": "Summer", "start": "2026-12-07", "end": "2027-01-31" }
+    ]
+  }
+]
