@@ -468,5 +468,98 @@
       "start": "10:30",
       "end": "14:30"
     }
+  },
+  {
+    "id": "chc-tall-tails-hunt",
+    "name": "Tall Tails Museum Hunt",
+    "provider": "Air Force Museum of New Zealand",
+    "description": "Explore the Tall Tails exhibition then hunt for animal tails hidden through the museum. Completed hunts go in a draw to win a C-130H Hercules tour with a pilot. Drop in any time.",
+    "suburb": "Wigram",
+    "lat": -43.5489,
+    "lng": 172.552,
+    "ageMin": 3,
+    "ageMax": 14,
+    "categories": [
+      "educational",
+      "science",
+      "social"
+    ],
+    "cost": "paid",
+    "price": 5,
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/tall-tails-museum-hunt",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-19",
+    "sessionTimes": {
+      "start": "09:30",
+      "end": "16:30"
+    }
+  },
+  {
+    "id": "chc-twigarella-hero-hunt",
+    "name": "Twigarella Puddlenip's Great Hero Hunt",
+    "provider": "Christchurch Botanic Gardens",
+    "description": "Join a quirky green witch on a magical trail through the Botanic Gardens, discovering native plants with storytelling, games and hands-on activities. Free, drop in any time.",
+    "suburb": "Christchurch Central",
+    "lat": -43.531,
+    "lng": 172.62,
+    "ageMin": 2,
+    "ageMax": 10,
+    "categories": [
+      "outdoors",
+      "educational",
+      "performing"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/twigarella-puddlenips-great-hero-hunt",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-19"
+  },
+  {
+    "id": "chc-stars-west-melton",
+    "name": "KidsFest under the Stars",
+    "provider": "Canterbury Astronomical Society",
+    "description": "See stars, clusters and nebulae through telescopes at the West Melton observatory with experienced astronomers. Runs on selected nights and is weather-dependent, so check cas.org.nz by 6pm. Tickets $10-$17 and sell out fast.",
+    "suburb": "West Melton",
+    "lat": -43.487,
+    "lng": 172.398,
+    "ageMin": 5,
+    "ageMax": 14,
+    "categories": [
+      "science",
+      "educational",
+      "outdoors"
+    ],
+    "cost": "paid",
+    "price": 10,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/kidsfest-under-the-stars-2",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-19",
+    "sessionTimes": {
+      "start": "19:30",
+      "end": "21:00"
+    }
+  },
+  {
+    "id": "chc-telling-tales-hunt",
+    "name": "Telling Tales KidsFest Treasure Hunt",
+    "provider": "Telling Tales",
+    "description": "Pick up an entry form and tick off the characters as you spot them around the bookshop, then go in a draw to win books. Free, drop in any time.",
+    "suburb": "Christchurch Central",
+    "lat": -43.5345,
+    "lng": 172.636,
+    "ageMin": 2,
+    "ageMax": 10,
+    "categories": [
+      "educational",
+      "social"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/telling-tales-kidsfest-treasure-hunt",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-19"
   }
 ]
