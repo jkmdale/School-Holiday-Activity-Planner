@@ -22,5 +22,27 @@
       { "name": "Spring", "start": "2026-09-28", "end": "2026-10-09" },
       { "name": "Summer", "start": "2026-12-07", "end": "2027-01-31" }
     ]
+  },
+  {
+    "id": "christs-college-2026",
+    "name": "Christ's College",
+    "schoolType": "Independent",
+    "notes": "Independent boys' school (Yrs 9-13) with its own calendar. Winter aligns with state; spring break is three weeks (Term 3 ends a week before state). Compiled 28 June 2026.",
+    "breaks": [
+      { "name": "Autumn", "start": "2026-04-03", "end": "2026-04-26" },
+      { "name": "Winter", "start": "2026-07-04", "end": "2026-07-19" },
+      { "name": "Spring", "start": "2026-09-19", "end": "2026-10-11" },
+      { "name": "Summer", "start": "2026-12-05", "end": "2027-01-31" }
+    ]
+  },
+  {
+    "id": "st-margarets-2026",
+    "name": "St Margaret's College",
+    "schoolType": "Independent",
+    "notes": "Independent girls' school. Autumn and winter dates confirmed; spring and summer breaks were not published in the source and are still to confirm. Compiled 28 June 2026.",
+    "breaks": [
+      { "name": "Autumn", "start": "2026-04-03", "end": "2026-04-27" },
+      { "name": "Winter", "start": "2026-07-04", "end": "2026-07-19" }
+    ]
   }
 ]
