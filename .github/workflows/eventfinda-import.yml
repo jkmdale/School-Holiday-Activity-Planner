@@ -69,3 +69,10 @@ jobs:
           name: eventfinda-suggestions
           path: data/eventfinda-suggestions.csv
           if-no-files-found: warn
+
+      - name: Print suggestions CSV to the log
+        if: always()
+        run: |
+          echo "----BEGIN SUGGESTIONS CSV----"
+          cat data/eventfinda-suggestions.csv || echo "(no file produced)"
+          echo "----END SUGGESTIONS CSV----"
