@@ -2,9 +2,10 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// On GitHub Pages the app is served from a repo subpath, so the build needs the
-// matching base. Locally (and on other hosts) it stays at root.
-const base = process.env.GITHUB_ACTIONS ? '/Shop-Holiday-Activity-Planner/' : '/'
+// On GitHub Pages the app is served from a repo subpath. A RELATIVE base makes
+// the build work under any repo name (so renaming the repo needs no code change)
+// and on any host. Locally it stays at root for the dev server.
+const base = process.env.GITHUB_ACTIONS ? './' : '/'
 
 // Installable PWA config. The service worker precaches the built app shell and
 // the local JSON seed so browsing works offline once installed.
