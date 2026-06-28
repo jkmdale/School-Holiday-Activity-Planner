@@ -26,31 +26,50 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
 
 <template>
   <header class="app-header">
-    <h1>Christchurch Holiday Planner</h1>
+    <div class="app-header-inner">
+      <span class="app-logo" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="30" height="30">
+          <rect x="10" y="14" width="44" height="42" rx="8" fill="#ffffff" />
+          <rect x="10" y="14" width="44" height="12" rx="8" fill="rgba(255,255,255,.55)" />
+          <path d="M24 38 l6 6 l12 -13" fill="none" stroke="#0f766e" stroke-width="5"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+      <div>
+        <h1>Holiday Planner</h1>
+        <p class="app-sub">Christchurch · school holidays, sorted</p>
+      </div>
+    </div>
   </header>
 
   <main v-if="state.ready" class="app-main">
-    <KidsView v-show="tab === 'kids'" />
-    <BrowseView v-show="tab === 'browse'" />
-    <SavedView v-show="tab === 'saved'" />
+    <Transition name="fade" mode="out-in">
+      <KidsView v-if="tab === 'kids'" key="kids" />
+      <BrowseView v-else-if="tab === 'browse'" key="browse" />
+      <SavedView v-else key="saved" />
+    </Transition>
   </main>
   <main v-else class="app-main">
-    <p class="empty">Loading…</p>
+    <div class="skeleton-list">
+      <div v-for="n in 3" :key="n" class="skeleton-card" />
+    </div>
   </main>
 
   <nav class="tabbar">
-    <button
-      v-for="t in tabs"
-      :key="t.id"
-      class="tab"
-      :class="{ on: tab === t.id }"
-      @click="tab = t.id"
-    >
-      <span class="tab-icon">{{ t.icon }}</span>
-      <span class="tab-label">
-        {{ t.label }}
-        <span v-if="t.id === 'saved' && savedCount" class="badge">{{ savedCount }}</span>
-      </span>
-    </button>
+    <div class="tabbar-inner">
+      <button
+        v-for="t in tabs"
+        :key="t.id"
+        class="tab"
+        :class="{ on: tab === t.id }"
+        @click="tab = t.id"
+      >
+        <span class="tab-icon">
+          {{ t.icon }}
+          <span v-if="t.id === 'saved' && savedCount" class="badge">{{ savedCount }}</span>
+        </span>
+        <span class="tab-label">{{ t.label }}</span>
+      </button>
+    </div>
   </nav>
 </template>

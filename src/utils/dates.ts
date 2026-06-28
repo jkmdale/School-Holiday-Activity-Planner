@@ -3,7 +3,7 @@
  * Christchurch time, so plain string comparison is enough for ordering and
  * overlap — no timezone maths needed.
  */
-import type { Activity, HolidayBreak } from '../types'
+import type { Activity, HolidayBreak, HolidaySet } from '../types'
 
 const MONTHS = [
   'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
@@ -37,4 +37,38 @@ export function formatTime(hhmm: string): string {
 /** Does an activity's date range overlap a holiday break window? */
 export function overlapsBreak(activity: Activity, brk: HolidayBreak): boolean {
   return activity.startDate <= brk.end && activity.endDate >= brk.start
+}
+
+/** Today's date as an ISO `YYYY-MM-DD` string in local time. */
+export function todayISO(): string {
+  const d = new Date()
+  const p = (n: number) => String(n).padStart(2, '0')
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`
+}
+
+export interface BreakInfo {
+  set: HolidaySet
+  brk: HolidayBreak
+  /** 'current' if today falls inside it, otherwise 'upcoming'. */
+  status: 'current' | 'upcoming'
+}
+
+/**
+ * The break to surface to the parent: the one on now, else the soonest to come.
+ * Prefers the State (MOE) set since most CHCH kids follow it. Returns null when
+ * there's nothing current or upcoming.
+ */
+export function currentOrNextBreak(sets: HolidaySet[], today = todayISO()): BreakInfo | null {
+  const preferred = sets.find((s) => /MOE|State/i.test(s.name)) ?? sets[0]
+  if (!preferred) return null
+  const relevant = preferred.breaks
+    .filter((b) => b.end >= today)
+    .sort((a, b) => a.start.localeCompare(b.start))
+  const next = relevant[0]
+  if (!next) return null
+  return {
+    set: preferred,
+    brk: next,
+    status: next.start <= today ? 'current' : 'upcoming'
+  }
 }

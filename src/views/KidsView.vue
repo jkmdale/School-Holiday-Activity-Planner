@@ -2,6 +2,7 @@
 import { reactive, ref } from 'vue'
 import { CATEGORIES, type Category, type KidProfile } from '../types'
 import { state, addKid, updateKid, removeKid } from '../store'
+import { CATEGORY_META, avatarColor, initial } from '../utils/categories'
 
 /** Form model for adding/editing a kid. */
 const draft = reactive<{ id: string | null; name: string; age: number | null; interests: Category[] }>(
@@ -45,65 +46,83 @@ async function confirmRemove(kid: KidProfile) {
 
 <template>
   <section>
-    <p class="privacy-note">
-      🔒 Private by design. Your kids' profiles and saved activities are stored
-      only on this device and are never sent anywhere.
-    </p>
-
     <div class="section-head">
       <h2 class="section-title">Your kids</h2>
       <button v-if="!showForm" class="primary-btn" @click="startAdd">+ Add a kid</button>
     </div>
 
-    <p v-if="!state.kids.length && !showForm" class="empty">
-      Add a kid to start planning. Their age and interests are used to filter
-      activities just for them.
+    <p class="privacy-note">
+      🔒 <strong>Private by design.</strong> Profiles and saved activities stay on
+      this device only — nothing about a child is ever sent anywhere.
     </p>
 
+    <!-- Empty state -->
+    <div v-if="!state.kids.length && !showForm" class="empty">
+      <div class="empty-emoji">🧒</div>
+      <p class="empty-title">No kids yet</p>
+      <p class="empty-sub">
+        Add a kid to start planning. Their age and interests filter activities
+        just for them.
+      </p>
+      <button class="primary-btn" @click="startAdd">+ Add your first kid</button>
+    </div>
+
     <!-- Kid list -->
-    <ul v-if="!showForm" class="kid-list">
+    <TransitionGroup v-if="!showForm" name="list" tag="ul" class="kid-list">
       <li v-for="kid in state.kids" :key="kid.id" class="kid-row">
-        <div>
-          <strong>{{ kid.name }}</strong>
-          <span class="muted"> · age {{ kid.age }}</span>
+        <span class="avatar" :style="{ background: avatarColor(kid.name) }">
+          {{ initial(kid.name) }}
+        </span>
+        <div class="kid-info">
+          <div class="kid-name">{{ kid.name }} <span class="muted">· age {{ kid.age }}</span></div>
           <div class="tags" v-if="kid.interests.length">
-            <span v-for="c in kid.interests" :key="c" class="tag">{{ c }}</span>
+            <span
+              v-for="c in kid.interests"
+              :key="c"
+              class="tag cat"
+              :style="{ color: CATEGORY_META[c].color, background: CATEGORY_META[c].bg }"
+            >
+              {{ CATEGORY_META[c].icon }} {{ CATEGORY_META[c].label }}
+            </span>
           </div>
           <div class="muted small" v-else>No interests set</div>
         </div>
         <div class="kid-actions">
-          <button class="link-btn" @click="startEdit(kid)">Edit</button>
-          <button class="link-btn danger" @click="confirmRemove(kid)">Remove</button>
+          <button class="icon-btn" aria-label="Edit" @click="startEdit(kid)">✎</button>
+          <button class="icon-btn danger" aria-label="Remove" @click="confirmRemove(kid)">🗑</button>
         </div>
       </li>
-    </ul>
+    </TransitionGroup>
 
     <!-- Add / edit form -->
     <form v-if="showForm" class="card form" @submit.prevent="save">
       <h2 class="section-title">{{ draft.id ? 'Edit kid' : 'Add a kid' }}</h2>
 
       <label class="field">
-        <span>Name</span>
+        <span class="field-label">Name</span>
         <input v-model="draft.name" type="text" placeholder="e.g. Maia" required />
       </label>
 
       <label class="field">
-        <span>Age (years)</span>
-        <input v-model.number="draft.age" type="number" min="0" max="18" required />
+        <span class="field-label">Age (years)</span>
+        <input v-model.number="draft.age" type="number" min="0" max="18" placeholder="e.g. 8" required />
       </label>
 
       <div class="field">
-        <span>Interests</span>
+        <span class="field-label">Interests</span>
         <div class="tags choices">
           <button
             v-for="c in CATEGORIES"
             :key="c"
             type="button"
-            class="tag choice"
+            class="choice"
             :class="{ on: draft.interests.includes(c) }"
+            :style="draft.interests.includes(c)
+              ? { color: CATEGORY_META[c].color, background: CATEGORY_META[c].bg, borderColor: CATEGORY_META[c].color }
+              : {}"
             @click="toggleInterest(c)"
           >
-            {{ c }}
+            {{ CATEGORY_META[c].icon }} {{ CATEGORY_META[c].label }}
           </button>
         </div>
       </div>

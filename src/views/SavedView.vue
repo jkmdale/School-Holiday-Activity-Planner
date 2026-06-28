@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { state, activeKid, savedActivitiesFor, toggleSave } from '../store'
 import { downloadIcs } from '../services/ics'
+import { avatarColor, initial } from '../utils/categories'
 import ActivityCard from '../components/ActivityCard.vue'
 
 const kid = computed(() => activeKid())
@@ -16,53 +17,57 @@ function exportIcs() {
 
 <template>
   <section>
-    <p v-if="!state.kids.length" class="empty">
-      Add a kid on the Kids tab first, then save activities to build their plan.
-    </p>
+    <div v-if="!state.kids.length" class="empty">
+      <div class="empty-emoji">♥</div>
+      <p class="empty-title">No plans yet</p>
+      <p class="empty-sub">Add a kid first, then save activities to build their plan.</p>
+    </div>
 
     <template v-else>
       <!-- Kid selector -->
       <div class="kid-picker">
-        <span class="muted small">Plan for:</span>
         <button
           v-for="k in state.kids"
           :key="k.id"
-          class="chip"
+          class="kid-chip"
           :class="{ on: state.activeKidId === k.id }"
           @click="state.activeKidId = k.id"
         >
+          <span class="avatar sm" :style="{ background: avatarColor(k.name) }">
+            {{ initial(k.name) }}
+          </span>
           {{ k.name }}
         </button>
       </div>
 
       <div class="section-head" v-if="kid">
         <h2 class="section-title">{{ kid.name }}'s plan</h2>
-        <button
-          class="primary-btn"
-          :disabled="!savedList.length"
-          @click="exportIcs"
-        >
-          ⬇ Export to calendar
-        </button>
+      </div>
+
+      <!-- Export call-to-action -->
+      <div v-if="savedList.length" class="export-card">
+        <div>
+          <div class="export-title">{{ savedList.length }} saved {{ savedList.length === 1 ? 'activity' : 'activities' }}</div>
+          <div class="export-sub">Add them all to your phone calendar in one tap.</div>
+        </div>
+        <button class="primary-btn export-btn" @click="exportIcs">⬇ Export</button>
       </div>
 
       <p v-if="kid && !savedList.length" class="empty">
-        Nothing saved yet. Tap the ♡ on an activity in Browse to add it to
-        {{ kid.name }}'s plan.
+        <span class="empty-emoji">📅</span>
+        <span class="empty-title">Nothing saved for {{ kid.name }}</span>
+        <span class="empty-sub">Tap the ♥ on an activity in Browse to add it here.</span>
       </p>
 
-      <p v-if="savedList.length" class="muted small">
-        {{ savedList.length }} saved · the export downloads an .ics you can open
-        in Google or Apple Calendar.
-      </p>
-
-      <ActivityCard
-        v-for="a in savedList"
-        :key="a.id"
-        :activity="a"
-        removable
-        @remove="kid && toggleSave(kid.id, a.id)"
-      />
+      <TransitionGroup name="list" tag="div">
+        <ActivityCard
+          v-for="a in savedList"
+          :key="a.id"
+          :activity="a"
+          removable
+          @remove="kid && toggleSave(kid.id, a.id)"
+        />
+      </TransitionGroup>
     </template>
   </section>
 </template>

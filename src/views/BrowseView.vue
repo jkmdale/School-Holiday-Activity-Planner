@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed, reactive } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import { CATEGORIES, type Category, type Cost } from '../types'
 import { state, activeKid, isSaved, toggleSave } from '../store'
-import { overlapsBreak } from '../utils/dates'
+import { overlapsBreak, currentOrNextBreak, formatDateRange } from '../utils/dates'
+import { CATEGORY_META, avatarColor, initial } from '../utils/categories'
 import ActivityCard from '../components/ActivityCard.vue'
 
 /** Filters. Kid age is applied automatically when a kid is selected. */
@@ -22,6 +23,8 @@ const filters = reactive<{
   breakName: ''
 })
 
+const showFilters = ref(false)
+
 // Distinct suburbs from the catalogue, for the dropdown.
 const suburbs = computed(() =>
   [...new Set(state.activities.map((a) => a.suburb))].sort()
@@ -35,12 +38,13 @@ const selectedBreak = computed(() =>
   selectedSet.value?.breaks.find((b) => b.name === filters.breakName) ?? null
 )
 
+// The contextual banner: the holiday on now or coming up next.
+const upcoming = computed(() => currentOrNextBreak(state.holidaySets))
+
 const filtered = computed(() => {
   const kid = activeKid()
   return state.activities.filter((a) => {
-    // Auto age match when a kid is selected.
     if (kid && (kid.age < a.ageMin || kid.age > a.ageMax)) return false
-    // Optional interest match when a kid is selected and has interests.
     if (kid && filters.matchInterests && kid.interests.length) {
       if (!a.categories.some((c) => kid.interests.includes(c))) return false
     }
@@ -50,6 +54,15 @@ const filtered = computed(() => {
     if (selectedBreak.value && !overlapsBreak(a, selectedBreak.value)) return false
     return true
   })
+})
+
+const activeFilterCount = computed(() => {
+  let n = 0
+  if (filters.suburb) n++
+  if (filters.category) n++
+  if (filters.cost !== 'all') n++
+  if (filters.breakName) n++
+  return n
 })
 
 function selectKid(id: string) {
@@ -67,103 +80,146 @@ function resetFilters() {
   })
 }
 
-// Keep the break selection valid when the calendar set changes.
 function onSetChange() {
   filters.breakName = ''
+}
+
+// Tapping the holiday banner filters to that break.
+function applyUpcoming() {
+  if (!upcoming.value) return
+  filters.holidaySetId = upcoming.value.set.id
+  filters.breakName = upcoming.value.brk.name
+  showFilters.value = true
 }
 </script>
 
 <template>
   <section>
+    <!-- Contextual holiday banner -->
+    <button v-if="upcoming" class="holiday-banner" @click="applyUpcoming">
+      <span class="hb-emoji">{{ upcoming.status === 'current' ? '🎉' : '⛄' }}</span>
+      <span class="hb-text">
+        <strong>
+          {{ upcoming.brk.name }} holidays
+          {{ upcoming.status === 'current' ? 'are on now' : 'are coming up' }}
+        </strong>
+        <span class="hb-dates">{{ formatDateRange(upcoming.brk.start, upcoming.brk.end) }}</span>
+      </span>
+      <span class="hb-cta">Show →</span>
+    </button>
+
     <!-- Kid selector -->
     <div v-if="state.kids.length" class="kid-picker">
-      <span class="muted small">Filter for:</span>
       <button
         v-for="kid in state.kids"
         :key="kid.id"
-        class="chip"
+        class="kid-chip"
         :class="{ on: state.activeKidId === kid.id }"
         @click="selectKid(kid.id)"
       >
-        {{ kid.name }} ({{ kid.age }})
+        <span class="avatar sm" :style="{ background: avatarColor(kid.name) }">
+          {{ initial(kid.name) }}
+        </span>
+        {{ kid.name }} · {{ kid.age }}
       </button>
     </div>
-    <p v-else class="empty small">
-      Tip: add a kid on the Kids tab to auto-filter by their age and interests.
+    <p v-else class="hint">
+      💡 Add a kid on the <strong>Kids</strong> tab to auto-filter by their age and interests.
     </p>
 
-    <!-- Filters -->
-    <div class="filters">
-      <label v-if="activeKid() && activeKid()!.interests.length" class="toggle">
-        <input v-model="filters.matchInterests" type="checkbox" />
-        Match {{ activeKid()!.name }}'s interests
-      </label>
-
-      <div class="filter-grid">
-        <label class="field compact">
-          <span>Suburb</span>
-          <select v-model="filters.suburb">
-            <option value="">All</option>
-            <option v-for="s in suburbs" :key="s" :value="s">{{ s }}</option>
-          </select>
-        </label>
-
-        <label class="field compact">
-          <span>Category</span>
-          <select v-model="filters.category">
-            <option value="">All</option>
-            <option v-for="c in CATEGORIES" :key="c" :value="c">{{ c }}</option>
-          </select>
-        </label>
-
-        <label class="field compact">
-          <span>Cost</span>
-          <select v-model="filters.cost">
-            <option value="all">All</option>
-            <option value="free">Free</option>
-            <option value="paid">Paid</option>
-          </select>
-        </label>
-
-        <label class="field compact">
-          <span>Holiday set</span>
-          <select v-model="filters.holidaySetId" @change="onSetChange">
-            <option value="">Any time</option>
-            <option v-for="hs in state.holidaySets" :key="hs.id" :value="hs.id">
-              {{ hs.name }}
-            </option>
-          </select>
-        </label>
-
-        <label v-if="selectedSet" class="field compact">
-          <span>Break</span>
-          <select v-model="filters.breakName">
-            <option value="">All breaks</option>
-            <option v-for="b in selectedSet.breaks" :key="b.name" :value="b.name">
-              {{ b.name }}
-            </option>
-          </select>
-        </label>
-      </div>
-
-      <button class="link-btn" @click="resetFilters">Reset filters</button>
+    <!-- Filter toggle + summary -->
+    <div class="filter-bar">
+      <button class="filter-toggle" :class="{ open: showFilters }" @click="showFilters = !showFilters">
+        <span>⚙︎ Filters</span>
+        <span v-if="activeFilterCount" class="filter-count">{{ activeFilterCount }}</span>
+        <span class="chev">{{ showFilters ? '▴' : '▾' }}</span>
+      </button>
+      <span class="result-count">{{ filtered.length }} found</span>
     </div>
 
+    <!-- Filters panel -->
+    <Transition name="expand">
+      <div v-show="showFilters" class="filters">
+        <label
+          v-if="activeKid() && activeKid()!.interests.length"
+          class="switch-row"
+        >
+          <span>Match {{ activeKid()!.name }}'s interests</span>
+          <span class="switch">
+            <input v-model="filters.matchInterests" type="checkbox" />
+            <span class="track"><span class="thumb" /></span>
+          </span>
+        </label>
+
+        <div class="field">
+          <span class="field-label">Cost</span>
+          <div class="segmented">
+            <button :class="{ on: filters.cost === 'all' }" @click="filters.cost = 'all'">All</button>
+            <button :class="{ on: filters.cost === 'free' }" @click="filters.cost = 'free'">Free</button>
+            <button :class="{ on: filters.cost === 'paid' }" @click="filters.cost = 'paid'">Paid</button>
+          </div>
+        </div>
+
+        <div class="filter-grid">
+          <label class="field compact">
+            <span class="field-label">Suburb</span>
+            <select v-model="filters.suburb">
+              <option value="">All suburbs</option>
+              <option v-for="s in suburbs" :key="s" :value="s">{{ s }}</option>
+            </select>
+          </label>
+
+          <label class="field compact">
+            <span class="field-label">Category</span>
+            <select v-model="filters.category">
+              <option value="">All categories</option>
+              <option v-for="c in CATEGORIES" :key="c" :value="c">
+                {{ CATEGORY_META[c].icon }} {{ CATEGORY_META[c].label }}
+              </option>
+            </select>
+          </label>
+
+          <label class="field compact">
+            <span class="field-label">Holiday set</span>
+            <select v-model="filters.holidaySetId" @change="onSetChange">
+              <option value="">Any time</option>
+              <option v-for="hs in state.holidaySets" :key="hs.id" :value="hs.id">
+                {{ hs.name }}
+              </option>
+            </select>
+          </label>
+
+          <label v-if="selectedSet" class="field compact">
+            <span class="field-label">Break</span>
+            <select v-model="filters.breakName">
+              <option value="">All breaks</option>
+              <option v-for="b in selectedSet.breaks" :key="b.name" :value="b.name">
+                {{ b.name }}
+              </option>
+            </select>
+          </label>
+        </div>
+
+        <button class="link-btn" @click="resetFilters">Reset all filters</button>
+      </div>
+    </Transition>
+
     <!-- Results -->
-    <p class="muted small">{{ filtered.length }} activit{{ filtered.length === 1 ? 'y' : 'ies' }}</p>
+    <div v-if="!filtered.length" class="empty">
+      <div class="empty-emoji">🔍</div>
+      <p class="empty-title">No activities match</p>
+      <p class="empty-sub">Try widening your filters or turning off interest matching.</p>
+    </div>
 
-    <p v-if="!filtered.length" class="empty">
-      No activities match these filters. Try widening them or turning off
-      interest matching.
-    </p>
-
-    <ActivityCard
-      v-for="a in filtered"
-      :key="a.id"
-      :activity="a"
-      :can-save="!!state.activeKidId"
-      :saved="!!state.activeKidId && isSaved(state.activeKidId, a.id)"
-      @toggle-save="state.activeKidId && toggleSave(state.activeKidId, a.id)"
-    />
+    <TransitionGroup v-else name="list" tag="div">
+      <ActivityCard
+        v-for="a in filtered"
+        :key="a.id"
+        :activity="a"
+        :can-save="!!state.activeKidId"
+        :saved="!!state.activeKidId && isSaved(state.activeKidId, a.id)"
+        @toggle-save="state.activeKidId && toggleSave(state.activeKidId, a.id)"
+      />
+    </TransitionGroup>
   </section>
 </template>
