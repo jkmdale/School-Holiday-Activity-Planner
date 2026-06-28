@@ -27,6 +27,8 @@ export interface SuggestOptions {
   exclude?: Set<string>
   /** Max activities in a day. */
   max?: number
+  /** Optional: returns true if the given ISO date is forecast wet, to prefer indoor. */
+  isRainy?: (iso: string) => boolean
 }
 
 function fitsAges(a: Activity, ages: number[]): boolean {
@@ -43,9 +45,23 @@ function activeOn(a: Activity, iso: string): boolean {
 }
 
 /** Two timed activities clash if their windows overlap. All-day ones never clash. */
-function clashes(a: Activity, b: Activity): boolean {
+export function timesClash(a: Activity, b: Activity): boolean {
   if (!a.sessionTimes || !b.sessionTimes) return false
   return a.sessionTimes.start < b.sessionTimes.end && b.sessionTimes.start < a.sessionTimes.end
+}
+
+/** Ids of activities that clash with at least one other in the list (same day). */
+export function findClashes(list: Activity[]): Set<string> {
+  const clashing = new Set<string>()
+  for (let i = 0; i < list.length; i++) {
+    for (let j = i + 1; j < list.length; j++) {
+      if (timesClash(list[i], list[j])) {
+        clashing.add(list[i].id)
+        clashing.add(list[j].id)
+      }
+    }
+  }
+  return clashing
 }
 
 /**
@@ -72,8 +88,16 @@ export function suggestDay(
     const onDay = eligible.filter((a) => activeOn(a, day))
     if (!onDay.length) continue
 
-    // Prefer interest matches, then earlier start times, then named order.
+    const rainy = opts.isRainy?.(day) ?? false
+
+    // On wet days push outdoor activities to the back; then prefer interest
+    // matches, earlier start times, and finally name order.
     const ranked = [...onDay].sort((x, y) => {
+      if (rainy) {
+        const ox = x.weather === 'outdoor' ? 1 : 0
+        const oy = y.weather === 'outdoor' ? 1 : 0
+        if (ox !== oy) return ox - oy
+      }
       const di = interestScore(y, opts.interests) - interestScore(x, opts.interests)
       if (di) return di
       const sx = x.sessionTimes?.start ?? '99:99'
@@ -87,7 +111,7 @@ export function suggestDay(
     for (const a of ranked) {
       if (items.length >= max) break
       if (items.some((i) => i.id === a.id)) continue
-      if (items.some((i) => clashes(i, a))) continue
+      if (items.some((i) => timesClash(i, a))) continue
       // Encourage variety: skip a same-category repeat unless we're short on options.
       const sameCat = a.categories.some((c) => usedCats.has(c))
       if (sameCat && ranked.length > max && items.length > 0) continue
@@ -96,8 +120,12 @@ export function suggestDay(
     }
     if (!items.length) continue
 
+    // Penalise outdoor picks on a wet day so a fine/indoor day ranks higher.
+    const rainPenalty = rainy ? items.filter((a) => a.weather === 'outdoor').length * 5 : 0
     const score =
-      items.length * 10 + items.reduce((n, a) => n + interestScore(a, opts.interests), 0)
+      items.length * 10 +
+      items.reduce((n, a) => n + interestScore(a, opts.interests), 0) -
+      rainPenalty
     if (!best || score > best.score) best = { date: day, score, items }
   }
 

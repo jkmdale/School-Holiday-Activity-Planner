@@ -162,6 +162,13 @@ for (let r = 1; r < table.length; r++) {
   }
   const datesTbc = tbcRaw === 'true'
 
+  // Optional weather suitability; infer from the 'outdoors' category when blank.
+  const weatherRaw = get('weather').toLowerCase()
+  if (weatherRaw && !['indoor', 'outdoor', 'any'].includes(weatherRaw)) {
+    fail(`weather must be indoor, outdoor or any (or blank) (got "${weatherRaw}")`)
+  }
+  const weather = weatherRaw || (categories.includes('outdoors') ? 'outdoor' : 'any')
+
   const lat = get('lat')
   const lng = get('lng')
 
@@ -179,6 +186,7 @@ for (let r = 1; r < table.length; r++) {
   activity.endDate = endDate
   if (sessionTimes) activity.sessionTimes = sessionTimes
   if (datesTbc) activity.datesTbc = true
+  if (weather !== 'any') activity.weather = weather
 
   activities.push(activity)
 }

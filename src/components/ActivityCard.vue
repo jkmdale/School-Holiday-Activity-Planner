@@ -70,6 +70,8 @@ const distance = computed(() => {
     <!-- Classification row -->
     <div class="classify">
       <span class="class-tag age">{{ activity.ageMin }}–{{ activity.ageMax }} yrs</span>
+      <span v-if="activity.weather === 'indoor'" class="class-tag weather-tag indoor">Indoor</span>
+      <span v-else-if="activity.weather === 'outdoor'" class="class-tag weather-tag outdoor">Outdoor</span>
       <span class="class-tag" :class="activity.cost === 'free' ? 'free' : 'paid'">
         {{ activity.cost === 'free' ? 'Free' : `$${activity.price}` }}
       </span>

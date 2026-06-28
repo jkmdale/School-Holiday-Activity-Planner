@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { suggestDay } from '../utils/suggest'
+import { suggestDay, timesClash, findClashes } from '../utils/suggest'
 import type { Activity, Category } from '../types'
 
 let n = 0
@@ -67,5 +67,38 @@ describe('suggestDay', () => {
     const s = suggestDay(acts, { ages: [8], interests: noInterest, from: '2026-07-06', to: '2026-07-19', today: '2026-07-10' })
     // 6 Jul is before today (10 Jul) → no eligible day
     expect(s).toBeNull()
+  })
+
+  it('prefers indoor activities on a forecast wet day', () => {
+    const acts = [
+      mk({ weather: 'outdoor', sessionTimes: { start: '09:00', end: '11:00' } }),
+      mk({ weather: 'indoor', sessionTimes: { start: '09:00', end: '11:00' } })
+    ]
+    // Both clash (same time) so only one is picked; rain should tip it to indoor.
+    const s = suggestDay(acts, { ages: [8], interests: noInterest, ...window, isRainy: () => true })
+    expect(s!.activities).toHaveLength(1)
+    expect(s!.activities[0].weather).toBe('indoor')
+  })
+})
+
+describe('clash detection', () => {
+  it('timesClash flags overlapping timed events only', () => {
+    const a = mk({ sessionTimes: { start: '09:00', end: '11:00' } })
+    const b = mk({ sessionTimes: { start: '10:00', end: '12:00' } })
+    const c = mk({ sessionTimes: { start: '11:00', end: '12:00' } }) // touches, no overlap
+    const allDay = mk({})
+    expect(timesClash(a, b)).toBe(true)
+    expect(timesClash(a, c)).toBe(false)
+    expect(timesClash(a, allDay)).toBe(false) // all-day never clashes
+  })
+
+  it('findClashes returns the ids that overlap something', () => {
+    const a = mk({ sessionTimes: { start: '09:00', end: '11:00' } })
+    const b = mk({ sessionTimes: { start: '10:00', end: '12:00' } })
+    const c = mk({ sessionTimes: { start: '13:00', end: '14:00' } })
+    const ids = findClashes([a, b, c])
+    expect(ids.has(a.id)).toBe(true)
+    expect(ids.has(b.id)).toBe(true)
+    expect(ids.has(c.id)).toBe(false)
   })
 })

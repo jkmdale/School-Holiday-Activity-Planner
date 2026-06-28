@@ -13,6 +13,7 @@
 import { reactive } from 'vue'
 import type { Activity, HolidaySet, KidProfile, SavedItem } from './types'
 import type { SharedPlan } from './services/share'
+import { getForecast, type DayForecast } from './services/weather'
 import { getActivities, getHolidaySets } from './services/dataService'
 import * as storage from './services/storage'
 import { StorageWriteError } from './services/storage'
@@ -37,6 +38,8 @@ interface State {
   locating: boolean
   /** Custom-event form: open flag and the id being edited (null = creating). */
   eventForm: { open: boolean; editingId: string | null }
+  /** Christchurch forecast by ISO date, once loaded (best-effort, may stay null). */
+  forecast: Record<string, DayForecast> | null
 }
 
 export const state = reactive<State>({
@@ -51,8 +54,23 @@ export const state = reactive<State>({
   pendingImport: null,
   coords: null,
   locating: false,
-  eventForm: { open: false, editingId: null }
+  eventForm: { open: false, editingId: null },
+  forecast: null
 })
+
+/** Load the Christchurch forecast in the background; ignore failures. */
+export async function loadForecast(): Promise<void> {
+  try {
+    state.forecast = await getForecast()
+  } catch {
+    /* offline or blocked — suggestions just won't be weather-aware */
+  }
+}
+
+/** True when the forecast says it's likely wet on the given ISO date. */
+export function isRainyOn(iso: string): boolean {
+  return !!state.forecast?.[iso]?.rainy
+}
 
 /* --------------------------- Event form --------------------------- */
 
@@ -155,6 +173,8 @@ export async function init(): Promise<void> {
   state.saved = saved
   state.activeKidId = kids[0]?.id ?? null
   state.ready = true
+  // Best-effort, non-blocking: makes Suggest-a-day weather-aware once it lands.
+  void loadForecast()
 }
 
 /* ----------------------- Custom (user) activities ----------------------- */

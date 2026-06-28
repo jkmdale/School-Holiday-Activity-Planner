@@ -8,6 +8,7 @@ import {
 } from '../utils/dates'
 import { avatarColor, initial } from '../utils/categories'
 import { formatDateRange, formatTime } from '../utils/dates'
+import { findClashes } from '../utils/suggest'
 import ActivityCard from '../components/ActivityCard.vue'
 import Icon from '../components/Icon.vue'
 import SharePlan from '../components/SharePlan.vue'
@@ -64,6 +65,20 @@ const title = computed(() => monthLabel(cur.value.y, cur.value.m))
 
 const dayEvents = computed(() =>
   selectedDay.value ? byDate.value.get(selectedDay.value) ?? [] : []
+)
+
+/** Days that contain at least one pair of time-overlapping activities. */
+const clashDays = computed(() => {
+  const days = new Set<string>()
+  for (const [iso, evs] of byDate.value) {
+    if (findClashes(evs).size) days.add(iso)
+  }
+  return days
+})
+
+/** Whether the currently selected day has a clash, for the inline warning. */
+const selectedDayHasClash = computed(
+  () => !!selectedDay.value && clashDays.value.has(selectedDay.value)
 )
 
 function countOn(iso: string): number {
@@ -220,6 +235,7 @@ function exportIcs() {
                   dim: !c.inMonth,
                   today: c.iso === today,
                   has: countOn(c.iso) > 0,
+                  clash: clashDays.has(c.iso),
                   on: c.iso === selectedDay
                 }"
                 :disabled="!countOn(c.iso)"
@@ -234,6 +250,9 @@ function exportIcs() {
           <!-- Selected day's events -->
           <div v-if="selectedDay" class="cal-day">
             <h3 class="cal-day-head">{{ formatDate(selectedDay) }}</h3>
+            <p v-if="selectedDayHasClash" class="clash-warn">
+              <Icon name="clock" :size="14" /> Heads up — two of these overlap in time.
+            </p>
             <ActivityCard
               v-for="a in dayEvents"
               :key="a.id"

@@ -687,6 +687,16 @@ input, select { font: inherit; color: var(--ink); }
   display: grid; place-items: center;
 }
 .cal-cell.on .cal-dot { background: rgba(255, 255, 255, 0.4); }
+/* A day with a time overlap gets an amber dot instead of coral. */
+.cal-cell.clash .cal-dot { background: #d98a00; }
+.cal-cell.clash.on .cal-dot { background: rgba(255, 255, 255, 0.55); }
+
+.clash-warn {
+  display: flex; align-items: center; gap: 0.4rem;
+  font-size: 0.83rem; font-weight: 600; color: #8a6500;
+  background: rgba(176, 132, 18, 0.12);
+  border-radius: 10px; padding: 0.45rem 0.65rem; margin: 0 0 0.7rem;
+}
 
 /* Reserve space below the calendar so picking a day doesn't shift the page. */
 .cal-day, .cal-none { min-height: 8.5rem; }
@@ -806,6 +816,45 @@ input, select { font: inherit; color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
+
+/* ============================ Map ============================ */
+
+.map-wrap { margin-top: 0.2rem; }
+.map {
+  height: 60vh; min-height: 320px;
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+}
+.map-note { font-size: 0.85rem; color: var(--muted); text-align: center; margin-top: 0.7rem; }
+/* Leaflet attribution sits flush with rounded corners */
+.map .leaflet-control-attribution { font-size: 0.62rem; }
+.map-pin {
+  background: linear-gradient(135deg, #ff9276, #ff7a6b);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.map-me {
+  background: #3f7cae;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(63, 124, 174, 0.25);
+}
+
+/* ============================ Weather ============================ */
+
+.weather-tag.indoor { background: rgba(63, 124, 174, 0.14); color: #39709d; border-color: transparent; }
+.weather-tag.outdoor { background: rgba(90, 138, 85, 0.16); color: #4c7447; border-color: transparent; }
+
+.weather-line {
+  display: flex; align-items: center; gap: 0.4rem;
+  font-size: 0.85rem; font-weight: 600; color: #4c7447;
+  background: rgba(90, 138, 85, 0.12);
+  border-radius: 10px; padding: 0.45rem 0.65rem; margin: 0 0 0.8rem;
+}
+.weather-line.wet { color: #39709d; background: rgba(63, 124, 174, 0.12); }
 
 /* ============================ Custom events ============================ */
 

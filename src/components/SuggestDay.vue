@@ -6,7 +6,7 @@
  */
 import { computed, ref, watch } from 'vue'
 import type { Category } from '../types'
-import { state, isSaved, toggleSave, openActivity, notify } from '../store'
+import { state, isSaved, toggleSave, openActivity, notify, isRainyOn } from '../store'
 import { currentOrNextBreak, formatDate, formatTime, todayISO } from '../utils/dates'
 import { suggestDay } from '../utils/suggest'
 import { useModal } from '../composables/useModal'
@@ -36,9 +36,15 @@ const suggestion = computed(() => {
     from: brk.value.brk.start,
     to: brk.value.brk.end,
     today,
-    exclude: excluded.value
+    exclude: excluded.value,
+    isRainy: isRainyOn
   })
 })
+
+/** Forecast for the suggested day, if we have one (only ~16 days ahead). */
+const dayForecast = computed(() =>
+  suggestion.value ? state.forecast?.[suggestion.value.date] ?? null : null
+)
 
 // Reset the "try another day" history whenever the sheet (re)opens.
 watch(
@@ -99,6 +105,13 @@ function saveAll() {
               <Icon name="calendar" :size="15" />
               {{ formatDate(suggestion.date) }} ·
               for {{ kids.map((k) => k.name).join(', ') }}
+            </p>
+
+            <p v-if="dayForecast" class="weather-line" :class="{ wet: dayForecast.rainy }">
+              <Icon :name="dayForecast.rainy ? 'cloud' : 'sun'" :size="14" />
+              {{ dayForecast.rainy
+                ? `Rain likely (${dayForecast.precipProb}%) — leaning on indoor picks`
+                : 'Looking fine — outdoor options included' }}
             </p>
 
             <div class="suggest-list">

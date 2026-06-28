@@ -10,9 +10,11 @@ import { CATEGORY_META, avatarColor, initial } from '../utils/categories'
 import { haversineKm } from '../utils/geo'
 import ActivityCard from '../components/ActivityCard.vue'
 import SuggestDay from '../components/SuggestDay.vue'
+import MapView from '../components/MapView.vue'
 import Icon from '../components/Icon.vue'
 
 type SortKey = 'soon' | 'price' | 'name' | 'near'
+const resultView = ref<'list' | 'map'>('list')
 
 const filters = reactive<{
   q: string
@@ -359,12 +361,20 @@ function applyUpcoming() {
       </div>
     </Transition>
 
+    <!-- List / Map toggle -->
+    <div v-if="results.length" class="segmented view-toggle">
+      <button :class="{ on: resultView === 'list' }" @click="resultView = 'list'">List</button>
+      <button :class="{ on: resultView === 'map' }" @click="resultView = 'map'">Map</button>
+    </div>
+
     <!-- Results -->
     <div v-if="!results.length" class="empty">
       <span class="empty-icon"><Icon name="search" :size="26" /></span>
       <p class="empty-title">No matching activities</p>
       <p class="empty-sub">Try widening your filters or turning off interest matching.</p>
     </div>
+
+    <MapView v-else-if="resultView === 'map'" :activities="results" />
 
     <TransitionGroup v-else name="list" tag="div">
       <ActivityCard

@@ -58,6 +58,11 @@ export interface Activity {
    */
   custom?: boolean
   /**
+   * Weather suitability, used to bias suggestions on wet/fine days. 'any' (the
+   * default) when it doesn't matter or is unknown.
+   */
+  weather?: 'indoor' | 'outdoor' | 'any'
+  /**
    * Optional daily session window, 24h "HH:MM". When present, calendar export
    * uses these times; otherwise the event is treated as all-day.
    */
