@@ -1,0 +1,71 @@
+name: Eventfinda import
+
+# Run the Eventfinda top-up importer from the GitHub UI (Actions tab →
+# "Eventfinda import" → Run workflow). Your API credentials are read from
+# encrypted repository secrets, never from the repo or any log.
+#
+# Setup (once): repo Settings → Secrets and variables → Actions → New
+# repository secret, add:
+#   EVENTFINDA_USERNAME
+#   EVENTFINDA_PASSWORD
+#
+# Output: a downloadable artifact "eventfinda-suggestions" containing
+# data/eventfinda-suggestions.csv. Review it, paste the good rows into
+# data/activities.csv, then run `npm run import` (or ask Claude to do it).
+
+on:
+  workflow_dispatch:
+    inputs:
+      category:
+        description: 'Category id (leave blank to fetch all; see the "List categories" step output to find "Children, Kids, Holidays")'
+        required: false
+        default: ''
+      q:
+        description: 'Keyword filter (optional, e.g. "school holidays")'
+        required: false
+        default: ''
+      radius:
+        description: 'Search radius in km around Christchurch'
+        required: false
+        default: '30'
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: List categories (find the id you want here)
+        continue-on-error: true
+        env:
+          EVENTFINDA_USERNAME: ${{ secrets.EVENTFINDA_USERNAME }}
+          EVENTFINDA_PASSWORD: ${{ secrets.EVENTFINDA_PASSWORD }}
+        run: node scripts/import-eventfinda.mjs --categories
+
+      - name: Fetch suggestions
+        env:
+          EVENTFINDA_USERNAME: ${{ secrets.EVENTFINDA_USERNAME }}
+          EVENTFINDA_PASSWORD: ${{ secrets.EVENTFINDA_PASSWORD }}
+          CATEGORY: ${{ inputs.category }}
+          Q: ${{ inputs.q }}
+          RADIUS: ${{ inputs.radius }}
+        run: |
+          ARGS="--radius ${RADIUS:-30}"
+          [ -n "$CATEGORY" ] && ARGS="$ARGS --category $CATEGORY"
+          [ -n "$Q" ] && ARGS="$ARGS --q \"$Q\""
+          echo "Running: node scripts/import-eventfinda.mjs $ARGS"
+          eval node scripts/import-eventfinda.mjs $ARGS
+
+      - name: Upload suggestions CSV
+        uses: actions/upload-artifact@v4
+        with:
+          name: eventfinda-suggestions
+          path: data/eventfinda-suggestions.csv
+          if-no-files-found: warn
