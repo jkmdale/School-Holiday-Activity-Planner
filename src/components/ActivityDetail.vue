@@ -4,7 +4,7 @@
  * Shows every field plus actions: save/remove for the active kid, add this one
  * event to the calendar, and open the registration link.
  */
-import { computed, onMounted, onBeforeUnmount } from 'vue'
+import { computed, onMounted, onBeforeUnmount, ref, watch, nextTick } from 'vue'
 import { state, selectedActivity, closeActivity, activeKid, isSaved, toggleSave } from '../store'
 import { formatDateRange, formatTime } from '../utils/dates'
 import { CATEGORY_META } from '../utils/categories'
@@ -20,11 +20,64 @@ const multiDay = computed(
   () => !!activity.value && activity.value.startDate !== activity.value.endDate
 )
 
-function onKey(e: KeyboardEvent) {
-  if (e.key === 'Escape') closeActivity()
+const sheet = ref<HTMLElement | null>(null)
+// The element focused before the sheet opened, so we can restore it on close.
+let lastFocused: HTMLElement | null = null
+
+function focusables(): HTMLElement[] {
+  if (!sheet.value) return []
+  return Array.from(
+    sheet.value.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )
+  ).filter((el) => el.offsetParent !== null || el === document.activeElement)
 }
+
+function onKey(e: KeyboardEvent) {
+  if (!activity.value) return
+  if (e.key === 'Escape') {
+    closeActivity()
+    return
+  }
+  if (e.key === 'Tab') {
+    // Trap focus within the sheet.
+    const items = focusables()
+    if (!items.length) return
+    const first = items[0]
+    const last = items[items.length - 1]
+    const active = document.activeElement as HTMLElement | null
+    if (e.shiftKey && (active === first || !sheet.value?.contains(active))) {
+      e.preventDefault()
+      last.focus()
+    } else if (!e.shiftKey && active === last) {
+      e.preventDefault()
+      first.focus()
+    }
+  }
+}
+
+// Lock background scroll and move focus into the sheet while it's open;
+// restore both when it closes.
+watch(activity, (now, prev) => {
+  if (now && !prev) {
+    lastFocused = document.activeElement as HTMLElement | null
+    document.body.classList.add('modal-open')
+    nextTick(() => {
+      const first = focusables()[0]
+      first?.focus()
+    })
+  } else if (!now && prev) {
+    document.body.classList.remove('modal-open')
+    lastFocused?.focus?.()
+    lastFocused = null
+  }
+})
+
 onMounted(() => window.addEventListener('keydown', onKey))
-onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onKey)
+  document.body.classList.remove('modal-open')
+})
 
 function exportOne() {
   const a = activity.value
@@ -41,7 +94,7 @@ function mapsUrl(lat: number, lng: number) {
 <template>
   <Transition name="sheet">
     <div v-if="activity" class="modal-overlay" @click.self="closeActivity()">
-      <section class="sheet" role="dialog" aria-modal="true" :aria-label="activity.name">
+      <section ref="sheet" class="sheet" role="dialog" aria-modal="true" :aria-label="activity.name">
         <div class="sheet-bar">
           <span class="sheet-grip" />
           <button class="install-x sheet-close" aria-label="Close" @click="closeActivity()">✕</button>

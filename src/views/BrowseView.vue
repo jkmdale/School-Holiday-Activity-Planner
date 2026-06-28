@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue'
 import { CATEGORIES, type Category, type Cost } from '../types'
-import { state, activeKid, isSaved, toggleSave, openActivity } from '../store'
-import { overlapsBreak, currentOrNextBreak, formatDateRange } from '../utils/dates'
+import {
+  state, activeKid, isSaved, toggleSave, openActivity,
+  isSavedForAll, toggleSaveForAll
+} from '../store'
+import { overlapsBreak, currentOrNextBreak, formatDateRange, todayISO } from '../utils/dates'
 import { CATEGORY_META, avatarColor, initial } from '../utils/categories'
 import ActivityCard from '../components/ActivityCard.vue'
 import Icon from '../components/Icon.vue'
 
+type SortKey = 'soon' | 'price' | 'name'
+
 const filters = reactive<{
+  q: string
   matchInterests: boolean
   suburb: string
   category: Category | ''
@@ -15,17 +21,36 @@ const filters = reactive<{
   holidaySetId: string
   breakName: string
   date: string
+  showPast: boolean
 }>({
+  q: '',
   matchInterests: true,
   suburb: '',
   category: '',
   cost: 'all',
   holidaySetId: '',
   breakName: '',
-  date: ''
+  date: '',
+  showPast: false
 })
 
 const showFilters = ref(false)
+const sort = ref<SortKey>('soon')
+const today = todayISO()
+
+/** Whole-family mode: find activities that suit every kid at once. */
+const familyMode = ref(false)
+const canFamily = computed(() => state.kids.length > 1)
+const family = computed(() => familyMode.value && canFamily.value)
+
+/** Combined interests across all kids, used for family interest matching. */
+const familyInterests = computed(
+  () => new Set(state.kids.flatMap((k) => k.interests))
+)
+
+function priceOf(a: { cost: Cost; price?: number }): number {
+  return a.cost === 'free' ? 0 : a.price ?? 0
+}
 
 const suburbs = computed(() =>
   [...new Set(state.activities.map((a) => a.suburb))].sort()
@@ -43,11 +68,29 @@ const upcoming = computed(() => currentOrNextBreak(state.holidaySets))
 
 const filtered = computed(() => {
   const kid = activeKid()
+  const q = filters.q.trim().toLowerCase()
   return state.activities.filter((a) => {
-    if (kid && (kid.age < a.ageMin || kid.age > a.ageMax)) return false
-    if (kid && filters.matchInterests && kid.interests.length) {
-      if (!a.categories.some((c) => kid.interests.includes(c))) return false
+    // Hide finished activities unless the parent opts to see them.
+    if (!filters.showPast && a.endDate < today) return false
+
+    // Free-text search across name, provider and description.
+    if (q && !`${a.name} ${a.provider} ${a.description}`.toLowerCase().includes(q)) {
+      return false
     }
+
+    if (family.value) {
+      // Must suit every kid's age, and (optionally) one of their interests.
+      if (!state.kids.every((k) => k.age >= a.ageMin && k.age <= a.ageMax)) return false
+      if (filters.matchInterests && familyInterests.value.size) {
+        if (!a.categories.some((c) => familyInterests.value.has(c))) return false
+      }
+    } else {
+      if (kid && (kid.age < a.ageMin || kid.age > a.ageMax)) return false
+      if (kid && filters.matchInterests && kid.interests.length) {
+        if (!a.categories.some((c) => kid.interests.includes(c))) return false
+      }
+    }
+
     if (filters.suburb && a.suburb !== filters.suburb) return false
     if (filters.category && !a.categories.includes(filters.category)) return false
     if (filters.cost !== 'all' && a.cost !== filters.cost) return false
@@ -57,6 +100,14 @@ const filtered = computed(() => {
   })
 })
 
+/** Filtered results in the chosen sort order. */
+const results = computed(() => {
+  const arr = [...filtered.value]
+  if (sort.value === 'price') return arr.sort((a, b) => priceOf(a) - priceOf(b))
+  if (sort.value === 'name') return arr.sort((a, b) => a.name.localeCompare(b.name))
+  return arr.sort((a, b) => a.startDate.localeCompare(b.startDate)) // 'soon'
+})
+
 const activeFilterCount = computed(() => {
   let n = 0
   if (filters.suburb) n++
@@ -64,22 +115,30 @@ const activeFilterCount = computed(() => {
   if (filters.cost !== 'all') n++
   if (filters.breakName) n++
   if (filters.date) n++
+  if (filters.showPast) n++
   return n
 })
 
 function selectKid(id: string) {
+  familyMode.value = false
   state.activeKidId = state.activeKidId === id ? null : id
+}
+
+function selectFamily() {
+  familyMode.value = true
 }
 
 function resetFilters() {
   Object.assign(filters, {
+    q: '',
     matchInterests: true,
     suburb: '',
     category: '',
     cost: 'all',
     holidaySetId: '',
     breakName: '',
-    date: ''
+    date: '',
+    showPast: false
   })
 }
 
@@ -115,7 +174,7 @@ function applyUpcoming() {
           v-for="kid in state.kids"
           :key="kid.id"
           class="kid-chip"
-          :class="{ on: state.activeKidId === kid.id }"
+          :class="{ on: !family && state.activeKidId === kid.id }"
           @click="selectKid(kid.id)"
         >
           <span class="avatar sm" :style="{ background: avatarColor(kid.name) }">
@@ -123,11 +182,36 @@ function applyUpcoming() {
           </span>
           {{ kid.name }} · {{ kid.age }}
         </button>
+        <button
+          v-if="canFamily"
+          class="kid-chip family-chip"
+          :class="{ on: family }"
+          @click="selectFamily"
+        >
+          <span class="avatar sm family-avatar"><Icon name="users" :size="14" /></span>
+          Whole family
+        </button>
       </div>
+      <p v-if="family" class="hint family-hint">
+        Showing activities that suit all {{ state.kids.length }} kids. Saving adds them to every kid's plan.
+      </p>
     </div>
     <p v-else class="hint">
       Add a kid on the <strong>Kids</strong> tab to filter by their age and interests.
     </p>
+
+    <!-- Search -->
+    <div class="search-box">
+      <Icon name="search" :size="17" />
+      <input
+        v-model="filters.q"
+        type="search"
+        inputmode="search"
+        placeholder="Search activities, providers…"
+        aria-label="Search activities"
+      />
+      <button v-if="filters.q" class="search-clear" aria-label="Clear search" @click="filters.q = ''">✕</button>
+    </div>
 
     <!-- Filter bar -->
     <div class="filter-bar">
@@ -136,18 +220,42 @@ function applyUpcoming() {
         <span>Filters</span>
         <span v-if="activeFilterCount" class="filter-count">{{ activeFilterCount }}</span>
       </button>
-      <span class="result-count">{{ filtered.length }} {{ filtered.length === 1 ? 'result' : 'results' }}</span>
+      <span class="result-count">{{ results.length }} {{ results.length === 1 ? 'result' : 'results' }}</span>
     </div>
 
     <Transition name="expand">
       <div v-show="showFilters" class="filters">
         <label
-          v-if="activeKid() && activeKid()!.interests.length"
+          v-if="!family && activeKid() && activeKid()!.interests.length"
           class="switch-row"
         >
           <span>Match {{ activeKid()!.name }}'s interests</span>
           <span class="switch">
             <input v-model="filters.matchInterests" type="checkbox" />
+            <span class="track"><span class="thumb" /></span>
+          </span>
+        </label>
+        <label v-else-if="family && familyInterests.size" class="switch-row">
+          <span>Match the kids' interests</span>
+          <span class="switch">
+            <input v-model="filters.matchInterests" type="checkbox" />
+            <span class="track"><span class="thumb" /></span>
+          </span>
+        </label>
+
+        <div class="field">
+          <span class="field-label">Sort by</span>
+          <div class="segmented">
+            <button :class="{ on: sort === 'soon' }" @click="sort = 'soon'">Soonest</button>
+            <button :class="{ on: sort === 'price' }" @click="sort = 'price'">Price</button>
+            <button :class="{ on: sort === 'name' }" @click="sort = 'name'">Name</button>
+          </div>
+        </div>
+
+        <label class="switch-row">
+          <span>Show past activities</span>
+          <span class="switch">
+            <input v-model="filters.showPast" type="checkbox" />
             <span class="track"><span class="thumb" /></span>
           </span>
         </label>
@@ -208,7 +316,7 @@ function applyUpcoming() {
     </Transition>
 
     <!-- Results -->
-    <div v-if="!filtered.length" class="empty">
+    <div v-if="!results.length" class="empty">
       <span class="empty-icon"><Icon name="search" :size="26" /></span>
       <p class="empty-title">No matching activities</p>
       <p class="empty-sub">Try widening your filters or turning off interest matching.</p>
@@ -216,12 +324,12 @@ function applyUpcoming() {
 
     <TransitionGroup v-else name="list" tag="div">
       <ActivityCard
-        v-for="a in filtered"
+        v-for="a in results"
         :key="a.id"
         :activity="a"
-        :can-save="!!state.activeKidId"
-        :saved="!!state.activeKidId && isSaved(state.activeKidId, a.id)"
-        @toggle-save="state.activeKidId && toggleSave(state.activeKidId, a.id)"
+        :can-save="family ? state.kids.length > 0 : !!state.activeKidId"
+        :saved="family ? isSavedForAll(a.id) : (!!state.activeKidId && isSaved(state.activeKidId, a.id))"
+        @toggle-save="family ? toggleSaveForAll(a.id) : (state.activeKidId && toggleSave(state.activeKidId, a.id))"
         @open="openActivity(a.id)"
       />
     </TransitionGroup>

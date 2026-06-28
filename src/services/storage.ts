@@ -24,13 +24,33 @@ function read<T>(key: string, fallback: T): T {
   }
 }
 
-function write<T>(key: string, value: T): void {
-  localStorage.setItem(key, JSON.stringify(value))
+/** Raised when a write fails (most often the localStorage quota). */
+export class StorageWriteError extends Error {
+  constructor(message: string, readonly cause?: unknown) {
+    super(message)
+    this.name = 'StorageWriteError'
+  }
 }
 
-/** Small id helper — good enough for local records. */
+function write<T>(key: string, value: T): void {
+  try {
+    localStorage.setItem(key, JSON.stringify(value))
+  } catch (err) {
+    // Most commonly QuotaExceededError, but private-mode browsers can also
+    // throw here. Surface a friendly message rather than crashing a save.
+    throw new StorageWriteError(
+      "Couldn't save to this device — storage may be full or unavailable.",
+      err
+    )
+  }
+}
+
+/** Stable unique id for local records. Falls back if crypto is unavailable. */
 function newId(): string {
-  return Math.random().toString(36).slice(2, 10)
+  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
+    return crypto.randomUUID()
+  }
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`
 }
 
 /* ------------------------------- Kids ------------------------------- */

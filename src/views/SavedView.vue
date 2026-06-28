@@ -10,14 +10,28 @@ import { avatarColor, initial } from '../utils/categories'
 import ActivityCard from '../components/ActivityCard.vue'
 import Icon from '../components/Icon.vue'
 
+const today = todayISO()
+
 const kid = computed(() => activeKid())
-const savedList = computed(() => (kid.value ? savedActivitiesFor(kid.value.id) : []))
+const allSaved = computed(() => (kid.value ? savedActivitiesFor(kid.value.id) : []))
+
+const showPast = ref(false)
+const pastCount = computed(() => allSaved.value.filter((a) => a.endDate < today).length)
+
+/** What we actually render: upcoming only, unless the parent opts to see past. */
+const savedList = computed(() =>
+  showPast.value ? allSaved.value : allSaved.value.filter((a) => a.endDate >= today)
+)
+
+/** Running holiday spend across the shown plan (paid activities only). */
+const budget = computed(() =>
+  savedList.value.reduce((sum, a) => sum + (a.cost === 'paid' ? a.price ?? 0 : 0), 0)
+)
 
 const view = ref<'list' | 'calendar'>('list')
 const cursor = ref<{ y: number; m: number } | null>(null)
 const selectedDay = ref<string | null>(null)
 const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-const today = todayISO()
 
 /** Map of ISO date → saved activities on that day (multi-day events span days). */
 const byDate = computed(() => {
@@ -114,17 +128,34 @@ function exportIcs() {
       <div class="export-card" v-if="savedList.length">
         <div>
           <div class="export-title">{{ savedList.length }} saved {{ savedList.length === 1 ? 'activity' : 'activities' }}</div>
-          <div class="export-sub">Add them to your phone calendar in one tap.</div>
+          <div class="export-sub">
+            <template v-if="budget > 0">Planned spend <strong>${{ budget }}</strong> · </template>Add them to your phone calendar in one tap.
+          </div>
         </div>
         <button class="primary-btn export-btn" @click="exportIcs">
           <Icon name="download" :size="16" /> Export
         </button>
       </div>
 
-      <div v-if="kid && !savedList.length" class="empty">
+      <!-- Toggle to reveal past activities, shown only when some exist -->
+      <label v-if="kid && pastCount" class="switch-row past-toggle">
+        <span>Show past activities <span class="muted small">({{ pastCount }})</span></span>
+        <span class="switch">
+          <input v-model="showPast" type="checkbox" />
+          <span class="track"><span class="thumb" /></span>
+        </span>
+      </label>
+
+      <div v-if="kid && !allSaved.length" class="empty">
         <span class="empty-icon"><Icon name="calendar" :size="26" /></span>
         <p class="empty-title">Nothing saved for {{ kid.name }}</p>
         <p class="empty-sub">Save an activity in Browse to add it here.</p>
+      </div>
+
+      <div v-else-if="kid && !savedList.length" class="empty">
+        <span class="empty-icon"><Icon name="calendar" :size="26" /></span>
+        <p class="empty-title">No upcoming activities</p>
+        <p class="empty-sub">{{ kid.name }}'s saved activities have all finished. Turn on “Show past activities” to see them.</p>
       </div>
 
       <template v-else-if="kid">

@@ -14,6 +14,7 @@ import { reactive } from 'vue'
 import type { Activity, HolidaySet, KidProfile, SavedItem } from './types'
 import { getActivities, getHolidaySets } from './services/dataService'
 import * as storage from './services/storage'
+import { StorageWriteError } from './services/storage'
 
 interface State {
   activities: Activity[]
@@ -25,6 +26,8 @@ interface State {
   /** The activity open in the detail view, if any. */
   selectedActivityId: string | null
   ready: boolean
+  /** Transient message shown to the user (e.g. a save failure). */
+  toast: string | null
 }
 
 export const state = reactive<State>({
@@ -34,8 +37,33 @@ export const state = reactive<State>({
   saved: [],
   activeKidId: null,
   selectedActivityId: null,
-  ready: false
+  ready: false,
+  toast: null
 })
+
+let toastTimer: ReturnType<typeof setTimeout> | null = null
+
+/** Show a brief message to the user. Auto-dismisses. */
+export function notify(message: string): void {
+  state.toast = message
+  if (toastTimer) clearTimeout(toastTimer)
+  toastTimer = setTimeout(() => {
+    state.toast = null
+  }, 4000)
+}
+
+/** Run a storage mutation, surfacing write failures as a toast. */
+async function guard(fn: () => Promise<void>): Promise<void> {
+  try {
+    await fn()
+  } catch (err) {
+    if (err instanceof StorageWriteError) {
+      notify(err.message)
+    } else {
+      throw err
+    }
+  }
+}
 
 /* --------------------------- Detail view --------------------------- */
 
@@ -102,16 +130,40 @@ export function isSaved(kidId: string, activityId: string): boolean {
 
 export async function toggleSave(kidId: string, activityId: string): Promise<void> {
   if (isSaved(kidId, activityId)) {
-    await storage.unsaveActivity(kidId, activityId)
-    state.saved = state.saved.filter(
-      (s) => !(s.kidId === kidId && s.activityId === activityId)
-    )
+    await guard(async () => {
+      await storage.unsaveActivity(kidId, activityId)
+      state.saved = state.saved.filter(
+        (s) => !(s.kidId === kidId && s.activityId === activityId)
+      )
+    })
   } else {
-    await storage.saveActivity(kidId, activityId)
-    state.saved = [
-      ...state.saved,
-      { kidId, activityId, savedAt: new Date().toISOString() }
-    ]
+    await guard(async () => {
+      await storage.saveActivity(kidId, activityId)
+      state.saved = [
+        ...state.saved,
+        { kidId, activityId, savedAt: new Date().toISOString() }
+      ]
+    })
+  }
+}
+
+/** True when every kid (there must be at least one) has this activity saved. */
+export function isSavedForAll(activityId: string): boolean {
+  if (!state.kids.length) return false
+  return state.kids.every((k) => isSaved(k.id, activityId))
+}
+
+/**
+ * Whole-family toggle: if every kid already has it, remove it from all;
+ * otherwise add it for every kid who's missing it. Used in family browse mode.
+ */
+export async function toggleSaveForAll(activityId: string): Promise<void> {
+  if (!state.kids.length) return
+  const addToAll = !isSavedForAll(activityId)
+  for (const k of state.kids) {
+    const has = isSaved(k.id, activityId)
+    if (addToAll && !has) await toggleSave(k.id, activityId)
+    else if (!addToAll && has) await toggleSave(k.id, activityId)
   }
 }
 

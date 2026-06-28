@@ -85,4 +85,8 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
 
   <InstallPrompt />
   <ActivityDetail />
+
+  <Transition name="toast">
+    <div v-if="state.toast" class="toast" role="status" aria-live="polite">{{ state.toast }}</div>
+  </Transition>
 </template>
