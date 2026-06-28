@@ -1,75 +1,269 @@
 [
   {
-    "id": "act-001",
-    "name": "Winter Holiday Multisport Camp",
-    "provider": "Christchurch Sports Hub",
-    "description": "Full-day, action-packed camp rotating through basketball, soccer, dodgeball and indoor games. Bring lunch, a drink bottle and running shoes.",
-    "suburb": "Addington",
-    "lat": -43.5408,
-    "lng": 172.6171,
-    "ageMin": 6,
+    "id": "chc-gondola-2026w",
+    "name": "Kids Go Free at the Christchurch Gondola",
+    "provider": "Christchurch Attractions",
+    "description": "KidsFest offer: up to three children go free with each paying adult. Ride to the summit for scenic trails, the audio-visual Discovery Ride, a cafe and gift shop.",
+    "suburb": "Heathcote Valley",
+    "ageMin": 2,
     "ageMax": 12,
-    "categories": ["physical", "social"],
-    "cost": "paid",
-    "price": 55,
-    "registrationRequired": true,
-    "registrationUrl": "https://example.com/multisport-camp",
-    "startDate": "2026-07-06",
-    "endDate": "2026-07-10",
-    "sessionTimes": { "start": "09:00", "end": "15:00" }
-  },
-  {
-    "id": "act-002",
-    "name": "Make & Create Craft Mornings",
-    "provider": "Te Hāpua: Halswell Centre",
-    "description": "Drop-in craft sessions for younger kids — painting, collage and seasonal winter decorations. All materials supplied. Caregiver to stay with under-5s.",
-    "suburb": "Halswell",
-    "lat": -43.5462,
-    "lng": 172.5547,
-    "ageMin": 3,
-    "ageMax": 8,
-    "categories": ["craft", "social"],
+    "categories": [
+      "outdoors",
+      "educational"
+    ],
     "cost": "free",
     "registrationRequired": false,
-    "startDate": "2026-07-07",
-    "endDate": "2026-07-07",
-    "sessionTimes": { "start": "10:00", "end": "11:30" }
+    "registrationUrl": "https://www.christchurchattractions.nz/free-fun-for-kidsfest-2026/",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-19"
   },
   {
-    "id": "act-003",
-    "name": "Junior Coders: Game Builders",
-    "provider": "Tūranga City Library",
-    "description": "Hands-on intro to building a simple video game with Scratch. Laptops provided. Great for curious kids new to coding.",
+    "id": "chc-tram-2026w",
+    "name": "Kids Go Free at the Christchurch Tram",
+    "provider": "Christchurch Attractions",
+    "description": "KidsFest offer: up to three children free with a paying adult. All-day hop-on hop-off pass across 18 stops including the Margaret Mahy playground, Art Gallery and Turanga.",
     "suburb": "Christchurch Central",
-    "lat": -43.5309,
-    "lng": 172.6365,
-    "ageMin": 9,
-    "ageMax": 14,
-    "categories": ["educational", "science"],
+    "ageMin": 2,
+    "ageMax": 12,
+    "categories": [
+      "outdoors",
+      "social"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://www.christchurchattractions.nz/free-fun-for-kidsfest-2026/",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-19"
+  },
+  {
+    "id": "chc-parakiore-w1",
+    "name": "Parakiore Holiday Programme",
+    "provider": "Parakiore Recreation and Sport Centre",
+    "description": "Active, supervised days of sport, swimming and games at the city's new rec centre. Drop-off 8.30-9am, pick-up 3.30-4pm. Community Services / Hapai Access card discounts available.",
+    "suburb": "Christchurch Central",
+    "ageMin": 8,
+    "ageMax": 12,
+    "categories": [
+      "physical",
+      "social"
+    ],
+    "cost": "paid",
+    "price": 60,
+    "registrationRequired": true,
+    "registrationUrl": "https://recandsport.perfectgym.com.au/ClientPortal2/",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-09",
+    "sessionTimes": {
+      "start": "08:30",
+      "end": "16:00"
+    }
+  },
+  {
+    "id": "chc-adventurepark-mtb",
+    "name": "School Holiday Mountain Biking",
+    "provider": "Christchurch Adventure Park",
+    "description": "Coached mountain-biking days building confidence and bike-handling on the Port Hills. Riders should be comfortable at beginner level. Optional lunch ($12) and bike hire ($25).",
+    "suburb": "Cashmere",
+    "ageMin": 7,
+    "ageMax": 12,
+    "categories": [
+      "physical",
+      "outdoors"
+    ],
+    "cost": "paid",
+    "price": 90,
+    "registrationRequired": true,
+    "registrationUrl": "https://christchurchadventurepark.com/experiences/school-holiday-programmes/",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-09",
+    "sessionTimes": {
+      "start": "09:00",
+      "end": "15:30"
+    }
+  },
+  {
+    "id": "chc-airforce-world",
+    "name": "Around the World Holiday Programme",
+    "provider": "Air Force Museum of New Zealand",
+    "description": "Each day explores a different country the RNZAF has visited, with hands-on activities, crafts and stories. Held at the museum in Wigram.",
+    "suburb": "Wigram",
+    "ageMin": 5,
+    "ageMax": 12,
+    "categories": [
+      "educational",
+      "craft"
+    ],
     "cost": "free",
     "registrationRequired": true,
-    "registrationUrl": "https://example.com/junior-coders",
-    "startDate": "2026-07-14",
-    "endDate": "2026-07-14",
-    "sessionTimes": { "start": "13:00", "end": "15:00" }
+    "registrationUrl": "https://airforcemuseum.co.nz/kids-and-families/school-holiday-activities/",
+    "startDate": "2026-07-13",
+    "endDate": "2026-07-13",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "12:00"
+    }
   },
   {
-    "id": "act-004",
-    "name": "Holiday Theatre Workshop & Showcase",
-    "provider": "Court Theatre Education",
-    "description": "Three-day drama intensive ending in a short showcase for whānau. Builds confidence through games, improvisation and a group performance.",
-    "suburb": "Addington",
-    "lat": -43.5421,
-    "lng": 172.6128,
-    "ageMin": 8,
-    "ageMax": 16,
-    "categories": ["performing", "music", "social"],
+    "id": "chc-orana-moo",
+    "name": "Orana Wildlife Park - Miniature Moo Encounter",
+    "provider": "Orana Wildlife Park",
+    "description": "Get up close with miniature cattle and other friendly animals at New Zealand's only open-range zoo. Part of the KidsFest programme.",
+    "suburb": "McLeans Island",
+    "ageMin": 3,
+    "ageMax": 12,
+    "categories": [
+      "outdoors",
+      "science"
+    ],
     "cost": "paid",
-    "price": 120,
+    "price": 20,
+    "registrationRequired": false,
+    "registrationUrl": "https://www.oranawildlifepark.co.nz/",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-04",
+    "sessionTimes": {
+      "start": "10:30",
+      "end": "11:30"
+    }
+  },
+  {
+    "id": "chc-lib-imagination",
+    "name": "Imagination Station at Turanga",
+    "provider": "Christchurch City Libraries",
+    "description": "Free drop-in making sessions at Turanga - holiday brick school, movie making and more. Check the Imagination Station page for session times and to book a spot.",
+    "suburb": "Christchurch Central",
+    "ageMin": 5,
+    "ageMax": 12,
+    "categories": [
+      "craft",
+      "educational",
+      "science"
+    ],
+    "cost": "free",
     "registrationRequired": true,
-    "registrationUrl": "https://example.com/theatre-workshop",
-    "startDate": "2026-07-15",
-    "endDate": "2026-07-17",
-    "sessionTimes": { "start": "09:30", "end": "14:30" }
+    "registrationUrl": "https://my.christchurchcitylibraries.com/imagination-station/",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "12:00"
+    }
+  },
+  {
+    "id": "chc-reluctant-dragon",
+    "name": "The Reluctant Dragon",
+    "provider": "KidsFest",
+    "description": "A charming family theatre show for the winter holidays. A gentle, book-loving dragon would rather write poetry than fight knights.",
+    "suburb": "Christchurch Central",
+    "ageMin": 4,
+    "ageMax": 12,
+    "categories": [
+      "performing",
+      "music"
+    ],
+    "cost": "paid",
+    "price": 18,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/kidsfest/",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-05",
+    "sessionTimes": {
+      "start": "11:00",
+      "end": "12:00"
+    }
+  },
+  {
+    "id": "chc-uv-roller-disco",
+    "name": "UV Roller Disco",
+    "provider": "KidsFest",
+    "description": "Glow-in-the-dark roller skating to music in a fun, supervised session. Skates available. A high-energy KidsFest favourite.",
+    "suburb": "Addington",
+    "ageMin": 5,
+    "ageMax": 13,
+    "categories": [
+      "physical",
+      "music",
+      "social"
+    ],
+    "cost": "paid",
+    "price": 15,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/kidsfest/",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-04",
+    "sessionTimes": {
+      "start": "13:00",
+      "end": "15:00"
+    }
+  },
+  {
+    "id": "chc-try-self-defence",
+    "name": "Try Self Defence",
+    "provider": "KidsFest",
+    "description": "A free taster session teaching the basics of self defence, confidence and body awareness in a safe, encouraging environment.",
+    "suburb": "Riccarton",
+    "ageMin": 6,
+    "ageMax": 13,
+    "categories": [
+      "physical",
+      "educational"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/kidsfest/",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-04",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "11:00"
+    }
+  },
+  {
+    "id": "chc-pirates-mermaids",
+    "name": "Pirates and Mermaids Adventure - Lincoln",
+    "provider": "KidsFest",
+    "description": "Dress up and join a playful pirates-and-mermaids treasure adventure with games, crafts and stories for younger kids.",
+    "suburb": "Lincoln",
+    "ageMin": 3,
+    "ageMax": 8,
+    "categories": [
+      "craft",
+      "performing",
+      "social"
+    ],
+    "cost": "paid",
+    "price": 12,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/kidsfest/",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-04",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "11:30"
+    }
+  },
+  {
+    "id": "chc-cantonese-festival",
+    "name": "Cantonese Culture Children's Festival 2026",
+    "provider": "KidsFest",
+    "description": "A family celebration of Cantonese culture with performances, food, craft and activities for tamariki of all ages.",
+    "suburb": "Riccarton",
+    "ageMin": 2,
+    "ageMax": 12,
+    "categories": [
+      "craft",
+      "music",
+      "social",
+      "educational"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/kidsfest/",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-04",
+    "sessionTimes": {
+      "start": "11:00",
+      "end": "14:00"
+    }
   }
 ]
