@@ -561,5 +561,45 @@
     "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/telling-tales-kidsfest-treasure-hunt",
     "startDate": "2026-07-04",
     "endDate": "2026-07-19"
+  },
+  {
+    "id": "chc-telling-tales-reading",
+    "name": "Telling Tales Reading Challenge",
+    "provider": "Telling Tales",
+    "description": "Collect an entry form, read any books you like over the holidays, and return the form in-store to claim a goody bag. Free, all ages.",
+    "suburb": "Christchurch Central",
+    "lat": -43.5345,
+    "lng": 172.636,
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "educational",
+      "social"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/telling-tales-x-kidsfest-reading-challenge",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-19"
+  },
+  {
+    "id": "chc-telling-tales-bookcover",
+    "name": "Design-Your-Own Book Cover",
+    "provider": "Telling Tales",
+    "description": "Pick up an entry form and design your brightest, most original book cover these school holidays. Free, drop in any time.",
+    "suburb": "Christchurch Central",
+    "lat": -43.5345,
+    "lng": 172.636,
+    "ageMin": 3,
+    "ageMax": 12,
+    "categories": [
+      "craft",
+      "educational"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/telling-tales-kidsfest-design-your-own-book-cover",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-19"
   }
 ]
