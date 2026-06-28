@@ -46,6 +46,54 @@ export function todayISO(): string {
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`
 }
 
+function isoFromParts(y: number, m: number, d: number): string {
+  const p = (n: number) => String(n).padStart(2, '0')
+  return `${y}-${p(m + 1)}-${p(d)}`
+}
+
+/** Every ISO date from start to end inclusive. */
+export function eachDateInRange(start: string, end: string): string[] {
+  const out: string[] = []
+  const s = new Date(start + 'T00:00:00')
+  const e = new Date(end + 'T00:00:00')
+  if (Number.isNaN(s.getTime()) || Number.isNaN(e.getTime()) || s > e) {
+    return start ? [start] : out
+  }
+  const d = new Date(s)
+  // Cap to a sane span so a stray multi-month range can't loop forever.
+  for (let i = 0; i < 400 && d <= e; i++) {
+    out.push(isoFromParts(d.getFullYear(), d.getMonth(), d.getDate()))
+    d.setDate(d.getDate() + 1)
+  }
+  return out
+}
+
+export interface CalCell {
+  iso: string
+  day: number
+  inMonth: boolean
+}
+
+/** A 6×7 Monday-first grid of calendar cells for the given month (0-based). */
+export function monthGrid(year: number, month: number): CalCell[] {
+  const first = new Date(year, month, 1)
+  const lead = (first.getDay() + 6) % 7 // days before the 1st (Mon-first)
+  const cells: CalCell[] = []
+  for (let i = 0; i < 42; i++) {
+    const d = new Date(year, month, 1 - lead + i)
+    cells.push({
+      iso: isoFromParts(d.getFullYear(), d.getMonth(), d.getDate()),
+      day: d.getDate(),
+      inMonth: d.getMonth() === month
+    })
+  }
+  return cells
+}
+
+export function monthLabel(year: number, month: number): string {
+  return `${MONTHS[month]} ${year}`
+}
+
 export interface BreakInfo {
   set: HolidaySet
   brk: HolidayBreak

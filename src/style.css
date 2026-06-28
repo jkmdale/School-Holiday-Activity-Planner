@@ -553,6 +553,69 @@ input, select { font: inherit; color: var(--ink); }
 }
 @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 
+/* ============================ Calendar view ============================ */
+
+.view-toggle { margin-bottom: 1rem; }
+
+.cal { padding: 0.9rem; margin-bottom: 1.1rem; }
+.cal-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.cal-nav .icon-btn { font-size: 1.25rem; font-weight: 700; line-height: 1; }
+.cal-title { font-weight: 700; font-size: 1.02rem; }
+
+.cal-weekdays, .cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+.cal-weekdays { margin-bottom: 5px; }
+.cal-weekday {
+  text-align: center;
+  font-size: 0.64rem; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--faint);
+}
+
+.cal-cell {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.88rem; font-weight: 600; color: var(--ink-2);
+  transition: background 0.15s, transform 0.1s;
+}
+.cal-cell.dim { color: var(--faint); opacity: 0.45; }
+.cal-cell.today .cal-num { color: var(--accent); font-weight: 800; }
+.cal-cell.has { background: var(--accent-soft); color: var(--accent); cursor: pointer; }
+.cal-cell.has:active { transform: scale(0.92); }
+.cal-cell.on {
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+}
+.cal-cell.on .cal-num { color: #fff; }
+.cal-cell:disabled { cursor: default; }
+
+.cal-dot {
+  position: absolute;
+  top: 4px; right: 4px;
+  min-width: 15px; height: 15px;
+  padding: 0 3px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.56rem; font-weight: 700;
+  display: grid; place-items: center;
+}
+.cal-cell.on .cal-dot { background: rgba(255, 255, 255, 0.4); }
+
+.cal-day { margin-top: 0.4rem; }
+.cal-day-head { font-size: 0.95rem; font-weight: 800; margin: 0 0 0.7rem; color: var(--ink); }
+.cal-none { text-align: center; margin: 1rem auto 0; }
+
 /* ============================ Detail sheet ============================ */
 
 .modal-overlay {
