@@ -571,6 +571,99 @@ input, select { font: inherit; color: var(--ink); }
 .expand-enter-active, .expand-leave-active { transition: opacity 0.16s ease; }
 .expand-enter-from, .expand-leave-to { opacity: 0; }
 
+/* ============================ Install prompt ============================ */
+
+.install-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 0.5rem);
+  z-index: 19;
+  max-width: calc(var(--maxw) - 1rem);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--surface);
+  border: var(--bd);
+  border-radius: var(--r);
+  box-shadow: var(--sh);
+  padding: 0.7rem 0.8rem;
+}
+
+.install-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: none;
+  background: var(--brand);
+  color: #fff;
+  border: var(--bd2);
+  border-radius: 12px;
+  box-shadow: var(--sh-sm);
+}
+
+.install-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.install-text strong {
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.install-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.install-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: none;
+}
+
+.install-btn {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.install-x {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  background: #fff;
+  border: var(--bd2);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--ink);
+  box-shadow: var(--sh-sm);
+}
+
+.install-x:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 0.28s ease;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(140%);
+  opacity: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
