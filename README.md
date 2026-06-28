@@ -8,9 +8,20 @@ their phone calendar.
 This is the **MVP**: one city (Christchurch), no accounts, no backend. **All
 data stays on the device.**
 
-> **Status:** scaffold. The project structure, data layer, seed data and PWA
-> config are in place and the app runs. The full features (kid onboarding,
-> filtering, saving, `.ics` export) are built on top of this scaffold.
+## What it does
+
+1. **Onboarding** — add one or more kid profiles (name, age, interests). Stored
+   on the device.
+2. **Browse & filter** — pick a kid to auto-apply their age and interests, then
+   refine by suburb, category, cost, and which school-holiday break an activity
+   falls in.
+3. **Save** — tap the ♡ to save an activity to the selected kid; view a per-kid
+   saved plan.
+4. **Calendar export** — export a kid's saved plan to a `.ics` file (one VEVENT
+   per activity) that imports cleanly into Google and Apple Calendar.
+5. **Installable PWA** — add to the home screen; browsing works offline.
+
+The three tabs are **Browse**, **Plan** (saved), and **Kids**.
 
 ## Privacy by design
 
@@ -133,6 +144,21 @@ The 2026 dates are seeded from the supplied Christchurch holiday spreadsheet
 
 No build step or database is involved; the JSON is the source of truth for the
 MVP.
+
+## Calendar export (`services/ics.ts`)
+
+The headline feature builds an RFC 5545 `.ics` with one `VEVENT` per saved
+activity. Design choices made for clean Google/Apple import:
+
+- **Single-day with a session time** → a timed event in *floating* local time
+  (no `Z`/`TZID`), so "9:00am at the venue" stays 9:00am on any device.
+- **Multi-day camps** → an all-day event spanning the dates (`DTEND` is the
+  exclusive day after the last day, per the spec), with the daily time in the
+  description — this avoids the event looking like one long overnight session.
+- **Single-day with no time** → a one-day all-day event.
+
+Output uses CRLF endings and 75-octet line folding. Tested end-to-end (add kid
+→ filter → save → export) with a real browser download.
 
 ## Out of scope (deliberately)
 
