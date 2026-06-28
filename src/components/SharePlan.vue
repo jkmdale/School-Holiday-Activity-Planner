@@ -8,10 +8,14 @@ import { computed, ref } from 'vue'
 import qrcode from 'qrcode-generator'
 import { buildSharedPlan, buildShareUrl } from '../services/share'
 import { notify } from '../store'
+import { useModal } from '../composables/useModal'
 import Icon from './Icon.vue'
 
 const props = defineProps<{ open: boolean }>()
 const emit = defineEmits<{ (e: 'close'): void }>()
+
+const sheet = ref<HTMLElement | null>(null)
+useModal({ isOpen: () => props.open, onClose: () => emit('close'), container: sheet })
 
 const plan = computed(() => (props.open ? buildSharedPlan() : { v: 1, kids: [] }))
 const url = computed(() => (props.open ? buildShareUrl(plan.value) : ''))
@@ -53,7 +57,7 @@ async function nativeShare() {
 <template>
   <Transition name="sheet">
     <div v-if="open" class="modal-overlay" @click.self="emit('close')">
-      <section class="sheet" role="dialog" aria-modal="true" aria-label="Share plan">
+      <section ref="sheet" class="sheet" role="dialog" aria-modal="true" aria-label="Share plan">
         <div class="sheet-bar">
           <span class="sheet-grip" />
           <button class="install-x sheet-close" aria-label="Close" @click="emit('close')">✕</button>

@@ -9,10 +9,14 @@ import type { Category } from '../types'
 import { state, isSaved, toggleSave, openActivity, notify } from '../store'
 import { currentOrNextBreak, formatDate, formatTime, todayISO } from '../utils/dates'
 import { suggestDay } from '../utils/suggest'
+import { useModal } from '../composables/useModal'
 import Icon from './Icon.vue'
 
 const props = defineProps<{ open: boolean; kidIds: string[] }>()
 const emit = defineEmits<{ (e: 'close'): void }>()
+
+const sheet = ref<HTMLElement | null>(null)
+useModal({ isOpen: () => props.open, onClose: () => emit('close'), container: sheet })
 
 const today = todayISO()
 const excluded = ref<Set<string>>(new Set())
@@ -70,7 +74,7 @@ function saveAll() {
 <template>
   <Transition name="sheet">
     <div v-if="open" class="modal-overlay" @click.self="emit('close')">
-      <section class="sheet" role="dialog" aria-modal="true" aria-label="Suggest a day">
+      <section ref="sheet" class="sheet" role="dialog" aria-modal="true" aria-label="Suggest a day">
         <div class="sheet-bar">
           <span class="sheet-grip" />
           <button class="install-x sheet-close" aria-label="Close" @click="emit('close')">✕</button>

@@ -52,6 +52,9 @@ const distance = computed(() => {
         <Icon name="calendar" :size="15" />
         {{ formatDateRange(activity.startDate, activity.endDate) }}
       </span>
+      <span v-if="activity.datesTbc" class="tbc-badge" title="Dates not yet confirmed — check when booking">
+        Dates TBC
+      </span>
       <span v-if="activity.sessionTimes" class="meta">
         <Icon name="clock" :size="15" />
         {{ formatTime(activity.sessionTimes.start) }}–{{ formatTime(activity.sessionTimes.end) }}

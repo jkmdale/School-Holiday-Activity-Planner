@@ -4,11 +4,12 @@
  * Shows every field plus actions: save/remove for the active kid, add this one
  * event to the calendar, and open the registration link.
  */
-import { computed, onMounted, onBeforeUnmount, ref, watch, nextTick } from 'vue'
+import { computed, ref } from 'vue'
 import { state, selectedActivity, closeActivity, activeKid, isSaved, toggleSave } from '../store'
 import { formatDateRange, formatTime } from '../utils/dates'
 import { CATEGORY_META } from '../utils/categories'
 import { downloadIcs } from '../services/ics'
+import { useModal } from '../composables/useModal'
 import Icon from './Icon.vue'
 
 const activity = computed(() => selectedActivity())
@@ -21,63 +22,7 @@ const multiDay = computed(
 )
 
 const sheet = ref<HTMLElement | null>(null)
-// The element focused before the sheet opened, so we can restore it on close.
-let lastFocused: HTMLElement | null = null
-
-function focusables(): HTMLElement[] {
-  if (!sheet.value) return []
-  return Array.from(
-    sheet.value.querySelectorAll<HTMLElement>(
-      'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    )
-  ).filter((el) => el.offsetParent !== null || el === document.activeElement)
-}
-
-function onKey(e: KeyboardEvent) {
-  if (!activity.value) return
-  if (e.key === 'Escape') {
-    closeActivity()
-    return
-  }
-  if (e.key === 'Tab') {
-    // Trap focus within the sheet.
-    const items = focusables()
-    if (!items.length) return
-    const first = items[0]
-    const last = items[items.length - 1]
-    const active = document.activeElement as HTMLElement | null
-    if (e.shiftKey && (active === first || !sheet.value?.contains(active))) {
-      e.preventDefault()
-      last.focus()
-    } else if (!e.shiftKey && active === last) {
-      e.preventDefault()
-      first.focus()
-    }
-  }
-}
-
-// Lock background scroll and move focus into the sheet while it's open;
-// restore both when it closes.
-watch(activity, (now, prev) => {
-  if (now && !prev) {
-    lastFocused = document.activeElement as HTMLElement | null
-    document.body.classList.add('modal-open')
-    nextTick(() => {
-      const first = focusables()[0]
-      first?.focus()
-    })
-  } else if (!now && prev) {
-    document.body.classList.remove('modal-open')
-    lastFocused?.focus?.()
-    lastFocused = null
-  }
-})
-
-onMounted(() => window.addEventListener('keydown', onKey))
-onBeforeUnmount(() => {
-  window.removeEventListener('keydown', onKey)
-  document.body.classList.remove('modal-open')
-})
+useModal({ isOpen: () => !!activity.value, onClose: closeActivity, container: sheet })
 
 function exportOne() {
   const a = activity.value
@@ -115,7 +60,12 @@ function mapsUrl(lat: number, lng: number) {
               <Icon name="clock" :size="15" />
               {{ multiDay ? 'Daily ' : '' }}{{ formatTime(activity.sessionTimes.start) }}–{{ formatTime(activity.sessionTimes.end) }}
             </span>
+            <span v-if="activity.datesTbc" class="tbc-badge">Dates TBC</span>
           </div>
+
+          <p v-if="activity.datesTbc" class="tbc-note">
+            <Icon name="clock" :size="14" /> This provider runs selected days — confirm the exact date when you book.
+          </p>
 
           <div class="classify detail-tags">
             <span class="class-tag age">{{ activity.ageMin }}–{{ activity.ageMax }} yrs</span>

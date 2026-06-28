@@ -6,11 +6,15 @@
 import { computed, ref } from 'vue'
 import { state, importSummary, importSharedPlan, notify } from '../store'
 import { clearPlanHash } from '../services/share'
+import { useModal } from '../composables/useModal'
 import Icon from './Icon.vue'
 
 const plan = computed(() => state.pendingImport)
 const summary = computed(() => (plan.value ? importSummary(plan.value) : null))
 const busy = ref(false)
+
+const sheet = ref<HTMLElement | null>(null)
+useModal({ isOpen: () => !!plan.value, onClose: dismiss, container: sheet })
 
 async function confirmImport() {
   if (!plan.value || busy.value) return
@@ -31,7 +35,7 @@ function dismiss() {
 <template>
   <Transition name="sheet">
     <div v-if="plan" class="modal-overlay" @click.self="dismiss">
-      <section class="sheet" role="dialog" aria-modal="true" aria-label="Import shared plan">
+      <section ref="sheet" class="sheet" role="dialog" aria-modal="true" aria-label="Import shared plan">
         <div class="sheet-bar">
           <span class="sheet-grip" />
           <button class="install-x sheet-close" aria-label="Close" @click="dismiss">✕</button>

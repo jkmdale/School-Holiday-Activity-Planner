@@ -155,6 +155,13 @@ for (let r = 1; r < table.length; r++) {
     }
   }
 
+  // Optional: flag rows whose dates are representative / not yet confirmed.
+  const tbcRaw = get('datesTbc').toLowerCase()
+  if (tbcRaw && tbcRaw !== 'true' && tbcRaw !== 'false') {
+    fail(`datesTbc must be true or false (or blank) (got "${tbcRaw}")`)
+  }
+  const datesTbc = tbcRaw === 'true'
+
   const lat = get('lat')
   const lng = get('lng')
 
@@ -171,6 +178,7 @@ for (let r = 1; r < table.length; r++) {
   activity.startDate = startDate
   activity.endDate = endDate
   if (sessionTimes) activity.sessionTimes = sessionTimes
+  if (datesTbc) activity.datesTbc = true
 
   activities.push(activity)
 }

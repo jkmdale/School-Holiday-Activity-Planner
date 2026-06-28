@@ -16,16 +16,17 @@ export interface CategoryMeta {
 }
 
 // Grouped to the brand palette: coral (active), sage (outdoors/people),
-// sky (learning), peach (craft), butter (music).
+// sky (learning), peach (craft), butter (music). Text colours are darkened so
+// every label clears WCAG AA (≥4.5:1) on its soft tint.
 export const CATEGORY_META: Record<Category, CategoryMeta> = {
-  physical: { label: 'Physical', icon: 'activity', color: '#d1503a', bg: '#ffe4dd' },
-  performing: { label: 'Performing', icon: 'star', color: '#d1503a', bg: '#ffeae3' },
-  craft: { label: 'Craft', icon: 'scissors', color: '#c2722f', bg: '#ffecd9' },
-  music: { label: 'Music', icon: 'music', color: '#b08412', bg: '#fff3d4' },
-  outdoors: { label: 'Outdoors', icon: 'tree', color: '#5a8a55', bg: '#e7f1e5' },
-  social: { label: 'Social', icon: 'users', color: '#5a8a55', bg: '#edf4eb' },
-  educational: { label: 'Educational', icon: 'book', color: '#3f7cae', bg: '#e5f1fb' },
-  science: { label: 'Science', icon: 'flask', color: '#3f7cae', bg: '#eef6fd' }
+  physical: { label: 'Physical', icon: 'activity', color: '#b04331', bg: '#ffe4dd' },
+  performing: { label: 'Performing', icon: 'star', color: '#b44532', bg: '#ffeae3' },
+  craft: { label: 'Craft', icon: 'scissors', color: '#9b5b26', bg: '#ffecd9' },
+  music: { label: 'Music', icon: 'music', color: '#89670e', bg: '#fff3d4' },
+  outdoors: { label: 'Outdoors', icon: 'tree', color: '#4c7447', bg: '#e7f1e5' },
+  social: { label: 'Social', icon: 'users', color: '#4d7749', bg: '#edf4eb' },
+  educational: { label: 'Educational', icon: 'book', color: '#39709d', bg: '#e5f1fb' },
+  science: { label: 'Science', icon: 'flask', color: '#3a72a0', bg: '#eef6fd' }
 }
 
 /** A stable, warm avatar colour (brand palette) derived from a kid's name. */

@@ -46,6 +46,12 @@ export interface Activity {
   /** ISO date (YYYY-MM-DD). For a single-day activity, same as startDate. */
   endDate: string
   /**
+   * True when the dates are representative / not yet confirmed by the provider
+   * (e.g. a venue runs "selected days" — pick the exact date when booking).
+   * The UI badges these so the calendar and .ics stay trustworthy.
+   */
+  datesTbc?: boolean
+  /**
    * Optional daily session window, 24h "HH:MM". When present, calendar export
    * uses these times; otherwise the event is treated as all-day.
    */

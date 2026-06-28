@@ -392,7 +392,8 @@
     "sessionTimes": {
       "start": "10:30",
       "end": "14:30"
-    }
+    },
+    "datesTbc": true
   },
   {
     "id": "chc-willowbank-jnr-keeper-plus",
@@ -418,7 +419,8 @@
     "sessionTimes": {
       "start": "10:30",
       "end": "14:30"
-    }
+    },
+    "datesTbc": true
   },
   {
     "id": "chc-bunnings-kids-diy",
@@ -442,7 +444,8 @@
     "sessionTimes": {
       "start": "10:00",
       "end": "10:45"
-    }
+    },
+    "datesTbc": true
   },
   {
     "id": "chc-westfield-monty",
@@ -467,7 +470,8 @@
     "sessionTimes": {
       "start": "10:30",
       "end": "14:30"
-    }
+    },
+    "datesTbc": true
   },
   {
     "id": "chc-tall-tails-hunt",
