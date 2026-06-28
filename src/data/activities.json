@@ -422,10 +422,12 @@
   },
   {
     "id": "chc-bunnings-kids-diy",
-    "name": "Kids DIY Workshop",
+    "name": "Free Kids DIY Workshop",
     "provider": "Bunnings Warehouse",
-    "description": "Free hands-on woodworking and craft projects with a new theme each session. Recommended for ages 3-12; booking is compulsory. Workshops run most days over the holidays at Christchurch stores — check your local store page for dates and to book.",
-    "suburb": "Hornby",
+    "description": "Free hands-on woodworking and craft projects, with a new theme each session. Recommended for ages 3-12; booking is compulsory. Runs at Riccarton (64 Blenheim Rd), Christchurch Airport and Shirley stores, among others. Bunnings releases sessions about two weeks ahead, so check your store page for the exact July dates and to book.",
+    "suburb": "Riccarton",
+    "lat": -43.5388,
+    "lng": 172.588,
     "ageMin": 3,
     "ageMax": 12,
     "categories": [
@@ -438,8 +440,8 @@
     "startDate": "2026-07-09",
     "endDate": "2026-07-09",
     "sessionTimes": {
-      "start": "11:00",
-      "end": "12:00"
+      "start": "10:00",
+      "end": "10:45"
     }
   },
   {
