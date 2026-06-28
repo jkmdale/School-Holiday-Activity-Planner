@@ -564,11 +564,14 @@ input, select { font: inherit; color: var(--ink); }
 /* ============================ Export card ============================ */
 
 .export-card {
-  display: flex; align-items: center; justify-content: space-between; gap: 0.8rem;
+  display: flex; flex-direction: column; gap: 0.7rem;
   border-radius: var(--r);
   border-left: 3px solid var(--accent);
   padding: 0.95rem 1rem; margin-bottom: 1.1rem;
 }
+.export-head { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; }
+.export-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.export-actions .primary-btn { flex: 1; min-width: 8rem; justify-content: center; }
 .export-title { font-weight: 700; font-size: 1rem; color: var(--ink); }
 .export-sub { font-size: 0.82rem; color: var(--muted); }
 .export-btn { flex: none; }
@@ -800,3 +803,93 @@ input, select { font: inherit; color: var(--ink); }
 }
 .toast-enter-active, .toast-leave-active { transition: opacity 0.25s ease, transform 0.25s ease; }
 .toast-enter-from, .toast-leave-to { opacity: 0; transform: translateX(-50%) translateY(12px); }
+
+/* ============================ Share / import ============================ */
+
+.qr-wrap {
+  width: 220px; max-width: 70%;
+  margin: 0.4rem auto 1.1rem;
+  padding: 0.75rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+.qr-wrap svg { display: block; width: 100%; height: auto; }
+
+.import-list {
+  list-style: none; padding: 0; margin: 0 0 0.8rem;
+  display: flex; flex-direction: column; gap: 0.4rem;
+}
+.import-list li {
+  padding: 0.6rem 0.8rem;
+  border-radius: 12px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  font-size: 0.9rem; color: var(--ink-2);
+}
+
+/* ============================ Suggest a day ============================ */
+
+.suggest-cta {
+  display: flex; align-items: center; gap: 0.7rem; width: 100%;
+  padding: 0.75rem 0.9rem; margin-bottom: 0.9rem;
+  border-radius: 16px;
+  text-align: left;
+  background:
+    linear-gradient(120deg, rgba(255, 146, 118, 0.18), rgba(255, 203, 170, 0.22)),
+    var(--glass-strong);
+  border: 1px solid rgba(255, 122, 107, 0.32);
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  transition: transform 0.1s, box-shadow 0.2s;
+}
+.suggest-cta:active { transform: scale(0.99); }
+.suggest-spark {
+  flex: none; width: 34px; height: 34px; border-radius: 11px;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, #ff9276, #ff7a6b); color: #fff;
+}
+.suggest-cta-text { flex: 1; display: flex; flex-direction: column; line-height: 1.25; }
+.suggest-cta-text strong { font-size: 0.96rem; }
+.suggest-cta-text span { font-size: 0.78rem; color: var(--muted); }
+
+.suggest-list { display: flex; flex-direction: column; gap: 0.6rem; margin: 0.4rem 0 0.6rem; }
+.suggest-item {
+  text-align: left; width: 100%;
+  padding: 0.7rem 0.85rem;
+  border-radius: 14px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.1s;
+}
+.suggest-item:active { transform: scale(0.99); }
+.suggest-when {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: 0.74rem; font-weight: 700; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.suggest-name { font-weight: 700; font-size: 1rem; color: var(--ink); margin: 0.15rem 0 0.1rem; }
+.suggest-sub { font-size: 0.82rem; color: var(--muted); }
+
+/* ============================ Print ============================ */
+
+.print-summary { display: none; }
+
+@media print {
+  body { background: #fff !important; }
+  body * { visibility: hidden; }
+  .print-summary, .print-summary * { visibility: visible; }
+  .print-summary {
+    display: block !important;
+    position: absolute; top: 0; left: 0; width: 100%;
+    padding: 1.5rem; color: #000;
+  }
+  .print-summary h1 { font-size: 1.4rem; margin: 0 0 0.25rem; }
+  .print-summary .print-meta { color: #444; margin: 0 0 1rem; }
+  .print-summary ul { list-style: none; padding: 0; margin: 0; }
+  .print-summary li {
+    padding: 0.55rem 0; border-bottom: 1px solid #ddd;
+    font-size: 0.95rem; line-height: 1.45; break-inside: avoid;
+  }
+}

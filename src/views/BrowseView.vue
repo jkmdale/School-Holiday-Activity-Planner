@@ -3,14 +3,16 @@ import { computed, reactive, ref } from 'vue'
 import { CATEGORIES, type Category, type Cost } from '../types'
 import {
   state, activeKid, isSaved, toggleSave, openActivity,
-  isSavedForAll, toggleSaveForAll
+  isSavedForAll, toggleSaveForAll, requestLocation
 } from '../store'
 import { overlapsBreak, currentOrNextBreak, formatDateRange, todayISO } from '../utils/dates'
 import { CATEGORY_META, avatarColor, initial } from '../utils/categories'
+import { haversineKm } from '../utils/geo'
 import ActivityCard from '../components/ActivityCard.vue'
+import SuggestDay from '../components/SuggestDay.vue'
 import Icon from '../components/Icon.vue'
 
-type SortKey = 'soon' | 'price' | 'name'
+type SortKey = 'soon' | 'price' | 'name' | 'near'
 
 const filters = reactive<{
   q: string
@@ -51,6 +53,13 @@ const familyInterests = computed(
 function priceOf(a: { cost: Cost; price?: number }): number {
   return a.cost === 'free' ? 0 : a.price ?? 0
 }
+
+const showSuggest = ref(false)
+/** Whose day to plan: the whole family, the active kid, or nobody. */
+const suggestKidIds = computed(() => {
+  if (family.value) return state.kids.map((k) => k.id)
+  return state.activeKidId ? [state.activeKidId] : []
+})
 
 const suburbs = computed(() =>
   [...new Set(state.activities.map((a) => a.suburb))].sort()
@@ -100,13 +109,31 @@ const filtered = computed(() => {
   })
 })
 
+function distanceKm(a: { lat?: number; lng?: number }): number {
+  const c = state.coords
+  if (!c || a.lat == null || a.lng == null) return Number.POSITIVE_INFINITY
+  return haversineKm(c.lat, c.lng, a.lat, a.lng)
+}
+
 /** Filtered results in the chosen sort order. */
 const results = computed(() => {
   const arr = [...filtered.value]
   if (sort.value === 'price') return arr.sort((a, b) => priceOf(a) - priceOf(b))
   if (sort.value === 'name') return arr.sort((a, b) => a.name.localeCompare(b.name))
+  if (sort.value === 'near' && state.coords) {
+    return arr.sort((a, b) => distanceKm(a) - distanceKm(b))
+  }
   return arr.sort((a, b) => a.startDate.localeCompare(b.startDate)) // 'soon'
 })
+
+/** Switching to "nearest" asks for location the first time. */
+async function pickSort(key: SortKey) {
+  if (key === 'near' && !state.coords) {
+    const ok = await requestLocation()
+    if (!ok) return // stay on the current sort if permission was denied
+  }
+  sort.value = key
+}
 
 const activeFilterCount = computed(() => {
   let n = 0
@@ -213,6 +240,20 @@ function applyUpcoming() {
       <button v-if="filters.q" class="search-clear" aria-label="Clear search" @click="filters.q = ''">✕</button>
     </div>
 
+    <!-- Suggest a day -->
+    <button
+      v-if="state.kids.length"
+      class="suggest-cta"
+      @click="showSuggest = true"
+    >
+      <span class="suggest-spark"><Icon name="star" :size="16" /></span>
+      <span class="suggest-cta-text">
+        <strong>Suggest a day</strong>
+        <span>Auto-plan a day for {{ family ? 'the whole family' : (activeKid()?.name ?? 'your kid') }}</span>
+      </span>
+      <Icon name="arrow" :size="16" />
+    </button>
+
     <!-- Filter bar -->
     <div class="filter-bar">
       <button class="filter-toggle" :class="{ open: showFilters }" @click="showFilters = !showFilters">
@@ -246,9 +287,12 @@ function applyUpcoming() {
         <div class="field">
           <span class="field-label">Sort by</span>
           <div class="segmented">
-            <button :class="{ on: sort === 'soon' }" @click="sort = 'soon'">Soonest</button>
-            <button :class="{ on: sort === 'price' }" @click="sort = 'price'">Price</button>
-            <button :class="{ on: sort === 'name' }" @click="sort = 'name'">Name</button>
+            <button :class="{ on: sort === 'soon' }" @click="pickSort('soon')">Soonest</button>
+            <button :class="{ on: sort === 'price' }" @click="pickSort('price')">Price</button>
+            <button :class="{ on: sort === 'name' }" @click="pickSort('name')">Name</button>
+            <button :class="{ on: sort === 'near' }" @click="pickSort('near')">
+              {{ state.locating ? 'Locating…' : 'Nearest' }}
+            </button>
           </div>
         </div>
 
@@ -333,5 +377,7 @@ function applyUpcoming() {
         @open="openActivity(a.id)"
       />
     </TransitionGroup>
+
+    <SuggestDay :open="showSuggest" :kid-ids="suggestKidIds" @close="showSuggest = false" />
   </section>
 </template>

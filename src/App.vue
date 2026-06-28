@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue'
 import { state, init } from './store'
+import { readPlanFromHash } from './services/share'
 import KidsView from './views/KidsView.vue'
 import BrowseView from './views/BrowseView.vue'
 import SavedView from './views/SavedView.vue'
 import Icon from './components/Icon.vue'
 import InstallPrompt from './components/InstallPrompt.vue'
 import ActivityDetail from './components/ActivityDetail.vue'
+import ImportPlan from './components/ImportPlan.vue'
 
 type Tab = 'kids' | 'browse' | 'saved'
 const tab = ref<Tab>('browse')
@@ -15,7 +17,13 @@ const savedCount = computed(() => state.saved.length)
 
 onMounted(() => {
   init().then(() => {
-    if (!state.kids.length) tab.value = 'kids'
+    // A shared plan in the URL takes priority over the empty-state nudge.
+    const incoming = readPlanFromHash()
+    if (incoming) {
+      state.pendingImport = incoming
+    } else if (!state.kids.length) {
+      tab.value = 'kids'
+    }
   })
 })
 
@@ -85,6 +93,7 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
 
   <InstallPrompt />
   <ActivityDetail />
+  <ImportPlan />
 
   <Transition name="toast">
     <div v-if="state.toast" class="toast" role="status" aria-live="polite">{{ state.toast }}</div>

@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { Activity } from '../types'
 import { formatDateRange, formatTime } from '../utils/dates'
 import { CATEGORY_META } from '../utils/categories'
+import { haversineKm, formatDistance } from '../utils/geo'
+import { state } from '../store'
 import Icon from './Icon.vue'
 
-defineProps<{
+const props = defineProps<{
   activity: Activity
   /** Whether this activity is saved for the active kid. */
   saved?: boolean
@@ -15,6 +18,13 @@ defineProps<{
 }>()
 
 const emit = defineEmits<{ toggleSave: []; remove: []; open: [] }>()
+
+/** Distance from the device, shown only once the user opts into "near me". */
+const distance = computed(() => {
+  const a = props.activity
+  if (!state.coords || a.lat == null || a.lng == null) return null
+  return formatDistance(haversineKm(state.coords.lat, state.coords.lng, a.lat, a.lng))
+})
 </script>
 
 <template>
@@ -45,6 +55,10 @@ const emit = defineEmits<{ toggleSave: []; remove: []; open: [] }>()
       <span v-if="activity.sessionTimes" class="meta">
         <Icon name="clock" :size="15" />
         {{ formatTime(activity.sessionTimes.start) }}–{{ formatTime(activity.sessionTimes.end) }}
+      </span>
+      <span v-if="distance" class="meta">
+        <Icon name="pin" :size="15" />
+        {{ distance }}
       </span>
     </div>
 

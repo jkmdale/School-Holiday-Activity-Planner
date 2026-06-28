@@ -12,6 +12,7 @@
  */
 import { reactive } from 'vue'
 import type { Activity, HolidaySet, KidProfile, SavedItem } from './types'
+import type { SharedPlan } from './services/share'
 import { getActivities, getHolidaySets } from './services/dataService'
 import * as storage from './services/storage'
 import { StorageWriteError } from './services/storage'
@@ -28,6 +29,12 @@ interface State {
   ready: boolean
   /** Transient message shown to the user (e.g. a save failure). */
   toast: string | null
+  /** A plan received via a share link, awaiting the user's import decision. */
+  pendingImport: SharedPlan | null
+  /** The device's location, once the user opts into "near me". Never sent away. */
+  coords: { lat: number; lng: number } | null
+  /** True while a geolocation request is in flight. */
+  locating: boolean
 }
 
 export const state = reactive<State>({
@@ -38,8 +45,41 @@ export const state = reactive<State>({
   activeKidId: null,
   selectedActivityId: null,
   ready: false,
-  toast: null
+  toast: null,
+  pendingImport: null,
+  coords: null,
+  locating: false
 })
+
+/* ---------------------------- Geolocation ---------------------------- */
+
+/**
+ * Ask the browser for the device location (once). Resolves true on success.
+ * The coordinates stay in memory only — never persisted or transmitted.
+ */
+export function requestLocation(): Promise<boolean> {
+  return new Promise((resolve) => {
+    if (typeof navigator === 'undefined' || !navigator.geolocation) {
+      notify('Location is not available on this device.')
+      resolve(false)
+      return
+    }
+    state.locating = true
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        state.coords = { lat: pos.coords.latitude, lng: pos.coords.longitude }
+        state.locating = false
+        resolve(true)
+      },
+      () => {
+        state.locating = false
+        notify("Couldn't get your location. Check location permissions.")
+        resolve(false)
+      },
+      { enableHighAccuracy: false, timeout: 8000, maximumAge: 600000 }
+    )
+  })
+}
 
 let toastTimer: ReturnType<typeof setTimeout> | null = null
 
@@ -165,6 +205,41 @@ export async function toggleSaveForAll(activityId: string): Promise<void> {
     if (addToAll && !has) await toggleSave(k.id, activityId)
     else if (!addToAll && has) await toggleSave(k.id, activityId)
   }
+}
+
+/* ---------------------------- Plan import ---------------------------- */
+
+/** Summary of what a shared plan would add, for the import confirmation UI. */
+export function importSummary(plan: SharedPlan): { kids: number; activities: number } {
+  const known = new Set(state.activities.map((a) => a.id))
+  let activities = 0
+  for (const k of plan.kids) {
+    activities += k.activityIds.filter((id) => known.has(id)).length
+  }
+  return { kids: plan.kids.length, activities }
+}
+
+/**
+ * Merge a shared plan into local data. Kids are matched by name + age so
+ * re-importing doesn't duplicate them; only activity ids present in the
+ * catalogue are saved.
+ */
+export async function importSharedPlan(plan: SharedPlan): Promise<void> {
+  const known = new Set(state.activities.map((a) => a.id))
+  for (const sk of plan.kids) {
+    let kid = state.kids.find(
+      (k) => k.name.toLowerCase() === sk.name.toLowerCase() && k.age === sk.age
+    )
+    if (!kid) {
+      kid = await addKid({ name: sk.name, age: sk.age, interests: sk.interests ?? [] })
+    }
+    for (const id of sk.activityIds) {
+      if (known.has(id) && !isSaved(kid.id, id)) {
+        await toggleSave(kid.id, id)
+      }
+    }
+  }
+  state.pendingImport = null
 }
 
 /** Saved activities for a kid, newest first, resolved to full Activity objects. */

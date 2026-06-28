@@ -7,10 +7,17 @@ import {
   eachDateInRange, monthGrid, monthLabel, todayISO, formatDate
 } from '../utils/dates'
 import { avatarColor, initial } from '../utils/categories'
+import { formatDateRange, formatTime } from '../utils/dates'
 import ActivityCard from '../components/ActivityCard.vue'
 import Icon from '../components/Icon.vue'
+import SharePlan from '../components/SharePlan.vue'
 
 const today = todayISO()
+const showShare = ref(false)
+
+function printPlan() {
+  window.print()
+}
 
 const kid = computed(() => activeKid())
 const allSaved = computed(() => (kid.value ? savedActivitiesFor(kid.value.id) : []))
@@ -126,15 +133,25 @@ function exportIcs() {
       </div>
 
       <div class="export-card" v-if="savedList.length">
-        <div>
-          <div class="export-title">{{ savedList.length }} saved {{ savedList.length === 1 ? 'activity' : 'activities' }}</div>
-          <div class="export-sub">
-            <template v-if="budget > 0">Planned spend <strong>${{ budget }}</strong> · </template>Add them to your phone calendar in one tap.
+        <div class="export-head">
+          <div>
+            <div class="export-title">{{ savedList.length }} saved {{ savedList.length === 1 ? 'activity' : 'activities' }}</div>
+            <div class="export-sub">
+              <template v-if="budget > 0">Planned spend <strong>${{ budget }}</strong> · </template>Calendar, share or print in one tap.
+            </div>
           </div>
         </div>
-        <button class="primary-btn export-btn" @click="exportIcs">
-          <Icon name="download" :size="16" /> Export
-        </button>
+        <div class="export-actions">
+          <button class="primary-btn export-btn" @click="exportIcs">
+            <Icon name="download" :size="16" /> Calendar
+          </button>
+          <button class="primary-btn alt" @click="showShare = true">
+            <Icon name="share" :size="16" /> Share
+          </button>
+          <button class="primary-btn alt" @click="printPlan">
+            <Icon name="book" :size="16" /> Print
+          </button>
+        </div>
       </div>
 
       <!-- Toggle to reveal past activities, shown only when some exist -->
@@ -228,5 +245,22 @@ function exportIcs() {
         </div>
       </template>
     </template>
+
+    <!-- Print-only summary (hidden on screen, shown when printing) -->
+    <div v-if="kid && savedList.length" class="print-summary">
+      <h1>{{ kid.name }}'s holiday plan</h1>
+      <p class="print-meta">
+        {{ savedList.length }} {{ savedList.length === 1 ? 'activity' : 'activities' }}<template v-if="budget > 0"> · planned spend ${{ budget }}</template>
+      </p>
+      <ul>
+        <li v-for="a in savedList" :key="a.id">
+          <strong>{{ a.name }}</strong> — {{ a.provider }}, {{ a.suburb }}<br />
+          {{ formatDateRange(a.startDate, a.endDate) }}<template v-if="a.sessionTimes">, {{ formatTime(a.sessionTimes.start) }}–{{ formatTime(a.sessionTimes.end) }}</template>
+          · {{ a.cost === 'free' ? 'Free' : '$' + a.price }}
+        </li>
+      </ul>
+    </div>
+
+    <SharePlan :open="showShare" @close="showShare = false" />
   </section>
 </template>
