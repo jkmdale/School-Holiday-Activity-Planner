@@ -31,9 +31,16 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
     <div class="app-header-inner">
       <div class="wordmark">
         <span class="mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="20" height="20">
-            <rect x="3" y="4" width="18" height="18" rx="4" fill="currentColor" />
-            <path d="M8 13l3 3 5-6" fill="none" stroke="#fff" stroke-width="2.2"
+          <svg viewBox="0 0 48 48" width="34" height="34">
+            <defs>
+              <linearGradient id="mkbg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#6366f1" />
+                <stop offset="1" stop-color="#0ea5e9" />
+              </linearGradient>
+            </defs>
+            <rect width="48" height="48" rx="14" fill="url(#mkbg)" />
+            <rect x="13" y="18" width="22" height="4.5" rx="2.25" fill="#fbbf24" />
+            <path d="M16 27 l5.5 5.5 l11 -13" fill="none" stroke="#fff" stroke-width="4"
               stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </span>

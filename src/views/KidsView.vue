@@ -79,9 +79,12 @@ async function confirmRemove(kid: KidProfile) {
         <div class="kid-info">
           <div class="kid-name">{{ kid.name }} <span class="muted">· {{ kid.age }} yrs</span></div>
           <div class="classify" v-if="kid.interests.length">
-            <span v-for="c in kid.interests" :key="c" class="class-tag cat">
-              <span class="dot" :style="{ background: CATEGORY_META[c].color }" />{{ CATEGORY_META[c].label }}
-            </span>
+            <span
+              v-for="c in kid.interests"
+              :key="c"
+              class="class-tag cat"
+              :style="{ background: CATEGORY_META[c].bg, color: CATEGORY_META[c].color }"
+            >{{ CATEGORY_META[c].label }}</span>
           </div>
           <div class="muted small" v-else>No interests set</div>
         </div>
@@ -115,10 +118,9 @@ async function confirmRemove(kid: KidProfile) {
             type="button"
             class="class-tag cat choice"
             :class="{ on: draft.interests.includes(c) }"
+            :style="draft.interests.includes(c) ? { background: CATEGORY_META[c].bg, color: CATEGORY_META[c].color } : {}"
             @click="toggleInterest(c)"
-          >
-            <span class="dot" :style="{ background: CATEGORY_META[c].color }" />{{ CATEGORY_META[c].label }}
-          </button>
+          >{{ CATEGORY_META[c].label }}</button>
         </div>
       </div>
 

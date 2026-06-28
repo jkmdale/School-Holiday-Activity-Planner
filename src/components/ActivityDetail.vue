@@ -69,9 +69,12 @@ function mapsUrl(lat: number, lng: number) {
             <span class="class-tag" :class="activity.cost === 'free' ? 'free' : 'paid'">
               {{ activity.cost === 'free' ? 'Free' : `$${activity.price}` }}
             </span>
-            <span v-for="c in activity.categories" :key="c" class="class-tag cat">
-              <span class="dot" :style="{ background: CATEGORY_META[c].color }" />{{ CATEGORY_META[c].label }}
-            </span>
+            <span
+              v-for="c in activity.categories"
+              :key="c"
+              class="class-tag cat"
+              :style="{ background: CATEGORY_META[c].bg, color: CATEGORY_META[c].color }"
+            >{{ CATEGORY_META[c].label }}</span>
           </div>
 
           <p class="detail-desc">{{ activity.description }}</p>
