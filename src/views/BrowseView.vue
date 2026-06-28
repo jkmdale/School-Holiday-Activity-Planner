@@ -14,13 +14,15 @@ const filters = reactive<{
   cost: Cost | 'all'
   holidaySetId: string
   breakName: string
+  date: string
 }>({
   matchInterests: true,
   suburb: '',
   category: '',
   cost: 'all',
   holidaySetId: '',
-  breakName: ''
+  breakName: '',
+  date: ''
 })
 
 const showFilters = ref(false)
@@ -50,6 +52,7 @@ const filtered = computed(() => {
     if (filters.category && !a.categories.includes(filters.category)) return false
     if (filters.cost !== 'all' && a.cost !== filters.cost) return false
     if (selectedBreak.value && !overlapsBreak(a, selectedBreak.value)) return false
+    if (filters.date && !(a.startDate <= filters.date && a.endDate >= filters.date)) return false
     return true
   })
 })
@@ -60,6 +63,7 @@ const activeFilterCount = computed(() => {
   if (filters.category) n++
   if (filters.cost !== 'all') n++
   if (filters.breakName) n++
+  if (filters.date) n++
   return n
 })
 
@@ -74,7 +78,8 @@ function resetFilters() {
     category: '',
     cost: 'all',
     holidaySetId: '',
-    breakName: ''
+    breakName: '',
+    date: ''
   })
 }
 
@@ -155,6 +160,14 @@ function applyUpcoming() {
             <button :class="{ on: filters.cost === 'paid' }" @click="filters.cost = 'paid'">Paid</button>
           </div>
         </div>
+
+        <label class="field">
+          <span class="field-label">On a particular day</span>
+          <div class="date-row">
+            <input v-model="filters.date" type="date" />
+            <button v-if="filters.date" class="link-btn" @click="filters.date = ''">Clear</button>
+          </div>
+        </label>
 
         <div class="filter-grid">
           <label class="field compact">

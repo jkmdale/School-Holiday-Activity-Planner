@@ -397,6 +397,7 @@ input, select { font: inherit; color: var(--ink); }
 .field-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .field input[type="text"],
 .field input[type="number"],
+.field input[type="date"],
 .field select {
   padding: 0.6rem 0.7rem;
   border: 1px solid var(--hairline-2);
@@ -417,6 +418,9 @@ input, select { font: inherit; color: var(--ink); }
   background-position: right 0.7rem center;
   padding-right: 1.8rem;
 }
+.date-row { display: flex; align-items: center; gap: 0.6rem; }
+.date-row input[type="date"] { flex: 1; }
+
 .form { padding: 1.1rem; }
 .form-actions { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; margin-top: 0.3rem; }
 
