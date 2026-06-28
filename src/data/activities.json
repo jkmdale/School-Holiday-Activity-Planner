@@ -367,5 +367,104 @@
       "start": "10:00",
       "end": "10:45"
     }
+  },
+  {
+    "id": "chc-willowbank-jnr-keeper",
+    "name": "Junior Keeper Programme",
+    "provider": "Willowbank Wildlife Reserve",
+    "description": "Spend a full day working alongside a keeper feeding and caring for animals and birds. Lunch and a Willowbank hat included. Runs on selected days these July holidays — pick your date when booking.",
+    "suburb": "Harewood",
+    "lat": -43.4575,
+    "lng": 172.568,
+    "ageMin": 10,
+    "ageMax": 14,
+    "categories": [
+      "outdoors",
+      "science",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 90,
+    "registrationRequired": true,
+    "registrationUrl": "https://book.willowbank.co.nz/",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "10:30",
+      "end": "14:30"
+    }
+  },
+  {
+    "id": "chc-willowbank-jnr-keeper-plus",
+    "name": "Junior Keeper Plus",
+    "provider": "Willowbank Wildlife Reserve",
+    "description": "All the Junior Keeper activities plus bees and beekeeping instruction. Full day, with lunch and a Willowbank hat included. Runs on selected days these July holidays — pick your date when booking.",
+    "suburb": "Harewood",
+    "lat": -43.4575,
+    "lng": 172.568,
+    "ageMin": 10,
+    "ageMax": 14,
+    "categories": [
+      "outdoors",
+      "science",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 125,
+    "registrationRequired": true,
+    "registrationUrl": "https://book.willowbank.co.nz/",
+    "startDate": "2026-07-15",
+    "endDate": "2026-07-15",
+    "sessionTimes": {
+      "start": "10:30",
+      "end": "14:30"
+    }
+  },
+  {
+    "id": "chc-bunnings-kids-diy",
+    "name": "Kids DIY Workshop",
+    "provider": "Bunnings Warehouse",
+    "description": "Free hands-on woodworking and craft projects with a new theme each session. Recommended for ages 3-12; booking is compulsory. Workshops run most days over the holidays at Christchurch stores — check your local store page for dates and to book.",
+    "suburb": "Hornby",
+    "ageMin": 3,
+    "ageMax": 12,
+    "categories": [
+      "craft",
+      "educational"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://www.bunnings.co.nz/services/in-store/diy-workshops",
+    "startDate": "2026-07-09",
+    "endDate": "2026-07-09",
+    "sessionTimes": {
+      "start": "11:00",
+      "end": "12:00"
+    }
+  },
+  {
+    "id": "chc-westfield-monty",
+    "name": "Monty the Monkey Craft & Discovery",
+    "provider": "Westfield Riccarton",
+    "description": "Free craft and discovery activities for younger kids with Monty the Monkey. Drop in and book a 20-minute session at Centre Court on the day. Runs daily through the July school holidays, 10.30am-2.30pm.",
+    "suburb": "Riccarton",
+    "lat": -43.53,
+    "lng": 172.587,
+    "ageMin": 2,
+    "ageMax": 10,
+    "categories": [
+      "craft",
+      "educational",
+      "social"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://www.westfield.co.nz/riccarton",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-19",
+    "sessionTimes": {
+      "start": "10:30",
+      "end": "14:30"
+    }
   }
 ]
