@@ -84,7 +84,7 @@ async function confirmRemove(kid: KidProfile) {
               :key="c"
               class="class-tag cat"
               :style="{ background: CATEGORY_META[c].bg, color: CATEGORY_META[c].color }"
-            >{{ CATEGORY_META[c].label }}</span>
+            ><Icon :name="CATEGORY_META[c].icon" :size="13" />{{ CATEGORY_META[c].label }}</span>
           </div>
           <div class="muted small" v-else>No interests set</div>
         </div>
@@ -120,7 +120,7 @@ async function confirmRemove(kid: KidProfile) {
             :class="{ on: draft.interests.includes(c) }"
             :style="draft.interests.includes(c) ? { background: CATEGORY_META[c].bg, color: CATEGORY_META[c].color } : {}"
             @click="toggleInterest(c)"
-          >{{ CATEGORY_META[c].label }}</button>
+          ><Icon :name="CATEGORY_META[c].icon" :size="13" />{{ CATEGORY_META[c].label }}</button>
         </div>
       </div>
 

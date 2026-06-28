@@ -29,7 +29,25 @@ const PATHS: Record<string, string> = {
     '<polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>',
   arrow: '<line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>',
   plus: '<line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>',
-  check: '<polyline points="20 6 9 17 4 12"/>'
+  check: '<polyline points="20 6 9 17 4 12"/>',
+  share:
+    '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/>',
+  tag:
+    '<path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/>',
+  /* category icons */
+  activity: '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
+  tree:
+    '<path d="M12 3l4 6h-3l3.5 5.5h-3L16 19H8l2.5-4.5h-3L11 9H8z"/><line x1="12" y1="19" x2="12" y2="22"/>',
+  book:
+    '<path d="M3 4.5A2 2 0 0 1 5 3h6v15H5a2 2 0 0 0-2 2z"/><path d="M21 4.5A2 2 0 0 0 19 3h-6v15h6a2 2 0 0 1 2 2z"/>',
+  flask:
+    '<path d="M9 3h6"/><path d="M10 3v6l-5.2 9A2 2 0 0 0 6.6 21h10.8a2 2 0 0 0 1.8-3l-5.2-9V3"/><line x1="8" y1="15" x2="16" y2="15"/>',
+  scissors:
+    '<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/>',
+  music: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
+  star: '<polygon points="12 2 15 9 22 9.3 16.5 14 18.3 21 12 17.2 5.7 21 7.5 14 2 9.3 9 9"/>',
+  smile:
+    '<circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9.5" x2="9" y2="9.5"/><line x1="15" y1="9.5" x2="15" y2="9.5"/>'
 }
 
 const inner = computed(() => PATHS[props.name] ?? '')

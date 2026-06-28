@@ -61,7 +61,7 @@ const emit = defineEmits<{ toggleSave: []; remove: []; open: [] }>()
         :key="c"
         class="class-tag cat"
         :style="{ background: CATEGORY_META[c].bg, color: CATEGORY_META[c].color }"
-      >{{ CATEGORY_META[c].label }}</span>
+      ><Icon :name="CATEGORY_META[c].icon" :size="13" />{{ CATEGORY_META[c].label }}</span>
     </div>
 
     <div class="card-foot">

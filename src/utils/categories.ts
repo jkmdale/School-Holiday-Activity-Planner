@@ -7,28 +7,31 @@ import type { Category } from '../types'
 
 export interface CategoryMeta {
   label: string
+  /** Icon name in Icon.vue. */
   icon: string
-  /** Text/― accent colour. */
+  /** Readable text colour on the soft tint. */
   color: string
-  /** Soft tint background. */
+  /** Soft tint background (brand palette). */
   bg: string
 }
 
+// Grouped to the brand palette: coral (active), sage (outdoors/people),
+// sky (learning), peach (craft), butter (music).
 export const CATEGORY_META: Record<Category, CategoryMeta> = {
-  physical: { label: 'Physical', icon: '🏃', color: '#c2410c', bg: '#fff1e6' },
-  craft: { label: 'Craft', icon: '🎨', color: '#9333ea', bg: '#f6ecfe' },
-  music: { label: 'Music', icon: '🎵', color: '#db2777', bg: '#fdebf4' },
-  outdoors: { label: 'Outdoors', icon: '🌳', color: '#15803d', bg: '#e8f6ec' },
-  educational: { label: 'Educational', icon: '📚', color: '#1d4ed8', bg: '#e8f0fe' },
-  performing: { label: 'Performing', icon: '🎭', color: '#b91c1c', bg: '#fdeaea' },
-  science: { label: 'Science', icon: '🔬', color: '#0e7490', bg: '#e3f4f7' },
-  social: { label: 'Social', icon: '👋', color: '#a16207', bg: '#fbf3df' }
+  physical: { label: 'Physical', icon: 'activity', color: '#d1503a', bg: '#ffe4dd' },
+  performing: { label: 'Performing', icon: 'star', color: '#d1503a', bg: '#ffeae3' },
+  craft: { label: 'Craft', icon: 'scissors', color: '#c2722f', bg: '#ffecd9' },
+  music: { label: 'Music', icon: 'music', color: '#b08412', bg: '#fff3d4' },
+  outdoors: { label: 'Outdoors', icon: 'tree', color: '#5a8a55', bg: '#e7f1e5' },
+  social: { label: 'Social', icon: 'users', color: '#5a8a55', bg: '#edf4eb' },
+  educational: { label: 'Educational', icon: 'book', color: '#3f7cae', bg: '#e5f1fb' },
+  science: { label: 'Science', icon: 'flask', color: '#3f7cae', bg: '#eef6fd' }
 }
 
-/** A stable, muted avatar colour derived from a kid's name. */
+/** A stable, warm avatar colour (brand palette) derived from a kid's name. */
 const AVATAR_COLORS = [
-  '#3f6f68', '#5b5f8a', '#8a5b73', '#9a6b4a',
-  '#4a6d8a', '#5a7a55', '#8a7340', '#4f7a7d'
+  '#FF7A6B', '#E8943B', '#6FA368', '#4F9CC9',
+  '#E2685E', '#C79A2E', '#5C97B0', '#D98E5A'
 ]
 
 export function avatarColor(name: string): string {

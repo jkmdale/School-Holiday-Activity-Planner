@@ -1,39 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#6366f1"/>
-      <stop offset=".55" stop-color="#4f46e5"/>
-      <stop offset="1" stop-color="#0ea5e9"/>
+      <stop offset="0" stop-color="#ffd9b0"/>
+      <stop offset=".55" stop-color="#ffae8a"/>
+      <stop offset="1" stop-color="#ff7a6b"/>
     </linearGradient>
-    <linearGradient id="strip" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#fb7185"/>
-      <stop offset="1" stop-color="#fbbf24"/>
-    </linearGradient>
-    <radialGradient id="glow" cx=".82" cy=".16" r=".62">
-      <stop offset="0" stop-color="#fb7185" stop-opacity=".55"/>
-      <stop offset="1" stop-color="#fb7185" stop-opacity="0"/>
+    <radialGradient id="sky" cx=".8" cy=".22" r=".6">
+      <stop offset="0" stop-color="#b9ddf7" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#b9ddf7" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffffff" stop-opacity=".22"/>
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".25"/>
       <stop offset=".55" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
-    <clipPath id="body"><rect x="110" y="150" width="292" height="248" rx="40"/></clipPath>
+    <clipPath id="body"><rect x="108" y="150" width="296" height="250" rx="44"/></clipPath>
   </defs>
 
   <rect width="512" height="512" rx="120" fill="url(#bg)"/>
-  <rect width="512" height="512" rx="120" fill="url(#glow)"/>
+  <rect width="512" height="512" rx="120" fill="url(#sky)"/>
   <rect width="512" height="512" rx="120" fill="url(#sheen)"/>
 
   <!-- binding rings -->
-  <rect x="172" y="116" width="26" height="72" rx="13" fill="#ffffff"/>
-  <rect x="314" y="116" width="26" height="72" rx="13" fill="#ffffff"/>
+  <rect x="170" y="116" width="26" height="72" rx="13" fill="#e0563f"/>
+  <rect x="316" y="116" width="26" height="72" rx="13" fill="#e0563f"/>
 
   <!-- calendar body -->
-  <rect x="110" y="150" width="292" height="248" rx="40" fill="#ffffff"/>
-  <!-- warm header strip -->
-  <rect x="110" y="150" width="292" height="60" fill="url(#strip)" clip-path="url(#body)"/>
+  <rect x="108" y="150" width="296" height="250" rx="44" fill="#ffffff"/>
+  <!-- coral header strip -->
+  <rect x="108" y="150" width="296" height="58" fill="#ff8f7e" clip-path="url(#body)"/>
 
-  <!-- check -->
-  <path d="M186 312 l44 46 l98 -112" fill="none" stroke="#4f46e5"
-    stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- sun -->
+  <g transform="translate(256 300)">
+    <g stroke="#ffc23d" stroke-width="14" stroke-linecap="round">
+      <line x1="0" y1="-74" x2="0" y2="-58"/>
+      <line x1="52" y1="-52" x2="41" y2="-41"/>
+      <line x1="74" y1="0" x2="58" y2="0"/>
+      <line x1="52" y1="52" x2="41" y2="41"/>
+      <line x1="-52" y1="52" x2="-41" y2="41"/>
+      <line x1="-74" y1="0" x2="-58" y2="0"/>
+      <line x1="-52" y1="-52" x2="-41" y2="-41"/>
+    </g>
+    <circle r="44" fill="#ffd23f"/>
+    <circle cx="-15" cy="-6" r="5.5" fill="#e0563f"/>
+    <circle cx="15" cy="-6" r="5.5" fill="#e0563f"/>
+    <path d="M-16 12 q16 18 32 0" fill="none" stroke="#e0563f" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- sage leaf -->
+  <path d="M150 384 q-30 -34 6 -64 q30 30 -6 64 z" fill="#a7c7a1"/>
 </svg>

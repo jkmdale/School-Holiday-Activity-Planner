@@ -34,14 +34,16 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
           <svg viewBox="0 0 48 48" width="34" height="34">
             <defs>
               <linearGradient id="mkbg" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#6366f1" />
-                <stop offset="1" stop-color="#0ea5e9" />
+                <stop offset="0" stop-color="#ff9276" />
+                <stop offset="1" stop-color="#ff7a6b" />
               </linearGradient>
             </defs>
             <rect width="48" height="48" rx="14" fill="url(#mkbg)" />
-            <rect x="13" y="18" width="22" height="4.5" rx="2.25" fill="#fbbf24" />
-            <path d="M16 27 l5.5 5.5 l11 -13" fill="none" stroke="#fff" stroke-width="4"
-              stroke-linecap="round" stroke-linejoin="round" />
+            <rect x="11" y="14" width="26" height="20" rx="5" fill="#fff" />
+            <rect x="11" y="14" width="26" height="6" rx="3" fill="#ffe69a" />
+            <circle cx="24" cy="26" r="4.4" fill="#ffd23f" />
+            <path d="M22.4 26.4s0.7 1 1.6 1 1.6-1 1.6-1" fill="none" stroke="#e0563f"
+              stroke-width="1.1" stroke-linecap="round" />
           </svg>
         </span>
         <span class="wordmark-text">Holiday&nbsp;Planner</span>
