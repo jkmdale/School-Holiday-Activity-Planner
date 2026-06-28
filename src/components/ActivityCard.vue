@@ -32,7 +32,7 @@ const distance = computed(() => {
     @click="emit('open')" @keydown.enter="emit('open')">
     <div class="card-head">
       <div class="head-text">
-        <h2>{{ activity.name }}</h2>
+        <h2>{{ activity.name }} <span v-if="activity.custom" class="mine-badge">Yours</span></h2>
         <p class="provider">{{ activity.provider }} · {{ activity.suburb }}</p>
       </div>
       <button
@@ -82,8 +82,11 @@ const distance = computed(() => {
     </div>
 
     <div class="card-foot">
+      <span v-if="activity.custom" class="reg-note ok">
+        <Icon name="star" :size="14" /> Your event
+      </span>
       <a
-        v-if="activity.registrationRequired && activity.registrationUrl"
+        v-else-if="activity.registrationRequired && activity.registrationUrl"
         :href="activity.registrationUrl"
         target="_blank"
         rel="noopener noreferrer"

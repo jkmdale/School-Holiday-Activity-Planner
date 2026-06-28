@@ -5,7 +5,10 @@
  * event to the calendar, and open the registration link.
  */
 import { computed, ref } from 'vue'
-import { state, selectedActivity, closeActivity, activeKid, isSaved, toggleSave } from '../store'
+import {
+  state, selectedActivity, closeActivity, activeKid, isSaved, toggleSave,
+  openEventForm, removeCustomActivity
+} from '../store'
 import { formatDateRange, formatTime } from '../utils/dates'
 import { CATEGORY_META } from '../utils/categories'
 import { downloadIcs } from '../services/ics'
@@ -34,6 +37,18 @@ function exportOne() {
 function mapsUrl(lat: number, lng: number) {
   return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`
 }
+
+function editEvent() {
+  if (activity.value) openEventForm(activity.value.id)
+}
+
+async function deleteEvent() {
+  const a = activity.value
+  if (!a) return
+  if (confirm(`Delete "${a.name}"? This removes it from every plan on this device.`)) {
+    await removeCustomActivity(a.id)
+  }
+}
 </script>
 
 <template>
@@ -46,7 +61,10 @@ function mapsUrl(lat: number, lng: number) {
         </div>
 
         <div class="sheet-body">
-          <h2 class="detail-title">{{ activity.name }}</h2>
+          <h2 class="detail-title">
+            {{ activity.name }}
+            <span v-if="activity.custom" class="mine-badge">Yours</span>
+          </h2>
           <p class="detail-provider">
             <Icon name="pin" :size="15" /> {{ activity.provider }} · {{ activity.suburb }}, Christchurch
           </p>
@@ -82,8 +100,8 @@ function mapsUrl(lat: number, lng: number) {
 
           <p class="detail-desc">{{ activity.description }}</p>
 
-          <!-- Booking -->
-          <div class="detail-line">
+          <!-- Booking (catalogue activities only) -->
+          <div class="detail-line" v-if="!activity.custom">
             <span class="overline">Booking</span>
             <template v-if="activity.registrationRequired && activity.registrationUrl">
               <a :href="activity.registrationUrl" target="_blank" rel="noopener noreferrer" class="reg-link">
@@ -117,6 +135,16 @@ function mapsUrl(lat: number, lng: number) {
 
             <button class="primary-btn alt" @click="exportOne">
               <Icon name="download" :size="16" /> Add to calendar
+            </button>
+          </div>
+
+          <!-- Manage your own events -->
+          <div v-if="activity.custom" class="detail-actions">
+            <button class="primary-btn ghost" @click="editEvent">
+              <Icon name="edit" :size="16" /> Edit event
+            </button>
+            <button class="primary-btn danger-btn" @click="deleteEvent">
+              <Icon name="trash" :size="16" /> Delete
             </button>
           </div>
 

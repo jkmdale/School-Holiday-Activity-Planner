@@ -10,10 +10,11 @@
  * localStorage is used for the MVP (small data, simple, synchronous). The async
  * Promise signatures leave room to swap in IndexedDB later without UI churn.
  */
-import type { KidProfile, SavedItem } from '../types'
+import type { Activity, KidProfile, SavedItem } from '../types'
 
 const KIDS_KEY = 'chp.kids.v1'
 const SAVED_KEY = 'chp.saved.v1'
+const CUSTOM_KEY = 'chp.custom.v1'
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -100,4 +101,30 @@ export async function unsaveActivity(kidId: string, activityId: string): Promise
     SAVED_KEY,
     saved.filter((s) => !(s.kidId === kidId && s.activityId === activityId))
   )
+}
+
+/* -------------------- Custom (user-created) activities -------------------- */
+
+export async function getCustom(): Promise<Activity[]> {
+  return read<Activity[]>(CUSTOM_KEY, [])
+}
+
+export async function addCustom(data: Omit<Activity, 'id'>): Promise<Activity> {
+  const list = await getCustom()
+  const created: Activity = { ...data, id: `custom-${newId()}`, custom: true }
+  write(CUSTOM_KEY, [...list, created])
+  return created
+}
+
+export async function updateCustom(activity: Activity): Promise<void> {
+  const list = await getCustom()
+  write(CUSTOM_KEY, list.map((a) => (a.id === activity.id ? activity : a)))
+}
+
+export async function removeCustom(activityId: string): Promise<void> {
+  const list = await getCustom()
+  write(CUSTOM_KEY, list.filter((a) => a.id !== activityId))
+  // Cascade: drop any saved references to this custom event.
+  const saved = await getSaved()
+  write(SAVED_KEY, saved.filter((s) => s.activityId !== activityId))
 }

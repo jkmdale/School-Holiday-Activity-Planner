@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue'
-import { state, init } from './store'
+import { state, init, closeEventForm, editingEvent } from './store'
 import { readPlanFromHash } from './services/share'
 import KidsView from './views/KidsView.vue'
 import BrowseView from './views/BrowseView.vue'
@@ -9,6 +9,9 @@ import Icon from './components/Icon.vue'
 import InstallPrompt from './components/InstallPrompt.vue'
 import ActivityDetail from './components/ActivityDetail.vue'
 import ImportPlan from './components/ImportPlan.vue'
+import CustomEventForm from './components/CustomEventForm.vue'
+
+const eventFormKids = computed(() => (state.activeKidId ? [state.activeKidId] : []))
 
 type Tab = 'kids' | 'browse' | 'saved'
 const tab = ref<Tab>('browse')
@@ -94,6 +97,12 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
   <InstallPrompt />
   <ActivityDetail />
   <ImportPlan />
+  <CustomEventForm
+    :open="state.eventForm.open"
+    :editing="editingEvent()"
+    :default-kid-ids="eventFormKids"
+    @close="closeEventForm"
+  />
 
   <Transition name="toast">
     <div v-if="state.toast" class="toast" role="status" aria-live="polite">{{ state.toast }}</div>

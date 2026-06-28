@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import type { Activity } from '../types'
-import { state, activeKid, savedActivitiesFor, toggleSave, openActivity } from '../store'
+import { state, activeKid, savedActivitiesFor, toggleSave, openActivity, openEventForm } from '../store'
 import { downloadIcs } from '../services/ics'
 import {
   eachDateInRange, monthGrid, monthLabel, todayISO, formatDate
@@ -131,6 +131,10 @@ function exportIcs() {
           {{ k.name }}
         </button>
       </div>
+
+      <button class="add-event-btn" @click="openEventForm()">
+        <Icon name="plus" :size="16" /> Add your own event
+      </button>
 
       <div class="export-card" v-if="savedList.length">
         <div class="export-head">

@@ -52,6 +52,12 @@ export interface Activity {
    */
   datesTbc?: boolean
   /**
+   * True for activities the parent created themselves (their own events/plans).
+   * LOCAL ONLY — these never came from the public catalogue and never leave the
+   * device. They're editable/deletable, unlike catalogue activities.
+   */
+  custom?: boolean
+  /**
    * Optional daily session window, 24h "HH:MM". When present, calendar export
    * uses these times; otherwise the event is treated as all-day.
    */

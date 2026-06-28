@@ -429,6 +429,8 @@ input, select { font: inherit; color: var(--ink); }
 .field input[type="text"],
 .field input[type="number"],
 .field input[type="date"],
+.field input[type="time"],
+.field textarea,
 .field select {
   padding: 0.6rem 0.7rem;
   border: 1px solid var(--hairline-2);
@@ -454,6 +456,8 @@ input, select { font: inherit; color: var(--ink); }
 
 .form { padding: 1.1rem; }
 .form-actions { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; margin-top: 0.3rem; }
+.form-error { color: #b4402c; font-size: 0.85rem; font-weight: 600; margin: 0 0 0.6rem; }
+.field textarea { resize: vertical; min-height: 2.6rem; font-family: inherit; }
 
 /* ============================ Cards ============================ */
 
@@ -802,6 +806,31 @@ input, select { font: inherit; color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
+
+/* ============================ Custom events ============================ */
+
+.mine-badge {
+  display: inline-flex; align-items: center; vertical-align: middle;
+  font-size: 0.6rem; font-weight: 800; letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.add-event-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+  width: 100%;
+  padding: 0.7rem 1rem; margin-bottom: 1.1rem;
+  border-radius: 14px;
+  font-weight: 700; font-size: 0.92rem;
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1.5px dashed rgba(255, 122, 107, 0.5);
+  transition: transform 0.1s, background 0.2s;
+}
+.add-event-btn:active { transform: scale(0.99); }
+.primary-btn.danger-btn { background: rgba(209, 80, 58, 0.12); color: #b4402c; box-shadow: none; border: 1px solid rgba(209, 80, 58, 0.25); }
 
 /* ================================ Toast ================================ */
 

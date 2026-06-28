@@ -63,6 +63,21 @@ describe('buildIcs', () => {
     expect(ics).toContain('SUMMARY:Art\\, Craft\\; Fun')
   })
 
+  it('exports a custom (user-created) event like any other', () => {
+    const mine: Activity = {
+      ...base,
+      id: 'custom-xyz',
+      name: 'Grandma visit',
+      provider: 'Your event',
+      custom: true,
+      sessionTimes: { start: '12:00', end: '14:00' }
+    }
+    const ics = buildIcs([mine], NOW)
+    expect(ics).toContain('SUMMARY:Grandma visit')
+    expect(ics).toContain('UID:custom-xyz@chch-holiday-planner')
+    expect(ics).toContain('DTSTART:20260706T120000')
+  })
+
   it('folds lines longer than 75 octets with a leading space continuation', () => {
     const a: Activity = { ...base, description: 'x'.repeat(300) }
     const ics = buildIcs([a], NOW)

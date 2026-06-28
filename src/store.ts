@@ -35,6 +35,8 @@ interface State {
   coords: { lat: number; lng: number } | null
   /** True while a geolocation request is in flight. */
   locating: boolean
+  /** Custom-event form: open flag and the id being edited (null = creating). */
+  eventForm: { open: boolean; editingId: string | null }
 }
 
 export const state = reactive<State>({
@@ -48,8 +50,26 @@ export const state = reactive<State>({
   toast: null,
   pendingImport: null,
   coords: null,
-  locating: false
+  locating: false,
+  eventForm: { open: false, editingId: null }
 })
+
+/* --------------------------- Event form --------------------------- */
+
+/** Open the custom-event form. Pass an id to edit, or nothing to create. */
+export function openEventForm(editingId: string | null = null): void {
+  state.eventForm = { open: true, editingId }
+}
+
+export function closeEventForm(): void {
+  state.eventForm = { open: false, editingId: null }
+}
+
+/** The activity currently being edited in the form, if any. */
+export function editingEvent(): Activity | null {
+  const id = state.eventForm.editingId
+  return id ? state.activities.find((a) => a.id === id) ?? null : null
+}
 
 /* ---------------------------- Geolocation ---------------------------- */
 
@@ -120,18 +140,51 @@ export function selectedActivity(): Activity | null {
 }
 
 export async function init(): Promise<void> {
-  const [activities, holidaySets, kids, saved] = await Promise.all([
+  const [activities, holidaySets, kids, saved, custom] = await Promise.all([
     getActivities(),
     getHolidaySets(),
     storage.getKids(),
-    storage.getSaved()
+    storage.getSaved(),
+    storage.getCustom()
   ])
-  state.activities = activities
+  // Catalogue activities plus the parent's own events share one pool, so
+  // saving, calendar, export and suggest all treat them identically.
+  state.activities = [...activities, ...custom]
   state.holidaySets = holidaySets
   state.kids = kids
   state.saved = saved
   state.activeKidId = kids[0]?.id ?? null
   state.ready = true
+}
+
+/* ----------------------- Custom (user) activities ----------------------- */
+
+export async function addCustomActivity(
+  data: Omit<Activity, 'id'>
+): Promise<Activity | null> {
+  let created: Activity | null = null
+  await guard(async () => {
+    created = await storage.addCustom(data)
+    state.activities.push(created)
+  })
+  return created
+}
+
+export async function updateCustomActivity(activity: Activity): Promise<void> {
+  await guard(async () => {
+    await storage.updateCustom(activity)
+    const i = state.activities.findIndex((a) => a.id === activity.id)
+    if (i !== -1) state.activities[i] = activity
+  })
+}
+
+export async function removeCustomActivity(activityId: string): Promise<void> {
+  await guard(async () => {
+    await storage.removeCustom(activityId)
+    state.activities = state.activities.filter((a) => a.id !== activityId)
+    state.saved = state.saved.filter((s) => s.activityId !== activityId)
+    if (state.selectedActivityId === activityId) state.selectedActivityId = null
+  })
 }
 
 /* ------------------------------- Kids ------------------------------- */
