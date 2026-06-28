@@ -601,5 +601,1513 @@
     "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/telling-tales-kidsfest-design-your-own-book-cover",
     "startDate": "2026-07-04",
     "endDate": "2026-07-19"
+  },
+  {
+    "id": "kf-did-they-really-do-that-cantabrians-quest-for-world-records-2",
+    "name": "Did they really do that? Cantabrians quest for world records",
+    "provider": "Tūranga",
+    "description": "A popup exhibition exploring Cantabrians' bold endeavours to break world records in the 1970s-80s.",
+    "suburb": "Christchurch Central",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "educational"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/did-they-really-do-that-cantabrians-quest-for-world-records-2",
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-19"
+  },
+  {
+    "id": "kf-pooh-bear-live",
+    "name": "Pooh Bear LIVE",
+    "provider": "Christchurch Town Hall",
+    "description": "An interactive family show with live music dancing magic and audience participation.",
+    "suburb": "Christchurch Central",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "performing",
+      "music"
+    ],
+    "cost": "paid",
+    "price": 48,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/pooh-bear-live",
+    "startDate": "2026-07-05",
+    "endDate": "2026-07-05",
+    "sessionTimes": {
+      "start": "11:00",
+      "end": "12:30"
+    }
+  },
+  {
+    "id": "kf-kids-at-church-for-kidsfest",
+    "name": "Kids at Church for Kidsfest",
+    "provider": "The Cardboard Cathedral",
+    "description": "A KidsFest church service with choir music drama balloons and entertainment for children.",
+    "suburb": "Christchurch Central",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "music",
+      "social"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/kids-at-church-for-kidsfest",
+    "startDate": "2026-07-05",
+    "endDate": "2026-07-05",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "11:00"
+    }
+  },
+  {
+    "id": "kf-fun-dumpling-workshop",
+    "name": "Fun Dumpling Workshop",
+    "provider": "WEA Canterbury",
+    "description": "Learn to make vegetarian dumplings with a Japanese tutor and take home ten dumplings.",
+    "suburb": "Christchurch Central",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "craft",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 24,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/fun-dumpling-workshop",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "13:00",
+      "end": "15:00"
+    }
+  },
+  {
+    "id": "kf-secret-ukulele-society",
+    "name": "Secret Ukulele Society",
+    "provider": "Pianosaurus Rex Studio",
+    "description": "An introduction to ukulele where kids master the basics and jam along to popular songs.",
+    "suburb": "North New Brighton",
+    "ageMin": 7,
+    "ageMax": 12,
+    "categories": [
+      "music"
+    ],
+    "cost": "paid",
+    "price": 40,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/secret-ukulele-society",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06"
+  },
+  {
+    "id": "kf-ferrymead-signal-seekers",
+    "name": "Ferrymead Signal Seekers",
+    "provider": "Ferrymead Heritage Park",
+    "description": "Hands-on activities exploring how people communicated before smartphones including morse code and telephone building.",
+    "suburb": "Ferrymead",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "educational",
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 15,
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/ferrymead-signal-seekers",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-17"
+  },
+  {
+    "id": "kf-matariki-code-quest-kaiapoi",
+    "name": "Matariki Code Quest - Kaiapoi",
+    "provider": "Kaiapoi Library",
+    "description": "Make a Matariki quiz on Scratch while learning coding fundamentals.",
+    "suburb": "Kaiapoi",
+    "ageMin": 8,
+    "ageMax": 14,
+    "categories": [
+      "educational",
+      "science"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/matariki-code-quest-kaiapoi",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "13:30",
+      "end": "15:00"
+    }
+  },
+  {
+    "id": "kf-oych-otautahi-youth-circus-hui",
+    "name": "OYCH Ōtautahi Youth Circus Hui",
+    "provider": "Roy Stokes Community Hall",
+    "description": "A circus festival offering workshops in general and specialised circus skills for kids and youth.",
+    "suburb": "New Brighton",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "physical",
+      "performing"
+    ],
+    "cost": "paid",
+    "price": 20,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/oych-otautahi-youth-circus-hui",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-07"
+  },
+  {
+    "id": "kf-mahjong-for-teens-10-18-years",
+    "name": "Mahjong for Teens 10-18 years",
+    "provider": "Matatiki Hornby Centre",
+    "description": "An introductory mahjong session helping teens build strategy and problem-solving skills.",
+    "suburb": "Hornby",
+    "ageMin": 10,
+    "ageMax": 18,
+    "categories": [
+      "social",
+      "educational"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/mahjong-for-teens-10-18-years",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "14:00",
+      "end": "16:00"
+    }
+  },
+  {
+    "id": "kf-ready-set-read-4-6-years-2",
+    "name": "Ready Set Read! 4-6 years",
+    "provider": "New Brighton Library",
+    "description": "Storytimes with songs and activities to build early literacy skills including a librarian-picked book bag.",
+    "suburb": "New Brighton",
+    "ageMin": 4,
+    "ageMax": 6,
+    "categories": [
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 4,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/ready-set-read-4-6-years-2",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "10:30",
+      "end": "11:30"
+    }
+  },
+  {
+    "id": "kf-elements-work-and-play-2yrs-7yrs",
+    "name": "Elements Work and Play 2yrs-7yrs",
+    "provider": "Elements Education at Bushland Farm",
+    "description": "A farm-based session with raking apple peeling firewood moving digging and carpentry.",
+    "suburb": "Halswell",
+    "ageMin": 2,
+    "ageMax": 7,
+    "categories": [
+      "outdoors",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 15,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/elements-work-and-play-2yrs-7yrs",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "09:30",
+      "end": "12:00"
+    }
+  },
+  {
+    "id": "kf-the-mini-disco-experience-2-6yr-olds",
+    "name": "The Mini Disco Experience 2-6yr olds",
+    "provider": "Silhouette Theatre",
+    "description": "A relaxed dance session with music games and follow-the-leader moves for young dancers.",
+    "suburb": "Burnside",
+    "ageMin": 2,
+    "ageMax": 6,
+    "categories": [
+      "music",
+      "physical"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/the-mini-disco-experience-2-6yr-olds",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "11:00"
+    }
+  },
+  {
+    "id": "kf-active-kids-kickstart-karate-age-6-12",
+    "name": "Active Kids Kickstart Karate Age 6-12",
+    "provider": "Proactive Martial Arts",
+    "description": "An entry-level karate class with techniques games and foam nunchaku training.",
+    "suburb": "Riccarton",
+    "ageMin": 6,
+    "ageMax": 12,
+    "categories": [
+      "physical"
+    ],
+    "cost": "paid",
+    "price": 5,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/active-kids-kickstart-karate-age-6-12",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-08"
+  },
+  {
+    "id": "kf-airclay-toadies-bugs-and-handing-jellyfish",
+    "name": "Airclay Toadies Bugs and Hanging Jellyfish",
+    "provider": "The Creative Workroom",
+    "description": "A craft class making air-dry clay toadies bugs and hanging jellyfish decorations.",
+    "suburb": "Rolleston",
+    "ageMin": 6,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 10,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/airclay-toadies-bugs-and-handing-jellyfish",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06"
+  },
+  {
+    "id": "kf-makey-makey-music-with-scratch-8-10-years",
+    "name": "Makey Makey Music with Scratch Age 8-10 years",
+    "provider": "Matatiki Hornby Centre",
+    "description": "Create and code an electronic musical instrument using Makey Makey and Scratch.",
+    "suburb": "Hornby",
+    "ageMin": 8,
+    "ageMax": 10,
+    "categories": [
+      "science",
+      "music",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 10,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/makey-makey-music-with-scratch-8-10-years",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "12:30"
+    }
+  },
+  {
+    "id": "kf-spike-prime-explorer-imagination-station-turanga",
+    "name": "SPIKE Prime Explorer",
+    "provider": "Imagination Station",
+    "description": "Build a robot with LEGO SPIKE Prime and learn how robots use sensors motors and code.",
+    "suburb": "Christchurch Central",
+    "ageMin": 9,
+    "ageMax": 12,
+    "categories": [
+      "science",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 30,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/spike-prime-explorer-imagination-station-turanga",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "13:30",
+      "end": "15:00"
+    }
+  },
+  {
+    "id": "kf-robots-in-cold-places-imagination-station-turanga",
+    "name": "Robots in Cold Places",
+    "provider": "Imagination Station",
+    "description": "Build and program LEGO robots while learning how robots accomplish the impossible in Antarctica.",
+    "suburb": "Christchurch Central",
+    "ageMin": 7,
+    "ageMax": 10,
+    "categories": [
+      "science",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 30,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/robots-in-cold-places-imagination-station-turanga",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "15:30",
+      "end": "17:00"
+    }
+  },
+  {
+    "id": "kf-boys-dance-and-gymnastics-workshop-3-17yrs-old",
+    "name": "Boys Dance and Gymnastics Workshop",
+    "provider": "Silhouette Theatre",
+    "description": "Workshop for boys interested in dance and gymnastics with fitness and freestyle sessions.",
+    "suburb": "Burnside",
+    "ageMin": 3,
+    "ageMax": 17,
+    "categories": [
+      "physical",
+      "performing"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/boys-dance-and-gymnastics-workshop-3-17yrs-old",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "15:00",
+      "end": "17:00"
+    }
+  },
+  {
+    "id": "kf-lego-wedo-2-0-explorer-imagination-station-turanga",
+    "name": "LEGO WeDo 2.0 Explorer",
+    "provider": "Imagination Station",
+    "description": "A 90-minute robotics session selecting from LEGO WeDo 2.0 builds and coding concepts.",
+    "suburb": "Christchurch Central",
+    "ageMin": 6,
+    "ageMax": 8,
+    "categories": [
+      "science",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 30,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/lego-wedo-2-0-explorer-imagination-station-turanga",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "11:00",
+      "end": "12:30"
+    }
+  },
+  {
+    "id": "kf-hibernation-haven-come-as-your-favourite-furry-creature",
+    "name": "Hibernation Haven",
+    "provider": "Children's Imagination Academy",
+    "description": "A nature-themed winter retreat with art music mindful movement and collaborative den building.",
+    "suburb": "Lyttelton",
+    "ageMin": 5,
+    "ageMax": 12,
+    "categories": [
+      "craft",
+      "music",
+      "social"
+    ],
+    "cost": "paid",
+    "price": 65,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/hibernation-haven-come-as-your-favourite-furry-creature",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-07"
+  },
+  {
+    "id": "kf-try-judo-2",
+    "name": "Try Judo",
+    "provider": "Christchurch Martial Arts Dojo",
+    "description": "Youth introductory judo sessions teaching rolling falling and grappling skills.",
+    "suburb": "St Albans",
+    "ageMin": 3,
+    "ageMax": 17,
+    "categories": [
+      "physical"
+    ],
+    "cost": "paid",
+    "price": 5,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/try-judo-2",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-18"
+  },
+  {
+    "id": "kf-cuddle-creatures-3",
+    "name": "Cuddle Creatures",
+    "provider": "Imprint Studio",
+    "description": "Make your own cuddle creature from recycled blankets buttons fabric and more.",
+    "suburb": "Avonhead",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 18,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/cuddle-creatures-3",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-16"
+  },
+  {
+    "id": "kf-fudge-decorating-46",
+    "name": "Fudge Decorating",
+    "provider": "The Fudge Cottage",
+    "description": "Decorate your own fudge shape using chocolate and confectionery items.",
+    "suburb": "Christchurch Central",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 10,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/fudge-decorating-46",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-17"
+  },
+  {
+    "id": "kf-dinosaurs-after-dark",
+    "name": "Dinosaurs After Dark",
+    "provider": "Jurassic Adventure",
+    "description": "Explore life-size dinosaurs after dark with a maze scavenger hunt mini golf and geocaching.",
+    "suburb": "Hillsborough",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "outdoors",
+      "social"
+    ],
+    "cost": "paid",
+    "price": 24,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/dinosaurs-after-dark",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-17"
+  },
+  {
+    "id": "kf-fudge-spectacular-28",
+    "name": "Fudge Spectacular",
+    "provider": "The Fudge Cottage",
+    "description": "Design and create your ultimate fudge masterpiece in a 30-minute hands-on workshop.",
+    "suburb": "Christchurch Central",
+    "ageMin": 5,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 17.5,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/fudge-spectacular-28",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-17"
+  },
+  {
+    "id": "kf-learn-to-ice-skate",
+    "name": "Learn to Ice Skate",
+    "provider": "Alpine Ice",
+    "description": "Fun group ice skating lessons over five days with friendly qualified coaches.",
+    "suburb": "Waltham",
+    "ageMin": 4,
+    "ageMax": 14,
+    "categories": [
+      "physical"
+    ],
+    "cost": "paid",
+    "price": 140,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/learn-to-ice-skate",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-17"
+  },
+  {
+    "id": "kf-judo-skills-week-2",
+    "name": "Judo Skills Week",
+    "provider": "Christchurch Martial Arts Dojo",
+    "description": "A weeklong intensive judo training camp led by an Olympic instructor.",
+    "suburb": "St Albans",
+    "ageMin": 7,
+    "ageMax": 17,
+    "categories": [
+      "physical"
+    ],
+    "cost": "paid",
+    "price": 150,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/judo-skills-week-2",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-10"
+  },
+  {
+    "id": "kf-kids-fest-have-a-go-gymnastics",
+    "name": "Kids Fest Have-a-Go Gymnastics",
+    "provider": "Christchurch School of Gymnastics",
+    "description": "Two weeks of gymnastics activities including trampoline tumbling Ninja Gym and Nerf Battles.",
+    "suburb": "North New Brighton",
+    "ageMin": 2,
+    "ageMax": 16,
+    "categories": [
+      "physical"
+    ],
+    "cost": "paid",
+    "price": 20,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/kids-fest-have-a-go-gymnastics",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-17"
+  },
+  {
+    "id": "kf-orana-wildlife-park-holiday-programme",
+    "name": "Orana Wildlife Park Holiday Programme",
+    "provider": "Orana Wildlife Park",
+    "description": "A full day of hands-on wildlife experiences with themed activities like Monkey Mayhem.",
+    "suburb": "McLeans Island",
+    "ageMin": 7,
+    "ageMax": 12,
+    "categories": [
+      "outdoors",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 85,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/orana-wildlife-park-holiday-programme",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-16"
+  },
+  {
+    "id": "kf-little-listeners-lounge-5-12-years",
+    "name": "Little Listeners Lounge",
+    "provider": "Christchurch City Libraries",
+    "description": "A themed audiobook listening session in the library's dedicated audiobook lounge.",
+    "suburb": "Hornby",
+    "ageMin": 5,
+    "ageMax": 12,
+    "categories": [
+      "educational"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/little-listeners-lounge-5-12-years",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-06",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "10:30"
+    }
+  },
+  {
+    "id": "kf-active-kids-tigers-karate-age-5-7",
+    "name": "Active Kids Tigers Karate",
+    "provider": "Proactive Martial Arts",
+    "description": "Karate classes for primary school children focused on confidence-building and self-defence skills.",
+    "suburb": "Riccarton",
+    "ageMin": 5,
+    "ageMax": 7,
+    "categories": [
+      "physical"
+    ],
+    "cost": "paid",
+    "price": 5,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/active-kids-tigers-karate-age-5-7",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-15"
+  },
+  {
+    "id": "kf-my-first-robotics-imagination-station-turanga",
+    "name": "My First Robotics",
+    "provider": "Imagination Station",
+    "description": "An interactive robotics class introducing children to programming and mechanics using sensors and LEGO equipment.",
+    "suburb": "Christchurch Central",
+    "ageMin": 5,
+    "ageMax": 8,
+    "categories": [
+      "science",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 15,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/my-first-robotics-imagination-station-turanga",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-14"
+  },
+  {
+    "id": "kf-kids-dance-and-gymnastics-camp-6-12yr-olds",
+    "name": "Kids Dance and Gymnastics Camp",
+    "provider": "Silhouette Studios",
+    "description": "A four-day camp exploring dance gymnastics and circus arts with experienced instructors.",
+    "suburb": "Burnside",
+    "ageMin": 6,
+    "ageMax": 12,
+    "categories": [
+      "physical",
+      "performing"
+    ],
+    "cost": "paid",
+    "price": 150,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/kids-dance-and-gymnastics-camp-6-12yr-olds",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-09"
+  },
+  {
+    "id": "kf-imagination-station-holiday-brick-school-turanga-2",
+    "name": "Imagination Station Holiday Brick School",
+    "provider": "Imagination Station",
+    "description": "A full-day LEGO-based programme combining structured challenges and free play for primary school children.",
+    "suburb": "Christchurch Central",
+    "ageMin": 6,
+    "ageMax": 10,
+    "categories": [
+      "craft",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 50,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/imagination-station-holiday-brick-school-turanga-2",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-17"
+  },
+  {
+    "id": "kf-inky-arts-and-crafts-at-ferrymead-print-shop-2",
+    "name": "Inky Arts and Crafts at Ferrymead Print Shop",
+    "provider": "Ferrymead Print Shop",
+    "description": "Children learn printing techniques on vintage presses to create cards posters stencils and booklets.",
+    "suburb": "Ferrymead",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 20,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/inky-arts-and-crafts-at-ferrymead-print-shop-2",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-10"
+  },
+  {
+    "id": "kf-canterbury-rams-and-mainland-pouakai-july-holiday-camps",
+    "name": "Canterbury Rams and Mainland Pouākai Holiday Camps",
+    "provider": "Canterbury Rams",
+    "description": "Action-packed basketball sessions led by professional players and coaches focusing on core skills.",
+    "suburb": "Christchurch Central",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "physical"
+    ],
+    "cost": "paid",
+    "price": 60,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/canterbury-rams-and-mainland-pouakai-july-holiday-camps",
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-14"
+  },
+  {
+    "id": "kf-composing-club",
+    "name": "Composing Club",
+    "provider": "Pianosaurus Rex Studio",
+    "description": "Students learn to compose original music through hands-on exercises and personalised guidance.",
+    "suburb": "North New Brighton",
+    "ageMin": 9,
+    "ageMax": 14,
+    "categories": [
+      "music"
+    ],
+    "cost": "paid",
+    "price": 40,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/composing-club",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07"
+  },
+  {
+    "id": "kf-cut-pin-repeat",
+    "name": "Cut Pin Repeat",
+    "provider": "Paper Jam",
+    "description": "A crafting workshop where participants create collage badges with all materials supplied.",
+    "suburb": "Kaiapoi",
+    "ageMin": 6,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 15,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/cut-pin-repeat",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-09"
+  },
+  {
+    "id": "kf-redcliff-rambles-5-13yrs",
+    "name": "Redcliff Rambles",
+    "provider": "Elements Education",
+    "description": "A full-day outdoor nature programme featuring hut-building art activities and guided exploration.",
+    "suburb": "Redcliffs",
+    "ageMin": 5,
+    "ageMax": 13,
+    "categories": [
+      "outdoors"
+    ],
+    "cost": "paid",
+    "price": 75,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/redcliff-rambles-5-13yrs",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07",
+    "sessionTimes": {
+      "start": "09:00",
+      "end": "15:00"
+    }
+  },
+  {
+    "id": "kf-fairy-and-fantasy-jewellery",
+    "name": "Fairy and Fantasy Jewellery",
+    "provider": "The Creative Workroom",
+    "description": "A class where children make fairy and fantasy jewellery in multiple styles.",
+    "suburb": "Rolleston",
+    "ageMin": 10,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 15,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/fairy-and-fantasy-jewellery",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07"
+  },
+  {
+    "id": "kf-use-your-art-in-activism",
+    "name": "Use your art in activism",
+    "provider": "WEA Canterbury",
+    "description": "Workshop teaching participants to create slogans and graphic artwork for activist posters and leaflets.",
+    "suburb": "Christchurch Central",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 18,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/use-your-art-in-activism",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "12:00"
+    }
+  },
+  {
+    "id": "kf-lets-dig-it-8-12-years",
+    "name": "Let's Dig It! 8-12 years",
+    "provider": "Tūranga",
+    "description": "Young explorers handle genuine artefacts and learn how archaeologists piece together New Zealand's past.",
+    "suburb": "Christchurch Central",
+    "ageMin": 8,
+    "ageMax": 12,
+    "categories": [
+      "educational"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/lets-dig-it-8-12-years",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07"
+  },
+  {
+    "id": "kf-melanie-poppins-magic-show-kaiapoi-2",
+    "name": "Melanie Poppins Magic Show - Kaiapoi",
+    "provider": "Kaiapoi Library",
+    "description": "An enchanting magic performance of illusions and tricks for young audiences.",
+    "suburb": "Kaiapoi",
+    "ageMin": 0,
+    "ageMax": 10,
+    "categories": [
+      "performing"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/melanie-poppins-magic-show-kaiapoi-2",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07",
+    "sessionTimes": {
+      "start": "14:00",
+      "end": "15:00"
+    }
+  },
+  {
+    "id": "kf-melanie-poppins-magic-show-rangiora-2",
+    "name": "Melanie Poppins Magic Show - Rangiora",
+    "provider": "Rangiora Library",
+    "description": "A magic performance of dazzling tricks and illusions for young audiences.",
+    "suburb": "Rangiora",
+    "ageMin": 0,
+    "ageMax": 10,
+    "categories": [
+      "performing"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/melanie-poppins-magic-show-rangiora-2",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "11:00"
+    }
+  },
+  {
+    "id": "kf-uc-kidsfest-towers-vehicles-and-prosthetics",
+    "name": "UC KidsFest Towers Vehicles and Prosthetics",
+    "provider": "University of Canterbury",
+    "description": "Hands-on engineering challenges building earthquake-resistant towers wind-tunnel vehicles and mechanical prosthetic hands.",
+    "suburb": "Upper Riccarton",
+    "ageMin": 9,
+    "ageMax": 13,
+    "categories": [
+      "science",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 25,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/uc-kidsfest-towers-vehicles-and-prosthetics",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-09"
+  },
+  {
+    "id": "kf-kidsfest-heritage-stargazing-at-the-observatory-tower",
+    "name": "KidsFest Heritage Stargazing at the Observatory Tower",
+    "provider": "The Arts Centre Te Matatiki Toi Ora",
+    "description": "View the Southern Sky through a restored Victorian-era telescope in an 1896 Observatory Tower guided by University of Canterbury astronomers.",
+    "suburb": "Christchurch Central",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "science",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 5,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/kidsfest-heritage-stargazing-at-the-observatory-tower",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-15"
+  },
+  {
+    "id": "kf-te-hotera-karara-bug-hotels-journals-and-food-in-a-jar-5-15-years-2",
+    "name": "Te Hotera Karara Bug Hotels Journals Food in a Jar 5-15yrs",
+    "provider": "Tūranga",
+    "description": "Participants design and build their own bug hotel and journal to document visiting insects and plant growth.",
+    "suburb": "Christchurch Central",
+    "ageMin": 5,
+    "ageMax": 15,
+    "categories": [
+      "craft",
+      "science"
+    ],
+    "cost": "paid",
+    "price": 5,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/te-hotera-karara-bug-hotels-journals-and-food-in-a-jar-5-15-years-2",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-16"
+  },
+  {
+    "id": "kf-fairy-jars",
+    "name": "Fairy Jars",
+    "provider": "The Creative Workroom",
+    "description": "Children decorate jars to create homes for fairies dragons gnomes or treasure containers.",
+    "suburb": "Rolleston",
+    "ageMin": 6,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 15,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/fairy-jars",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08"
+  },
+  {
+    "id": "kf-teen-book-club",
+    "name": "Teen Book Club",
+    "provider": "Tūranga",
+    "description": "A relaxed book club for teens to discuss their current reads and exchange recommendations.",
+    "suburb": "Christchurch Central",
+    "ageMin": 12,
+    "ageMax": 18,
+    "categories": [
+      "social",
+      "educational"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/teen-book-club",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "15:00",
+      "end": "16:00"
+    }
+  },
+  {
+    "id": "kf-underwater-wonderland",
+    "name": "Underwater Wonderland",
+    "provider": "Lincoln Event Centre",
+    "description": "Hands-on marine science activities craft stations and diorama building led by high school students.",
+    "suburb": "Lincoln",
+    "ageMin": 3,
+    "ageMax": 12,
+    "categories": [
+      "science",
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 5,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/underwater-wonderland",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "12:30"
+    }
+  },
+  {
+    "id": "kf-matariki-night-sky",
+    "name": "Matariki Night Sky",
+    "provider": "Paint & Sip Studio",
+    "description": "A family-friendly canvas painting session with all materials included.",
+    "suburb": "Christchurch Central",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 39,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/matariki-night-sky",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "13:30",
+      "end": "15:00"
+    }
+  },
+  {
+    "id": "kf-whanau-board-games",
+    "name": "Whanau Board Games",
+    "provider": "New Brighton Library",
+    "description": "A drop-in session where families can play social board games using library or their own games.",
+    "suburb": "New Brighton",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "social"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/whanau-board-games",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "14:00",
+      "end": "16:30"
+    }
+  },
+  {
+    "id": "kf-matariki-pool-party",
+    "name": "Matariki Pool Party",
+    "provider": "Kaiapoi Aquatic Centre",
+    "description": "A two-hour water-based celebration with star-themed games and family activities.",
+    "suburb": "Kaiapoi",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "physical"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/matariki-pool-party",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "13:00",
+      "end": "15:00"
+    }
+  },
+  {
+    "id": "kf-decorate-a-felt-critter-2",
+    "name": "Decorate a Felt Critter",
+    "provider": "Christchurch Guild of Weavers and Spinners",
+    "description": "Learn to decorate felt animals with stitches lace buttons and beads and construct moving parts.",
+    "suburb": "Woolston",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 25,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/decorate-a-felt-critter-2",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "15:00"
+    }
+  },
+  {
+    "id": "kf-magic-and-make-believe-day",
+    "name": "Magic and Make-Believe Day",
+    "provider": "Shirley Library",
+    "description": "Hunt through the library to find parts to build your own mythical creature alongside magical storytime.",
+    "suburb": "Shirley",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "craft",
+      "social"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/magic-and-make-believe-day",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "17:00"
+    }
+  },
+  {
+    "id": "kf-cosy-storytimes-7-12-years",
+    "name": "Cosy Storytimes 7-12 years",
+    "provider": "Parklands Library",
+    "description": "Snuggle down to listen to an older fiction story while making hot chocolate spoons.",
+    "suburb": "Parklands",
+    "ageMin": 7,
+    "ageMax": 12,
+    "categories": [
+      "social",
+      "educational"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/cosy-storytimes-7-12-years",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "16:00",
+      "end": "17:00"
+    }
+  },
+  {
+    "id": "kf-creative-cartography-9-16-years",
+    "name": "Creative Cartography 9-16 years",
+    "provider": "Matatiki Hornby Centre",
+    "description": "Children learn to design fantasy maps inspired by books like Narnia and The Lord of the Rings.",
+    "suburb": "Hornby",
+    "ageMin": 9,
+    "ageMax": 16,
+    "categories": [
+      "craft",
+      "educational"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/creative-cartography-9-16-years",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "11:30"
+    }
+  },
+  {
+    "id": "kf-elements-hot-chocolate-shop-huts",
+    "name": "Elements Hot Chocolate Shop",
+    "provider": "Elements Education",
+    "description": "Children design and run outdoor shops serving hot chocolate and treats through creative play in nature.",
+    "suburb": "Halswell",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "outdoors",
+      "social"
+    ],
+    "cost": "paid",
+    "price": 75,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/elements-hot-chocolate-shop-huts",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "09:00",
+      "end": "15:00"
+    }
+  },
+  {
+    "id": "kf-free-theatre-kids-holiday-programme-2",
+    "name": "Free Theatre Kids Holiday Programme",
+    "provider": "Free Theatre Christchurch",
+    "description": "Two-day programme featuring mask design puppetry physical theatre and performance creation.",
+    "suburb": "Avonside",
+    "ageMin": 8,
+    "ageMax": 12,
+    "categories": [
+      "performing"
+    ],
+    "cost": "paid",
+    "price": 130,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/free-theatre-kids-holiday-programme-2",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-09"
+  },
+  {
+    "id": "kf-alice-in-wonderland-tea-party-5-12-years",
+    "name": "Alice in Wonderland Tea Party 5-12 years",
+    "provider": "Linwood Library",
+    "description": "Children enjoy a tea party scavenger hunt and craft activities based on Lewis Carroll's classic novel.",
+    "suburb": "Linwood",
+    "ageMin": 5,
+    "ageMax": 12,
+    "categories": [
+      "craft",
+      "social"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/alice-in-wonderland-tea-party-5-12-years",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-08",
+    "sessionTimes": {
+      "start": "14:30",
+      "end": "16:00"
+    }
+  },
+  {
+    "id": "kf-kids-fest-cooking-day-at-alliance-francaise",
+    "name": "Kids Fest Cooking Day at Alliance Française",
+    "provider": "Alliance Française Christchurch",
+    "description": "Children prepare and eat a French-style lunch while expanding their French cultural knowledge.",
+    "suburb": "Christchurch Central",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "craft",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 65,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/kids-fest-cooking-day-at-alliance-francaise",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-09"
+  },
+  {
+    "id": "kf-makey-makey-music-with-scratch-8-10-years-3",
+    "name": "Makey Makey Music with Scratch Halswell 8-10 years",
+    "provider": "Te Hāpua Halswell Centre",
+    "description": "Build a musical instrument from cardboard and code it using Makey Makey and Scratch.",
+    "suburb": "Halswell",
+    "ageMin": 8,
+    "ageMax": 10,
+    "categories": [
+      "science",
+      "music",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 10,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/makey-makey-music-with-scratch-8-10-years-3",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "12:30"
+    }
+  },
+  {
+    "id": "kf-rc-race-cars-imagination-station-te-hapua-halswell-centre",
+    "name": "RC Race Cars Imagination Station Halswell",
+    "provider": "Imagination Station",
+    "description": "Design and build a remote-controlled car using LEGO Technic motors and receivers.",
+    "suburb": "Halswell",
+    "ageMin": 8,
+    "ageMax": 12,
+    "categories": [
+      "science",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 20,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/rc-race-cars-imagination-station-te-hapua-halswell-centre",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07",
+    "sessionTimes": {
+      "start": "15:00",
+      "end": "16:30"
+    }
+  },
+  {
+    "id": "kf-spike-prime-battlebots-imagination-station-te-hapua-halswell-cntr",
+    "name": "SPIKE Prime Battlebots Imagination Station Halswell",
+    "provider": "Imagination Station",
+    "description": "Program LEGO SPIKE Prime robots with Scratch and compete in a sumo-style robotics battle.",
+    "suburb": "Halswell",
+    "ageMin": 10,
+    "ageMax": 14,
+    "categories": [
+      "science",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 25,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/spike-prime-battlebots-imagination-station-te-hapua-halswell-cntr",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "12:00"
+    }
+  },
+  {
+    "id": "kf-movie-making-with-lego-imagination-station-te-hapua-halswell-cntr",
+    "name": "Movie Making with LEGO Imagination Station Halswell",
+    "provider": "Imagination Station",
+    "description": "Learn stop-motion animation by creating LEGO-based short films.",
+    "suburb": "Halswell",
+    "ageMin": 7,
+    "ageMax": 12,
+    "categories": [
+      "science",
+      "craft",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 20,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/movie-making-with-lego-imagination-station-te-hapua-halswell-cntr",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07",
+    "sessionTimes": {
+      "start": "13:00",
+      "end": "14:30"
+    }
+  },
+  {
+    "id": "kf-try-taekwondo",
+    "name": "Try Taekwondo",
+    "provider": "Christchurch Martial Arts",
+    "description": "Introductory Korean martial arts session emphasising courtesy and self-control.",
+    "suburb": "St Albans",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "physical"
+    ],
+    "cost": "paid",
+    "price": 5,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/try-taekwondo",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-16"
+  },
+  {
+    "id": "kf-crafty-cat-2",
+    "name": "Crafty Cat",
+    "provider": "Imprint Studio",
+    "description": "Create a custom soft-toy cat with fabric patches that doubles as a doorstop.",
+    "suburb": "Avonhead",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "craft"
+    ],
+    "cost": "paid",
+    "price": 18,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/crafty-cat-2",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-18"
+  },
+  {
+    "id": "kf-rock-candy-making",
+    "name": "Rock Candy Making",
+    "provider": "Sweet Ltd",
+    "description": "Watch candy makers colour stretch and extrude rock candy and take home a warm sample.",
+    "suburb": "Papanui",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "craft",
+      "social"
+    ],
+    "cost": "free",
+    "registrationRequired": false,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/rock-candy-making",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-18"
+  },
+  {
+    "id": "kf-disneys-finding-nemo-jr",
+    "name": "Disney's Finding Nemo JR",
+    "provider": "The Court Theatre",
+    "description": "A youth stage adaptation of the Disney Pixar film about a clownfish searching for his lost son.",
+    "suburb": "Christchurch Central",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "performing",
+      "music"
+    ],
+    "cost": "paid",
+    "price": 10,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/disneys-finding-nemo-jr",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-19"
+  },
+  {
+    "id": "kf-rollickin-gelato-classes-kidsfest",
+    "name": "Rollickin Gelato Classes",
+    "provider": "Rollickin Gelato",
+    "description": "A hands-on kids gelato-making class with techniques tastings and takeaway treats.",
+    "suburb": "Riccarton",
+    "ageMin": 8,
+    "ageMax": 12,
+    "categories": [
+      "craft",
+      "educational"
+    ],
+    "cost": "paid",
+    "price": 38,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/rollickin-gelato-classes-kidsfest",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-16"
+  },
+  {
+    "id": "kf-tiny-town-live-at-the-palms",
+    "name": "Tiny Town Live at The Palms!",
+    "provider": "The Palms Shopping Centre",
+    "description": "An interactive miniature-town role-play experience with a construction zone shops and radio station.",
+    "suburb": "Shirley",
+    "ageMin": 1,
+    "ageMax": 6,
+    "categories": [
+      "social",
+      "performing"
+    ],
+    "cost": "paid",
+    "price": 10,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/tiny-town-live-at-the-palms",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-17"
+  },
+  {
+    "id": "kf-active-kids-kickboxing-age-10-15",
+    "name": "Active Kids Kickboxing Age 10-15",
+    "provider": "Proactive Martial Arts",
+    "description": "Fitness-based kickboxing and Muay Thai instruction building confidence and self-defence skills.",
+    "suburb": "Riccarton",
+    "ageMin": 10,
+    "ageMax": 15,
+    "categories": [
+      "physical"
+    ],
+    "cost": "paid",
+    "price": 5,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/active-kids-kickboxing-age-10-15",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-16"
+  },
+  {
+    "id": "kf-kiwivolley-school-holiday-programme-2",
+    "name": "KiwiVolley School Holiday Programme",
+    "provider": "Canterbury Volleyball Association",
+    "description": "Volleyball skills instruction covering serving passing setting and spiking through fun games.",
+    "suburb": "Somerfield",
+    "ageMin": 0,
+    "ageMax": 14,
+    "categories": [
+      "physical"
+    ],
+    "cost": "paid",
+    "price": 20,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/kiwivolley-school-holiday-programme-2",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-15"
+  },
+  {
+    "id": "kf-dungeons-and-dragons-dnd-have-a-go",
+    "name": "Dungeons and Dragons Have a Go",
+    "provider": "Rangiora Borough School",
+    "description": "A tabletop fantasy game where players create characters and embark on problem-solving adventures.",
+    "suburb": "Rangiora",
+    "ageMin": 8,
+    "ageMax": 14,
+    "categories": [
+      "social",
+      "performing"
+    ],
+    "cost": "paid",
+    "price": 25,
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/dungeons-and-dragons-dnd-have-a-go",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-16"
+  },
+  {
+    "id": "kf-survival-quest-a-bear-grylls-inspired-adventure",
+    "name": "Survival Quest A Bear Grylls-Inspired Adventure",
+    "provider": "Epic Christian Books",
+    "description": "A self-guided bookshop adventure with hidden clues and survival-themed challenges.",
+    "suburb": "Ferrymead",
+    "ageMin": 6,
+    "ageMax": 12,
+    "categories": [
+      "educational",
+      "social"
+    ],
+    "cost": "free",
+    "registrationRequired": true,
+    "registrationUrl": "https://ccc.govt.nz/news-and-events/whats-on/event/survival-quest-a-bear-grylls-inspired-adventure",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-15"
   }
 ]
