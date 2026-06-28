@@ -265,5 +265,107 @@
       "start": "11:00",
       "end": "14:00"
     }
+  },
+  {
+    "id": "chc-ballantynes-donut-0707",
+    "name": "School Holiday Donut Decorating",
+    "provider": "Ballantynes",
+    "description": "Decorate delicious donuts with frosting, sprinkles and toppings to take home, then decorate a box to carry them in. Two 45-minute sessions (10am and 11am) — choose yours when booking. Held at Kin Bistro, ground floor.",
+    "suburb": "Christchurch Central",
+    "lat": -43.5337,
+    "lng": 172.636,
+    "ageMin": 5,
+    "ageMax": 12,
+    "categories": [
+      "craft",
+      "social"
+    ],
+    "cost": "paid",
+    "price": 25,
+    "registrationRequired": true,
+    "registrationUrl": "https://events.humanitix.com/school-holiday-programme-donut-decorating-july",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "10:45"
+    }
+  },
+  {
+    "id": "chc-ballantynes-donut-0714",
+    "name": "School Holiday Donut Decorating",
+    "provider": "Ballantynes",
+    "description": "Decorate delicious donuts with frosting, sprinkles and toppings to take home, then decorate a box to carry them in. Two 45-minute sessions (10am and 11am) — choose yours when booking. Held at Kin Bistro, ground floor.",
+    "suburb": "Christchurch Central",
+    "lat": -43.5337,
+    "lng": 172.636,
+    "ageMin": 5,
+    "ageMax": 12,
+    "categories": [
+      "craft",
+      "social"
+    ],
+    "cost": "paid",
+    "price": 25,
+    "registrationRequired": true,
+    "registrationUrl": "https://events.humanitix.com/school-holiday-programme-donut-decorating-july",
+    "startDate": "2026-07-14",
+    "endDate": "2026-07-14",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "10:45"
+    }
+  },
+  {
+    "id": "chc-ballantynes-kpop-0709",
+    "name": "Meet a K-Pop Demon Hunter Superfan",
+    "provider": "Ballantynes",
+    "description": "Make a custom charm bracelet and decorated keepsake box, add hair glitter, meet a character, and learn a simple routine at a mini dance party. Two 45-minute sessions (10am and 11am) — choose yours when booking.",
+    "suburb": "Christchurch Central",
+    "lat": -43.5337,
+    "lng": 172.636,
+    "ageMin": 5,
+    "ageMax": 12,
+    "categories": [
+      "music",
+      "performing",
+      "social"
+    ],
+    "cost": "paid",
+    "price": 32,
+    "registrationRequired": true,
+    "registrationUrl": "https://events.humanitix.com/school-holiday-programme-meet-a-k-pop-demon-hunter-superfan",
+    "startDate": "2026-07-09",
+    "endDate": "2026-07-09",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "10:45"
+    }
+  },
+  {
+    "id": "chc-ballantynes-kpop-0716",
+    "name": "Meet a K-Pop Demon Hunter Superfan",
+    "provider": "Ballantynes",
+    "description": "Make a custom charm bracelet and decorated keepsake box, add hair glitter, meet a character, and learn a simple routine at a mini dance party. Two 45-minute sessions (10am and 11am) — choose yours when booking.",
+    "suburb": "Christchurch Central",
+    "lat": -43.5337,
+    "lng": 172.636,
+    "ageMin": 5,
+    "ageMax": 12,
+    "categories": [
+      "music",
+      "performing",
+      "social"
+    ],
+    "cost": "paid",
+    "price": 32,
+    "registrationRequired": true,
+    "registrationUrl": "https://events.humanitix.com/school-holiday-programme-meet-a-k-pop-demon-hunter-superfan",
+    "startDate": "2026-07-16",
+    "endDate": "2026-07-16",
+    "sessionTimes": {
+      "start": "10:00",
+      "end": "10:45"
+    }
   }
 ]
