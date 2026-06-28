@@ -5,8 +5,8 @@ import { state, activeKid, isSaved, toggleSave } from '../store'
 import { overlapsBreak, currentOrNextBreak, formatDateRange } from '../utils/dates'
 import { CATEGORY_META, avatarColor, initial } from '../utils/categories'
 import ActivityCard from '../components/ActivityCard.vue'
+import Icon from '../components/Icon.vue'
 
-/** Filters. Kid age is applied automatically when a kid is selected. */
 const filters = reactive<{
   matchInterests: boolean
   suburb: string
@@ -25,7 +25,6 @@ const filters = reactive<{
 
 const showFilters = ref(false)
 
-// Distinct suburbs from the catalogue, for the dropdown.
 const suburbs = computed(() =>
   [...new Set(state.activities.map((a) => a.suburb))].sort()
 )
@@ -38,7 +37,6 @@ const selectedBreak = computed(() =>
   selectedSet.value?.breaks.find((b) => b.name === filters.breakName) ?? null
 )
 
-// The contextual banner: the holiday on now or coming up next.
 const upcoming = computed(() => currentOrNextBreak(state.holidaySets))
 
 const filtered = computed(() => {
@@ -84,7 +82,6 @@ function onSetChange() {
   filters.breakName = ''
 }
 
-// Tapping the holiday banner filters to that break.
 function applyUpcoming() {
   if (!upcoming.value) return
   filters.holidaySetId = upcoming.value.set.id
@@ -96,48 +93,47 @@ function applyUpcoming() {
 <template>
   <section>
     <!-- Contextual holiday banner -->
-    <button v-if="upcoming" class="holiday-banner" @click="applyUpcoming">
-      <span class="hb-emoji">{{ upcoming.status === 'current' ? '🎉' : '⛄' }}</span>
-      <span class="hb-text">
-        <strong>
-          {{ upcoming.brk.name }} holidays
-          {{ upcoming.status === 'current' ? 'are on now' : 'are coming up' }}
-        </strong>
-        <span class="hb-dates">{{ formatDateRange(upcoming.brk.start, upcoming.brk.end) }}</span>
+    <button v-if="upcoming" class="break-banner" @click="applyUpcoming">
+      <span class="bb-left">
+        <span class="overline">{{ upcoming.status === 'current' ? 'On now' : 'Next break' }}</span>
+        <span class="bb-title">{{ upcoming.brk.name }} holidays</span>
+        <span class="bb-dates">{{ formatDateRange(upcoming.brk.start, upcoming.brk.end) }}</span>
       </span>
-      <span class="hb-cta">Show →</span>
+      <span class="bb-action">Show <Icon name="arrow" :size="14" /></span>
     </button>
 
     <!-- Kid selector -->
-    <div v-if="state.kids.length" class="kid-picker">
-      <button
-        v-for="kid in state.kids"
-        :key="kid.id"
-        class="kid-chip"
-        :class="{ on: state.activeKidId === kid.id }"
-        @click="selectKid(kid.id)"
-      >
-        <span class="avatar sm" :style="{ background: avatarColor(kid.name) }">
-          {{ initial(kid.name) }}
-        </span>
-        {{ kid.name }} · {{ kid.age }}
-      </button>
+    <div v-if="state.kids.length">
+      <span class="overline block">Planning for</span>
+      <div class="kid-picker">
+        <button
+          v-for="kid in state.kids"
+          :key="kid.id"
+          class="kid-chip"
+          :class="{ on: state.activeKidId === kid.id }"
+          @click="selectKid(kid.id)"
+        >
+          <span class="avatar sm" :style="{ background: avatarColor(kid.name) }">
+            {{ initial(kid.name) }}
+          </span>
+          {{ kid.name }} · {{ kid.age }}
+        </button>
+      </div>
     </div>
     <p v-else class="hint">
-      💡 Add a kid on the <strong>Kids</strong> tab to auto-filter by their age and interests.
+      Add a kid on the <strong>Kids</strong> tab to filter by their age and interests.
     </p>
 
-    <!-- Filter toggle + summary -->
+    <!-- Filter bar -->
     <div class="filter-bar">
       <button class="filter-toggle" :class="{ open: showFilters }" @click="showFilters = !showFilters">
-        <span>⚙︎ Filters</span>
+        <Icon name="sliders" :size="16" />
+        <span>Filters</span>
         <span v-if="activeFilterCount" class="filter-count">{{ activeFilterCount }}</span>
-        <span class="chev">{{ showFilters ? '▴' : '▾' }}</span>
       </button>
-      <span class="result-count">{{ filtered.length }} found</span>
+      <span class="result-count">{{ filtered.length }} {{ filtered.length === 1 ? 'result' : 'results' }}</span>
     </div>
 
-    <!-- Filters panel -->
     <Transition name="expand">
       <div v-show="showFilters" class="filters">
         <label
@@ -173,9 +169,7 @@ function applyUpcoming() {
             <span class="field-label">Category</span>
             <select v-model="filters.category">
               <option value="">All categories</option>
-              <option v-for="c in CATEGORIES" :key="c" :value="c">
-                {{ CATEGORY_META[c].icon }} {{ CATEGORY_META[c].label }}
-              </option>
+              <option v-for="c in CATEGORIES" :key="c" :value="c">{{ CATEGORY_META[c].label }}</option>
             </select>
           </label>
 
@@ -183,9 +177,7 @@ function applyUpcoming() {
             <span class="field-label">Holiday set</span>
             <select v-model="filters.holidaySetId" @change="onSetChange">
               <option value="">Any time</option>
-              <option v-for="hs in state.holidaySets" :key="hs.id" :value="hs.id">
-                {{ hs.name }}
-              </option>
+              <option v-for="hs in state.holidaySets" :key="hs.id" :value="hs.id">{{ hs.name }}</option>
             </select>
           </label>
 
@@ -193,9 +185,7 @@ function applyUpcoming() {
             <span class="field-label">Break</span>
             <select v-model="filters.breakName">
               <option value="">All breaks</option>
-              <option v-for="b in selectedSet.breaks" :key="b.name" :value="b.name">
-                {{ b.name }}
-              </option>
+              <option v-for="b in selectedSet.breaks" :key="b.name" :value="b.name">{{ b.name }}</option>
             </select>
           </label>
         </div>
@@ -206,8 +196,8 @@ function applyUpcoming() {
 
     <!-- Results -->
     <div v-if="!filtered.length" class="empty">
-      <div class="empty-emoji">🔍</div>
-      <p class="empty-title">No activities match</p>
+      <span class="empty-icon"><Icon name="search" :size="26" /></span>
+      <p class="empty-title">No matching activities</p>
       <p class="empty-sub">Try widening your filters or turning off interest matching.</p>
     </div>
 

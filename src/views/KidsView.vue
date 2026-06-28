@@ -3,8 +3,8 @@ import { reactive, ref } from 'vue'
 import { CATEGORIES, type Category, type KidProfile } from '../types'
 import { state, addKid, updateKid, removeKid } from '../store'
 import { CATEGORY_META, avatarColor, initial } from '../utils/categories'
+import Icon from '../components/Icon.vue'
 
-/** Form model for adding/editing a kid. */
 const draft = reactive<{ id: string | null; name: string; age: number | null; interests: Category[] }>(
   { id: null, name: '', age: null, interests: [] }
 )
@@ -48,23 +48,26 @@ async function confirmRemove(kid: KidProfile) {
   <section>
     <div class="section-head">
       <h2 class="section-title">Your kids</h2>
-      <button v-if="!showForm" class="primary-btn" @click="startAdd">+ Add a kid</button>
+      <button v-if="!showForm" class="primary-btn" @click="startAdd">
+        <Icon name="plus" :size="16" /> Add a kid
+      </button>
     </div>
 
     <p class="privacy-note">
-      🔒 <strong>Private by design.</strong> Profiles and saved activities stay on
-      this device only — nothing about a child is ever sent anywhere.
+      <strong>Private by design.</strong> Profiles and saved activities stay on this
+      device only — nothing about a child is ever sent anywhere.
     </p>
 
     <!-- Empty state -->
     <div v-if="!state.kids.length && !showForm" class="empty">
-      <div class="empty-emoji">🧒</div>
+      <span class="empty-icon"><Icon name="users" :size="26" /></span>
       <p class="empty-title">No kids yet</p>
       <p class="empty-sub">
-        Add a kid to start planning. Their age and interests filter activities
-        just for them.
+        Add a kid to start planning. Their age and interests filter activities just for them.
       </p>
-      <button class="primary-btn" @click="startAdd">+ Add your first kid</button>
+      <button class="primary-btn" @click="startAdd">
+        <Icon name="plus" :size="16" /> Add your first kid
+      </button>
     </div>
 
     <!-- Kid list -->
@@ -74,22 +77,18 @@ async function confirmRemove(kid: KidProfile) {
           {{ initial(kid.name) }}
         </span>
         <div class="kid-info">
-          <div class="kid-name">{{ kid.name }} <span class="muted">· age {{ kid.age }}</span></div>
-          <div class="tags" v-if="kid.interests.length">
-            <span
-              v-for="c in kid.interests"
-              :key="c"
-              class="tag cat"
-              :style="{ color: CATEGORY_META[c].color, background: CATEGORY_META[c].bg }"
-            >
-              {{ CATEGORY_META[c].icon }} {{ CATEGORY_META[c].label }}
+          <div class="kid-name">{{ kid.name }} <span class="muted">· {{ kid.age }} yrs</span></div>
+          <div class="classify" v-if="kid.interests.length">
+            <span v-for="c in kid.interests" :key="c" class="class-tag cat">
+              <span class="dot" :style="{ background: CATEGORY_META[c].color }" />
+              {{ CATEGORY_META[c].label }}
             </span>
           </div>
           <div class="muted small" v-else>No interests set</div>
         </div>
         <div class="kid-actions">
-          <button class="icon-btn" aria-label="Edit" @click="startEdit(kid)">✎</button>
-          <button class="icon-btn danger" aria-label="Remove" @click="confirmRemove(kid)">🗑</button>
+          <button class="icon-btn" aria-label="Edit" @click="startEdit(kid)"><Icon name="edit" :size="16" /></button>
+          <button class="icon-btn danger" aria-label="Remove" @click="confirmRemove(kid)"><Icon name="trash" :size="16" /></button>
         </div>
       </li>
     </TransitionGroup>
@@ -110,19 +109,17 @@ async function confirmRemove(kid: KidProfile) {
 
       <div class="field">
         <span class="field-label">Interests</span>
-        <div class="tags choices">
+        <div class="classify choices">
           <button
             v-for="c in CATEGORIES"
             :key="c"
             type="button"
-            class="choice"
+            class="class-tag cat choice"
             :class="{ on: draft.interests.includes(c) }"
-            :style="draft.interests.includes(c)
-              ? { color: CATEGORY_META[c].color, background: CATEGORY_META[c].bg, borderColor: CATEGORY_META[c].color }
-              : {}"
             @click="toggleInterest(c)"
           >
-            {{ CATEGORY_META[c].icon }} {{ CATEGORY_META[c].label }}
+            <span class="dot" :style="{ background: CATEGORY_META[c].color }" />
+            {{ CATEGORY_META[c].label }}
           </button>
         </div>
       </div>

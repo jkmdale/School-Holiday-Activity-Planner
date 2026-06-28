@@ -4,6 +4,7 @@ import { state, activeKid, savedActivitiesFor, toggleSave } from '../store'
 import { downloadIcs } from '../services/ics'
 import { avatarColor, initial } from '../utils/categories'
 import ActivityCard from '../components/ActivityCard.vue'
+import Icon from '../components/Icon.vue'
 
 const kid = computed(() => activeKid())
 const savedList = computed(() => (kid.value ? savedActivitiesFor(kid.value.id) : []))
@@ -18,13 +19,13 @@ function exportIcs() {
 <template>
   <section>
     <div v-if="!state.kids.length" class="empty">
-      <div class="empty-emoji">♥</div>
+      <span class="empty-icon"><Icon name="bookmark" :size="26" /></span>
       <p class="empty-title">No plans yet</p>
       <p class="empty-sub">Add a kid first, then save activities to build their plan.</p>
     </div>
 
     <template v-else>
-      <!-- Kid selector -->
+      <span class="overline block">Plan for</span>
       <div class="kid-picker">
         <button
           v-for="k in state.kids"
@@ -48,16 +49,18 @@ function exportIcs() {
       <div v-if="savedList.length" class="export-card">
         <div>
           <div class="export-title">{{ savedList.length }} saved {{ savedList.length === 1 ? 'activity' : 'activities' }}</div>
-          <div class="export-sub">Add them all to your phone calendar in one tap.</div>
+          <div class="export-sub">Add them to your phone calendar in one tap.</div>
         </div>
-        <button class="primary-btn export-btn" @click="exportIcs">⬇ Export</button>
+        <button class="primary-btn export-btn" @click="exportIcs">
+          <Icon name="download" :size="16" /> Export
+        </button>
       </div>
 
-      <p v-if="kid && !savedList.length" class="empty">
-        <span class="empty-emoji">📅</span>
-        <span class="empty-title">Nothing saved for {{ kid.name }}</span>
-        <span class="empty-sub">Tap the ♥ on an activity in Browse to add it here.</span>
-      </p>
+      <div v-if="kid && !savedList.length" class="empty">
+        <span class="empty-icon"><Icon name="calendar" :size="26" /></span>
+        <p class="empty-title">Nothing saved for {{ kid.name }}</p>
+        <p class="empty-sub">Save an activity in Browse to add it here.</p>
+      </div>
 
       <TransitionGroup name="list" tag="div">
         <ActivityCard

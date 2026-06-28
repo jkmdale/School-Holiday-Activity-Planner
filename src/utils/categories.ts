@@ -25,10 +25,10 @@ export const CATEGORY_META: Record<Category, CategoryMeta> = {
   social: { label: 'Social', icon: '👋', color: '#a16207', bg: '#fbf3df' }
 }
 
-/** A stable, pleasant avatar colour derived from a kid's name. */
+/** A stable, muted avatar colour derived from a kid's name. */
 const AVATAR_COLORS = [
-  '#0d9488', '#7c3aed', '#db2777', '#ea580c',
-  '#2563eb', '#16a34a', '#d97706', '#0891b2'
+  '#3f6f68', '#5b5f8a', '#8a5b73', '#9a6b4a',
+  '#4a6d8a', '#5a7a55', '#8a7340', '#4f7a7d'
 ]
 
 export function avatarColor(name: string): string {
