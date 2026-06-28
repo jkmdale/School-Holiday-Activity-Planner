@@ -56,7 +56,11 @@ function shiftMonth(delta: number) {
 }
 
 function pickDay(iso: string) {
-  if (countOn(iso)) selectedDay.value = iso
+  const evs = byDate.value.get(iso)
+  if (!evs?.length) return
+  selectedDay.value = iso
+  // One event that day → jump straight to it; otherwise show the day's list.
+  if (evs.length === 1) openActivity(evs[0].id)
 }
 
 // Keep a sensible selected day as the month/data changes.
