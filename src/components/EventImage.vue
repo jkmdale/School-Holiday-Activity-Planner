@@ -15,14 +15,18 @@ const props = defineProps<{ activity: Activity; height?: number }>()
 const cat = computed(() => props.activity.categories[0] ?? 'social')
 const meta = computed(() => CATEGORY_META[cat.value])
 const failed = ref(false)
-const showPhoto = computed(() => !!props.activity.image && !failed.value)
+// Real photo per item if provided, otherwise a representative category photo.
+const photoSrc = computed(
+  () => props.activity.image || `${import.meta.env.BASE_URL}photos/${cat.value}.jpg`
+)
+const showPhoto = computed(() => !!photoSrc.value && !failed.value)
 </script>
 
 <template>
   <div class="event-img" :style="{ height: (height ?? 116) + 'px' }">
     <img
       v-if="showPhoto"
-      :src="activity.image"
+      :src="photoSrc"
       :alt="activity.name"
       loading="lazy"
       @error="failed = true"

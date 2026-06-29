@@ -4,6 +4,9 @@ import { CATEGORIES, type Category, type KidProfile } from '../types'
 import { state, addKid, updateKid, removeKid } from '../store'
 import { CATEGORY_META, avatarColor, initial } from '../utils/categories'
 import Icon from '../components/Icon.vue'
+import photoCredits from '../data/photoCredits.json'
+
+const credits = Object.values(photoCredits as Record<string, { title: string; creator: string; license: string; source: string }>)
 
 const draft = reactive<{
   id: string | null
@@ -146,5 +149,16 @@ async function confirmRemove(kid: KidProfile) {
         <button type="submit" class="primary-btn">Save</button>
       </div>
     </form>
+
+    <details v-if="!showForm" class="credits">
+      <summary>Photo credits</summary>
+      <p class="muted small">Category cover photos are free-licensed via Openverse.</p>
+      <ul>
+        <li v-for="(c, i) in credits" :key="i">
+          <a :href="c.source" target="_blank" rel="noopener noreferrer">{{ c.title }}</a>
+          — {{ c.creator }} ({{ c.license }})
+        </li>
+      </ul>
+    </details>
   </section>
 </template>
