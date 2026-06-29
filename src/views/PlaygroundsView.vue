@@ -25,9 +25,20 @@ const kindIcon: Record<Place['kind'], string> = {
   playground: 'tree', pool: 'activity', library: 'book'
 }
 
+// Well-known destinations to lead the default view (so it isn't all "A"s).
+const FEATURED = [
+  'pg-margaret-mahy-family-playground', 'pg-botanic-gardens', 'pg-groynes',
+  'pool-taiora-qeii', 'pg-spencer-park', 'pool-jellie-park', 'pg-rawhiti-domain',
+  'pool-pioneer', 'lib-turanga', 'pool-linwood'
+]
+const featRank = (id: string) => {
+  const i = FEATURED.indexOf(id)
+  return i === -1 ? FEATURED.length : i
+}
+
 const kind = ref<Place['kind'] | 'all'>('all')
 const q = ref('')
-const sort = ref<'near' | 'rated' | 'name'>('name')
+const sort = ref<'featured' | 'near' | 'rated'>('featured')
 const view = ref<'list' | 'map'>('list')
 const noteOpen = reactive<Record<string, boolean>>({})
 const noteDraft = reactive<Record<string, string>>({})
@@ -50,13 +61,16 @@ const filtered = computed(() => {
   if (sort.value === 'near' && state.coords) arr.sort((a, b) => distance(a) - distance(b))
   else if (sort.value === 'rated') {
     arr.sort((a, b) => playRating(b.id).stars - playRating(a.id).stars || a.name.localeCompare(b.name))
-  } else arr.sort((a, b) => a.name.localeCompare(b.name))
+  } else {
+    // Featured first, then alphabetical.
+    arr.sort((a, b) => featRank(a.id) - featRank(b.id) || a.name.localeCompare(b.name))
+  }
   return arr
 })
 
 const shown = computed(() => filtered.value.slice(0, LIST_LIMIT))
 
-async function pickSort(s: 'near' | 'rated' | 'name') {
+async function pickSort(s: 'featured' | 'near' | 'rated') {
   if (s === 'near' && !state.coords) {
     const ok = await requestLocation()
     if (!ok) return
@@ -114,9 +128,9 @@ function saveNote(id: string) {
 
     <div class="play-controls">
       <div class="segmented view-toggle sm">
+        <button :class="{ on: sort === 'featured' }" @click="pickSort('featured')">Featured</button>
         <button :class="{ on: sort === 'near' }" @click="pickSort('near')">{{ state.locating ? '…' : 'Near me' }}</button>
         <button :class="{ on: sort === 'rated' }" @click="pickSort('rated')">Rated</button>
-        <button :class="{ on: sort === 'name' }" @click="pickSort('name')">A–Z</button>
       </div>
       <div class="segmented view-toggle sm">
         <button :class="{ on: view === 'list' }" @click="view = 'list'">List</button>
