@@ -51,7 +51,8 @@ async function download(url, dest) {
 
 let added = 0, kept = 0, none = 0
 for (const a of acts) {
-  if (overlay[a.id] && overlay[a.id].license === 'Provider') { kept++; continue }
+  // Already have a photo (venue og or a previous Pexels pull) → leave it.
+  if (overlay[a.id]) { kept++; continue }
   const t = topic(a)
   const tries = []
   if (t.length) tries.push(`${t.join(' ')} children`)
@@ -88,6 +89,7 @@ const KIND_QUERY = { pool: 'indoor swimming pool', library: 'public library inte
 
 let placeAdded = 0
 for (const pl of [...pools, ...libraries]) {
+  if (placeOverlay[pl.id]) continue // already fetched
   const p = await search(KIND_QUERY[pl.kind] || pl.kind)
   if (!p) { console.log(`${pl.id} (none)`); continue }
   const src = p.src.large || p.src.medium || p.src.original
