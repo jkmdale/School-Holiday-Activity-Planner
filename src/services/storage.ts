@@ -10,11 +10,12 @@
  * localStorage is used for the MVP (small data, simple, synchronous). The async
  * Promise signatures leave room to swap in IndexedDB later without UI churn.
  */
-import type { Activity, KidProfile, SavedItem } from '../types'
+import type { Activity, KidProfile, PlayRating, SavedItem } from '../types'
 
 const KIDS_KEY = 'chp.kids.v1'
 const SAVED_KEY = 'chp.saved.v1'
 const CUSTOM_KEY = 'chp.custom.v1'
+const PLAY_KEY = 'chp.playratings.v1'
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -127,4 +128,17 @@ export async function removeCustom(activityId: string): Promise<void> {
   // Cascade: drop any saved references to this custom event.
   const saved = await getSaved()
   write(SAVED_KEY, saved.filter((s) => s.activityId !== activityId))
+}
+
+/* ----------------- Playground ratings (local only) ----------------- */
+
+export async function getPlayRatings(): Promise<Record<string, PlayRating>> {
+  return read<Record<string, PlayRating>>(PLAY_KEY, {})
+}
+
+export async function setPlayRating(id: string, rating: PlayRating): Promise<void> {
+  const all = await getPlayRatings()
+  if (rating.stars <= 0 && !rating.note) delete all[id]
+  else all[id] = rating
+  write(PLAY_KEY, all)
 }

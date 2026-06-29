@@ -8,9 +8,10 @@
  * This module deliberately knows NOTHING about kids or saved items — that data
  * is local-only and lives in storage.ts.
  */
-import type { Activity, HolidaySet } from '../types'
+import type { Activity, HolidaySet, Playground } from '../types'
 import activitiesSeed from '../data/activities.json'
 import holidaysSeed from '../data/holidays.json'
+import playgroundsSeed from '../data/playgrounds.json'
 
 export async function getActivities(): Promise<Activity[]> {
   // Future: return (await fetch('/api/activities')).json()
@@ -20,4 +21,9 @@ export async function getActivities(): Promise<Activity[]> {
 export async function getHolidaySets(): Promise<HolidaySet[]> {
   // Future: return (await fetch('/api/holiday-sets')).json()
   return holidaysSeed as HolidaySet[]
+}
+
+export async function getPlaygrounds(): Promise<Playground[]> {
+  // Future: return (await fetch('/api/playgrounds')).json()
+  return playgroundsSeed as Playground[]
 }

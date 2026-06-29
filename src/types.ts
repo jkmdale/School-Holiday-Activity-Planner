@@ -106,7 +106,26 @@ export interface HolidaySet {
   notes?: string
 }
 
+/** A public playground. Place, not an event — always there. */
+export interface Playground {
+  id: string
+  name: string
+  suburb: string
+  lat: number
+  lng: number
+  description: string
+  /** Short feature tags: "Fenced", "Toilets", "Water play", etc. */
+  features: string[]
+}
+
 /* ----------------------------- Local-only ----------------------------- */
+
+/** A parent's private rating of a playground. LOCAL ONLY. */
+export interface PlayRating {
+  /** 1–5 stars, or 0 for "not rated". */
+  stars: number
+  note?: string
+}
 
 /** A child's profile. LOCAL ONLY — never leaves the device. */
 export interface KidProfile {

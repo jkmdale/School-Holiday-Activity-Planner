@@ -1,0 +1,92 @@
+[
+  {
+    "id": "pg-margaret-mahy",
+    "name": "Margaret Mahy Family Playground",
+    "suburb": "Central City",
+    "lat": -43.5298,
+    "lng": 172.6423,
+    "description": "One of the largest playgrounds in the Southern Hemisphere — towers, slides, a huge water-play area, swings and a flying fox.",
+    "features": ["Toilets", "Water play", "Flying fox", "Accessible", "Café nearby"]
+  },
+  {
+    "id": "pg-botanic-gardens",
+    "name": "Botanic Gardens Playground",
+    "suburb": "Central City",
+    "lat": -43.5312,
+    "lng": 172.6190,
+    "description": "Nature-themed playground inside the Botanic Gardens with climbing nets, slides and a paddling stream in summer.",
+    "features": ["Toilets", "Water play", "Shade", "Café nearby"]
+  },
+  {
+    "id": "pg-the-groynes",
+    "name": "The Groynes",
+    "suburb": "Harewood",
+    "lat": -43.4472,
+    "lng": 172.5793,
+    "description": "Picnic spot with playgrounds, ponds, walking tracks and a miniature railway on some weekends. Great for bikes and scooters.",
+    "features": ["Toilets", "BBQ", "Bike tracks", "Picnic tables"]
+  },
+  {
+    "id": "pg-halswell-quarry",
+    "name": "Halswell Quarry Park",
+    "suburb": "Halswell",
+    "lat": -43.5762,
+    "lng": 172.5641,
+    "description": "Playground beside the old quarry with walking tracks, sister-city gardens and plenty of room to run.",
+    "features": ["Toilets", "Walking tracks", "Picnic tables", "Dogs allowed"]
+  },
+  {
+    "id": "pg-spencer-park",
+    "name": "Spencer Park",
+    "suburb": "Spencerville",
+    "lat": -43.4399,
+    "lng": 172.7049,
+    "description": "Large coastal park near the beach with a playground, big lawns and a paddling area.",
+    "features": ["Toilets", "BBQ", "Beach nearby", "Picnic tables"]
+  },
+  {
+    "id": "pg-foster-park",
+    "name": "Foster Park",
+    "suburb": "Wigram",
+    "lat": -43.5469,
+    "lng": 172.5461,
+    "description": "Modern destination playground with a flying fox, climbing frames, basketball and a big open field.",
+    "features": ["Toilets", "Flying fox", "Basketball", "Accessible"]
+  },
+  {
+    "id": "pg-rawhiti-domain",
+    "name": "Rawhiti Domain Playground",
+    "suburb": "New Brighton",
+    "lat": -43.5067,
+    "lng": 172.7253,
+    "description": "Spacious playground near the beach and the New Brighton hot pools, with swings, slides and open green space.",
+    "features": ["Toilets", "Beach nearby", "Open field"]
+  },
+  {
+    "id": "pg-sumner-beach",
+    "name": "Sumner Beach Playground",
+    "suburb": "Sumner",
+    "lat": -43.5673,
+    "lng": 172.7558,
+    "description": "Seaside playground right by the sand and cafés — perfect to pair with a beach day.",
+    "features": ["Toilets", "Beach nearby", "Café nearby"]
+  },
+  {
+    "id": "pg-bishopdale-park",
+    "name": "Bishopdale Park",
+    "suburb": "Bishopdale",
+    "lat": -43.4901,
+    "lng": 172.5797,
+    "description": "Friendly neighbourhood park with a fenced playground, good for younger kids.",
+    "features": ["Fenced", "Toilets", "Picnic tables"]
+  },
+  {
+    "id": "pg-edmonds-rotunda",
+    "name": "Edmonds Band Rotunda Playground",
+    "suburb": "Linwood",
+    "lat": -43.5337,
+    "lng": 172.6533,
+    "description": "Riverside playground along the Avon with shade, paths for scooters and easy parking.",
+    "features": ["Shade", "Riverside", "Scooter paths"]
+  }
+]

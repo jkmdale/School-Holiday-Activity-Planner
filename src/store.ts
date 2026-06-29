@@ -11,10 +11,10 @@
  * truth.
  */
 import { reactive } from 'vue'
-import type { Activity, HolidaySet, KidProfile, SavedItem } from './types'
+import type { Activity, HolidaySet, KidProfile, PlayRating, Playground, SavedItem } from './types'
 import type { SharedPlan } from './services/share'
 import { getForecast, type DayForecast } from './services/weather'
-import { getActivities, getHolidaySets } from './services/dataService'
+import { getActivities, getHolidaySets, getPlaygrounds } from './services/dataService'
 import * as storage from './services/storage'
 import { StorageWriteError } from './services/storage'
 
@@ -40,6 +40,9 @@ interface State {
   eventForm: { open: boolean; editingId: string | null }
   /** Christchurch forecast by ISO date, once loaded (best-effort, may stay null). */
   forecast: Record<string, DayForecast> | null
+  /** Public playgrounds, and the parent's private ratings of them. */
+  playgrounds: Playground[]
+  playRatings: Record<string, PlayRating>
 }
 
 export const state = reactive<State>({
@@ -55,7 +58,9 @@ export const state = reactive<State>({
   coords: null,
   locating: false,
   eventForm: { open: false, editingId: null },
-  forecast: null
+  forecast: null,
+  playgrounds: [],
+  playRatings: {}
 })
 
 /** Load the Christchurch forecast in the background; ignore failures. */
@@ -70,6 +75,35 @@ export async function loadForecast(): Promise<void> {
 /** True when the forecast says it's likely wet on the given ISO date. */
 export function isRainyOn(iso: string): boolean {
   return !!state.forecast?.[iso]?.rainy
+}
+
+/* ---------------------------- Playgrounds ---------------------------- */
+
+export function playRating(id: string): PlayRating {
+  return state.playRatings[id] ?? { stars: 0 }
+}
+
+async function persistPlayRating(id: string, rating: PlayRating): Promise<void> {
+  await guard(async () => {
+    await storage.setPlayRating(id, rating)
+    if (rating.stars <= 0 && !rating.note) {
+      delete state.playRatings[id]
+    } else {
+      state.playRatings[id] = rating
+    }
+  })
+}
+
+export function setPlayStars(id: string, stars: number): Promise<void> {
+  const cur = playRating(id)
+  // Tapping the current rating again clears it.
+  const next = cur.stars === stars ? 0 : stars
+  return persistPlayRating(id, { stars: next, note: cur.note })
+}
+
+export function setPlayNote(id: string, note: string): Promise<void> {
+  const cur = playRating(id)
+  return persistPlayRating(id, { stars: cur.stars, note: note.trim() || undefined })
 }
 
 /* --------------------------- Event form --------------------------- */
@@ -158,19 +192,24 @@ export function selectedActivity(): Activity | null {
 }
 
 export async function init(): Promise<void> {
-  const [activities, holidaySets, kids, saved, custom] = await Promise.all([
-    getActivities(),
-    getHolidaySets(),
-    storage.getKids(),
-    storage.getSaved(),
-    storage.getCustom()
-  ])
+  const [activities, holidaySets, playgrounds, kids, saved, custom, playRatings] =
+    await Promise.all([
+      getActivities(),
+      getHolidaySets(),
+      getPlaygrounds(),
+      storage.getKids(),
+      storage.getSaved(),
+      storage.getCustom(),
+      storage.getPlayRatings()
+    ])
   // Catalogue activities plus the parent's own events share one pool, so
   // saving, calendar, export and suggest all treat them identically.
   state.activities = [...activities, ...custom]
   state.holidaySets = holidaySets
+  state.playgrounds = playgrounds
   state.kids = kids
   state.saved = saved
+  state.playRatings = playRatings
   state.activeKidId = kids[0]?.id ?? null
   state.ready = true
   // Best-effort, non-blocking: makes Suggest-a-day weather-aware once it lands.

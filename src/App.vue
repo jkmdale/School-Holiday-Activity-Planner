@@ -5,6 +5,7 @@ import { readPlanFromHash } from './services/share'
 import KidsView from './views/KidsView.vue'
 import BrowseView from './views/BrowseView.vue'
 import SavedView from './views/SavedView.vue'
+import PlaygroundsView from './views/PlaygroundsView.vue'
 import Icon from './components/Icon.vue'
 import InstallPrompt from './components/InstallPrompt.vue'
 import ActivityDetail from './components/ActivityDetail.vue'
@@ -13,7 +14,7 @@ import CustomEventForm from './components/CustomEventForm.vue'
 
 const eventFormKids = computed(() => (state.activeKidId ? [state.activeKidId] : []))
 
-type Tab = 'kids' | 'browse' | 'saved'
+type Tab = 'kids' | 'browse' | 'saved' | 'play'
 const tab = ref<Tab>('browse')
 
 const savedCount = computed(() => state.saved.length)
@@ -33,6 +34,7 @@ onMounted(() => {
 const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'browse', label: 'Browse', icon: 'search' },
   { id: 'saved', label: 'Plan', icon: 'bookmark' },
+  { id: 'play', label: 'Play', icon: 'tree' },
   { id: 'kids', label: 'Kids', icon: 'users' }
 ]
 </script>
@@ -67,6 +69,7 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
     <Transition name="fade" mode="out-in">
       <KidsView v-if="tab === 'kids'" key="kids" />
       <BrowseView v-else-if="tab === 'browse'" key="browse" />
+      <PlaygroundsView v-else-if="tab === 'play'" key="play" />
       <SavedView v-else key="saved" />
     </Transition>
   </main>
