@@ -75,3 +75,33 @@ for (const a of acts) {
 }
 writeFileSync(overlayPath, JSON.stringify(overlay, null, 2) + '\n')
 console.log(`\n✓ Pexels photos added: ${added}, venue photos kept: ${kept}, none: ${none}`)
+
+/* ----------------- Places: pools & libraries (not playgrounds) ----------------- */
+
+const placeImgDir = resolve(ROOT, 'public/photos/places')
+mkdirSync(placeImgDir, { recursive: true })
+const placeOverlayPath = resolve(ROOT, 'src/data/placePhotos.json')
+const placeOverlay = existsSync(placeOverlayPath) ? JSON.parse(readFileSync(placeOverlayPath, 'utf8')) : {}
+const pools = JSON.parse(readFileSync(resolve(ROOT, 'src/data/pools.json'), 'utf8'))
+const libraries = JSON.parse(readFileSync(resolve(ROOT, 'src/data/libraries.json'), 'utf8'))
+const KIND_QUERY = { pool: 'indoor swimming pool', library: 'public library interior books' }
+
+let placeAdded = 0
+for (const pl of [...pools, ...libraries]) {
+  const p = await search(KIND_QUERY[pl.kind] || pl.kind)
+  if (!p) { console.log(`${pl.id} (none)`); continue }
+  const src = p.src.large || p.src.medium || p.src.original
+  try {
+    await download(src, resolve(placeImgDir, `${pl.id}.jpg`))
+  } catch { console.log(`${pl.id} download failed`); continue }
+  placeOverlay[pl.id] = {
+    url: `photos/places/${pl.id}.jpg`,
+    creator: p.photographer || 'Pexels',
+    license: 'Pexels',
+    source: p.url
+  }
+  placeAdded++
+  console.log(`${pl.id} <- ${p.photographer}`)
+}
+writeFileSync(placeOverlayPath, JSON.stringify(placeOverlay, null, 2) + '\n')
+console.log(`✓ Place photos added: ${placeAdded}`)

@@ -29,7 +29,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/photos/activities src/data/activityPhotos.json
+          git add public/photos/activities public/photos/places src/data/activityPhotos.json src/data/placePhotos.json
           if git diff --staged --quiet; then
             echo "No photo changes to commit."
           else

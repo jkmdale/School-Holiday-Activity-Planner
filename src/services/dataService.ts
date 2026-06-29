@@ -15,6 +15,7 @@ import holidaysSeed from '../data/holidays.json'
 import playgroundsSeed from '../data/playgrounds.json'
 import poolsSeed from '../data/pools.json'
 import librariesSeed from '../data/libraries.json'
+import placePhotos from '../data/placePhotos.json'
 
 export async function getActivities(): Promise<Activity[]> {
   // Future: return (await fetch('/api/activities')).json()
@@ -46,5 +47,14 @@ export async function getPlaces(): Promise<Place[]> {
   const playgrounds = (playgroundsSeed as Omit<Place, 'kind'>[]).map(
     (p) => ({ ...p, kind: 'playground' as const })
   )
-  return [...playgrounds, ...(poolsSeed as Place[]), ...(librariesSeed as Place[])]
+  const all = [...playgrounds, ...(poolsSeed as Place[]), ...(librariesSeed as Place[])]
+  // Overlay Pexels photos for pools/libraries (base-relative paths).
+  const base = import.meta.env.BASE_URL
+  const photos = placePhotos as Record<string, { url: string; creator: string; license: string; source: string }>
+  return all.map((p) => {
+    const ph = photos[p.id]
+    if (!ph || p.image) return p
+    const image = /^https?:\/\//.test(ph.url) ? ph.url : base + ph.url
+    return { ...p, image, imageCredit: { creator: ph.creator, license: ph.license, source: ph.source } }
+  })
 }

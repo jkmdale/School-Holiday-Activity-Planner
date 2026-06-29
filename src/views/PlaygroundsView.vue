@@ -129,6 +129,9 @@ function saveNote(id: string) {
     <template v-else>
       <div class="play-list">
         <article v-for="pg in shown" :key="pg.id" class="card play-card">
+          <div v-if="pg.image" class="event-img place-banner">
+            <img :src="pg.image" :alt="pg.name" loading="lazy" />
+          </div>
           <div class="play-head">
             <div>
               <h3 class="play-name"><Icon :name="kindIcon[pg.kind]" :size="16" /> {{ pg.name }}</h3>

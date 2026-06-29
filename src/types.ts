@@ -119,6 +119,9 @@ export interface Place {
   description: string
   /** Short feature tags: "Fenced", "Toilets", "Water play", etc. */
   features: string[]
+  /** Optional photo URL (pools/libraries); playgrounds use a shared visual. */
+  image?: string
+  imageCredit?: { creator: string; license: string; source: string }
 }
 
 /* ----------------------------- Local-only ----------------------------- */
