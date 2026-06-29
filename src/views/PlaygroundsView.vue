@@ -28,7 +28,11 @@ function distance(pg: { lat: number; lng: number }): number {
 const filtered = computed(() => {
   const needle = q.value.trim().toLowerCase()
   let list = state.playgrounds
-  if (needle) list = list.filter((p) => p.name.toLowerCase().includes(needle))
+  if (needle) {
+    list = list.filter(
+      (p) => p.name.toLowerCase().includes(needle) || p.suburb.toLowerCase().includes(needle)
+    )
+  }
   const arr = [...list]
   if (sort.value === 'near' && state.coords) arr.sort((a, b) => distance(a) - distance(b))
   else if (sort.value === 'rated') {
@@ -105,7 +109,9 @@ function saveNote(id: string) {
           <div class="play-head">
             <div>
               <h3 class="play-name">{{ pg.name }}</h3>
-              <p v-if="distLabel(pg)" class="provider"><Icon name="pin" :size="14" /> {{ distLabel(pg) }} away</p>
+              <p class="provider">
+                <Icon name="pin" :size="14" /> {{ pg.suburb }}<template v-if="distLabel(pg)"> · {{ distLabel(pg) }} away</template>
+              </p>
             </div>
           </div>
 

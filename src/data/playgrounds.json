@@ -2,7 +2,7 @@
   {
     "id": "pg-abberley-park",
     "name": "Abberley Park",
-    "suburb": "",
+    "suburb": "St Albans West",
     "lat": -43.514,
     "lng": 172.6302,
     "description": "2 play areas at Abberley Park.",
@@ -11,7 +11,7 @@
   {
     "id": "pg-addington-park",
     "name": "Addington Park",
-    "suburb": "",
+    "suburb": "Addington West",
     "lat": -43.54627,
     "lng": 172.61076,
     "description": "Council playground at Addington Park.",
@@ -22,7 +22,7 @@
   {
     "id": "pg-akoranga-reserve",
     "name": "Akoranga Reserve",
-    "suburb": "",
+    "suburb": "Hornby West",
     "lat": -43.54636,
     "lng": 172.52038,
     "description": "Council playground at Akoranga Reserve.",
@@ -31,7 +31,7 @@
   {
     "id": "pg-albion-square",
     "name": "Albion Square",
-    "suburb": "",
+    "suburb": "Lyttelton",
     "lat": -43.60191,
     "lng": 172.7203,
     "description": "Council playground at Albion Square.",
@@ -40,7 +40,7 @@
   {
     "id": "pg-alwyn-park",
     "name": "Alwyn Park",
-    "suburb": "",
+    "suburb": "Redwood North",
     "lat": -43.46982,
     "lng": 172.62915,
     "description": "Council playground at Alwyn Park.",
@@ -49,7 +49,7 @@
   {
     "id": "pg-annandale-park",
     "name": "Annandale Park",
-    "suburb": "",
+    "suburb": "Ilam North",
     "lat": -43.51608,
     "lng": 172.56538,
     "description": "Council playground at Annandale Park.",
@@ -58,7 +58,7 @@
   {
     "id": "pg-aranui-playground",
     "name": "Aranui Playground",
-    "suburb": "",
+    "suburb": "Bexley",
     "lat": -43.51756,
     "lng": 172.70362,
     "description": "Council playground at Aranui Playground.",
@@ -67,7 +67,7 @@
   {
     "id": "pg-arcon-playground",
     "name": "Arcon Playground",
-    "suburb": "",
+    "suburb": "Broomfield",
     "lat": -43.5246,
     "lng": 172.53002,
     "description": "Council playground at Arcon Playground.",
@@ -76,7 +76,7 @@
   {
     "id": "pg-arcon-stream-reserve",
     "name": "Arcon Stream Reserve",
-    "suburb": "",
+    "suburb": "Broomfield",
     "lat": -43.52796,
     "lng": 172.5331,
     "description": "Council playground at Arcon Stream Reserve.",
@@ -85,7 +85,7 @@
   {
     "id": "pg-arden-reserve",
     "name": "Arden Reserve",
-    "suburb": "",
+    "suburb": "Parklands",
     "lat": -43.4839,
     "lng": 172.70669,
     "description": "Council playground at Arden Reserve.",
@@ -94,7 +94,7 @@
   {
     "id": "pg-armitage-reserve",
     "name": "Armitage Reserve",
-    "suburb": "",
+    "suburb": "Bishopdale South",
     "lat": -43.49225,
     "lng": 172.59025,
     "description": "Council playground at Armitage Reserve.",
@@ -103,7 +103,7 @@
   {
     "id": "pg-arran-playground",
     "name": "Arran Playground",
-    "suburb": "",
+    "suburb": "Woolston North",
     "lat": -43.54214,
     "lng": 172.67641,
     "description": "Council playground at Arran Playground.",
@@ -112,7 +112,7 @@
   {
     "id": "pg-ashcroft-reserve",
     "name": "Ashcroft Reserve",
-    "suburb": "",
+    "suburb": "Burnside Park",
     "lat": -43.49969,
     "lng": 172.56485,
     "description": "Council playground at Ashcroft Reserve.",
@@ -121,7 +121,7 @@
   {
     "id": "pg-ashwood-reserve",
     "name": "Ashwood Reserve",
-    "suburb": "",
+    "suburb": "Queenspark",
     "lat": -43.47688,
     "lng": 172.70097,
     "description": "Council playground at Ashwood Reserve.",
@@ -130,7 +130,7 @@
   {
     "id": "pg-aston-reserve",
     "name": "Aston Reserve",
-    "suburb": "",
+    "suburb": "Waimairi Beach",
     "lat": -43.48167,
     "lng": 172.71871,
     "description": "Council playground at Aston Reserve.",
@@ -139,7 +139,7 @@
   {
     "id": "pg-auburn-reserve",
     "name": "Auburn Reserve",
-    "suburb": "",
+    "suburb": "Wharenui",
     "lat": -43.53216,
     "lng": 172.57759,
     "description": "Council playground at Auburn Reserve.",
@@ -148,7 +148,7 @@
   {
     "id": "pg-avebury-park",
     "name": "Avebury Park",
-    "suburb": "",
+    "suburb": "Richmond South",
     "lat": -43.52038,
     "lng": 172.66047,
     "description": "Council playground at Avebury Park.",
@@ -157,7 +157,7 @@
   {
     "id": "pg-aviemore-park",
     "name": "Aviemore Park",
-    "suburb": "",
+    "suburb": "Prestons Park",
     "lat": -43.48215,
     "lng": 172.67093,
     "description": "Council playground at Aviemore Park.",
@@ -166,7 +166,7 @@
   {
     "id": "pg-avon-park",
     "name": "Avon Park",
-    "suburb": "",
+    "suburb": "Avonside",
     "lat": -43.51922,
     "lng": 172.67753,
     "description": "Council playground at Avon Park.",
@@ -175,7 +175,7 @@
   {
     "id": "pg-avondale-park",
     "name": "Avondale Park",
-    "suburb": "",
+    "suburb": "Avondale",
     "lat": -43.50442,
     "lng": 172.68978,
     "description": "Council playground at Avondale Park.",
@@ -186,7 +186,7 @@
   {
     "id": "pg-avondale-playground",
     "name": "Avondale Playground",
-    "suburb": "",
+    "suburb": "Avondale",
     "lat": -43.50833,
     "lng": 172.68753,
     "description": "Council playground at Avondale Playground.",
@@ -195,7 +195,7 @@
   {
     "id": "pg-aylsham-reserve",
     "name": "Aylsham Reserve",
-    "suburb": "",
+    "suburb": "Regents Park",
     "lat": -43.47172,
     "lng": 172.60987,
     "description": "Council playground at Aylsham Reserve.",
@@ -204,7 +204,7 @@
   {
     "id": "pg-balcairn-reserve",
     "name": "Balcairn Reserve",
-    "suburb": "",
+    "suburb": "Oaklands East",
     "lat": -43.57382,
     "lng": 172.56541,
     "description": "Council playground at Balcairn Reserve.",
@@ -213,7 +213,7 @@
   {
     "id": "pg-balmoral-hill-reserve",
     "name": "Balmoral Hill Reserve",
-    "suburb": "",
+    "suburb": "Redcliffs",
     "lat": -43.56035,
     "lng": 172.73123,
     "description": "Council playground at Balmoral Hill Reserve.",
@@ -222,7 +222,7 @@
   {
     "id": "pg-barnett-park-sports-grounds",
     "name": "Barnett Park Sports Grounds",
-    "suburb": "",
+    "suburb": "Clifton Hill",
     "lat": -43.56434,
     "lng": 172.74015,
     "description": "Council playground at Barnett Park Sports Grounds.",
@@ -233,7 +233,7 @@
   {
     "id": "pg-barrington-park",
     "name": "Barrington Park",
-    "suburb": "",
+    "suburb": "Spreydon North",
     "lat": -43.5552,
     "lng": 172.6173,
     "description": "2 play areas at Barrington Park.",
@@ -244,7 +244,7 @@
   {
     "id": "pg-bayswater-reserve",
     "name": "Bayswater Reserve",
-    "suburb": "",
+    "suburb": "Bromley South",
     "lat": -43.54406,
     "lng": 172.69333,
     "description": "Council playground at Bayswater Reserve.",
@@ -253,7 +253,7 @@
   {
     "id": "pg-beckenham-park",
     "name": "Beckenham Park",
-    "suburb": "",
+    "suburb": "Beckenham",
     "lat": -43.56205,
     "lng": 172.64701,
     "description": "Council playground at Beckenham Park.",
@@ -264,7 +264,7 @@
   {
     "id": "pg-bendrose-park",
     "name": "Bendrose Park",
-    "suburb": "",
+    "suburb": "Broken Run",
     "lat": -43.56222,
     "lng": 172.55699,
     "description": "Council playground at Bendrose Park.",
@@ -273,7 +273,7 @@
   {
     "id": "pg-benmore-gardens-reserve",
     "name": "Benmore Gardens Reserve",
-    "suburb": "",
+    "suburb": "Harewood",
     "lat": -43.48586,
     "lng": 172.57166,
     "description": "Council playground at Benmore Gardens Reserve.",
@@ -282,7 +282,7 @@
   {
     "id": "pg-bermuda-reserve",
     "name": "Bermuda Reserve",
-    "suburb": "",
+    "suburb": "Hornby South",
     "lat": -43.54427,
     "lng": 172.53501,
     "description": "Council playground at Bermuda Reserve.",
@@ -291,7 +291,7 @@
   {
     "id": "pg-bethia-park",
     "name": "Bethia Park",
-    "suburb": "",
+    "suburb": "Halswell North",
     "lat": -43.5786,
     "lng": 172.57937,
     "description": "Council playground at Bethia Park.",
@@ -300,7 +300,7 @@
   {
     "id": "pg-beverley-park",
     "name": "Beverley Park",
-    "suburb": "",
+    "suburb": "Stanmore",
     "lat": -43.52611,
     "lng": 172.65656,
     "description": "Council playground at Beverley Park.",
@@ -309,7 +309,7 @@
   {
     "id": "pg-bexley-park",
     "name": "Bexley Park",
-    "suburb": "",
+    "suburb": "Ōtakaro-Avon River Corridor",
     "lat": -43.51335,
     "lng": 172.71268,
     "description": "Council playground at Bexley Park.",
@@ -320,7 +320,7 @@
   {
     "id": "pg-bill-hammond-reserve",
     "name": "Bill Hammond Reserve",
-    "suburb": "",
+    "suburb": "Belfast East",
     "lat": -43.45742,
     "lng": 172.63796,
     "description": "Council playground at Bill Hammond Reserve.",
@@ -329,7 +329,7 @@
   {
     "id": "pg-birdlings-flat-community-reserve",
     "name": "Birdlings Flat Community Reserve",
-    "suburb": "",
+    "suburb": "Banks Peninsula South",
     "lat": -43.8257,
     "lng": 172.7075,
     "description": "Council playground at Birdlings Flat Community Reserve.",
@@ -338,7 +338,7 @@
   {
     "id": "pg-bishopdale-mall-reserve",
     "name": "Bishopdale Mall Reserve",
-    "suburb": "",
+    "suburb": "Bishopdale West",
     "lat": -43.48961,
     "lng": 172.58696,
     "description": "Council playground at Bishopdale Mall Reserve.",
@@ -347,7 +347,7 @@
   {
     "id": "pg-bishopdale-park",
     "name": "Bishopdale Park",
-    "suburb": "",
+    "suburb": "Bishopdale West",
     "lat": -43.48756,
     "lng": 172.58365,
     "description": "Council playground at Bishopdale Park.",
@@ -358,7 +358,7 @@
   {
     "id": "pg-bolero-reserve",
     "name": "Bolero Reserve",
-    "suburb": "",
+    "suburb": "Parklands",
     "lat": -43.48334,
     "lng": 172.69903,
     "description": "Council playground at Bolero Reserve.",
@@ -367,7 +367,7 @@
   {
     "id": "pg-botanic-gardens",
     "name": "Botanic Gardens",
-    "suburb": "",
+    "suburb": "Hagley Park",
     "lat": -43.52855,
     "lng": 172.61934,
     "description": "Nature-themed playground in the Botanic Gardens with climbing nets, slides and a paddling stream in summer.",
@@ -381,7 +381,7 @@
   {
     "id": "pg-bower-park",
     "name": "Bower Park",
-    "suburb": "",
+    "suburb": "Rawhiti",
     "lat": -43.50078,
     "lng": 172.70782,
     "description": "Council playground at Bower Park.",
@@ -392,7 +392,7 @@
   {
     "id": "pg-bradford-park",
     "name": "Bradford Park",
-    "suburb": "",
+    "suburb": "Sydenham West",
     "lat": -43.55206,
     "lng": 172.63216,
     "description": "Council playground at Bradford Park.",
@@ -403,7 +403,7 @@
   {
     "id": "pg-branston-park",
     "name": "Branston Park",
-    "suburb": "",
+    "suburb": "Branston",
     "lat": -43.55199,
     "lng": 172.53017,
     "description": "Council playground at Branston Park.",
@@ -414,7 +414,7 @@
   {
     "id": "pg-broad-park",
     "name": "Broad Park",
-    "suburb": "",
+    "suburb": "Waimairi Beach",
     "lat": -43.48505,
     "lng": 172.72244,
     "description": "Council playground at Broad Park.",
@@ -423,7 +423,7 @@
   {
     "id": "pg-broadhaven-reserve",
     "name": "Broadhaven Reserve",
-    "suburb": "",
+    "suburb": "Parklands",
     "lat": -43.47287,
     "lng": 172.70773,
     "description": "Council playground at Broadhaven Reserve.",
@@ -434,7 +434,7 @@
   {
     "id": "pg-broken-run-reserve",
     "name": "Broken Run Reserve",
-    "suburb": "",
+    "suburb": "Broken Run",
     "lat": -43.55952,
     "lng": 172.55976,
     "description": "Council playground at Broken Run Reserve.",
@@ -443,7 +443,7 @@
   {
     "id": "pg-bromley-old-school-reserve",
     "name": "Bromley Old School Reserve",
-    "suburb": "",
+    "suburb": "Bromley North",
     "lat": -43.53847,
     "lng": 172.69126,
     "description": "Council playground at Bromley Old School Reserve.",
@@ -452,7 +452,7 @@
   {
     "id": "pg-bromley-park",
     "name": "Bromley Park",
-    "suburb": "",
+    "suburb": "Linwood East",
     "lat": -43.52827,
     "lng": 172.68178,
     "description": "Council playground at Bromley Park.",
@@ -463,7 +463,7 @@
   {
     "id": "pg-bronco-park",
     "name": "Bronco Park",
-    "suburb": "",
+    "suburb": "Aidanfield",
     "lat": -43.56225,
     "lng": 172.56172,
     "description": "Council playground at Bronco Park.",
@@ -472,7 +472,7 @@
   {
     "id": "pg-brooklands-domain",
     "name": "Brooklands Domain",
-    "suburb": "",
+    "suburb": "Brooklands-Spencerville",
     "lat": -43.40283,
     "lng": 172.69866,
     "description": "Council playground at Brooklands Domain.",
@@ -481,7 +481,7 @@
   {
     "id": "pg-broomfield-common",
     "name": "Broomfield Common",
-    "suburb": "",
+    "suburb": "Broomfield",
     "lat": -43.52701,
     "lng": 172.52618,
     "description": "Council playground at Broomfield Common.",
@@ -492,7 +492,7 @@
   {
     "id": "pg-brownlee-reserve",
     "name": "Brownlee Reserve",
-    "suburb": "",
+    "suburb": "Clifton Hill",
     "lat": -43.56927,
     "lng": 172.75052,
     "description": "Council playground at Brownlee Reserve.",
@@ -501,7 +501,7 @@
   {
     "id": "pg-buchan-playground",
     "name": "Buchan Playground",
-    "suburb": "",
+    "suburb": "Sydenham Central",
     "lat": -43.54511,
     "lng": 172.6379,
     "description": "Council playground at Buchan Playground.",
@@ -510,7 +510,7 @@
   {
     "id": "pg-buchanans-reserve",
     "name": "Buchanans Reserve",
-    "suburb": "",
+    "suburb": "Riccarton Racecourse",
     "lat": -43.53435,
     "lng": 172.54241,
     "description": "Council playground at Buchanans Reserve.",
@@ -519,7 +519,7 @@
   {
     "id": "pg-bullock-reserve",
     "name": "Bullock Reserve",
-    "suburb": "",
+    "suburb": "Ilam North",
     "lat": -43.51018,
     "lng": 172.56598,
     "description": "Council playground at Bullock Reserve.",
@@ -528,7 +528,7 @@
   {
     "id": "pg-burnside-park",
     "name": "Burnside Park",
-    "suburb": "",
+    "suburb": "Burnside Park",
     "lat": -43.50466,
     "lng": 172.56318,
     "description": "2 play areas at Burnside Park.",
@@ -539,7 +539,7 @@
   {
     "id": "pg-burwood-park",
     "name": "Burwood Park",
-    "suburb": "",
+    "suburb": "Shirley East",
     "lat": -43.50557,
     "lng": 172.67189,
     "description": "2 play areas at Burwood Park.",
@@ -550,7 +550,7 @@
   {
     "id": "pg-cadogan-reserve",
     "name": "Cadogan Reserve",
-    "suburb": "",
+    "suburb": "Sydenham North",
     "lat": -43.54967,
     "lng": 172.64018,
     "description": "Council playground at Cadogan Reserve.",
@@ -559,7 +559,7 @@
   {
     "id": "pg-calbreath-reserve",
     "name": "Calbreath Reserve",
-    "suburb": "",
+    "suburb": "Russley",
     "lat": -43.51449,
     "lng": 172.54302,
     "description": "Council playground at Calbreath Reserve.",
@@ -568,7 +568,7 @@
   {
     "id": "pg-cameron-reserve",
     "name": "Cameron Reserve",
-    "suburb": "",
+    "suburb": "Sydenham North",
     "lat": -43.55047,
     "lng": 172.64354,
     "description": "Council playground at Cameron Reserve.",
@@ -577,7 +577,7 @@
   {
     "id": "pg-campion-reserve",
     "name": "Campion Reserve",
-    "suburb": "",
+    "suburb": "Oaklands West",
     "lat": -43.56922,
     "lng": 172.5581,
     "description": "Council playground at Campion Reserve.",
@@ -586,7 +586,7 @@
   {
     "id": "pg-canberra-reserve",
     "name": "Canberra Reserve",
-    "suburb": "",
+    "suburb": "Redwood West",
     "lat": -43.47132,
     "lng": 172.61627,
     "description": "Council playground at Canberra Reserve.",
@@ -595,7 +595,7 @@
   {
     "id": "pg-cardigan-bay-reserve",
     "name": "Cardigan Bay Reserve",
-    "suburb": "",
+    "suburb": "Hillmorton",
     "lat": -43.54899,
     "lng": 172.60107,
     "description": "Council playground at Cardigan Bay Reserve.",
@@ -604,7 +604,7 @@
   {
     "id": "pg-carisbrook-playground",
     "name": "Carisbrook Playground",
-    "suburb": "",
+    "suburb": "Aranui",
     "lat": -43.51086,
     "lng": 172.70954,
     "description": "Council playground at Carisbrook Playground.",
@@ -613,7 +613,7 @@
   {
     "id": "pg-carlsen-reserve",
     "name": "Carlsen Reserve",
-    "suburb": "",
+    "suburb": "Burwood South",
     "lat": -43.49507,
     "lng": 172.68237,
     "description": "Council playground at Carlsen Reserve.",
@@ -622,7 +622,7 @@
   {
     "id": "pg-carmen-reserve",
     "name": "Carmen Reserve",
-    "suburb": "",
+    "suburb": "Hei Hei",
     "lat": -43.5349,
     "lng": 172.5288,
     "description": "Council playground at Carmen Reserve.",
@@ -631,7 +631,7 @@
   {
     "id": "pg-cashmere-valley-reserve",
     "name": "Cashmere Valley Reserve",
-    "suburb": "",
+    "suburb": "Cashmere West",
     "lat": -43.56861,
     "lng": 172.62562,
     "description": "Council playground at Cashmere Valley Reserve.",
@@ -640,7 +640,7 @@
   {
     "id": "pg-cashmere-view-playground",
     "name": "Cashmere View Playground",
-    "suburb": "",
+    "suburb": "Somerfield West",
     "lat": -43.56713,
     "lng": 172.61992,
     "description": "Council playground at Cashmere View Playground.",
@@ -649,7 +649,7 @@
   {
     "id": "pg-cashmere-village-green",
     "name": "Cashmere Village Green",
-    "suburb": "",
+    "suburb": "Cashmere West",
     "lat": -43.57369,
     "lng": 172.63159,
     "description": "Council playground at Cashmere Village Green.",
@@ -658,7 +658,7 @@
   {
     "id": "pg-cass-bay-playground",
     "name": "Cass Bay Playground",
-    "suburb": "",
+    "suburb": "Lyttelton",
     "lat": -43.60543,
     "lng": 172.69052,
     "description": "Council playground at Cass Bay Playground.",
@@ -667,7 +667,7 @@
   {
     "id": "pg-caulfield-drainage-reserve",
     "name": "Caulfield Drainage Reserve",
-    "suburb": "",
+    "suburb": "Halswell West",
     "lat": -43.57484,
     "lng": 172.54644,
     "description": "Council playground at Caulfield Drainage Reserve.",
@@ -676,7 +676,7 @@
   {
     "id": "pg-centaurus-park",
     "name": "Centaurus Park",
-    "suburb": "",
+    "suburb": "St Martins",
     "lat": -43.56356,
     "lng": 172.65564,
     "description": "Council playground at Centaurus Park.",
@@ -685,7 +685,7 @@
   {
     "id": "pg-centennial-park",
     "name": "Centennial Park",
-    "suburb": "",
+    "suburb": "Somerfield West",
     "lat": -43.5658,
     "lng": 172.6127,
     "description": "Council playground at Centennial Park.",
@@ -696,7 +696,7 @@
   {
     "id": "pg-champagne-reserve",
     "name": "Champagne Reserve",
-    "suburb": "",
+    "suburb": "Yaldhurst",
     "lat": -43.52341,
     "lng": 172.52169,
     "description": "Council playground at Champagne Reserve.",
@@ -705,7 +705,7 @@
   {
     "id": "pg-champion-reserve",
     "name": "Champion Reserve",
-    "suburb": "",
+    "suburb": "Edgeware South",
     "lat": -43.51446,
     "lng": 172.64948,
     "description": "Council playground at Champion Reserve.",
@@ -714,7 +714,7 @@
   {
     "id": "pg-charleston-reserve",
     "name": "Charleston Reserve",
-    "suburb": "",
+    "suburb": "Charleston",
     "lat": -43.54392,
     "lng": 172.65829,
     "description": "Council playground at Charleston Reserve.",
@@ -723,7 +723,7 @@
   {
     "id": "pg-chartwell-reserve",
     "name": "Chartwell Reserve",
-    "suburb": "",
+    "suburb": "Burwood North",
     "lat": -43.48744,
     "lng": 172.68479,
     "description": "Council playground at Chartwell Reserve.",
@@ -732,7 +732,7 @@
   {
     "id": "pg-clare-park",
     "name": "Clare Park",
-    "suburb": "",
+    "suburb": "Burwood North",
     "lat": -43.48968,
     "lng": 172.68151,
     "description": "Council playground at Clare Park.",
@@ -743,7 +743,7 @@
   {
     "id": "pg-clarevale-reserve",
     "name": "Clarevale Reserve",
-    "suburb": "",
+    "suburb": "Burwood North",
     "lat": -43.48954,
     "lng": 172.68702,
     "description": "Council playground at Clarevale Reserve.",
@@ -752,7 +752,7 @@
   {
     "id": "pg-cobra-reserve",
     "name": "Cobra Reserve",
-    "suburb": "",
+    "suburb": "Oaklands East",
     "lat": -43.56992,
     "lng": 172.56403,
     "description": "Council playground at Cobra Reserve.",
@@ -761,7 +761,7 @@
   {
     "id": "pg-colman-reserve",
     "name": "Colman Reserve",
-    "suburb": "",
+    "suburb": "Sockburn North",
     "lat": -43.53154,
     "lng": 172.5601,
     "description": "Council playground at Colman Reserve.",
@@ -770,7 +770,7 @@
   {
     "id": "pg-copperfield-reserve",
     "name": "Copperfield Reserve",
-    "suburb": "",
+    "suburb": "Queenspark",
     "lat": -43.47304,
     "lng": 172.70128,
     "description": "Council playground at Copperfield Reserve.",
@@ -779,7 +779,7 @@
   {
     "id": "pg-coringa-reserve",
     "name": "Coringa Reserve",
-    "suburb": "",
+    "suburb": "Burnside West",
     "lat": -43.50068,
     "lng": 172.55653,
     "description": "Council playground at Coringa Reserve.",
@@ -788,7 +788,7 @@
   {
     "id": "pg-cornelius-o-connor-reserve",
     "name": "Cornelius O'Connor Reserve",
-    "suburb": "",
+    "suburb": "Addington East",
     "lat": -43.54269,
     "lng": 172.61914,
     "description": "Council playground at Cornelius O'Connor Reserve.",
@@ -797,7 +797,7 @@
   {
     "id": "pg-corsair-bay-reserve",
     "name": "Corsair Bay Reserve",
-    "suburb": "",
+    "suburb": "Lyttelton",
     "lat": -43.60709,
     "lng": 172.69958,
     "description": "Council playground at Corsair Bay Reserve.",
@@ -806,7 +806,7 @@
   {
     "id": "pg-cottonwood-reserve",
     "name": "Cottonwood Reserve",
-    "suburb": "",
+    "suburb": "Parklands",
     "lat": -43.4825,
     "lng": 172.70183,
     "description": "Council playground at Cottonwood Reserve.",
@@ -815,7 +815,7 @@
   {
     "id": "pg-craighead-reserve",
     "name": "Craighead Reserve",
-    "suburb": "",
+    "suburb": "Papanui North",
     "lat": -43.48467,
     "lng": 172.60582,
     "description": "Council playground at Craighead Reserve.",
@@ -824,7 +824,7 @@
   {
     "id": "pg-crofton-reserve",
     "name": "Crofton Reserve",
-    "suburb": "",
+    "suburb": "Harewood",
     "lat": -43.47945,
     "lng": 172.57841,
     "description": "Council playground at Crofton Reserve.",
@@ -833,7 +833,7 @@
   {
     "id": "pg-crofts-reserve",
     "name": "Crofts Reserve",
-    "suburb": "",
+    "suburb": "Parklands",
     "lat": -43.47952,
     "lng": 172.70962,
     "description": "Council playground at Crofts Reserve.",
@@ -842,7 +842,7 @@
   {
     "id": "pg-crosbie-park",
     "name": "Crosbie Park",
-    "suburb": "",
+    "suburb": "Avonhead West",
     "lat": -43.51777,
     "lng": 172.54946,
     "description": "Council playground at Crosbie Park.",
@@ -853,7 +853,7 @@
   {
     "id": "pg-cross-reserve",
     "name": "Cross Reserve",
-    "suburb": "",
+    "suburb": "Phillipstown",
     "lat": -43.53817,
     "lng": 172.65726,
     "description": "Council playground at Cross Reserve.",
@@ -862,7 +862,7 @@
   {
     "id": "pg-cuffs-road-playground",
     "name": "Cuffs Road Playground",
-    "suburb": "",
+    "suburb": "Wainoni",
     "lat": -43.52,
     "lng": 172.6848,
     "description": "Council playground at Cuffs Road Playground.",
@@ -871,7 +871,7 @@
   {
     "id": "pg-cunningham-reserve",
     "name": "Cunningham Reserve",
-    "suburb": "",
+    "suburb": "Oaklands East",
     "lat": -43.57241,
     "lng": 172.56823,
     "description": "Council playground at Cunningham Reserve.",
@@ -880,7 +880,7 @@
   {
     "id": "pg-curries-reserve",
     "name": "Curries Reserve",
-    "suburb": "",
+    "suburb": "Woolston South",
     "lat": -43.56117,
     "lng": 172.67797,
     "description": "Council playground at Curries Reserve.",
@@ -889,7 +889,7 @@
   {
     "id": "pg-curzon-reserve",
     "name": "Curzon Reserve",
-    "suburb": "",
+    "suburb": "Queenspark",
     "lat": -43.48208,
     "lng": 172.69627,
     "description": "Council playground at Curzon Reserve.",
@@ -898,7 +898,7 @@
   {
     "id": "pg-cuthberts-green",
     "name": "Cuthberts Green",
-    "suburb": "",
+    "suburb": "Bromley North",
     "lat": -43.52235,
     "lng": 172.69745,
     "description": "Council playground at Cuthberts Green.",
@@ -909,7 +909,7 @@
   {
     "id": "pg-cutler-park",
     "name": "Cutler Park",
-    "suburb": "",
+    "suburb": "Woolston East",
     "lat": -43.54359,
     "lng": 172.68488,
     "description": "Council playground at Cutler Park.",
@@ -918,7 +918,7 @@
   {
     "id": "pg-daresbury-park",
     "name": "Daresbury Park",
-    "suburb": "",
+    "suburb": "Holmwood",
     "lat": -43.52131,
     "lng": 172.60429,
     "description": "Council playground at Daresbury Park.",
@@ -927,7 +927,7 @@
   {
     "id": "pg-darroch-reserve",
     "name": "Darroch Reserve",
-    "suburb": "",
+    "suburb": "Belfast West",
     "lat": -43.44058,
     "lng": 172.63232,
     "description": "Council playground at Darroch Reserve.",
@@ -936,7 +936,7 @@
   {
     "id": "pg-de-lange-reserve",
     "name": "De Lange Reserve",
-    "suburb": "",
+    "suburb": "Awatea North",
     "lat": -43.5527,
     "lng": 172.53856,
     "description": "Council playground at De Lange Reserve.",
@@ -945,7 +945,7 @@
   {
     "id": "pg-delamare-park",
     "name": "Delamare Park",
-    "suburb": "",
+    "suburb": "Bexley",
     "lat": -43.52087,
     "lng": 172.71051,
     "description": "Council playground at Delamare Park.",
@@ -954,7 +954,7 @@
   {
     "id": "pg-denton-park",
     "name": "Denton Park",
-    "suburb": "",
+    "suburb": "Hornby West",
     "lat": -43.54131,
     "lng": 172.51822,
     "description": "Council playground at Denton Park.",
@@ -965,7 +965,7 @@
   {
     "id": "pg-derwent-reserve",
     "name": "Derwent Reserve",
-    "suburb": "",
+    "suburb": "Burnside",
     "lat": -43.5009,
     "lng": 172.58268,
     "description": "Council playground at Derwent Reserve.",
@@ -974,7 +974,7 @@
   {
     "id": "pg-donnell-sports-park",
     "name": "Donnell Sports Park",
-    "suburb": "",
+    "suburb": "Ōtakaro-Avon River Corridor",
     "lat": -43.49658,
     "lng": 172.69607,
     "description": "Council playground at Donnell Sports Park.",
@@ -983,7 +983,7 @@
   {
     "id": "pg-dunedin-reserve",
     "name": "Dunedin Reserve",
-    "suburb": "",
+    "suburb": "Redwood East",
     "lat": -43.47706,
     "lng": 172.6229,
     "description": "Council playground at Dunedin Reserve.",
@@ -992,7 +992,7 @@
   {
     "id": "pg-duvauchelle-domain-esplanade-strip",
     "name": "Duvauchelle Domain Esplanade Strip",
-    "suburb": "",
+    "suburb": "Akaroa Harbour",
     "lat": -43.75431,
     "lng": 172.94401,
     "description": "Council playground at Duvauchelle Domain Esplanade Strip.",
@@ -1003,7 +1003,7 @@
   {
     "id": "pg-edgar-macintosh-park",
     "name": "Edgar Macintosh Park",
-    "suburb": "",
+    "suburb": "Bryndwr North",
     "lat": -43.49909,
     "lng": 172.59353,
     "description": "Council playground at Edgar Macintosh Park.",
@@ -1014,7 +1014,7 @@
   {
     "id": "pg-edmonds-park",
     "name": "Edmonds Park",
-    "suburb": "",
+    "suburb": "Phillipstown",
     "lat": -43.54097,
     "lng": 172.66526,
     "description": "Council playground at Edmonds Park.",
@@ -1025,7 +1025,7 @@
   {
     "id": "pg-elmwood-park",
     "name": "Elmwood Park",
-    "suburb": "",
+    "suburb": "Strowan",
     "lat": -43.51257,
     "lng": 172.61005,
     "description": "Council playground at Elmwood Park.",
@@ -1036,7 +1036,7 @@
   {
     "id": "pg-emlyn-playground",
     "name": "Emlyn Playground",
-    "suburb": "",
+    "suburb": "Avondale",
     "lat": -43.51223,
     "lng": 172.68722,
     "description": "Council playground at Emlyn Playground.",
@@ -1045,7 +1045,7 @@
   {
     "id": "pg-endeavour-playground",
     "name": "Endeavour Playground",
-    "suburb": "",
+    "suburb": "North Beach",
     "lat": -43.49085,
     "lng": 172.7175,
     "description": "Council playground at Endeavour Playground.",
@@ -1054,7 +1054,7 @@
   {
     "id": "pg-englefield-reserve",
     "name": "Englefield Reserve",
-    "suburb": "",
+    "suburb": "Northwood",
     "lat": -43.45643,
     "lng": 172.61812,
     "description": "Council playground at Englefield Reserve.",
@@ -1063,7 +1063,7 @@
   {
     "id": "pg-erica-playground",
     "name": "Erica Playground",
-    "suburb": "",
+    "suburb": "Papanui East",
     "lat": -43.49774,
     "lng": 172.6166,
     "description": "Council playground at Erica Playground.",
@@ -1072,7 +1072,7 @@
   {
     "id": "pg-evergreen-reserve",
     "name": "Evergreen Reserve",
-    "suburb": "",
+    "suburb": "Parklands",
     "lat": -43.47726,
     "lng": 172.70382,
     "description": "Council playground at Evergreen Reserve.",
@@ -1081,7 +1081,7 @@
   {
     "id": "pg-f-w-delamain-park",
     "name": "F W Delamain Park",
-    "suburb": "",
+    "suburb": "Yaldhurst",
     "lat": -43.52329,
     "lng": 172.51552,
     "description": "Council playground at F W Delamain Park.",
@@ -1092,7 +1092,7 @@
   {
     "id": "pg-fairway-reserve",
     "name": "Fairway Reserve",
-    "suburb": "",
+    "suburb": "Shirley East",
     "lat": -43.49286,
     "lng": 172.66598,
     "description": "Council playground at Fairway Reserve.",
@@ -1101,7 +1101,7 @@
   {
     "id": "pg-fendalton-park",
     "name": "Fendalton Park",
-    "suburb": "",
+    "suburb": "Deans Bush",
     "lat": -43.51938,
     "lng": 172.59197,
     "description": "Council playground at Fendalton Park.",
@@ -1112,7 +1112,7 @@
   {
     "id": "pg-fern-reserve",
     "name": "Fern Reserve",
-    "suburb": "",
+    "suburb": "Oaklands East",
     "lat": -43.57694,
     "lng": 172.5643,
     "description": "Council playground at Fern Reserve.",
@@ -1121,7 +1121,7 @@
   {
     "id": "pg-fernbrook-playground",
     "name": "Fernbrook Playground",
-    "suburb": "",
+    "suburb": "Mairehau South",
     "lat": -43.5017,
     "lng": 172.64972,
     "description": "Council playground at Fernbrook Playground.",
@@ -1130,7 +1130,7 @@
   {
     "id": "pg-ferrier-park",
     "name": "Ferrier Park",
-    "suburb": "",
+    "suburb": "Avonhead South",
     "lat": -43.52426,
     "lng": 172.55699,
     "description": "Council playground at Ferrier Park.",
@@ -1141,7 +1141,7 @@
   {
     "id": "pg-foley-reserve",
     "name": "Foley Reserve",
-    "suburb": "",
+    "suburb": "Belfast West",
     "lat": -43.45641,
     "lng": 172.62376,
     "description": "Council playground at Foley Reserve.",
@@ -1150,7 +1150,7 @@
   {
     "id": "pg-fortune-playground",
     "name": "Fortune Playground",
-    "suburb": "",
+    "suburb": "Mairehau North",
     "lat": -43.4937,
     "lng": 172.63927,
     "description": "Council playground at Fortune Playground.",
@@ -1159,7 +1159,7 @@
   {
     "id": "pg-francis-reserve",
     "name": "Francis Reserve",
-    "suburb": "",
+    "suburb": "Westmorland",
     "lat": -43.57571,
     "lng": 172.60482,
     "description": "Council playground at Francis Reserve.",
@@ -1168,7 +1168,7 @@
   {
     "id": "pg-franco-park",
     "name": "Franco Park",
-    "suburb": "",
+    "suburb": "Hoon Hay West",
     "lat": -43.564,
     "lng": 172.58145,
     "description": "Council playground at Franco Park.",
@@ -1177,7 +1177,7 @@
   {
     "id": "pg-gainsborough-reserve",
     "name": "Gainsborough Reserve",
-    "suburb": "",
+    "suburb": "Hoon Hay East",
     "lat": -43.56349,
     "lng": 172.602,
     "description": "Council playground at Gainsborough Reserve.",
@@ -1186,7 +1186,7 @@
   {
     "id": "pg-garden-of-tane",
     "name": "Garden of Tane",
-    "suburb": "",
+    "suburb": "Akaroa",
     "lat": -43.81347,
     "lng": 172.96042,
     "description": "Council playground at Garden of Tane.",
@@ -1195,7 +1195,7 @@
   {
     "id": "pg-gilberthorpes-reserve",
     "name": "Gilberthorpes Reserve",
-    "suburb": "",
+    "suburb": "Islington",
     "lat": -43.53895,
     "lng": 172.51589,
     "description": "Council playground at Gilberthorpes Reserve.",
@@ -1204,7 +1204,7 @@
   {
     "id": "pg-gisele-park",
     "name": "Gisele Park",
-    "suburb": "",
+    "suburb": "Halswell North",
     "lat": -43.57269,
     "lng": 172.58457,
     "description": "Council playground at Gisele Park.",
@@ -1215,7 +1215,7 @@
   {
     "id": "pg-glenstrae-reserve",
     "name": "Glenstrae Reserve",
-    "suburb": "",
+    "suburb": "Redcliffs",
     "lat": -43.56489,
     "lng": 172.73015,
     "description": "Council playground at Glenstrae Reserve.",
@@ -1224,7 +1224,7 @@
   {
     "id": "pg-gloaming-reserve",
     "name": "Gloaming Reserve",
-    "suburb": "",
+    "suburb": "Sockburn North",
     "lat": -43.53293,
     "lng": 172.55231,
     "description": "Council playground at Gloaming Reserve.",
@@ -1233,7 +1233,7 @@
   {
     "id": "pg-glynne-reserve",
     "name": "Glynne Reserve",
-    "suburb": "",
+    "suburb": "Spreydon South",
     "lat": -43.55906,
     "lng": 172.60831,
     "description": "Council playground at Glynne Reserve.",
@@ -1242,7 +1242,7 @@
   {
     "id": "pg-goulding-playground",
     "name": "Goulding Playground",
-    "suburb": "",
+    "suburb": "Hornby West",
     "lat": -43.54484,
     "lng": 172.52376,
     "description": "Council playground at Goulding Playground.",
@@ -1251,7 +1251,7 @@
   {
     "id": "pg-governors-bay-community-centre-and-pool-reserve",
     "name": "Governors Bay Community Centre and Pool Reserve",
-    "suburb": "",
+    "suburb": "Governors Bay",
     "lat": -43.62319,
     "lng": 172.64922,
     "description": "Council playground at Governors Bay Community Centre and Pool Reserve.",
@@ -1260,7 +1260,7 @@
   {
     "id": "pg-grampian-reserve",
     "name": "Grampian Reserve",
-    "suburb": "",
+    "suburb": "Casebrook",
     "lat": -43.47805,
     "lng": 172.60623,
     "description": "Council playground at Grampian Reserve.",
@@ -1269,7 +1269,7 @@
   {
     "id": "pg-greenaway-park",
     "name": "Greenaway Park",
-    "suburb": "",
+    "suburb": "Halswell West",
     "lat": -43.5775,
     "lng": 172.5469,
     "description": "Council playground at Greenaway Park.",
@@ -1278,7 +1278,7 @@
   {
     "id": "pg-greendale-reserve",
     "name": "Greendale Reserve",
-    "suburb": "",
+    "suburb": "Avonhead East",
     "lat": -43.51216,
     "lng": 172.55877,
     "description": "Council playground at Greendale Reserve.",
@@ -1287,7 +1287,7 @@
   {
     "id": "pg-groynes",
     "name": "Groynes",
-    "suburb": "",
+    "suburb": "Clearwater",
     "lat": -43.45061,
     "lng": 172.60608,
     "description": "Picnic spot with playgrounds, ponds and walking tracks — great for bikes and scooters.",
@@ -1301,7 +1301,7 @@
   {
     "id": "pg-halberg-reserve",
     "name": "Halberg Reserve",
-    "suburb": "",
+    "suburb": "Ōtakaro-Avon River Corridor",
     "lat": -43.51451,
     "lng": 172.68063,
     "description": "Council playground at Halberg Reserve.",
@@ -1310,7 +1310,7 @@
   {
     "id": "pg-halifax-reserve",
     "name": "Halifax Reserve",
-    "suburb": "",
+    "suburb": "Bishopdale South",
     "lat": -43.49652,
     "lng": 172.5817,
     "description": "Council playground at Halifax Reserve.",
@@ -1319,7 +1319,7 @@
   {
     "id": "pg-halswell-domain",
     "name": "Halswell Domain",
-    "suburb": "",
+    "suburb": "Halswell North",
     "lat": -43.57857,
     "lng": 172.57105,
     "description": "2 play areas at Halswell Domain.",
@@ -1330,7 +1330,7 @@
   {
     "id": "pg-hansen-park",
     "name": "Hansen Park",
-    "suburb": "",
+    "suburb": "Opawa",
     "lat": -43.56122,
     "lng": 172.66007,
     "description": "Council playground at Hansen Park.",
@@ -1341,7 +1341,7 @@
   {
     "id": "pg-hansons-reserve",
     "name": "Hansons Reserve",
-    "suburb": "",
+    "suburb": "Upper Riccarton",
     "lat": -43.53386,
     "lng": 172.57328,
     "description": "Council playground at Hansons Reserve.",
@@ -1350,7 +1350,7 @@
   {
     "id": "pg-harrington-park",
     "name": "Harrington Park",
-    "suburb": "",
+    "suburb": "Riccarton West",
     "lat": -43.53407,
     "lng": 172.59019,
     "description": "Council playground at Harrington Park.",
@@ -1361,7 +1361,7 @@
   {
     "id": "pg-hastings-reserve",
     "name": "Hastings Reserve",
-    "suburb": "",
+    "suburb": "Sydenham North",
     "lat": -43.54811,
     "lng": 172.64299,
     "description": "Council playground at Hastings Reserve.",
@@ -1370,7 +1370,7 @@
   {
     "id": "pg-heathcote-domain",
     "name": "Heathcote Domain",
-    "suburb": "",
+    "suburb": "Heathcote Valley",
     "lat": -43.57985,
     "lng": 172.70684,
     "description": "Council playground at Heathcote Domain.",
@@ -1381,7 +1381,7 @@
   {
     "id": "pg-helmore-park",
     "name": "Helmore Park",
-    "suburb": "",
+    "suburb": "Hornby South",
     "lat": -43.54557,
     "lng": 172.52844,
     "description": "Council playground at Helmore Park.",
@@ -1390,7 +1390,7 @@
   {
     "id": "pg-hereford-playground",
     "name": "Hereford Playground",
-    "suburb": "",
+    "suburb": "Linwood Central",
     "lat": -43.53155,
     "lng": 172.66126,
     "description": "Council playground at Hereford Playground.",
@@ -1399,7 +1399,7 @@
   {
     "id": "pg-heritage-park-little-river",
     "name": "Heritage Park Little River",
-    "suburb": "",
+    "suburb": "Banks Peninsula South",
     "lat": -43.77002,
     "lng": 172.78984,
     "description": "Council playground at Heritage Park Little River.",
@@ -1408,7 +1408,7 @@
   {
     "id": "pg-highcrest-reserve",
     "name": "Highcrest Reserve",
-    "suburb": "",
+    "suburb": "Westmorland",
     "lat": -43.58072,
     "lng": 172.59893,
     "description": "Council playground at Highcrest Reserve.",
@@ -1417,7 +1417,7 @@
   {
     "id": "pg-highsted-reserve",
     "name": "Highsted Reserve",
-    "suburb": "",
+    "suburb": "Bishopdale North",
     "lat": -43.48171,
     "lng": 172.59237,
     "description": "Council playground at Highsted Reserve.",
@@ -1426,7 +1426,7 @@
   {
     "id": "pg-hillary-reserve",
     "name": "Hillary Reserve",
-    "suburb": "",
+    "suburb": "Upper Riccarton",
     "lat": -43.53678,
     "lng": 172.57089,
     "description": "Council playground at Hillary Reserve.",
@@ -1435,7 +1435,7 @@
   {
     "id": "pg-hillsborough-park",
     "name": "Hillsborough Park",
-    "suburb": "",
+    "suburb": "Hillsborough",
     "lat": -43.5602,
     "lng": 172.67036,
     "description": "Council playground at Hillsborough Park.",
@@ -1446,7 +1446,7 @@
   {
     "id": "pg-hockey-park",
     "name": "Hockey Park",
-    "suburb": "",
+    "suburb": "Bishopdale West",
     "lat": -43.4884,
     "lng": 172.57334,
     "description": "Council playground at Hockey Park.",
@@ -1455,7 +1455,7 @@
   {
     "id": "pg-holliss-reserve",
     "name": "Holliss Reserve",
-    "suburb": "",
+    "suburb": "Cashmere East",
     "lat": -43.57186,
     "lng": 172.63848,
     "description": "Council playground at Holliss Reserve.",
@@ -1464,7 +1464,7 @@
   {
     "id": "pg-holmes-park",
     "name": "Holmes Park",
-    "suburb": "",
+    "suburb": "Sockburn North",
     "lat": -43.53138,
     "lng": 172.56315,
     "description": "Council playground at Holmes Park.",
@@ -1473,7 +1473,7 @@
   {
     "id": "pg-hoon-hay-park",
     "name": "Hoon Hay Park",
-    "suburb": "",
+    "suburb": "Hoon Hay East",
     "lat": -43.56225,
     "lng": 172.59423,
     "description": "2 play areas at Hoon Hay Park.",
@@ -1484,7 +1484,7 @@
   {
     "id": "pg-huntsbury-playground",
     "name": "Huntsbury Playground",
-    "suburb": "",
+    "suburb": "Huntsbury",
     "lat": -43.5662,
     "lng": 172.65191,
     "description": "Council playground at Huntsbury Playground.",
@@ -1493,7 +1493,7 @@
   {
     "id": "pg-hyde-park",
     "name": "Hyde Park",
-    "suburb": "",
+    "suburb": "Avonhead West",
     "lat": -43.51172,
     "lng": 172.54817,
     "description": "Council playground at Hyde Park.",
@@ -1502,7 +1502,7 @@
   {
     "id": "pg-iona-reserve",
     "name": "Iona Reserve",
-    "suburb": "",
+    "suburb": "Sockburn North",
     "lat": -43.52821,
     "lng": 172.55637,
     "description": "Council playground at Iona Reserve.",
@@ -1511,7 +1511,7 @@
   {
     "id": "pg-james-drive-reserve",
     "name": "James Drive Reserve",
-    "suburb": "",
+    "suburb": "Diamond Harbour",
     "lat": -43.62778,
     "lng": 172.72054,
     "description": "Council playground at James Drive Reserve.",
@@ -1520,7 +1520,7 @@
   {
     "id": "pg-jeffreys-reserve",
     "name": "Jeffreys Reserve",
-    "suburb": "",
+    "suburb": "Fendalton",
     "lat": -43.51391,
     "lng": 172.5921,
     "description": "Council playground at Jeffreys Reserve.",
@@ -1529,7 +1529,7 @@
   {
     "id": "pg-jellie-park",
     "name": "Jellie Park",
-    "suburb": "",
+    "suburb": "Jellie Park",
     "lat": -43.50834,
     "lng": 172.58187,
     "description": "2 play areas at Jellie Park.",
@@ -1540,7 +1540,7 @@
   {
     "id": "pg-john-lindsay-reserve",
     "name": "John Lindsay Reserve",
-    "suburb": "",
+    "suburb": "Prestons Park",
     "lat": -43.48005,
     "lng": 172.67525,
     "description": "Council playground at John Lindsay Reserve.",
@@ -1549,7 +1549,7 @@
   {
     "id": "pg-jones-reserve",
     "name": "Jones Reserve",
-    "suburb": "",
+    "suburb": "Templeton",
     "lat": -43.55569,
     "lng": 172.46763,
     "description": "Council playground at Jones Reserve.",
@@ -1560,7 +1560,7 @@
   {
     "id": "pg-kahu-kiwi-park",
     "name": "Kahu Kiwi Park",
-    "suburb": "",
+    "suburb": "Prestons",
     "lat": -43.46229,
     "lng": 172.6666,
     "description": "Council playground at Kahu Kiwi Park.",
@@ -1569,7 +1569,7 @@
   {
     "id": "pg-kahuku-park",
     "name": "Kahuku Park",
-    "suburb": "",
+    "suburb": "Wigram East",
     "lat": -43.55187,
     "lng": 172.55849,
     "description": "Council playground at Kahuku Park.",
@@ -1578,7 +1578,7 @@
   {
     "id": "pg-kainga-park",
     "name": "Kainga Park",
-    "suburb": "",
+    "suburb": "Styx",
     "lat": -43.41019,
     "lng": 172.66431,
     "description": "2 play areas at Kainga Park.",
@@ -1587,7 +1587,7 @@
   {
     "id": "pg-kaituna-reserve",
     "name": "Kaituna Reserve",
-    "suburb": "",
+    "suburb": "Banks Peninsula South",
     "lat": -43.7744,
     "lng": 172.64859,
     "description": "Council playground at Kaituna Reserve.",
@@ -1596,7 +1596,7 @@
   {
     "id": "pg-kaiwara-reserve",
     "name": "Kaiwara Reserve",
-    "suburb": "",
+    "suburb": "Hoon Hay South",
     "lat": -43.57164,
     "lng": 172.60799,
     "description": "Council playground at Kaiwara Reserve.",
@@ -1605,7 +1605,7 @@
   {
     "id": "pg-kaputone-springs-reserve",
     "name": "Kaputone Springs Reserve",
-    "suburb": "",
+    "suburb": "Northwood",
     "lat": -43.45541,
     "lng": 172.61221,
     "description": "Council playground at Kaputone Springs Reserve.",
@@ -1614,7 +1614,7 @@
   {
     "id": "pg-kendal-reserve",
     "name": "Kendal Reserve",
-    "suburb": "",
+    "suburb": "Burnside",
     "lat": -43.49782,
     "lng": 172.57609,
     "description": "Council playground at Kendal Reserve.",
@@ -1623,7 +1623,7 @@
   {
     "id": "pg-kenmure-reserve",
     "name": "Kenmure Reserve",
-    "suburb": "",
+    "suburb": "Huntsbury",
     "lat": -43.57394,
     "lng": 172.65205,
     "description": "Council playground at Kenmure Reserve.",
@@ -1632,7 +1632,7 @@
   {
     "id": "pg-king-park",
     "name": "King Park",
-    "suburb": "",
+    "suburb": "Mount Pleasant",
     "lat": -43.55678,
     "lng": 172.71671,
     "description": "Council playground at King Park.",
@@ -1641,7 +1641,7 @@
   {
     "id": "pg-kinross-reserve",
     "name": "Kinross Reserve",
-    "suburb": "",
+    "suburb": "Riccarton Racecourse",
     "lat": -43.53162,
     "lng": 172.53729,
     "description": "Council playground at Kinross Reserve.",
@@ -1650,7 +1650,7 @@
   {
     "id": "pg-kinsella-reserve",
     "name": "Kinsella Reserve",
-    "suburb": "",
+    "suburb": "Aidanfield",
     "lat": -43.56577,
     "lng": 172.56757,
     "description": "Council playground at Kinsella Reserve.",
@@ -1659,7 +1659,7 @@
   {
     "id": "pg-kirk-park",
     "name": "Kirk Park",
-    "suburb": "",
+    "suburb": "Diamond Harbour",
     "lat": -43.63094,
     "lng": 172.74002,
     "description": "Council playground at Kirk Park.",
@@ -1668,7 +1668,7 @@
   {
     "id": "pg-korowai-park",
     "name": "Korowai Park",
-    "suburb": "",
+    "suburb": "Prestons",
     "lat": -43.47242,
     "lng": 172.66788,
     "description": "Council playground at Korowai Park.",
@@ -1677,7 +1677,7 @@
   {
     "id": "pg-kotuku-reserve",
     "name": "Kotuku Reserve",
-    "suburb": "",
+    "suburb": "Brookhaven-Ferrymead",
     "lat": -43.55257,
     "lng": 172.69252,
     "description": "Council playground at Kotuku Reserve.",
@@ -1686,7 +1686,7 @@
   {
     "id": "pg-kumara-reserve",
     "name": "Kumara Reserve",
-    "suburb": "",
+    "suburb": "Hei Hei",
     "lat": -43.53209,
     "lng": 172.51845,
     "description": "Council playground at Kumara Reserve.",
@@ -1695,7 +1695,7 @@
   {
     "id": "pg-kyle-park",
     "name": "Kyle Park",
-    "suburb": "",
+    "suburb": "Hornby Central",
     "lat": -43.53893,
     "lng": 172.52377,
     "description": "Council playground at Kyle Park.",
@@ -1706,7 +1706,7 @@
   {
     "id": "pg-larch-reserve",
     "name": "Larch Reserve",
-    "suburb": "",
+    "suburb": "Casebrook",
     "lat": -43.47987,
     "lng": 172.59963,
     "description": "Council playground at Larch Reserve.",
@@ -1715,7 +1715,7 @@
   {
     "id": "pg-le-bons-bay-domain",
     "name": "Le Bons Bay Domain",
-    "suburb": "",
+    "suburb": "Banks Peninsula Eastern Bays",
     "lat": -43.74309,
     "lng": 173.09404,
     "description": "2 play areas at Le Bons Bay Domain.",
@@ -1726,7 +1726,7 @@
   {
     "id": "pg-leslie-park",
     "name": "Leslie Park",
-    "suburb": "",
+    "suburb": "Islington-Hornby Industrial",
     "lat": -43.54415,
     "lng": 172.5088,
     "description": "2 play areas at Leslie Park.",
@@ -1737,7 +1737,7 @@
   {
     "id": "pg-light-mood-park",
     "name": "Light Mood Park",
-    "suburb": "",
+    "suburb": "Halswell South East",
     "lat": -43.58704,
     "lng": 172.57407,
     "description": "Council playground at Light Mood Park.",
@@ -1746,7 +1746,7 @@
   {
     "id": "pg-linwood-park",
     "name": "Linwood Park",
-    "suburb": "",
+    "suburb": "Woolston North",
     "lat": -43.53637,
     "lng": 172.67461,
     "description": "2 play areas at Linwood Park.",
@@ -1758,7 +1758,7 @@
   {
     "id": "pg-little-akaloa-domain",
     "name": "Little Akaloa Domain",
-    "suburb": "",
+    "suburb": "Banks Peninsula Eastern Bays",
     "lat": -43.67556,
     "lng": 172.98939,
     "description": "Council playground at Little Akaloa Domain.",
@@ -1767,7 +1767,7 @@
   {
     "id": "pg-little-poland-park",
     "name": "Little Poland Park",
-    "suburb": "",
+    "suburb": "Burlington-Oakbridge",
     "lat": -43.4727,
     "lng": 172.64035,
     "description": "Council playground at Little Poland Park.",
@@ -1776,7 +1776,7 @@
   {
     "id": "pg-lomax-reserve",
     "name": "Lomax Reserve",
-    "suburb": "",
+    "suburb": "Hornby West",
     "lat": -43.5423,
     "lng": 172.51015,
     "description": "Council playground at Lomax Reserve.",
@@ -1785,7 +1785,7 @@
   {
     "id": "pg-longley-reserve",
     "name": "Longley Reserve",
-    "suburb": "",
+    "suburb": "Addington West",
     "lat": -43.54163,
     "lng": 172.60636,
     "description": "Council playground at Longley Reserve.",
@@ -1794,7 +1794,7 @@
   {
     "id": "pg-mabel-howard-reserve",
     "name": "Mabel Howard Reserve",
-    "suburb": "",
+    "suburb": "Sydenham South",
     "lat": -43.55479,
     "lng": 172.6447,
     "description": "Council playground at Mabel Howard Reserve.",
@@ -1803,7 +1803,7 @@
   {
     "id": "pg-macfarlane-park",
     "name": "Macfarlane Park",
-    "suburb": "",
+    "suburb": "Shirley West",
     "lat": -43.50228,
     "lng": 172.65392,
     "description": "2 play areas at Macfarlane Park.",
@@ -1814,7 +1814,7 @@
   {
     "id": "pg-mahars-playground",
     "name": "Mahars Playground",
-    "suburb": "",
+    "suburb": "Mairehau South",
     "lat": -43.49999,
     "lng": 172.64591,
     "description": "Council playground at Mahars Playground.",
@@ -1823,7 +1823,7 @@
   {
     "id": "pg-malabar-reserve",
     "name": "Malabar Reserve",
-    "suburb": "",
+    "suburb": "Broomfield",
     "lat": -43.52905,
     "lng": 172.52665,
     "description": "Council playground at Malabar Reserve.",
@@ -1832,7 +1832,7 @@
   {
     "id": "pg-malvern-park",
     "name": "Malvern Park",
-    "suburb": "",
+    "suburb": "Malvern",
     "lat": -43.50506,
     "lng": 172.63048,
     "description": "Council playground at Malvern Park.",
@@ -1843,7 +1843,7 @@
   {
     "id": "pg-manakura-park",
     "name": "Manakura Park",
-    "suburb": "",
+    "suburb": "Riccarton Racecourse",
     "lat": -43.52264,
     "lng": 172.53946,
     "description": "Council playground at Manakura Park.",
@@ -1852,7 +1852,7 @@
   {
     "id": "pg-mara-reserve",
     "name": "Mara Reserve",
-    "suburb": "",
+    "suburb": "Prestons Park",
     "lat": -43.47779,
     "lng": 172.67149,
     "description": "Council playground at Mara Reserve.",
@@ -1861,7 +1861,7 @@
   {
     "id": "pg-marama-park",
     "name": "Marama Park",
-    "suburb": "",
+    "suburb": "Wigram North",
     "lat": -43.55003,
     "lng": 172.55751,
     "description": "Council playground at Marama Park.",
@@ -1870,7 +1870,7 @@
   {
     "id": "pg-margaret-mahy-family-playground",
     "name": "Margaret Mahy Family Playground",
-    "suburb": "",
+    "suburb": "Christchurch Central-East",
     "lat": -43.52833,
     "lng": 172.64102,
     "description": "One of the largest playgrounds in the Southern Hemisphere — towers, giant slides, a big water-play area, swings and a flying fox.",
@@ -1885,7 +1885,7 @@
   {
     "id": "pg-mariposa-park",
     "name": "Mariposa Park",
-    "suburb": "",
+    "suburb": "Aidanfield",
     "lat": -43.55959,
     "lng": 172.56681,
     "description": "Council playground at Mariposa Park.",
@@ -1894,7 +1894,7 @@
   {
     "id": "pg-marlene-reserve",
     "name": "Marlene Reserve",
-    "suburb": "",
+    "suburb": "Casebrook",
     "lat": -43.47635,
     "lng": 172.60967,
     "description": "Council playground at Marlene Reserve.",
@@ -1903,7 +1903,7 @@
   {
     "id": "pg-marshland-domain",
     "name": "Marshland Domain",
-    "suburb": "",
+    "suburb": "Prestons Park",
     "lat": -43.47508,
     "lng": 172.66702,
     "description": "Council playground at Marshland Domain.",
@@ -1914,7 +1914,7 @@
   {
     "id": "pg-matangi-reserve",
     "name": "Matangi Reserve",
-    "suburb": "",
+    "suburb": "Hei Hei",
     "lat": -43.53489,
     "lng": 172.51739,
     "description": "Council playground at Matangi Reserve.",
@@ -1923,7 +1923,7 @@
   {
     "id": "pg-mccormacks-bay",
     "name": "McCormacks Bay",
-    "suburb": "",
+    "suburb": "Mount Pleasant",
     "lat": -43.55644,
     "lng": 172.72189,
     "description": "Council playground at McCormacks Bay.",
@@ -1934,7 +1934,7 @@
   {
     "id": "pg-mchaffies-reserve",
     "name": "McHaffies Reserve",
-    "suburb": "",
+    "suburb": "Wainoni",
     "lat": -43.51684,
     "lng": 172.69848,
     "description": "Council playground at McHaffies Reserve.",
@@ -1943,7 +1943,7 @@
   {
     "id": "pg-meadow-view-park",
     "name": "Meadow View Park",
-    "suburb": "",
+    "suburb": "Belfast West",
     "lat": -43.44754,
     "lng": 172.62598,
     "description": "Council playground at Meadow View Park.",
@@ -1952,7 +1952,7 @@
   {
     "id": "pg-mendip-reserve",
     "name": "Mendip Reserve",
-    "suburb": "",
+    "suburb": "Casebrook",
     "lat": -43.47621,
     "lng": 172.59912,
     "description": "Council playground at Mendip Reserve.",
@@ -1961,7 +1961,7 @@
   {
     "id": "pg-merivale-reserve",
     "name": "Merivale Reserve",
-    "suburb": "",
+    "suburb": "Merivale",
     "lat": -43.51567,
     "lng": 172.61572,
     "description": "Council playground at Merivale Reserve.",
@@ -1970,7 +1970,7 @@
   {
     "id": "pg-middleton-park",
     "name": "Middleton Park",
-    "suburb": "",
+    "suburb": "Wharenui",
     "lat": -43.53467,
     "lng": 172.58156,
     "description": "Council playground at Middleton Park.",
@@ -1981,7 +1981,7 @@
   {
     "id": "pg-millhaven-reserve",
     "name": "Millhaven Reserve",
-    "suburb": "",
+    "suburb": "Regents Park",
     "lat": -43.46858,
     "lng": 172.6032,
     "description": "Council playground at Millhaven Reserve.",
@@ -1992,7 +1992,7 @@
   {
     "id": "pg-milnebank-reserve",
     "name": "Milnebank Reserve",
-    "suburb": "",
+    "suburb": "Bush Inn",
     "lat": -43.52939,
     "lng": 172.58222,
     "description": "Council playground at Milnebank Reserve.",
@@ -2001,7 +2001,7 @@
   {
     "id": "pg-miromiro-2-drainage-reserve",
     "name": "Miromiro 2 Drainage Reserve",
-    "suburb": "",
+    "suburb": "Riccarton Racecourse",
     "lat": -43.5299,
     "lng": 172.53751,
     "description": "Council playground at Miromiro 2 Drainage Reserve.",
@@ -2010,7 +2010,7 @@
   {
     "id": "pg-moa-reserve",
     "name": "Moa Reserve",
-    "suburb": "",
+    "suburb": "Christchurch Central-North",
     "lat": -43.52243,
     "lng": 172.64407,
     "description": "Council playground at Moa Reserve.",
@@ -2019,7 +2019,7 @@
   {
     "id": "pg-moffett-reserve",
     "name": "Moffett Reserve",
-    "suburb": "",
+    "suburb": "Islington",
     "lat": -43.53801,
     "lng": 172.50715,
     "description": "Council playground at Moffett Reserve.",
@@ -2028,7 +2028,7 @@
   {
     "id": "pg-momorangi-reserve",
     "name": "Momorangi Reserve",
-    "suburb": "",
+    "suburb": "Redwood East",
     "lat": -43.48144,
     "lng": 172.61761,
     "description": "Council playground at Momorangi Reserve.",
@@ -2037,7 +2037,7 @@
   {
     "id": "pg-monro-playground",
     "name": "Monro Playground",
-    "suburb": "",
+    "suburb": "Hillsborough",
     "lat": -43.55503,
     "lng": 172.66961,
     "description": "Council playground at Monro Playground.",
@@ -2046,7 +2046,7 @@
   {
     "id": "pg-montclare-reserve",
     "name": "Montclare Reserve",
-    "suburb": "",
+    "suburb": "Ilam South",
     "lat": -43.52089,
     "lng": 172.56437,
     "description": "Council playground at Montclare Reserve.",
@@ -2055,7 +2055,7 @@
   {
     "id": "pg-morley-reserve",
     "name": "Morley Reserve",
-    "suburb": "",
+    "suburb": "Bryndwr North",
     "lat": -43.50542,
     "lng": 172.58587,
     "description": "Council playground at Morley Reserve.",
@@ -2064,7 +2064,7 @@
   {
     "id": "pg-morrison-avenue-bowling-club",
     "name": "Morrison Avenue Bowling Club",
-    "suburb": "",
+    "suburb": "Papanui North",
     "lat": -43.48817,
     "lng": 172.60096,
     "description": "Council playground at Morrison Avenue Bowling Club.",
@@ -2073,7 +2073,7 @@
   {
     "id": "pg-moyna-playground",
     "name": "Moyna Playground",
-    "suburb": "",
+    "suburb": "Dallington",
     "lat": -43.51207,
     "lng": 172.67704,
     "description": "Council playground at Moyna Playground.",
@@ -2082,7 +2082,7 @@
   {
     "id": "pg-muir-park",
     "name": "Muir Park",
-    "suburb": "",
+    "suburb": "Halswell South",
     "lat": -43.58913,
     "lng": 172.569,
     "description": "Council playground at Muir Park.",
@@ -2091,7 +2091,7 @@
   {
     "id": "pg-muka-park",
     "name": "Muka Park",
-    "suburb": "",
+    "suburb": "Prestons",
     "lat": -43.46766,
     "lng": 172.66668,
     "description": "Council playground at Muka Park.",
@@ -2100,7 +2100,7 @@
   {
     "id": "pg-murchison-park",
     "name": "Murchison Park",
-    "suburb": "",
+    "suburb": "Redwood North",
     "lat": -43.46983,
     "lng": 172.62126,
     "description": "Council playground at Murchison Park.",
@@ -2111,7 +2111,7 @@
   {
     "id": "pg-natalie-reserve",
     "name": "Natalie Reserve",
-    "suburb": "",
+    "suburb": "Bishopdale North",
     "lat": -43.47917,
     "lng": 172.58225,
     "description": "Council playground at Natalie Reserve.",
@@ -2120,7 +2120,7 @@
   {
     "id": "pg-naval-point",
     "name": "Naval Point",
-    "suburb": "",
+    "suburb": "Lyttelton",
     "lat": -43.6103,
     "lng": 172.70705,
     "description": "Council playground at Naval Point.",
@@ -2129,7 +2129,7 @@
   {
     "id": "pg-neil-graham-park",
     "name": "Neil Graham Park",
-    "suburb": "",
+    "suburb": "Halswell West",
     "lat": -43.57104,
     "lng": 172.53919,
     "description": "Council playground at Neil Graham Park.",
@@ -2138,7 +2138,7 @@
   {
     "id": "pg-nepal-reserve",
     "name": "Nepal Reserve",
-    "suburb": "",
+    "suburb": "Burnside Park",
     "lat": -43.49515,
     "lng": 172.57145,
     "description": "2 play areas at Nepal Reserve.",
@@ -2147,7 +2147,7 @@
   {
     "id": "pg-new-brighton-beach-developed",
     "name": "New Brighton Beach Developed",
-    "suburb": "",
+    "suburb": "New Brighton",
     "lat": -43.50627,
     "lng": 172.73093,
     "description": "Council playground at New Brighton Beach Developed.",
@@ -2156,7 +2156,7 @@
   {
     "id": "pg-new-brighton-mall-playground",
     "name": "New Brighton Mall Playground",
-    "suburb": "",
+    "suburb": "New Brighton",
     "lat": -43.50744,
     "lng": 172.72954,
     "description": "Council playground at New Brighton Mall Playground.",
@@ -2165,7 +2165,7 @@
   {
     "id": "pg-ng-puna-wai",
     "name": "Ngā Puna Wai",
-    "suburb": "",
+    "suburb": "Hillmorton",
     "lat": -43.5581,
     "lng": 172.57632,
     "description": "Council playground at Ngā Puna Wai.",
@@ -2176,7 +2176,7 @@
   {
     "id": "pg-nicholson-park",
     "name": "Nicholson Park",
-    "suburb": "",
+    "suburb": "Sumner",
     "lat": -43.57242,
     "lng": 172.77414,
     "description": "Council playground at Nicholson Park.",
@@ -2185,7 +2185,7 @@
   {
     "id": "pg-noodlum-park",
     "name": "Noodlum Park",
-    "suburb": "",
+    "suburb": "Halswell West",
     "lat": -43.57867,
     "lng": 172.54421,
     "description": "Council playground at Noodlum Park.",
@@ -2194,7 +2194,7 @@
   {
     "id": "pg-norrie-park",
     "name": "Norrie Park",
-    "suburb": "",
+    "suburb": "Redwood East",
     "lat": -43.48028,
     "lng": 172.62479,
     "description": "Council playground at Norrie Park.",
@@ -2203,7 +2203,7 @@
   {
     "id": "pg-nunweek-park",
     "name": "Nunweek Park",
-    "suburb": "",
+    "suburb": "Harewood",
     "lat": -43.48197,
     "lng": 172.57127,
     "description": "Council playground at Nunweek Park.",
@@ -2214,7 +2214,7 @@
   {
     "id": "pg-oakhampton-reserve",
     "name": "Oakhampton Reserve",
-    "suburb": "",
+    "suburb": "Hornby South",
     "lat": -43.54754,
     "lng": 172.53483,
     "description": "Council playground at Oakhampton Reserve.",
@@ -2223,7 +2223,7 @@
   {
     "id": "pg-oakley-reserve",
     "name": "Oakley Reserve",
-    "suburb": "",
+    "suburb": "Branston",
     "lat": -43.55466,
     "lng": 172.53413,
     "description": "Council playground at Oakley Reserve.",
@@ -2232,7 +2232,7 @@
   {
     "id": "pg-okains-bay-reserve",
     "name": "Okains Bay Reserve",
-    "suburb": "",
+    "suburb": "Banks Peninsula Eastern Bays",
     "lat": -43.69519,
     "lng": 173.0599,
     "description": "Council playground at Okains Bay Reserve.",
@@ -2243,7 +2243,7 @@
   {
     "id": "pg-old-school-reserve",
     "name": "Old School Reserve",
-    "suburb": "",
+    "suburb": "Mount Pleasant",
     "lat": -43.56769,
     "lng": 172.71506,
     "description": "Council playground at Old School Reserve.",
@@ -2252,7 +2252,7 @@
   {
     "id": "pg-olliviers-reserve",
     "name": "Olliviers Reserve",
-    "suburb": "",
+    "suburb": "Phillipstown",
     "lat": -43.53601,
     "lng": 172.6628,
     "description": "Council playground at Olliviers Reserve.",
@@ -2261,7 +2261,7 @@
   {
     "id": "pg-ouruhia-reserve",
     "name": "Ouruhia Reserve",
-    "suburb": "",
+    "suburb": "Styx",
     "lat": -43.44058,
     "lng": 172.65026,
     "description": "Council playground at Ouruhia Reserve.",
@@ -2272,7 +2272,7 @@
   {
     "id": "pg-owen-mitchell-park",
     "name": "Owen Mitchell Park",
-    "suburb": "",
+    "suburb": "Redwood East",
     "lat": -43.48113,
     "lng": 172.62741,
     "description": "Council playground at Owen Mitchell Park.",
@@ -2283,7 +2283,7 @@
   {
     "id": "pg-oxford-street-reserve",
     "name": "Oxford Street Reserve",
-    "suburb": "",
+    "suburb": "Lyttelton",
     "lat": -43.60186,
     "lng": 172.72352,
     "description": "Council playground at Oxford Street Reserve.",
@@ -2292,7 +2292,7 @@
   {
     "id": "pg-packe-reserve",
     "name": "Packe Reserve",
-    "suburb": "",
+    "suburb": "Edgeware South",
     "lat": -43.51458,
     "lng": 172.64432,
     "description": "Council playground at Packe Reserve.",
@@ -2301,7 +2301,7 @@
   {
     "id": "pg-paddington-playground",
     "name": "Paddington Playground",
-    "suburb": "",
+    "suburb": "Redwood West",
     "lat": -43.48312,
     "lng": 172.61074,
     "description": "Council playground at Paddington Playground.",
@@ -2310,7 +2310,7 @@
   {
     "id": "pg-paeroa-reserve",
     "name": "Paeroa Reserve",
-    "suburb": "",
+    "suburb": "Riccarton West",
     "lat": -43.5322,
     "lng": 172.58943,
     "description": "Council playground at Paeroa Reserve.",
@@ -2319,7 +2319,7 @@
   {
     "id": "pg-pagoda-playground",
     "name": "Pagoda Playground",
-    "suburb": "",
+    "suburb": "Shirley East",
     "lat": -43.49754,
     "lng": 172.66449,
     "description": "Council playground at Pagoda Playground.",
@@ -2328,7 +2328,7 @@
   {
     "id": "pg-pakihi-park",
     "name": "Pakihi Park",
-    "suburb": "",
+    "suburb": "Awatea South",
     "lat": -43.56356,
     "lng": 172.551,
     "description": "Council playground at Pakihi Park.",
@@ -2337,7 +2337,7 @@
   {
     "id": "pg-palatine-reserve",
     "name": "Palatine Reserve",
-    "suburb": "",
+    "suburb": "Huntsbury",
     "lat": -43.5652,
     "lng": 172.64708,
     "description": "Council playground at Palatine Reserve.",
@@ -2346,7 +2346,7 @@
   {
     "id": "pg-papanui-domain",
     "name": "Papanui Domain",
-    "suburb": "",
+    "suburb": "Northlands",
     "lat": -43.48895,
     "lng": 172.6073,
     "description": "2 play areas at Papanui Domain.",
@@ -2357,7 +2357,7 @@
   {
     "id": "pg-parera-park",
     "name": "Parera Park",
-    "suburb": "",
+    "suburb": "Wigram East",
     "lat": -43.55347,
     "lng": 172.56115,
     "description": "Council playground at Parera Park.",
@@ -2366,7 +2366,7 @@
   {
     "id": "pg-parklands-reserve",
     "name": "Parklands Reserve",
-    "suburb": "",
+    "suburb": "Parklands",
     "lat": -43.48144,
     "lng": 172.7042,
     "description": "Council playground at Parklands Reserve.",
@@ -2377,7 +2377,7 @@
   {
     "id": "pg-parnham-reserve",
     "name": "Parnham Reserve",
-    "suburb": "",
+    "suburb": "Mount Pleasant",
     "lat": -43.56406,
     "lng": 172.72335,
     "description": "Council playground at Parnham Reserve.",
@@ -2386,7 +2386,7 @@
   {
     "id": "pg-peebles-reserve",
     "name": "Peebles Reserve",
-    "suburb": "",
+    "suburb": "Riccarton Racecourse",
     "lat": -43.53181,
     "lng": 172.54035,
     "description": "Council playground at Peebles Reserve.",
@@ -2395,7 +2395,7 @@
   {
     "id": "pg-petrie-park",
     "name": "Petrie Park",
-    "suburb": "",
+    "suburb": "Richmond North",
     "lat": -43.51162,
     "lng": 172.6568,
     "description": "Council playground at Petrie Park.",
@@ -2404,7 +2404,7 @@
   {
     "id": "pg-picton-reserve",
     "name": "Picton Reserve",
-    "suburb": "",
+    "suburb": "Riccarton South",
     "lat": -43.53207,
     "lng": 172.60428,
     "description": "Council playground at Picton Reserve.",
@@ -2413,7 +2413,7 @@
   {
     "id": "pg-pigeon-bay-boat-park",
     "name": "Pigeon Bay Boat Park",
-    "suburb": "",
+    "suburb": "Banks Peninsula Eastern Bays",
     "lat": -43.68322,
     "lng": 172.90096,
     "description": "Council playground at Pigeon Bay Boat Park.",
@@ -2424,7 +2424,7 @@
   {
     "id": "pg-pinehurst-reserve",
     "name": "Pinehurst Reserve",
-    "suburb": "",
+    "suburb": "Russley",
     "lat": -43.51734,
     "lng": 172.54111,
     "description": "Council playground at Pinehurst Reserve.",
@@ -2433,7 +2433,7 @@
   {
     "id": "pg-pitcairn-playground",
     "name": "Pitcairn Playground",
-    "suburb": "",
+    "suburb": "Bryndwr South",
     "lat": -43.5042,
     "lng": 172.59922,
     "description": "Council playground at Pitcairn Playground.",
@@ -2442,7 +2442,7 @@
   {
     "id": "pg-plover-reserve",
     "name": "Plover Reserve",
-    "suburb": "",
+    "suburb": "South New Brighton",
     "lat": -43.54848,
     "lng": 172.74827,
     "description": "Council playground at Plover Reserve.",
@@ -2451,7 +2451,7 @@
   {
     "id": "pg-plynlimon-park",
     "name": "Plynlimon Park",
-    "suburb": "",
+    "suburb": "Strowan",
     "lat": -43.51232,
     "lng": 172.60596,
     "description": "Council playground at Plynlimon Park.",
@@ -2462,7 +2462,7 @@
   {
     "id": "pg-purau-recreation-ground",
     "name": "Purau Recreation Ground",
-    "suburb": "",
+    "suburb": "Diamond Harbour",
     "lat": -43.63921,
     "lng": 172.75053,
     "description": "Council playground at Purau Recreation Ground.",
@@ -2471,7 +2471,7 @@
   {
     "id": "pg-quarry-hill-reserve",
     "name": "Quarry Hill Reserve",
-    "suburb": "",
+    "suburb": "Kennedys Bush",
     "lat": -43.60043,
     "lng": 172.58915,
     "description": "Council playground at Quarry Hill Reserve.",
@@ -2480,7 +2480,7 @@
   {
     "id": "pg-quarry-view-park",
     "name": "Quarry View Park",
-    "suburb": "",
+    "suburb": "Halswell South East",
     "lat": -43.5915,
     "lng": 172.57665,
     "description": "Council playground at Quarry View Park.",
@@ -2489,7 +2489,7 @@
   {
     "id": "pg-queen-elizabeth-ii-park",
     "name": "Queen Elizabeth II Park",
-    "suburb": "",
+    "suburb": "North Beach",
     "lat": -43.48791,
     "lng": 172.70702,
     "description": "Council playground at Queen Elizabeth II Park.",
@@ -2500,7 +2500,7 @@
   {
     "id": "pg-queenspark-reserve",
     "name": "Queenspark Reserve",
-    "suburb": "",
+    "suburb": "Queenspark",
     "lat": -43.47416,
     "lng": 172.69571,
     "description": "Council playground at Queenspark Reserve.",
@@ -2511,7 +2511,7 @@
   {
     "id": "pg-radley-park",
     "name": "Radley Park",
-    "suburb": "",
+    "suburb": "Woolston West",
     "lat": -43.55204,
     "lng": 172.68287,
     "description": "Council playground at Radley Park.",
@@ -2520,7 +2520,7 @@
   {
     "id": "pg-radley-playground",
     "name": "Radley Playground",
-    "suburb": "",
+    "suburb": "Woolston West",
     "lat": -43.55243,
     "lng": 172.67352,
     "description": "Council playground at Radley Playground.",
@@ -2529,7 +2529,7 @@
   {
     "id": "pg-ramore-reserve",
     "name": "Ramore Reserve",
-    "suburb": "",
+    "suburb": "Northcote",
     "lat": -43.48686,
     "lng": 172.61746,
     "description": "Council playground at Ramore Reserve.",
@@ -2538,7 +2538,7 @@
   {
     "id": "pg-ravensdale-park",
     "name": "Ravensdale Park",
-    "suburb": "",
+    "suburb": "Westmorland",
     "lat": -43.58654,
     "lng": 172.60498,
     "description": "Council playground at Ravensdale Park.",
@@ -2547,7 +2547,7 @@
   {
     "id": "pg-rawhiti-domain",
     "name": "Rawhiti Domain",
-    "suburb": "",
+    "suburb": "Rawhiti",
     "lat": -43.50384,
     "lng": 172.72233,
     "description": "3 play areas at Rawhiti Domain.",
@@ -2558,7 +2558,7 @@
   {
     "id": "pg-ray-blank-park",
     "name": "Ray Blank Park",
-    "suburb": "",
+    "suburb": "Ilam North",
     "lat": -43.51545,
     "lng": 172.57397,
     "description": "Council playground at Ray Blank Park.",
@@ -2569,7 +2569,7 @@
   {
     "id": "pg-rearsby-reserve",
     "name": "Rearsby Reserve",
-    "suburb": "",
+    "suburb": "Halswell South",
     "lat": -43.58127,
     "lng": 172.56418,
     "description": "Council playground at Rearsby Reserve.",
@@ -2578,7 +2578,7 @@
   {
     "id": "pg-redmund-spur-park",
     "name": "Redmund Spur Park",
-    "suburb": "",
+    "suburb": "Kennedys Bush",
     "lat": -43.59179,
     "lng": 172.58627,
     "description": "Council playground at Redmund Spur Park.",
@@ -2587,7 +2587,7 @@
   {
     "id": "pg-redwood-park",
     "name": "Redwood Park",
-    "suburb": "",
+    "suburb": "Redwood West",
     "lat": -43.47734,
     "lng": 172.6159,
     "description": "Council playground at Redwood Park.",
@@ -2598,7 +2598,7 @@
   {
     "id": "pg-regency-reserve",
     "name": "Regency Reserve",
-    "suburb": "",
+    "suburb": "Redwood East",
     "lat": -43.4818,
     "lng": 172.62366,
     "description": "Council playground at Regency Reserve.",
@@ -2607,7 +2607,7 @@
   {
     "id": "pg-remuera-reserve",
     "name": "Remuera Reserve",
-    "suburb": "",
+    "suburb": "Cashmere West",
     "lat": -43.56876,
     "lng": 172.63754,
     "description": "Council playground at Remuera Reserve.",
@@ -2616,7 +2616,7 @@
   {
     "id": "pg-richmond-park",
     "name": "Richmond Park",
-    "suburb": "",
+    "suburb": "Richmond North",
     "lat": -43.51309,
     "lng": 172.66315,
     "description": "Council playground at Richmond Park.",
@@ -2627,7 +2627,7 @@
   {
     "id": "pg-richmond-playground",
     "name": "Richmond Playground",
-    "suburb": "",
+    "suburb": "Richmond South",
     "lat": -43.52067,
     "lng": 172.65552,
     "description": "Council playground at Richmond Playground.",
@@ -2636,7 +2636,7 @@
   {
     "id": "pg-ridder-reserve",
     "name": "Ridder Reserve",
-    "suburb": "",
+    "suburb": "Oaklands West",
     "lat": -43.5752,
     "lng": 172.5561,
     "description": "Council playground at Ridder Reserve.",
@@ -2645,7 +2645,7 @@
   {
     "id": "pg-rimu-park",
     "name": "Rimu Park",
-    "suburb": "",
+    "suburb": "Paparua",
     "lat": -43.51133,
     "lng": 172.47757,
     "description": "Council playground at Rimu Park.",
@@ -2654,7 +2654,7 @@
   {
     "id": "pg-risingholme-park",
     "name": "Risingholme Park",
-    "suburb": "",
+    "suburb": "Opawa",
     "lat": -43.55448,
     "lng": 172.66104,
     "description": "Council playground at Risingholme Park.",
@@ -2663,7 +2663,7 @@
   {
     "id": "pg-river-stone-park",
     "name": "River Stone Park",
-    "suburb": "",
+    "suburb": "Kennedys Bush",
     "lat": -43.59553,
     "lng": 172.5653,
     "description": "Council playground at River Stone Park.",
@@ -2672,7 +2672,7 @@
   {
     "id": "pg-riverlea-recreation-reserve",
     "name": "Riverlea Recreation Reserve",
-    "suburb": "",
+    "suburb": "Styx",
     "lat": -43.4021,
     "lng": 172.67428,
     "description": "Council playground at Riverlea Recreation Reserve.",
@@ -2681,7 +2681,7 @@
   {
     "id": "pg-robin-playground",
     "name": "Robin Playground",
-    "suburb": "",
+    "suburb": "Burwood South",
     "lat": -43.49301,
     "lng": 172.68558,
     "description": "Council playground at Robin Playground.",
@@ -2690,7 +2690,7 @@
   {
     "id": "pg-rollerdrome-reserve",
     "name": "Rollerdrome Reserve",
-    "suburb": "",
+    "suburb": "Hornby South",
     "lat": -43.54466,
     "lng": 172.54066,
     "description": "Council playground at Rollerdrome Reserve.",
@@ -2701,7 +2701,7 @@
   {
     "id": "pg-rosanna-reserve",
     "name": "Rosanna Reserve",
-    "suburb": "",
+    "suburb": "Bexley",
     "lat": -43.52185,
     "lng": 172.70615,
     "description": "Council playground at Rosanna Reserve.",
@@ -2710,7 +2710,7 @@
   {
     "id": "pg-rosella-reserve",
     "name": "Rosella Reserve",
-    "suburb": "",
+    "suburb": "Broomfield",
     "lat": -43.52225,
     "lng": 172.53381,
     "description": "Council playground at Rosella Reserve.",
@@ -2719,7 +2719,7 @@
   {
     "id": "pg-royal-park-reserve",
     "name": "Royal Park Reserve",
-    "suburb": "",
+    "suburb": "Queenspark",
     "lat": -43.47212,
     "lng": 172.69281,
     "description": "Council playground at Royal Park Reserve.",
@@ -2728,7 +2728,7 @@
   {
     "id": "pg-rue-balguerie-playground",
     "name": "Rue Balguerie Playground",
-    "suburb": "",
+    "suburb": "Akaroa",
     "lat": -43.8052,
     "lng": 172.96608,
     "description": "Council playground at Rue Balguerie Playground.",
@@ -2737,7 +2737,7 @@
   {
     "id": "pg-ruskin-reserve",
     "name": "Ruskin Reserve",
-    "suburb": "",
+    "suburb": "Addington East",
     "lat": -43.54541,
     "lng": 172.62482,
     "description": "Council playground at Ruskin Reserve.",
@@ -2746,7 +2746,7 @@
   {
     "id": "pg-rutland-reserve",
     "name": "Rutland Reserve",
-    "suburb": "",
+    "suburb": "Malvern",
     "lat": -43.49872,
     "lng": 172.62382,
     "description": "Council playground at Rutland Reserve.",
@@ -2755,7 +2755,7 @@
   {
     "id": "pg-rydal-reserve",
     "name": "Rydal Reserve",
-    "suburb": "",
+    "suburb": "Hoon Hay South",
     "lat": -43.56613,
     "lng": 172.60879,
     "description": "Council playground at Rydal Reserve.",
@@ -2764,7 +2764,7 @@
   {
     "id": "pg-ryeland-reserve",
     "name": "Ryeland Reserve",
-    "suburb": "",
+    "suburb": "Jellie Park",
     "lat": -43.51357,
     "lng": 172.57834,
     "description": "Council playground at Ryeland Reserve.",
@@ -2773,7 +2773,7 @@
   {
     "id": "pg-sabina-playground",
     "name": "Sabina Playground",
-    "suburb": "",
+    "suburb": "Shirley West",
     "lat": -43.50439,
     "lng": 172.66056,
     "description": "Council playground at Sabina Playground.",
@@ -2782,7 +2782,7 @@
   {
     "id": "pg-sanctuary-gardens-reserve",
     "name": "Sanctuary Gardens Reserve",
-    "suburb": "",
+    "suburb": "Shirley West",
     "lat": -43.49251,
     "lng": 172.65719,
     "description": "Council playground at Sanctuary Gardens Reserve.",
@@ -2791,7 +2791,7 @@
   {
     "id": "pg-sanscrit-reserve",
     "name": "Sanscrit Reserve",
-    "suburb": "",
+    "suburb": "Clifton Hill",
     "lat": -43.57405,
     "lng": 172.75276,
     "description": "Council playground at Sanscrit Reserve.",
@@ -2800,7 +2800,7 @@
   {
     "id": "pg-sarabande-reserve",
     "name": "Sarabande Reserve",
-    "suburb": "",
+    "suburb": "Northcote",
     "lat": -43.48677,
     "lng": 172.62533,
     "description": "Council playground at Sarabande Reserve.",
@@ -2809,7 +2809,7 @@
   {
     "id": "pg-scarborough-park",
     "name": "Scarborough Park",
-    "suburb": "",
+    "suburb": "Sumner",
     "lat": -43.57358,
     "lng": 172.76949,
     "description": "Council playground at Scarborough Park.",
@@ -2818,7 +2818,7 @@
   {
     "id": "pg-scott-park-wigram",
     "name": "Scott Park Wigram",
-    "suburb": "",
+    "suburb": "Oaklands East",
     "lat": -43.5748,
     "lng": 172.56234,
     "description": "Council playground at Scott Park Wigram.",
@@ -2827,7 +2827,7 @@
   {
     "id": "pg-sea-eagles-reserve",
     "name": "Sea Eagles Reserve",
-    "suburb": "",
+    "suburb": "North Beach",
     "lat": -43.49349,
     "lng": 172.72022,
     "description": "Council playground at Sea Eagles Reserve.",
@@ -2836,7 +2836,7 @@
   {
     "id": "pg-seafield-park",
     "name": "Seafield Park",
-    "suburb": "",
+    "suburb": "Brooklands-Spencerville",
     "lat": -43.43035,
     "lng": 172.6975,
     "description": "Council playground at Seafield Park.",
@@ -2845,7 +2845,7 @@
   {
     "id": "pg-seager-park",
     "name": "Seager Park",
-    "suburb": "",
+    "suburb": "Hillmorton",
     "lat": -43.55204,
     "lng": 172.59182,
     "description": "Council playground at Seager Park.",
@@ -2854,7 +2854,7 @@
   {
     "id": "pg-sedgewick-reserve",
     "name": "Sedgewick Reserve",
-    "suburb": "",
+    "suburb": "Westmorland",
     "lat": -43.5807,
     "lng": 172.60388,
     "description": "Council playground at Sedgewick Reserve.",
@@ -2863,7 +2863,7 @@
   {
     "id": "pg-shamrock-reserve",
     "name": "Shamrock Reserve",
-    "suburb": "",
+    "suburb": "Oaklands East",
     "lat": -43.57963,
     "lng": 172.56055,
     "description": "Council playground at Shamrock Reserve.",
@@ -2872,7 +2872,7 @@
   {
     "id": "pg-shearer-playground",
     "name": "Shearer Playground",
-    "suburb": "",
+    "suburb": "Northcote",
     "lat": -43.49244,
     "lng": 172.61547,
     "description": "Council playground at Shearer Playground.",
@@ -2881,7 +2881,7 @@
   {
     "id": "pg-sheldon-park",
     "name": "Sheldon Park",
-    "suburb": "",
+    "suburb": "Belfast East",
     "lat": -43.45393,
     "lng": 172.62832,
     "description": "2 play areas at Sheldon Park.",
@@ -2892,7 +2892,7 @@
   {
     "id": "pg-shirley-community-reserve",
     "name": "Shirley Community Reserve",
-    "suburb": "",
+    "suburb": "Richmond North",
     "lat": -43.50855,
     "lng": 172.65406,
     "description": "Council playground at Shirley Community Reserve.",
@@ -2901,7 +2901,7 @@
   {
     "id": "pg-shortland-playground",
     "name": "Shortland Playground",
-    "suburb": "",
+    "suburb": "Wainoni",
     "lat": -43.51309,
     "lng": 172.69242,
     "description": "Council playground at Shortland Playground.",
@@ -2910,7 +2910,7 @@
   {
     "id": "pg-shortland-reserve",
     "name": "Shortland Reserve",
-    "suburb": "",
+    "suburb": "Bexley",
     "lat": -43.52219,
     "lng": 172.70101,
     "description": "Council playground at Shortland Reserve.",
@@ -2919,7 +2919,7 @@
   {
     "id": "pg-simeon-park",
     "name": "Simeon Park",
-    "suburb": "",
+    "suburb": "Spreydon North",
     "lat": -43.54892,
     "lng": 172.61734,
     "description": "Council playground at Simeon Park.",
@@ -2928,7 +2928,7 @@
   {
     "id": "pg-sisson-park",
     "name": "Sisson Park",
-    "suburb": "",
+    "suburb": "Casebrook",
     "lat": -43.48238,
     "lng": 172.59993,
     "description": "Council playground at Sisson Park.",
@@ -2937,7 +2937,7 @@
   {
     "id": "pg-six-silvers-reserve",
     "name": "Six Silvers Reserve",
-    "suburb": "",
+    "suburb": "Halswell North",
     "lat": -43.58081,
     "lng": 172.57853,
     "description": "Council playground at Six Silvers Reserve.",
@@ -2946,7 +2946,7 @@
   {
     "id": "pg-skibbereen-park",
     "name": "Skibbereen Park",
-    "suburb": "",
+    "suburb": "Halswell South West",
     "lat": -43.58161,
     "lng": 172.55148,
     "description": "Council playground at Skibbereen Park.",
@@ -2955,7 +2955,7 @@
   {
     "id": "pg-sockburn-park",
     "name": "Sockburn Park",
-    "suburb": "",
+    "suburb": "Sockburn North",
     "lat": -43.53752,
     "lng": 172.55579,
     "description": "Council playground at Sockburn Park.",
@@ -2964,7 +2964,7 @@
   {
     "id": "pg-soleares-playground",
     "name": "Soleares Playground",
-    "suburb": "",
+    "suburb": "Mount Pleasant",
     "lat": -43.56111,
     "lng": 172.72115,
     "description": "Council playground at Soleares Playground.",
@@ -2973,7 +2973,7 @@
   {
     "id": "pg-somerfield-park",
     "name": "Somerfield Park",
-    "suburb": "",
+    "suburb": "Somerfield East",
     "lat": -43.55914,
     "lng": 172.62728,
     "description": "Council playground at Somerfield Park.",
@@ -2984,7 +2984,7 @@
   {
     "id": "pg-south-new-brighton-park",
     "name": "South New Brighton Park",
-    "suburb": "",
+    "suburb": "South New Brighton",
     "lat": -43.5313,
     "lng": 172.734,
     "description": "2 play areas at South New Brighton Park.",
@@ -2995,7 +2995,7 @@
   {
     "id": "pg-spencer-park",
     "name": "Spencer Park",
-    "suburb": "",
+    "suburb": "Styx",
     "lat": -43.42989,
     "lng": 172.70688,
     "description": "Council playground at Spencer Park.",
@@ -3004,7 +3004,7 @@
   {
     "id": "pg-spencerville-reserve",
     "name": "Spencerville Reserve",
-    "suburb": "",
+    "suburb": "Brooklands-Spencerville",
     "lat": -43.43327,
     "lng": 172.69646,
     "description": "Council playground at Spencerville Reserve.",
@@ -3015,7 +3015,7 @@
   {
     "id": "pg-spreydon-domain",
     "name": "Spreydon Domain",
-    "suburb": "",
+    "suburb": "Spreydon West",
     "lat": -43.55566,
     "lng": 172.60062,
     "description": "Council playground at Spreydon Domain.",
@@ -3026,7 +3026,7 @@
   {
     "id": "pg-spring-grove-stage-1",
     "name": "Spring Grove Stage 1",
-    "suburb": "",
+    "suburb": "Belfast East",
     "lat": -43.45823,
     "lng": 172.63132,
     "description": "Council playground at Spring Grove Stage 1.",
@@ -3035,7 +3035,7 @@
   {
     "id": "pg-springmead-park",
     "name": "Springmead Park",
-    "suburb": "",
+    "suburb": "Hornby West",
     "lat": -43.5436,
     "lng": 172.51479,
     "description": "Council playground at Springmead Park.",
@@ -3044,7 +3044,7 @@
   {
     "id": "pg-st-albans-park",
     "name": "St Albans Park",
-    "suburb": "",
+    "suburb": "Edgeware North",
     "lat": -43.51006,
     "lng": 172.64524,
     "description": "3 play areas at St Albans Park.",
@@ -3055,7 +3055,7 @@
   {
     "id": "pg-st-james-park",
     "name": "St James Park",
-    "suburb": "",
+    "suburb": "Papanui West",
     "lat": -43.499,
     "lng": 172.60439,
     "description": "2 play areas at St James Park.",
@@ -3066,7 +3066,7 @@
   {
     "id": "pg-st-leonards-park",
     "name": "St Leonards Park",
-    "suburb": "",
+    "suburb": "Sumner",
     "lat": -43.57806,
     "lng": 172.76061,
     "description": "Council playground at St Leonards Park.",
@@ -3077,7 +3077,7 @@
   {
     "id": "pg-st-lukes-reserve",
     "name": "St Lukes Reserve",
-    "suburb": "",
+    "suburb": "Woolston East",
     "lat": -43.5483,
     "lng": 172.68972,
     "description": "Council playground at St Lukes Reserve.",
@@ -3086,7 +3086,7 @@
   {
     "id": "pg-st-martins-park",
     "name": "St Martins Park",
-    "suburb": "",
+    "suburb": "St Martins",
     "lat": -43.55781,
     "lng": 172.65024,
     "description": "Council playground at St Martins Park.",
@@ -3097,7 +3097,7 @@
   {
     "id": "pg-starwood-reserve",
     "name": "Starwood Reserve",
-    "suburb": "",
+    "suburb": "Clifton Hill",
     "lat": -43.57274,
     "lng": 172.74649,
     "description": "Council playground at Starwood Reserve.",
@@ -3106,7 +3106,7 @@
   {
     "id": "pg-staveley-reserve",
     "name": "Staveley Reserve",
-    "suburb": "",
+    "suburb": "Avonhead South",
     "lat": -43.52056,
     "lng": 172.55614,
     "description": "Council playground at Staveley Reserve.",
@@ -3115,7 +3115,7 @@
   {
     "id": "pg-stewarts-bush",
     "name": "Stewarts Bush",
-    "suburb": "",
+    "suburb": "Avonhead South",
     "lat": -43.51954,
     "lng": 172.5472,
     "description": "Council playground at Stewarts Bush.",
@@ -3124,7 +3124,7 @@
   {
     "id": "pg-stoddart-point-reserve",
     "name": "Stoddart Point Reserve",
-    "suburb": "",
+    "suburb": "Diamond Harbour",
     "lat": -43.62673,
     "lng": 172.74047,
     "description": "Council playground at Stoddart Point Reserve.",
@@ -3133,7 +3133,7 @@
   {
     "id": "pg-stretton-reserve",
     "name": "Stretton Reserve",
-    "suburb": "",
+    "suburb": "Bishopdale North",
     "lat": -43.4818,
     "lng": 172.58603,
     "description": "Council playground at Stretton Reserve.",
@@ -3142,7 +3142,7 @@
   {
     "id": "pg-styx-mill-country-club-reserve",
     "name": "Styx Mill Country Club Reserve",
-    "suburb": "",
+    "suburb": "Northwood",
     "lat": -43.45961,
     "lng": 172.60878,
     "description": "Council playground at Styx Mill Country Club Reserve.",
@@ -3151,7 +3151,7 @@
   {
     "id": "pg-styx-river-conservation-reserve",
     "name": "Styx River Conservation Reserve",
-    "suburb": "",
+    "suburb": "Redwood North",
     "lat": -43.46445,
     "lng": 172.62758,
     "description": "Council playground at Styx River Conservation Reserve.",
@@ -3160,7 +3160,7 @@
   {
     "id": "pg-sumnervale-reserve",
     "name": "Sumnervale Reserve",
-    "suburb": "",
+    "suburb": "Sumner",
     "lat": -43.58349,
     "lng": 172.75257,
     "description": "Council playground at Sumnervale Reserve.",
@@ -3169,7 +3169,7 @@
   {
     "id": "pg-sunvale-reserve",
     "name": "Sunvale Reserve",
-    "suburb": "",
+    "suburb": "Cashmere East",
     "lat": -43.57257,
     "lng": 172.64462,
     "description": "Council playground at Sunvale Reserve.",
@@ -3178,7 +3178,7 @@
   {
     "id": "pg-takahe-reserve",
     "name": "Takahe Reserve",
-    "suburb": "",
+    "suburb": "Cashmere East",
     "lat": -43.5796,
     "lng": 172.63746,
     "description": "Council playground at Takahe Reserve.",
@@ -3187,7 +3187,7 @@
   {
     "id": "pg-talbot-reserve",
     "name": "Talbot Reserve",
-    "suburb": "",
+    "suburb": "Halswell South",
     "lat": -43.5867,
     "lng": 172.56477,
     "description": "Council playground at Talbot Reserve.",
@@ -3196,7 +3196,7 @@
   {
     "id": "pg-tangmere-reserve",
     "name": "Tangmere Reserve",
-    "suburb": "",
+    "suburb": "Burwood South",
     "lat": -43.49624,
     "lng": 172.67984,
     "description": "Council playground at Tangmere Reserve.",
@@ -3205,7 +3205,7 @@
   {
     "id": "pg-tautoru-park",
     "name": "Tautoru Park",
-    "suburb": "",
+    "suburb": "Wigram South",
     "lat": -43.55657,
     "lng": 172.55594,
     "description": "Council playground at Tautoru Park.",
@@ -3214,7 +3214,7 @@
   {
     "id": "pg-taylors-mistake-beach",
     "name": "Taylors Mistake Beach",
-    "suburb": "",
+    "suburb": "Sumner",
     "lat": -43.58438,
     "lng": 172.77555,
     "description": "Council playground at Taylors Mistake Beach.",
@@ -3223,7 +3223,7 @@
   {
     "id": "pg-te-ara-a-rongo-gloucester-worcester-park",
     "name": "Te Ara a Rongo - Gloucester/Worcester Park",
-    "suburb": "",
+    "suburb": "Christchurch Central-East",
     "lat": -43.53018,
     "lng": 172.64818,
     "description": "Council playground at Te Ara a Rongo - Gloucester/Worcester Park.",
@@ -3234,7 +3234,7 @@
   {
     "id": "pg-te-kahu-park",
     "name": "Te Kahu Park",
-    "suburb": "",
+    "suburb": "Wigram West",
     "lat": -43.55475,
     "lng": 172.55133,
     "description": "Council playground at Te Kahu Park.",
@@ -3245,7 +3245,7 @@
   {
     "id": "pg-te-karoro-karoro-reserve",
     "name": "Te Karoro Karoro Reserve",
-    "suburb": "",
+    "suburb": "South New Brighton",
     "lat": -43.52292,
     "lng": 172.73679,
     "description": "Council playground at Te Karoro Karoro Reserve.",
@@ -3254,7 +3254,7 @@
   {
     "id": "pg-te-papa-kura-redcliffs-park",
     "name": "Te Papa Kura Redcliffs Park",
-    "suburb": "",
+    "suburb": "Redcliffs",
     "lat": -43.55975,
     "lng": 172.73494,
     "description": "Council playground at Te Papa Kura Redcliffs Park.",
@@ -3265,7 +3265,7 @@
   {
     "id": "pg-templeton-domain",
     "name": "Templeton Domain",
-    "suburb": "",
+    "suburb": "Templeton",
     "lat": -43.55117,
     "lng": 172.46883,
     "description": "Council playground at Templeton Domain.",
@@ -3276,7 +3276,7 @@
   {
     "id": "pg-thackeray-reserve",
     "name": "Thackeray Reserve",
-    "suburb": "",
+    "suburb": "Waltham",
     "lat": -43.54739,
     "lng": 172.64928,
     "description": "Council playground at Thackeray Reserve.",
@@ -3285,7 +3285,7 @@
   {
     "id": "pg-thomson-park",
     "name": "Thomson Park",
-    "suburb": "",
+    "suburb": "Rawhiti",
     "lat": -43.49638,
     "lng": 172.7265,
     "description": "Council playground at Thomson Park.",
@@ -3296,7 +3296,7 @@
   {
     "id": "pg-thorrington-reserve",
     "name": "Thorrington Reserve",
-    "suburb": "",
+    "suburb": "Cashmere West",
     "lat": -43.56451,
     "lng": 172.63412,
     "description": "Council playground at Thorrington Reserve.",
@@ -3305,7 +3305,7 @@
   {
     "id": "pg-ti-rakau-reserve",
     "name": "Ti Rakau Reserve",
-    "suburb": "",
+    "suburb": "Brookhaven-Ferrymead",
     "lat": -43.54897,
     "lng": 172.69592,
     "description": "Council playground at Ti Rakau Reserve.",
@@ -3314,7 +3314,7 @@
   {
     "id": "pg-titirangi-reserve",
     "name": "Titirangi Reserve",
-    "suburb": "",
+    "suburb": "Waitikiri",
     "lat": -43.47568,
     "lng": 172.68912,
     "description": "Council playground at Titirangi Reserve.",
@@ -3323,7 +3323,7 @@
   {
     "id": "pg-toorak-reserve",
     "name": "Toorak Reserve",
-    "suburb": "",
+    "suburb": "Avonhead South",
     "lat": -43.52336,
     "lng": 172.55239,
     "description": "Council playground at Toorak Reserve.",
@@ -3332,7 +3332,7 @@
   {
     "id": "pg-torrens-reserve",
     "name": "Torrens Reserve",
-    "suburb": "",
+    "suburb": "Hillmorton",
     "lat": -43.54763,
     "lng": 172.59549,
     "description": "Council playground at Torrens Reserve.",
@@ -3341,7 +3341,7 @@
   {
     "id": "pg-tralee-reserve",
     "name": "Tralee Reserve",
-    "suburb": "",
+    "suburb": "Bishopdale North",
     "lat": -43.48598,
     "lng": 172.59351,
     "description": "Council playground at Tralee Reserve.",
@@ -3350,7 +3350,7 @@
   {
     "id": "pg-trevor-reserve",
     "name": "Trevor Reserve",
-    "suburb": "",
+    "suburb": "Hornby South",
     "lat": -43.54958,
     "lng": 172.53199,
     "description": "Council playground at Trevor Reserve.",
@@ -3359,7 +3359,7 @@
   {
     "id": "pg-tulett-park",
     "name": "Tulett Park",
-    "suburb": "",
+    "suburb": "Casebrook",
     "lat": -43.47659,
     "lng": 172.59167,
     "description": "Council playground at Tulett Park.",
@@ -3370,7 +3370,7 @@
   {
     "id": "pg-twyford-reserve",
     "name": "Twyford Reserve",
-    "suburb": "",
+    "suburb": "Bishopdale West",
     "lat": -43.49141,
     "lng": 172.57764,
     "description": "Council playground at Twyford Reserve.",
@@ -3379,7 +3379,7 @@
   {
     "id": "pg-tyrone-reserve",
     "name": "Tyrone Reserve",
-    "suburb": "",
+    "suburb": "Belfast East",
     "lat": -43.44782,
     "lng": 172.63546,
     "description": "Council playground at Tyrone Reserve.",
@@ -3388,7 +3388,7 @@
   {
     "id": "pg-upper-riccarton-domain",
     "name": "Upper Riccarton Domain",
-    "suburb": "",
+    "suburb": "Ilam South",
     "lat": -43.52899,
     "lng": 172.56426,
     "description": "Council playground at Upper Riccarton Domain.",
@@ -3399,7 +3399,7 @@
   {
     "id": "pg-viceroy-reserve",
     "name": "Viceroy Reserve",
-    "suburb": "",
+    "suburb": "Oaklands West",
     "lat": -43.57293,
     "lng": 172.54893,
     "description": "Council playground at Viceroy Reserve.",
@@ -3408,7 +3408,7 @@
   {
     "id": "pg-vickerys-reserve",
     "name": "Vickerys Reserve",
-    "suburb": "",
+    "suburb": "Wigram North",
     "lat": -43.54363,
     "lng": 172.55026,
     "description": "Council playground at Vickerys Reserve.",
@@ -3417,7 +3417,7 @@
   {
     "id": "pg-vicki-reserve",
     "name": "Vicki Reserve",
-    "suburb": "",
+    "suburb": "Upper Riccarton",
     "lat": -43.53603,
     "lng": 172.56703,
     "description": "Council playground at Vicki Reserve.",
@@ -3426,7 +3426,7 @@
   {
     "id": "pg-victoria-park",
     "name": "Victoria Park",
-    "suburb": "",
+    "suburb": "Port Hills",
     "lat": -43.58881,
     "lng": 172.64295,
     "description": "Council playground at Victoria Park.",
@@ -3437,7 +3437,7 @@
   {
     "id": "pg-vildebeest-park",
     "name": "Vildebeest Park",
-    "suburb": "",
+    "suburb": "Oaklands West",
     "lat": -43.56543,
     "lng": 172.55137,
     "description": "Council playground at Vildebeest Park.",
@@ -3448,7 +3448,7 @@
   {
     "id": "pg-wainoni-park",
     "name": "Wainoni Park",
-    "suburb": "",
+    "suburb": "Aranui",
     "lat": -43.51256,
     "lng": 172.69958,
     "description": "Council playground at Wainoni Park.",
@@ -3459,7 +3459,7 @@
   {
     "id": "pg-waipara-playground",
     "name": "Waipara Playground",
-    "suburb": "",
+    "suburb": "Hoon Hay South",
     "lat": -43.5772,
     "lng": 172.61253,
     "description": "Council playground at Waipara Playground.",
@@ -3468,7 +3468,7 @@
   {
     "id": "pg-waitikiri-square",
     "name": "Waitikiri Square",
-    "suburb": "",
+    "suburb": "Waitikiri",
     "lat": -43.47093,
     "lng": 172.67432,
     "description": "Council playground at Waitikiri Square.",
@@ -3477,7 +3477,7 @@
   {
     "id": "pg-waitohi-reserve",
     "name": "Waitohi Reserve",
-    "suburb": "",
+    "suburb": "Hornby West",
     "lat": -43.54675,
     "lng": 172.51564,
     "description": "Council playground at Waitohi Reserve.",
@@ -3486,7 +3486,7 @@
   {
     "id": "pg-waiwetu-reserve",
     "name": "Waiwetu Reserve",
-    "suburb": "",
+    "suburb": "Fendalton",
     "lat": -43.51452,
     "lng": 172.59376,
     "description": "Council playground at Waiwetu Reserve.",
@@ -3495,7 +3495,7 @@
   {
     "id": "pg-wales-reserve",
     "name": "Wales Reserve",
-    "suburb": "",
+    "suburb": "Oaklands East",
     "lat": -43.5774,
     "lng": 172.55922,
     "description": "Council playground at Wales Reserve.",
@@ -3504,7 +3504,7 @@
   {
     "id": "pg-walnut-tree-park",
     "name": "Walnut Tree Park",
-    "suburb": "",
+    "suburb": "Christchurch Central-East",
     "lat": -43.52489,
     "lng": 172.6487,
     "description": "Council playground at Walnut Tree Park.",
@@ -3513,7 +3513,7 @@
   {
     "id": "pg-walter-park",
     "name": "Walter Park",
-    "suburb": "",
+    "suburb": "Mairehau North",
     "lat": -43.49489,
     "lng": 172.64612,
     "description": "Council playground at Walter Park.",
@@ -3524,7 +3524,7 @@
   {
     "id": "pg-waltham-park",
     "name": "Waltham Park",
-    "suburb": "",
+    "suburb": "Waltham",
     "lat": -43.55261,
     "lng": 172.64941,
     "description": "Council playground at Waltham Park.",
@@ -3535,7 +3535,7 @@
   {
     "id": "pg-warner-reserve",
     "name": "Warner Reserve",
-    "suburb": "",
+    "suburb": "Heathcote Valley",
     "lat": -43.57038,
     "lng": 172.6968,
     "description": "Council playground at Warner Reserve.",
@@ -3544,7 +3544,7 @@
   {
     "id": "pg-warren-park",
     "name": "Warren Park",
-    "suburb": "",
+    "suburb": "Branston",
     "lat": -43.55567,
     "lng": 172.53727,
     "description": "Council playground at Warren Park.",
@@ -3555,7 +3555,7 @@
   {
     "id": "pg-waterford-reserve",
     "name": "Waterford Reserve",
-    "suburb": "",
+    "suburb": "Northwood",
     "lat": -43.45961,
     "lng": 172.6168,
     "description": "Council playground at Waterford Reserve.",
@@ -3564,7 +3564,7 @@
   {
     "id": "pg-west-watson-park",
     "name": "West Watson Park",
-    "suburb": "",
+    "suburb": "Hillmorton",
     "lat": -43.5579,
     "lng": 172.58218,
     "description": "Council playground at West Watson Park.",
@@ -3573,7 +3573,7 @@
   {
     "id": "pg-westbrooke-park",
     "name": "Westbrooke Park",
-    "suburb": "",
+    "suburb": "Oaklands East",
     "lat": -43.5777,
     "lng": 172.55653,
     "description": "Council playground at Westbrooke Park.",
@@ -3582,7 +3582,7 @@
   {
     "id": "pg-westburn-reserve",
     "name": "Westburn Reserve",
-    "suburb": "",
+    "suburb": "Burnside",
     "lat": -43.50827,
     "lng": 172.57217,
     "description": "Council playground at Westburn Reserve.",
@@ -3591,7 +3591,7 @@
   {
     "id": "pg-westgrove-park",
     "name": "Westgrove Park",
-    "suburb": "",
+    "suburb": "Avonhead North",
     "lat": -43.50749,
     "lng": 172.55376,
     "description": "Council playground at Westgrove Park.",
@@ -3600,7 +3600,7 @@
   {
     "id": "pg-westlake-reserve",
     "name": "Westlake Reserve",
-    "suburb": "",
+    "suburb": "Oaklands West",
     "lat": -43.57053,
     "lng": 172.55592,
     "description": "Council playground at Westlake Reserve.",
@@ -3611,7 +3611,7 @@
   {
     "id": "pg-whitburn-park",
     "name": "Whitburn Park",
-    "suburb": "",
+    "suburb": "Halswell North",
     "lat": -43.57437,
     "lng": 172.57674,
     "description": "Council playground at Whitburn Park.",
@@ -3620,7 +3620,7 @@
   {
     "id": "pg-wigram-village-green",
     "name": "Wigram Village Green",
-    "suburb": "",
+    "suburb": "Awatea North",
     "lat": -43.54691,
     "lng": 172.54418,
     "description": "Council playground at Wigram Village Green.",
@@ -3629,7 +3629,7 @@
   {
     "id": "pg-wolsey-playground",
     "name": "Wolsey Playground",
-    "suburb": "",
+    "suburb": "Hillmorton",
     "lat": -43.56005,
     "lng": 172.57974,
     "description": "Council playground at Wolsey Playground.",
@@ -3638,7 +3638,7 @@
   {
     "id": "pg-woodham-park",
     "name": "Woodham Park",
-    "suburb": "",
+    "suburb": "Avonside",
     "lat": -43.52432,
     "lng": 172.67138,
     "description": "Council playground at Woodham Park.",
@@ -3647,7 +3647,7 @@
   {
     "id": "pg-woodlands-playground",
     "name": "Woodlands Playground",
-    "suburb": "",
+    "suburb": "Bexley",
     "lat": -43.5212,
     "lng": 172.70712,
     "description": "Council playground at Woodlands Playground.",
@@ -3656,7 +3656,7 @@
   {
     "id": "pg-woolston-park",
     "name": "Woolston Park",
-    "suburb": "",
+    "suburb": "Ensors",
     "lat": -43.54645,
     "lng": 172.67309,
     "description": "Council playground at Woolston Park.",
@@ -3667,7 +3667,7 @@
   {
     "id": "pg-worcester-pump-station-park",
     "name": "Worcester Pump Station Park",
-    "suburb": "",
+    "suburb": "Stanmore",
     "lat": -43.5307,
     "lng": 172.65266,
     "description": "Council playground at Worcester Pump Station Park.",
@@ -3676,7 +3676,7 @@
   {
     "id": "pg-worcester-reserve",
     "name": "Worcester Reserve",
-    "suburb": "",
+    "suburb": "Linwood North",
     "lat": -43.52785,
     "lng": 172.6733,
     "description": "Council playground at Worcester Reserve.",
@@ -3685,7 +3685,7 @@
   {
     "id": "pg-wycola-park",
     "name": "Wycola Park",
-    "suburb": "",
+    "suburb": "Hei Hei",
     "lat": -43.53467,
     "lng": 172.5225,
     "description": "2 play areas at Wycola Park.",
@@ -3696,7 +3696,7 @@
   {
     "id": "pg-yaldhurst-domain",
     "name": "Yaldhurst Domain",
-    "suburb": "",
+    "suburb": "Yaldhurst",
     "lat": -43.50969,
     "lng": 172.50031,
     "description": "Council playground at Yaldhurst Domain.",
@@ -3707,7 +3707,7 @@
   {
     "id": "pg-yellowstone-reserve",
     "name": "Yellowstone Reserve",
-    "suburb": "",
+    "suburb": "Burwood South",
     "lat": -43.49206,
     "lng": 172.67725,
     "description": "Council playground at Yellowstone Reserve.",
@@ -3716,7 +3716,7 @@
   {
     "id": "pg-zinnia-park",
     "name": "Zinnia Park",
-    "suburb": "",
+    "suburb": "Awatea South",
     "lat": -43.56086,
     "lng": 172.54302,
     "description": "Council playground at Zinnia Park.",
