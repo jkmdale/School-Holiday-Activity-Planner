@@ -1,1 +1,44 @@
-{}
+{
+  "pool-linwood": {
+    "url": "photos/places/pool-linwood.jpg",
+    "creator": "SHVETS production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/dug-out-training-pool-with-lane-floaters-8028466/"
+  },
+  "pool-jellie-park": {
+    "url": "photos/places/pool-jellie-park.jpg",
+    "creator": "SHVETS production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/dug-out-training-pool-with-lane-floaters-8028466/"
+  },
+  "pool-pioneer": {
+    "url": "photos/places/pool-pioneer.jpg",
+    "creator": "SHVETS production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/dug-out-training-pool-with-lane-floaters-8028466/"
+  },
+  "pool-graham-condon": {
+    "url": "photos/places/pool-graham-condon.jpg",
+    "creator": "SHVETS production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/dug-out-training-pool-with-lane-floaters-8028466/"
+  },
+  "pool-taiora-qeii": {
+    "url": "photos/places/pool-taiora-qeii.jpg",
+    "creator": "SHVETS production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/dug-out-training-pool-with-lane-floaters-8028466/"
+  },
+  "pool-wharenui": {
+    "url": "photos/places/pool-wharenui.jpg",
+    "creator": "SHVETS production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/dug-out-training-pool-with-lane-floaters-8028466/"
+  },
+  "pool-templeton": {
+    "url": "photos/places/pool-templeton.jpg",
+    "creator": "SHVETS production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/dug-out-training-pool-with-lane-floaters-8028466/"
+  }
+}
