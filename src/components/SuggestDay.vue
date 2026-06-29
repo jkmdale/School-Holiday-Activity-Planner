@@ -9,6 +9,7 @@ import type { Category } from '../types'
 import { state, isSaved, toggleSave, openActivity, notify, isRainyOn } from '../store'
 import { currentOrNextBreak, formatDate, formatTime, todayISO } from '../utils/dates'
 import { suggestDay } from '../utils/suggest'
+import { audienceFits } from '../utils/audience'
 import { useModal } from '../composables/useModal'
 import Icon from './Icon.vue'
 
@@ -30,7 +31,11 @@ const brk = computed(() => currentOrNextBreak(state.holidaySets))
 
 const suggestion = computed(() => {
   if (!props.open || !kids.value.length || !brk.value) return null
-  return suggestDay(state.activities, {
+  // Only consider activities that suit every selected kid's gender.
+  const pool = state.activities.filter((a) =>
+    kids.value.every((k) => audienceFits(a, k.gender))
+  )
+  return suggestDay(pool, {
     ages: ages.value,
     interests: interests.value,
     from: brk.value.brk.start,

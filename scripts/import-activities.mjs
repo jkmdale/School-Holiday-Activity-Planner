@@ -171,6 +171,16 @@ for (let r = 1; r < table.length; r++) {
 
   const image = get('image')
 
+  // Audience: explicit column wins, else infer from a gendered name.
+  const audienceRaw = get('audience').toLowerCase()
+  if (audienceRaw && !['boys', 'girls', 'all'].includes(audienceRaw)) {
+    fail(`audience must be boys, girls or all (or blank) (got "${audienceRaw}")`)
+  }
+  const lname = name.toLowerCase()
+  const audience =
+    audienceRaw ||
+    (/\bboys\b/.test(lname) ? 'boys' : /\bgirls\b/.test(lname) ? 'girls' : 'all')
+
   const lat = get('lat')
   const lng = get('lng')
 
@@ -190,6 +200,7 @@ for (let r = 1; r < table.length; r++) {
   if (datesTbc) activity.datesTbc = true
   if (weather !== 'any') activity.weather = weather
   if (image) activity.image = image
+  if (audience !== 'all') activity.audience = audience
 
   activities.push(activity)
 }

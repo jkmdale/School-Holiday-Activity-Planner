@@ -5,18 +5,25 @@ import { state, addKid, updateKid, removeKid } from '../store'
 import { CATEGORY_META, avatarColor, initial } from '../utils/categories'
 import Icon from '../components/Icon.vue'
 
-const draft = reactive<{ id: string | null; name: string; age: number | null; interests: Category[] }>(
-  { id: null, name: '', age: null, interests: [] }
-)
+const draft = reactive<{
+  id: string | null
+  name: string
+  age: number | null
+  interests: Category[]
+  gender: 'boy' | 'girl' | ''
+}>({ id: null, name: '', age: null, interests: [], gender: '' })
 const showForm = ref(false)
 
 function startAdd() {
-  Object.assign(draft, { id: null, name: '', age: null, interests: [] })
+  Object.assign(draft, { id: null, name: '', age: null, interests: [], gender: '' })
   showForm.value = true
 }
 
 function startEdit(kid: KidProfile) {
-  Object.assign(draft, { id: kid.id, name: kid.name, age: kid.age, interests: [...kid.interests] })
+  Object.assign(draft, {
+    id: kid.id, name: kid.name, age: kid.age,
+    interests: [...kid.interests], gender: kid.gender ?? ''
+  })
   showForm.value = true
 }
 
@@ -30,9 +37,9 @@ async function save() {
   const name = draft.name.trim()
   if (!name || draft.age === null) return
   if (draft.id) {
-    await updateKid({ id: draft.id, name, age: draft.age, interests: [...draft.interests] })
+    await updateKid({ id: draft.id, name, age: draft.age, interests: [...draft.interests], gender: draft.gender })
   } else {
-    await addKid({ name, age: draft.age, interests: [...draft.interests] })
+    await addKid({ name, age: draft.age, interests: [...draft.interests], gender: draft.gender })
   }
   showForm.value = false
 }
@@ -108,6 +115,16 @@ async function confirmRemove(kid: KidProfile) {
         <span class="field-label">Age (years)</span>
         <input v-model.number="draft.age" type="number" min="0" max="18" placeholder="e.g. 8" required />
       </label>
+
+      <div class="field">
+        <span class="field-label">Gender (optional)</span>
+        <div class="segmented">
+          <button type="button" :class="{ on: draft.gender === '' }" @click="draft.gender = ''">Prefer not to say</button>
+          <button type="button" :class="{ on: draft.gender === 'girl' }" @click="draft.gender = 'girl'">Girl</button>
+          <button type="button" :class="{ on: draft.gender === 'boy' }" @click="draft.gender = 'boy'">Boy</button>
+        </div>
+        <span class="muted small">Only used to skip gender-specific activities that wouldn't fit. Stays on this device.</span>
+      </div>
 
       <div class="field">
         <span class="field-label">Interests</span>

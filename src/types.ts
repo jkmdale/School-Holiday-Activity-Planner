@@ -68,6 +68,11 @@ export interface Activity {
    */
   image?: string
   /**
+   * Who the activity is for. 'all' (default) unless it's explicitly gendered
+   * (e.g. a "Boys…" workshop), so suggestions don't propose a poor fit.
+   */
+  audience?: 'boys' | 'girls' | 'all'
+  /**
    * Optional daily session window, 24h "HH:MM". When present, calendar export
    * uses these times; otherwise the event is treated as all-day.
    */
@@ -114,6 +119,11 @@ export interface KidProfile {
   age: number
   /** Interests, matching Category values, used to pre-filter activities. */
   interests: Category[]
+  /**
+   * Optional. Only used to avoid suggesting gender-specific activities that
+   * wouldn't fit. '' / undefined means "prefer not to say" — no filtering.
+   */
+  gender?: 'boy' | 'girl' | ''
 }
 
 /** Links a saved activity to a kid. LOCAL ONLY. */

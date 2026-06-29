@@ -8,6 +8,7 @@ import {
 import { overlapsBreak, currentOrNextBreak, formatDateRange, todayISO } from '../utils/dates'
 import { CATEGORY_META, avatarColor, initial } from '../utils/categories'
 import { haversineKm } from '../utils/geo'
+import { audienceFits } from '../utils/audience'
 import ActivityCard from '../components/ActivityCard.vue'
 import SuggestDay from '../components/SuggestDay.vue'
 import MapView from '../components/MapView.vue'
@@ -90,13 +91,15 @@ const filtered = computed(() => {
     }
 
     if (family.value) {
-      // Must suit every kid's age, and (optionally) one of their interests.
+      // Must suit every kid's age + gender, and (optionally) one interest.
       if (!state.kids.every((k) => k.age >= a.ageMin && k.age <= a.ageMax)) return false
+      if (!state.kids.every((k) => audienceFits(a, k.gender))) return false
       if (filters.matchInterests && familyInterests.value.size) {
         if (!a.categories.some((c) => familyInterests.value.has(c))) return false
       }
     } else {
       if (kid && (kid.age < a.ageMin || kid.age > a.ageMax)) return false
+      if (kid && !audienceFits(a, kid.gender)) return false
       if (kid && filters.matchInterests && kid.interests.length) {
         if (!a.categories.some((c) => kid.interests.includes(c))) return false
       }
