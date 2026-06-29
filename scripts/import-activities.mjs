@@ -169,6 +169,8 @@ for (let r = 1; r < table.length; r++) {
   }
   const weather = weatherRaw || (categories.includes('outdoors') ? 'outdoor' : 'any')
 
+  const image = get('image')
+
   const lat = get('lat')
   const lng = get('lng')
 
@@ -187,6 +189,7 @@ for (let r = 1; r < table.length; r++) {
   if (sessionTimes) activity.sessionTimes = sessionTimes
   if (datesTbc) activity.datesTbc = true
   if (weather !== 'any') activity.weather = weather
+  if (image) activity.image = image
 
   activities.push(activity)
 }

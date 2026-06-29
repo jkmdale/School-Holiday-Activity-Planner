@@ -63,6 +63,11 @@ export interface Activity {
    */
   weather?: 'indoor' | 'outdoor' | 'any'
   /**
+   * Optional photo URL. When absent, the UI shows a generated category visual,
+   * so every event still has an attractive header.
+   */
+  image?: string
+  /**
    * Optional daily session window, 24h "HH:MM". When present, calendar export
    * uses these times; otherwise the event is treated as all-day.
    */

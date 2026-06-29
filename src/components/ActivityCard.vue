@@ -6,6 +6,7 @@ import { CATEGORY_META } from '../utils/categories'
 import { haversineKm, formatDistance } from '../utils/geo'
 import { state } from '../store'
 import Icon from './Icon.vue'
+import EventImage from './EventImage.vue'
 
 const props = defineProps<{
   activity: Activity
@@ -30,6 +31,7 @@ const distance = computed(() => {
 <template>
   <article class="card activity" role="button" tabindex="0"
     @click="emit('open')" @keydown.enter="emit('open')">
+    <EventImage :activity="activity" class="card-banner" />
     <div class="card-head">
       <div class="head-text">
         <h2>{{ activity.name }} <span v-if="activity.custom" class="mine-badge">Yours</span></h2>

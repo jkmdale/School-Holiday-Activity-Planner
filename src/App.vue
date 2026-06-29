@@ -57,7 +57,7 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
               stroke-width="1.1" stroke-linecap="round" />
           </svg>
         </span>
-        <span class="wordmark-text">Holiday&nbsp;Planner</span>
+        <span class="wordmark-text">Fun&nbsp;Days</span>
       </div>
       <span class="locale">Christchurch</span>
     </div>

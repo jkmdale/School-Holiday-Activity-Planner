@@ -32,6 +32,7 @@ interface Draft {
   allDay: boolean
   start: string
   end: string
+  image: string
   kidIds: string[]
 }
 
@@ -40,6 +41,7 @@ function blank(): Draft {
     name: '', location: '', description: '', category: 'social',
     cost: 'free', price: null,
     startDate: '', endDate: '', allDay: true, start: '10:00', end: '12:00',
+    image: '',
     kidIds: [...props.defaultKidIds]
   }
 }
@@ -68,6 +70,7 @@ watch(
         allDay: !e.sessionTimes,
         start: e.sessionTimes?.start ?? '10:00',
         end: e.sessionTimes?.end ?? '12:00',
+        image: e.image ?? '',
         kidIds: []
       })
     } else {
@@ -114,6 +117,7 @@ function build(): Activity | string {
   }
   if (draft.cost === 'paid' && draft.price != null) activity.price = draft.price
   if (!draft.allDay) activity.sessionTimes = { start: draft.start, end: draft.end }
+  if (draft.image.trim()) activity.image = draft.image.trim()
   return activity
 }
 
@@ -214,6 +218,11 @@ async function submit() {
             <label class="field">
               <span class="field-label">Notes (optional)</span>
               <textarea v-model="draft.description" rows="2" placeholder="Anything to remember"></textarea>
+            </label>
+
+            <label class="field">
+              <span class="field-label">Photo URL (optional)</span>
+              <input v-model="draft.image" type="text" inputmode="url" placeholder="https://…" />
             </label>
 
             <div v-if="!isEdit && state.kids.length" class="field">

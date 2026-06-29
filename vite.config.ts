@@ -17,12 +17,12 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'icons/icon-192.png', 'icons/icon-512.png'],
       manifest: {
-        name: 'Christchurch Holiday Planner',
-        short_name: 'Holiday Planner',
+        name: 'Fun Days — find family fun near you',
+        short_name: 'Fun Days',
         description:
-          'Plan Christchurch school holidays: filter activities by your kids, save them, export to your calendar. All data stays on your device.',
-        theme_color: '#4f46e5',
-        background_color: '#eef2f8',
+          'Local family activities, all in one place. Filter by your kids, save plans, map and export to your calendar. All data stays on your device.',
+        theme_color: '#FF7A6B',
+        background_color: '#fff7eb',
         display: 'standalone',
         orientation: 'portrait',
         start_url: base,

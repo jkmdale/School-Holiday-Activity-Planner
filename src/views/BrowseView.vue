@@ -229,42 +229,36 @@ function applyUpcoming() {
       Add a kid on the <strong>Kids</strong> tab to filter by their age and interests.
     </p>
 
-    <!-- Search -->
-    <div class="search-box">
-      <Icon name="search" :size="17" />
-      <input
-        v-model="filters.q"
-        type="search"
-        inputmode="search"
-        placeholder="Search activities, providers…"
-        aria-label="Search activities"
-      />
-      <button v-if="filters.q" class="search-clear" aria-label="Clear search" @click="filters.q = ''">✕</button>
-    </div>
-
-    <!-- Suggest a day -->
-    <button
-      v-if="state.kids.length"
-      class="suggest-cta"
-      @click="showSuggest = true"
-    >
-      <span class="suggest-spark"><Icon name="star" :size="16" /></span>
-      <span class="suggest-cta-text">
-        <strong>Suggest a day</strong>
-        <span>Auto-plan a day for {{ family ? 'the whole family' : (activeKid()?.name ?? 'your kid') }}</span>
-      </span>
-      <Icon name="arrow" :size="16" />
-    </button>
-
-    <!-- Filter bar -->
-    <div class="filter-bar">
-      <button class="filter-toggle" :class="{ open: showFilters }" @click="showFilters = !showFilters">
-        <Icon name="sliders" :size="16" />
-        <span>Filters</span>
+    <!-- Search + filters on one row -->
+    <div class="search-row">
+      <div class="search-box">
+        <Icon name="search" :size="17" />
+        <input
+          v-model="filters.q"
+          type="search"
+          inputmode="search"
+          placeholder="Search activities, providers…"
+          aria-label="Search activities"
+        />
+        <button v-if="filters.q" class="search-clear" aria-label="Clear search" @click="filters.q = ''">✕</button>
+      </div>
+      <button
+        class="filter-toggle compact"
+        :class="{ open: showFilters }"
+        aria-label="Filters"
+        @click="showFilters = !showFilters"
+      >
+        <Icon name="sliders" :size="18" />
         <span v-if="activeFilterCount" class="filter-count">{{ activeFilterCount }}</span>
       </button>
-      <span class="result-count">{{ results.length }} {{ results.length === 1 ? 'result' : 'results' }}</span>
     </div>
+
+    <!-- Slim suggest-a-day -->
+    <button v-if="state.kids.length" class="suggest-chip" @click="showSuggest = true">
+      <Icon name="star" :size="15" />
+      Suggest a day for {{ family ? 'the family' : (activeKid()?.name ?? 'your kid') }}
+      <Icon name="arrow" :size="14" />
+    </button>
 
     <Transition name="expand">
       <div v-show="showFilters" class="filters">
@@ -361,10 +355,13 @@ function applyUpcoming() {
       </div>
     </Transition>
 
-    <!-- List / Map toggle -->
-    <div v-if="results.length" class="segmented view-toggle">
-      <button :class="{ on: resultView === 'list' }" @click="resultView = 'list'">List</button>
-      <button :class="{ on: resultView === 'map' }" @click="resultView = 'map'">Map</button>
+    <!-- Result count + List/Map toggle -->
+    <div class="results-bar">
+      <span class="result-count">{{ results.length }} {{ results.length === 1 ? 'result' : 'results' }}</span>
+      <div v-if="results.length" class="segmented view-toggle sm">
+        <button :class="{ on: resultView === 'list' }" @click="resultView = 'list'">List</button>
+        <button :class="{ on: resultView === 'map' }" @click="resultView = 'map'">Map</button>
+      </div>
     </div>
 
     <!-- Results -->

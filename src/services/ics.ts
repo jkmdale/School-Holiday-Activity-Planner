@@ -128,7 +128,7 @@ export function buildIcs(activities: Activity[], now: Date = new Date()): string
   const lines: string[] = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Christchurch Holiday Planner//EN',
+    'PRODID:-//Fun Days//Christchurch//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH'
   ]

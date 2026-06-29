@@ -14,6 +14,7 @@ import { CATEGORY_META } from '../utils/categories'
 import { downloadIcs } from '../services/ics'
 import { useModal } from '../composables/useModal'
 import Icon from './Icon.vue'
+import EventImage from './EventImage.vue'
 
 const activity = computed(() => selectedActivity())
 const kid = computed(() => activeKid())
@@ -34,8 +35,11 @@ function exportOne() {
   downloadIcs(`${safe || 'activity'}.ics`, [a])
 }
 
-function mapsUrl(lat: number, lng: number) {
-  return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`
+function googleDir(lat: number, lng: number) {
+  return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
+}
+function appleDir(lat: number, lng: number) {
+  return `https://maps.apple.com/?daddr=${lat},${lng}&dirflg=d`
 }
 
 function editEvent() {
@@ -61,6 +65,7 @@ async function deleteEvent() {
         </div>
 
         <div class="sheet-body">
+          <EventImage :activity="activity" :height="170" class="detail-banner" />
           <h2 class="detail-title">
             {{ activity.name }}
             <span v-if="activity.custom" class="mine-badge">Yours</span>
@@ -112,12 +117,17 @@ async function deleteEvent() {
             <span v-else class="reg-note ok"><Icon name="check" :size="14" /> No booking needed — just turn up</span>
           </div>
 
-          <!-- Location map link -->
+          <!-- Directions -->
           <div class="detail-line" v-if="activity.lat && activity.lng">
-            <span class="overline">Location</span>
-            <a :href="mapsUrl(activity.lat, activity.lng)" target="_blank" rel="noopener noreferrer" class="reg-link">
-              View on map <Icon name="arrow" :size="14" />
-            </a>
+            <span class="overline">Directions</span>
+            <div class="dir-links">
+              <a :href="googleDir(activity.lat, activity.lng)" target="_blank" rel="noopener noreferrer" class="reg-link">
+                <Icon name="pin" :size="14" /> Google Maps
+              </a>
+              <a :href="appleDir(activity.lat, activity.lng)" target="_blank" rel="noopener noreferrer" class="reg-link">
+                <Icon name="pin" :size="14" /> Apple Maps
+              </a>
+            </div>
           </div>
 
           <!-- Actions -->
