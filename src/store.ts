@@ -11,10 +11,10 @@
  * truth.
  */
 import { reactive } from 'vue'
-import type { Activity, HolidaySet, KidProfile, PlayRating, Playground, SavedItem } from './types'
+import type { Activity, HolidaySet, KidProfile, PlayRating, Place, SavedItem } from './types'
 import type { SharedPlan } from './services/share'
 import { getForecast, type DayForecast } from './services/weather'
-import { getActivities, getHolidaySets, getPlaygrounds } from './services/dataService'
+import { getActivities, getHolidaySets, getPlaces } from './services/dataService'
 import * as storage from './services/storage'
 import { StorageWriteError } from './services/storage'
 
@@ -40,8 +40,8 @@ interface State {
   eventForm: { open: boolean; editingId: string | null }
   /** Christchurch forecast by ISO date, once loaded (best-effort, may stay null). */
   forecast: Record<string, DayForecast> | null
-  /** Public playgrounds, and the parent's private ratings of them. */
-  playgrounds: Playground[]
+  /** Public places (playgrounds, pools, libraries) + the parent's private ratings. */
+  places: Place[]
   playRatings: Record<string, PlayRating>
 }
 
@@ -59,7 +59,7 @@ export const state = reactive<State>({
   locating: false,
   eventForm: { open: false, editingId: null },
   forecast: null,
-  playgrounds: [],
+  places: [],
   playRatings: {}
 })
 
@@ -192,11 +192,11 @@ export function selectedActivity(): Activity | null {
 }
 
 export async function init(): Promise<void> {
-  const [activities, holidaySets, playgrounds, kids, saved, custom, playRatings] =
+  const [activities, holidaySets, places, kids, saved, custom, playRatings] =
     await Promise.all([
       getActivities(),
       getHolidaySets(),
-      getPlaygrounds(),
+      getPlaces(),
       storage.getKids(),
       storage.getSaved(),
       storage.getCustom(),
@@ -206,7 +206,7 @@ export async function init(): Promise<void> {
   // saving, calendar, export and suggest all treat them identically.
   state.activities = [...activities, ...custom]
   state.holidaySets = holidaySets
-  state.playgrounds = playgrounds
+  state.places = places
   state.kids = kids
   state.saved = saved
   state.playRatings = playRatings

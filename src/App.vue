@@ -34,7 +34,7 @@ onMounted(() => {
 const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'browse', label: 'Browse', icon: 'search' },
   { id: 'saved', label: 'Plan', icon: 'bookmark' },
-  { id: 'play', label: 'Play', icon: 'tree' },
+  { id: 'play', label: 'Places', icon: 'tree' },
   { id: 'kids', label: 'Kids', icon: 'users' }
 ]
 </script>

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "pool-linwood",
+    "kind": "pool",
+    "name": "Te Pou Toetoe: Linwood Pool",
+    "suburb": "Linwood",
+    "lat": -43.5335,
+    "lng": 172.6665,
+    "description": "Modern aquatic centre with lane pool, learners pool, leisure water, hydroslide and a library on site.",
+    "features": ["Learners pool", "Hydroslide", "Café", "Accessible"]
+  },
+  {
+    "id": "pool-jellie-park",
+    "kind": "pool",
+    "name": "Jellie Park Recreation & Sport Centre",
+    "suburb": "Ilam",
+    "lat": -43.5106,
+    "lng": 172.576,
+    "description": "Indoor and outdoor pools, a learners pool and gym in the north-west.",
+    "features": ["Outdoor pool", "Learners pool", "Café", "Accessible"]
+  },
+  {
+    "id": "pool-pioneer",
+    "kind": "pool",
+    "name": "Pioneer Recreation & Sport Centre",
+    "suburb": "Spreydon",
+    "lat": -43.5556,
+    "lng": 172.6086,
+    "description": "Big leisure pools, hydroslide, lane pool, stadium and gym in the south.",
+    "features": ["Hydroslide", "Learners pool", "Stadium", "Café"]
+  },
+  {
+    "id": "pool-graham-condon",
+    "kind": "pool",
+    "name": "Graham Condon Recreation & Sport Centre",
+    "suburb": "Papanui",
+    "lat": -43.488,
+    "lng": 172.605,
+    "description": "Accessible pools with a learners pool and hydrotherapy, plus a gym, in the north.",
+    "features": ["Learners pool", "Hydrotherapy", "Accessible", "Café"]
+  },
+  {
+    "id": "pool-taiora-qeii",
+    "kind": "pool",
+    "name": "Taiora QEII Recreation & Sport Centre",
+    "suburb": "Parklands",
+    "lat": -43.4869,
+    "lng": 172.692,
+    "description": "Leisure pools, hydroslides, a wave pool, lane pool and gym in the east.",
+    "features": ["Wave pool", "Hydroslide", "Learners pool", "Café"]
+  },
+  {
+    "id": "pool-wharenui",
+    "kind": "pool",
+    "name": "Wharenui Recreation & Sport Centre",
+    "suburb": "Riccarton",
+    "lat": -43.5316,
+    "lng": 172.586,
+    "description": "Local indoor pool with lane and learners pools, good for swimming lessons.",
+    "features": ["Learners pool", "Accessible"]
+  },
+  {
+    "id": "pool-templeton",
+    "kind": "pool",
+    "name": "Templeton Pool",
+    "suburb": "Templeton",
+    "lat": -43.556,
+    "lng": 172.472,
+    "description": "Outdoor summer pool on the city's south-western edge (open in the warmer months).",
+    "features": ["Outdoor pool", "Summer only"]
+  }
+]

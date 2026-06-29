@@ -8,10 +8,12 @@
  * This module deliberately knows NOTHING about kids or saved items — that data
  * is local-only and lives in storage.ts.
  */
-import type { Activity, HolidaySet, Playground } from '../types'
+import type { Activity, HolidaySet, Place } from '../types'
 import activitiesSeed from '../data/activities.json'
 import holidaysSeed from '../data/holidays.json'
 import playgroundsSeed from '../data/playgrounds.json'
+import poolsSeed from '../data/pools.json'
+import librariesSeed from '../data/libraries.json'
 
 export async function getActivities(): Promise<Activity[]> {
   // Future: return (await fetch('/api/activities')).json()
@@ -23,7 +25,11 @@ export async function getHolidaySets(): Promise<HolidaySet[]> {
   return holidaysSeed as HolidaySet[]
 }
 
-export async function getPlaygrounds(): Promise<Playground[]> {
-  // Future: return (await fetch('/api/playgrounds')).json()
-  return playgroundsSeed as Playground[]
+export async function getPlaces(): Promise<Place[]> {
+  // Future: return (await fetch('/api/places')).json()
+  // Playground rows predate the `kind` field, so default them here.
+  const playgrounds = (playgroundsSeed as Omit<Place, 'kind'>[]).map(
+    (p) => ({ ...p, kind: 'playground' as const })
+  )
+  return [...playgrounds, ...(poolsSeed as Place[]), ...(librariesSeed as Place[])]
 }

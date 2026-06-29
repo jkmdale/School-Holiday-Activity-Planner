@@ -106,9 +106,10 @@ export interface HolidaySet {
   notes?: string
 }
 
-/** A public playground. Place, not an event — always there. */
-export interface Playground {
+/** A public place (playground, pool or library) — not an event, always there. */
+export interface Place {
   id: string
+  kind: 'playground' | 'pool' | 'library'
   name: string
   suburb: string
   lat: number

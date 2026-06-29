@@ -1,0 +1,142 @@
+[
+  {
+    "id": "lib-turanga",
+    "kind": "library",
+    "name": "Tūranga (Central Library)",
+    "suburb": "Central City",
+    "lat": -43.5311,
+    "lng": 172.6365,
+    "description": "The flagship central library in Cathedral Square — five floors, a children's area, makerspace and events.",
+    "features": ["Children's area", "Events", "Makerspace", "Café nearby"]
+  },
+  {
+    "id": "lib-upper-riccarton",
+    "kind": "library",
+    "name": "Upper Riccarton Library",
+    "suburb": "Upper Riccarton",
+    "lat": -43.5302,
+    "lng": 172.5556,
+    "description": "Busy west-side library with a good children's section and holiday programmes.",
+    "features": ["Children's area", "Events"]
+  },
+  {
+    "id": "lib-fendalton",
+    "kind": "library",
+    "name": "Fendalton Library",
+    "suburb": "Fendalton",
+    "lat": -43.518,
+    "lng": 172.587,
+    "description": "Library and service centre set in parkland in the north-west.",
+    "features": ["Children's area", "Parking"]
+  },
+  {
+    "id": "lib-papanui",
+    "kind": "library",
+    "name": "Papanui Library",
+    "suburb": "Papanui",
+    "lat": -43.491,
+    "lng": 172.605,
+    "description": "Northern library inside Northlands, with a children's area and events.",
+    "features": ["Children's area", "Events"]
+  },
+  {
+    "id": "lib-shirley",
+    "kind": "library",
+    "name": "Shirley Library",
+    "suburb": "Shirley",
+    "lat": -43.506,
+    "lng": 172.666,
+    "description": "Community library in the north-east with regular kids' sessions.",
+    "features": ["Children's area", "Events"]
+  },
+  {
+    "id": "lib-new-brighton",
+    "kind": "library",
+    "name": "New Brighton Library",
+    "suburb": "New Brighton",
+    "lat": -43.5072,
+    "lng": 172.7305,
+    "description": "Seaside library near the pier and hot pools.",
+    "features": ["Children's area", "Beach nearby"]
+  },
+  {
+    "id": "lib-south",
+    "kind": "library",
+    "name": "South Library",
+    "suburb": "Beckenham",
+    "lat": -43.556,
+    "lng": 172.632,
+    "description": "Southern library and learning centre with a dedicated children's space.",
+    "features": ["Children's area", "Events"]
+  },
+  {
+    "id": "lib-hornby",
+    "kind": "library",
+    "name": "Hornby Library",
+    "suburb": "Hornby",
+    "lat": -43.539,
+    "lng": 172.529,
+    "description": "South-west library inside the Hornby hub, with kids' programmes.",
+    "features": ["Children's area", "Events"]
+  },
+  {
+    "id": "lib-halswell",
+    "kind": "library",
+    "name": "Te Hāpua: Halswell Centre",
+    "suburb": "Halswell",
+    "lat": -43.546,
+    "lng": 172.556,
+    "description": "Award-winning library and community facility with a great children's area.",
+    "features": ["Children's area", "Events", "Accessible"]
+  },
+  {
+    "id": "lib-bishopdale",
+    "kind": "library",
+    "name": "Bishopdale Library",
+    "suburb": "Bishopdale",
+    "lat": -43.49,
+    "lng": 172.58,
+    "description": "Local north-west library with a children's corner.",
+    "features": ["Children's area"]
+  },
+  {
+    "id": "lib-parklands",
+    "kind": "library",
+    "name": "Parklands Library",
+    "suburb": "Parklands",
+    "lat": -43.489,
+    "lng": 172.696,
+    "description": "Eastern community library next to Taiora QEII.",
+    "features": ["Children's area", "Events"]
+  },
+  {
+    "id": "lib-lyttelton",
+    "kind": "library",
+    "name": "Lyttelton Library",
+    "suburb": "Lyttelton",
+    "lat": -43.603,
+    "lng": 172.722,
+    "description": "Harbour-town library and service centre.",
+    "features": ["Children's area"]
+  },
+  {
+    "id": "lib-akaroa",
+    "kind": "library",
+    "name": "Akaroa Library",
+    "suburb": "Akaroa",
+    "lat": -43.804,
+    "lng": 172.968,
+    "description": "Banks Peninsula library in historic Akaroa.",
+    "features": ["Children's area"]
+  },
+  {
+    "id": "lib-aranui",
+    "kind": "library",
+    "name": "Aranui Library",
+    "suburb": "Aranui",
+    "lat": -43.516,
+    "lng": 172.706,
+    "description": "Eastern community library inside the Aranui Community Centre.",
+    "features": ["Children's area"]
+  }
+]

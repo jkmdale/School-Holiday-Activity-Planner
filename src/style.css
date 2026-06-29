@@ -860,6 +860,14 @@ input, select { font: inherit; color: var(--ink); }
 
 /* ============================ Playgrounds ============================ */
 
+.kind-tabs { display: flex; gap: 0.4rem; margin-bottom: 0.7rem; flex-wrap: wrap; }
+.kind-tab {
+  padding: 0.35rem 0.85rem; border-radius: 999px;
+  font-size: 0.84rem; font-weight: 600; color: var(--ink-2);
+  background: var(--glass); border: 1px solid var(--glass-border);
+}
+.kind-tab.on { background: var(--accent-soft); color: var(--accent); border-color: rgba(255, 122, 107, 0.4); }
+.play-name svg { color: var(--accent); vertical-align: -2px; }
 .play-controls { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-bottom: 0.85rem; flex-wrap: wrap; }
 .play-list { display: flex; flex-direction: column; gap: 0.85rem; }
 .play-card { padding: 1rem 1.1rem; }

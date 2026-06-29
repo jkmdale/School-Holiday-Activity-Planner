@@ -1,10 +1,11 @@
 <script setup lang="ts">
 /**
- * Playgrounds — every Christchurch City Council playground (sourced from the
- * council's open data). Browse as a list or map, search by name, sort by
- * nearest / your rating / A–Z, and rate + note them privately on-device.
+ * Places — Christchurch playgrounds, pools and libraries (council open data +
+ * curated). Filter by type, browse as a list or map, search by name/suburb,
+ * sort by nearest / rating / A–Z, and rate + note them privately on-device.
  */
 import { computed, reactive, ref } from 'vue'
+import type { Place } from '../types'
 import {
   state, playRating, setPlayStars, setPlayNote, requestLocation
 } from '../store'
@@ -14,6 +15,17 @@ import Icon from '../components/Icon.vue'
 
 const LIST_LIMIT = 60
 
+const KINDS: { id: Place['kind'] | 'all'; label: string }[] = [
+  { id: 'all', label: 'All' },
+  { id: 'playground', label: 'Playgrounds' },
+  { id: 'pool', label: 'Pools' },
+  { id: 'library', label: 'Libraries' }
+]
+const kindIcon: Record<Place['kind'], string> = {
+  playground: 'tree', pool: 'activity', library: 'book'
+}
+
+const kind = ref<Place['kind'] | 'all'>('all')
 const q = ref('')
 const sort = ref<'near' | 'rated' | 'name'>('name')
 const view = ref<'list' | 'map'>('list')
@@ -27,7 +39,8 @@ function distance(pg: { lat: number; lng: number }): number {
 
 const filtered = computed(() => {
   const needle = q.value.trim().toLowerCase()
-  let list = state.playgrounds
+  let list = state.places
+  if (kind.value !== 'all') list = list.filter((p) => p.kind === kind.value)
   if (needle) {
     list = list.filter(
       (p) => p.name.toLowerCase().includes(needle) || p.suburb.toLowerCase().includes(needle)
@@ -74,17 +87,27 @@ function saveNote(id: string) {
 <template>
   <section>
     <div class="section-head">
-      <h2 class="section-title">Playgrounds</h2>
-      <span class="result-count">{{ filtered.length }} of {{ state.playgrounds.length }}</span>
+      <h2 class="section-title">Places</h2>
+      <span class="result-count">{{ filtered.length }} of {{ state.places.length }}</span>
     </div>
     <p class="privacy-note">
-      <strong>Every CCC playground.</strong> Rate and note your favourites — ratings stay on this device.
+      <strong>Playgrounds, pools & libraries.</strong> Rate and note your favourites — ratings stay on this device.
     </p>
+
+    <div class="kind-tabs">
+      <button
+        v-for="k in KINDS"
+        :key="k.id"
+        class="kind-tab"
+        :class="{ on: kind === k.id }"
+        @click="kind = k.id"
+      >{{ k.label }}</button>
+    </div>
 
     <div class="search-row">
       <div class="search-box">
         <Icon name="search" :size="17" />
-        <input v-model="q" type="search" placeholder="Search playgrounds…" aria-label="Search playgrounds" />
+        <input v-model="q" type="search" placeholder="Search places or suburbs…" aria-label="Search places" />
         <button v-if="q" class="search-clear" aria-label="Clear search" @click="q = ''">✕</button>
       </div>
     </div>
@@ -108,7 +131,7 @@ function saveNote(id: string) {
         <article v-for="pg in shown" :key="pg.id" class="card play-card">
           <div class="play-head">
             <div>
-              <h3 class="play-name">{{ pg.name }}</h3>
+              <h3 class="play-name"><Icon :name="kindIcon[pg.kind]" :size="16" /> {{ pg.name }}</h3>
               <p class="provider">
                 <Icon name="pin" :size="14" /> {{ pg.suburb }}<template v-if="distLabel(pg)"> · {{ distLabel(pg) }} away</template>
               </p>
@@ -161,7 +184,7 @@ function saveNote(id: string) {
       </p>
       <div v-if="!filtered.length" class="empty">
         <span class="empty-icon"><Icon name="search" :size="26" /></span>
-        <p class="empty-title">No playgrounds found</p>
+        <p class="empty-title">No places found</p>
         <p class="empty-sub">Try a different search.</p>
       </div>
     </template>
