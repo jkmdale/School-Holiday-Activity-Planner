@@ -1,0 +1,38 @@
+name: Fetch activity photos (Pexels)
+
+# Manually triggered. Searches Pexels for a related photo per activity, bundles
+# them into public/photos/activities/, and commits the result to this branch.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/holiday-activities-planner-mvp-110kzs
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch photos from Pexels
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: node scripts/fetch-pexels-photos.mjs
+
+      - name: Commit photos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/photos/activities src/data/activityPhotos.json
+          if git diff --staged --quiet; then
+            echo "No photo changes to commit."
+          else
+            git commit -m "Add Pexels activity photos [skip ci]"
+            git push
+          fi

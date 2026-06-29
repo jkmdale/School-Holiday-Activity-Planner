@@ -24,10 +24,14 @@ export async function getActivities(): Promise<Activity[]> {
     string,
     { url: string; creator: string; license: string; source: string }
   >
+  const base = import.meta.env.BASE_URL
   return (activitiesSeed as Activity[]).map((a) => {
     const p = photos[a.id]
     if (!p || a.image) return a
-    return { ...a, image: p.url, imageCredit: { creator: p.creator, license: p.license, source: p.source } }
+    // Bundled photos are stored as a base-relative path; provider og:images are
+    // absolute URLs and used as-is.
+    const image = /^https?:\/\//.test(p.url) ? p.url : base + p.url
+    return { ...a, image, imageCredit: { creator: p.creator, license: p.license, source: p.source } }
   })
 }
 
