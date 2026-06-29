@@ -52,5 +52,557 @@
     "creator": "events.humanitix.com",
     "license": "Provider",
     "source": "https://events.humanitix.com/school-holiday-programme-meet-a-k-pop-demon-hunter-superfan"
+  },
+  "chc-parakiore-w1": {
+    "url": "photos/activities/chc-parakiore-w1.jpg",
+    "creator": "Patel Ankit",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/group-of-kids-posing-outdoors-in-village-setting-30124240/"
+  },
+  "chc-orana-moo": {
+    "url": "photos/activities/chc-orana-moo.jpg",
+    "creator": "Hassan Bouamoud",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/child-interacting-with-goat-at-petting-zoo-35318983/"
+  },
+  "chc-reluctant-dragon": {
+    "url": "photos/activities/chc-reluctant-dragon.jpg",
+    "creator": "Pavel Danilyuk",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/kids-wearing-their-costumes-8421951/"
+  },
+  "chc-uv-roller-disco": {
+    "url": "photos/activities/chc-uv-roller-disco.jpg",
+    "creator": "cottonbro studio",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/beautiful-woman-wearing-a-sequin-dress-sitting-on-the-floor-5788786/"
+  },
+  "chc-try-self-defence": {
+    "url": "photos/activities/chc-try-self-defence.jpg",
+    "creator": "Ruslan Alekso",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/kids-during-judo-class-19437725/"
+  },
+  "chc-pirates-mermaids": {
+    "url": "photos/activities/chc-pirates-mermaids.jpg",
+    "creator": "Fernanda De Freitas",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/birthday-boy-in-pirate-costume-with-parrot-pinata-26448049/"
+  },
+  "chc-cantonese-festival": {
+    "url": "photos/activities/chc-cantonese-festival.jpg",
+    "creator": "Thang Nguyen",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/children-s-festival-in-ha-n-i-vi-t-nam-celebration-33767835/"
+  },
+  "chc-willowbank-jnr-keeper": {
+    "url": "photos/activities/chc-willowbank-jnr-keeper.jpg",
+    "creator": "Ron Lach",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/man-in-black-jacket-sitting-beside-boy-in-red-and-black-jacket-8971921/"
+  },
+  "chc-willowbank-jnr-keeper-plus": {
+    "url": "photos/activities/chc-willowbank-jnr-keeper-plus.jpg",
+    "creator": "Ron Lach",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/man-in-black-jacket-sitting-beside-boy-in-red-and-black-jacket-8971921/"
+  },
+  "chc-bunnings-kids-diy": {
+    "url": "photos/activities/chc-bunnings-kids-diy.jpg",
+    "creator": "Shawkat Alharfosh",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/building-a-box-from-colorful-craft-sticks-10282712/"
+  },
+  "chc-westfield-monty": {
+    "url": "photos/activities/chc-westfield-monty.jpg",
+    "creator": "Liliana Drew",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-child-coloring-using-colored-pens-8501535/"
+  },
+  "chc-tall-tails-hunt": {
+    "url": "photos/activities/chc-tall-tails-hunt.jpg",
+    "creator": "Thirdman",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-girl-looking-at-colored-liquids-in-a-container-8926847/"
+  },
+  "chc-twigarella-hero-hunt": {
+    "url": "photos/activities/chc-twigarella-hero-hunt.jpg",
+    "creator": "Liliana Drew",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/kids-in-pyjamas-lying-on-bed-8501622/"
+  },
+  "chc-stars-west-melton": {
+    "url": "photos/activities/chc-stars-west-melton.jpg",
+    "creator": "Ahmed akacha",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-people-sitting-outside-the-house-7487903/"
+  },
+  "chc-telling-tales-hunt": {
+    "url": "photos/activities/chc-telling-tales-hunt.jpg",
+    "creator": "Artem Podrez",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/girl-in-pink-long-sleeve-shirt-holding-white-book-7494500/"
+  },
+  "chc-telling-tales-reading": {
+    "url": "photos/activities/chc-telling-tales-reading.jpg",
+    "creator": "Artem Podrez",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/girl-in-pink-long-sleeve-shirt-holding-white-book-7494500/"
+  },
+  "chc-telling-tales-bookcover": {
+    "url": "photos/activities/chc-telling-tales-bookcover.jpg",
+    "creator": "Mikhail Nilov",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/books-on-the-bed-8922399/"
+  },
+  "kf-did-they-really-do-that-cantabrians-quest-for-world-records-2": {
+    "url": "photos/activities/kf-did-they-really-do-that-cantabrians-quest-for-world-records-2.jpg",
+    "creator": "Mehmet Turgut  Kirkgoz",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/two-children-standing-on-the-floor-11531679/"
+  },
+  "kf-pooh-bear-live": {
+    "url": "photos/activities/kf-pooh-bear-live.jpg",
+    "creator": "Inna Lesyk",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/winnie-the-pooh-plush-toy-on-seesaw-283937/"
+  },
+  "kf-kids-at-church-for-kidsfest": {
+    "url": "photos/activities/kf-kids-at-church-for-kidsfest.jpg",
+    "creator": "Safari  Consoler",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/people-standing-in-front-of-a-church-10823589/"
+  },
+  "kf-fun-dumpling-workshop": {
+    "url": "photos/activities/kf-fun-dumpling-workshop.jpg",
+    "creator": "Angela Roma",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/asian-teen-sister-teaching-brother-to-cook-dumplings-7363997/"
+  },
+  "kf-secret-ukulele-society": {
+    "url": "photos/activities/kf-secret-ukulele-society.jpg",
+    "creator": "Ketut Subiyanto",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/crop-anonymous-woman-playing-ukulele-while-entertaining-ethnic-children-4473411/"
+  },
+  "kf-ferrymead-signal-seekers": {
+    "url": "photos/activities/kf-ferrymead-signal-seekers.jpg",
+    "creator": "cottonbro studio",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/boys-standing-beside-a-tree-9292786/"
+  },
+  "kf-matariki-code-quest-kaiapoi": {
+    "url": "photos/activities/kf-matariki-code-quest-kaiapoi.jpg",
+    "creator": "cottonbro studio",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/man-in-white-button-up-shirt-sitting-beside-woman-in-teal-scrub-suit-4705615/"
+  },
+  "kf-oych-otautahi-youth-circus-hui": {
+    "url": "photos/activities/kf-oych-otautahi-youth-circus-hui.jpg",
+    "creator": "Rabia BTR",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/smiling-girls-sitting-together-17102696/"
+  },
+  "kf-mahjong-for-teens-10-18-years": {
+    "url": "photos/activities/kf-mahjong-for-teens-10-18-years.jpg",
+    "creator": "Teresa Wang",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/close-up-of-mahjong-game-tiles-34222069/"
+  },
+  "kf-ready-set-read-4-6-years-2": {
+    "url": "photos/activities/kf-ready-set-read-4-6-years-2.jpg",
+    "creator": "B. Aristotlè Guweh Jr",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/children-reading-outdoors-in-a-garden-setting-35610365/"
+  },
+  "kf-elements-work-and-play-2yrs-7yrs": {
+    "url": "photos/activities/kf-elements-work-and-play-2yrs-7yrs.jpg",
+    "creator": "Atlantic Ambience",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/kid-s-toy-of-wooden-blocks-with-letters-12955867/"
+  },
+  "kf-the-mini-disco-experience-2-6yr-olds": {
+    "url": "photos/activities/kf-the-mini-disco-experience-2-6yr-olds.jpg",
+    "creator": "Kristina Kostenko",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/children-with-disco-ball-11528240/"
+  },
+  "kf-active-kids-kickstart-karate-age-6-12": {
+    "url": "photos/activities/kf-active-kids-kickstart-karate-age-6-12.jpg",
+    "creator": "Ruslan Alekso",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/kids-during-judo-class-19437725/"
+  },
+  "kf-airclay-toadies-bugs-and-handing-jellyfish": {
+    "url": "photos/activities/kf-airclay-toadies-bugs-and-handing-jellyfish.jpg",
+    "creator": "Magali Briche",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/ladybird-on-hand-19904177/"
+  },
+  "kf-makey-makey-music-with-scratch-8-10-years": {
+    "url": "photos/activities/kf-makey-makey-music-with-scratch-8-10-years.jpg",
+    "creator": "RDNE Stock project",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/smiling-child-playing-toy-piano-10566472/"
+  },
+  "kf-spike-prime-explorer-imagination-station-turanga": {
+    "url": "photos/activities/kf-spike-prime-explorer-imagination-station-turanga.jpg",
+    "creator": "Vanessa Loring",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/group-of-curious-diverse-friends-observing-new-technology-7869246/"
+  },
+  "kf-robots-in-cold-places-imagination-station-turanga": {
+    "url": "photos/activities/kf-robots-in-cold-places-imagination-station-turanga.jpg",
+    "creator": "Pavel Danilyuk",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-young-girl-and-boy-looking-at-the-robot-on-the-table-8294689/"
+  },
+  "kf-boys-dance-and-gymnastics-workshop-3-17yrs-old": {
+    "url": "photos/activities/kf-boys-dance-and-gymnastics-workshop-3-17yrs-old.jpg",
+    "creator": "cottonbro studio",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/children-ballerinos-and-ballerina-sitting-by-radiator-6715771/"
+  },
+  "kf-lego-wedo-2-0-explorer-imagination-station-turanga": {
+    "url": "photos/activities/kf-lego-wedo-2-0-explorer-imagination-station-turanga.jpg",
+    "creator": "Ahsanjaya",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/red-and-blue-lego-minifig-on-tree-trunk-8365826/"
+  },
+  "kf-hibernation-haven-come-as-your-favourite-furry-creature": {
+    "url": "photos/activities/kf-hibernation-haven-come-as-your-favourite-furry-creature.jpg",
+    "creator": "Ksenia Chernaya",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/cute-kids-wearing-costumes-6616209/"
+  },
+  "kf-try-judo-2": {
+    "url": "photos/activities/kf-try-judo-2.jpg",
+    "creator": "Kampus Production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/kids-doing-martial-arts-6765015/"
+  },
+  "kf-cuddle-creatures-3": {
+    "url": "photos/activities/kf-cuddle-creatures-3.jpg",
+    "creator": "cottonbro studio",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-girl-lying-on-the-bed-while-hugging-a-stuffed-toy-6684186/"
+  },
+  "kf-fudge-decorating-46": {
+    "url": "photos/activities/kf-fudge-decorating-46.jpg",
+    "creator": "Hert Niks",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/colorful-fudge-display-at-outdoor-market-stall-38138843/"
+  },
+  "kf-dinosaurs-after-dark": {
+    "url": "photos/activities/kf-dinosaurs-after-dark.jpg",
+    "creator": "Mehmet Turgut  Kirkgoz",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/dinosaur-statue-in-amusement-park-11743336/"
+  },
+  "kf-fudge-spectacular-28": {
+    "url": "photos/activities/kf-fudge-spectacular-28.jpg",
+    "creator": "Skyler Ewing",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/close-up-photo-of-chocolate-pastries-8927931/"
+  },
+  "kf-learn-to-ice-skate": {
+    "url": "photos/activities/kf-learn-to-ice-skate.jpg",
+    "creator": "Vladimir Srajber",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/family-ice-skating-fun-in-bjelovar-35098882/"
+  },
+  "kf-judo-skills-week-2": {
+    "url": "photos/activities/kf-judo-skills-week-2.jpg",
+    "creator": "Kampus Production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/kids-doing-martial-arts-6765015/"
+  },
+  "kf-kids-fest-have-a-go-gymnastics": {
+    "url": "photos/activities/kf-kids-fest-have-a-go-gymnastics.jpg",
+    "creator": "Danik Prihodko",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-girl-doing-a-side-split-7427565/"
+  },
+  "kf-orana-wildlife-park-holiday-programme": {
+    "url": "photos/activities/kf-orana-wildlife-park-holiday-programme.jpg",
+    "creator": "Hassan Bouamoud",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/child-interacting-with-goat-at-petting-zoo-35318983/"
+  },
+  "kf-little-listeners-lounge-5-12-years": {
+    "url": "photos/activities/kf-little-listeners-lounge-5-12-years.jpg",
+    "creator": "www.kaboompics.com",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/girl-in-modern-headphones-listening-to-music-4968501/"
+  },
+  "kf-active-kids-tigers-karate-age-5-7": {
+    "url": "photos/activities/kf-active-kids-tigers-karate-age-5-7.jpg",
+    "creator": "Ruslan Alekso",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/kids-during-judo-class-19437725/"
+  },
+  "kf-my-first-robotics-imagination-station-turanga": {
+    "url": "photos/activities/kf-my-first-robotics-imagination-station-turanga.jpg",
+    "creator": "Pavel Danilyuk",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/white-robot-on-a-wooden-surface-beside-a-board-8294830/"
+  },
+  "kf-kids-dance-and-gymnastics-camp-6-12yr-olds": {
+    "url": "photos/activities/kf-kids-dance-and-gymnastics-camp-6-12yr-olds.jpg",
+    "creator": "cottonbro studio",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/children-having-fun-playing-inside-the-sports-hall-7207355/"
+  },
+  "kf-imagination-station-holiday-brick-school-turanga-2": {
+    "url": "photos/activities/kf-imagination-station-holiday-brick-school-turanga-2.jpg",
+    "creator": "Polesie Toys",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/boy-playing-with-toys-on-table-18990536/"
+  },
+  "kf-inky-arts-and-crafts-at-ferrymead-print-shop-2": {
+    "url": "photos/activities/kf-inky-arts-and-crafts-at-ferrymead-print-shop-2.jpg",
+    "creator": "Vlada Karpovich",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/girl-in-brown-apron-doing-rainbow-painting-7025567/"
+  },
+  "kf-canterbury-rams-and-mainland-pouakai-july-holiday-camps": {
+    "url": "photos/activities/kf-canterbury-rams-and-mainland-pouakai-july-holiday-camps.jpg",
+    "creator": "Erwin Bosman",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/two-ouessant-rams-in-a-rural-pasture-setting-33445900/"
+  },
+  "kf-composing-club": {
+    "url": "photos/activities/kf-composing-club.jpg",
+    "creator": "Tahir Xəlfə",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/children-engaged-in-creative-art-activity-indoors-33738065/"
+  },
+  "kf-cut-pin-repeat": {
+    "url": "photos/activities/kf-cut-pin-repeat.jpg",
+    "creator": "Nathan J Hilton",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/kids-cutting-christmas-cookies-10634585/"
+  },
+  "kf-redcliff-rambles-5-13yrs": {
+    "url": "photos/activities/kf-redcliff-rambles-5-13yrs.jpg",
+    "creator": "Sergei Shilenko",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/children-in-coats-in-snow-11867565/"
+  },
+  "kf-fairy-and-fantasy-jewellery": {
+    "url": "photos/activities/kf-fairy-and-fantasy-jewellery.jpg",
+    "creator": "Вениамин Курочкин",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/grayscale-photo-of-girls-wearing-costume-9667486/"
+  },
+  "kf-use-your-art-in-activism": {
+    "url": "photos/activities/kf-use-your-art-in-activism.jpg",
+    "creator": "Vanessa Loring",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-girl-using-a-glue-stick-7869799/"
+  },
+  "kf-lets-dig-it-8-12-years": {
+    "url": "photos/activities/kf-lets-dig-it-8-12-years.jpg",
+    "creator": "Nikola Tomašić",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/toy-excavator-in-sand-on-a-sunny-day-36413257/"
+  },
+  "kf-melanie-poppins-magic-show-kaiapoi-2": {
+    "url": "photos/activities/kf-melanie-poppins-magic-show-kaiapoi-2.jpg",
+    "creator": "Kampus Production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-girl-sitting-on-the-ground-7965836/"
+  },
+  "kf-melanie-poppins-magic-show-rangiora-2": {
+    "url": "photos/activities/kf-melanie-poppins-magic-show-rangiora-2.jpg",
+    "creator": "Kampus Production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-girl-sitting-on-the-ground-7965836/"
+  },
+  "kf-uc-kidsfest-towers-vehicles-and-prosthetics": {
+    "url": "photos/activities/kf-uc-kidsfest-towers-vehicles-and-prosthetics.jpg",
+    "creator": "Polesie Toys",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/young-boys-playing-park-tower-toy-6129884/"
+  },
+  "kf-kidsfest-heritage-stargazing-at-the-observatory-tower": {
+    "url": "photos/activities/kf-kidsfest-heritage-stargazing-at-the-observatory-tower.jpg",
+    "creator": "Jul L. G.",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/black-telescope-under-blue-sky-10792552/"
+  },
+  "kf-te-hotera-karara-bug-hotels-journals-and-food-in-a-jar-5-15-years-2": {
+    "url": "photos/activities/kf-te-hotera-karara-bug-hotels-journals-and-food-in-a-jar-5-15-years-2.jpg",
+    "creator": "Kamaji Ogino",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/happy-asian-mother-and-daughter-having-fun-while-reading-book-5094100/"
+  },
+  "kf-fairy-jars": {
+    "url": "photos/activities/kf-fairy-jars.jpg",
+    "creator": "RALPH JOSHUA NORIEL",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/smiling-woman-resting-her-face-on-a-table-next-to-a-jar-with-lights-5829213/"
+  },
+  "kf-teen-book-club": {
+    "url": "photos/activities/kf-teen-book-club.jpg",
+    "creator": "Tima Miroshnichenko",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-young-girl-in-brown-pants-reading-a-book-while-sitting-on-the-floor-6550461/"
+  },
+  "kf-underwater-wonderland": {
+    "url": "photos/activities/kf-underwater-wonderland.jpg",
+    "creator": "Kindel Media",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/man-in-black-shorts-swimming-on-blue-water-9044078/"
+  },
+  "kf-matariki-night-sky": {
+    "url": "photos/activities/kf-matariki-night-sky.jpg",
+    "creator": "Lucius Crick",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/people-standing-by-a-bonfire-8482459/"
+  },
+  "kf-whanau-board-games": {
+    "url": "photos/activities/kf-whanau-board-games.jpg",
+    "creator": "cottonbro studio",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/person-in-black-pants-sitting-on-floor-4691567/"
+  },
+  "kf-matariki-pool-party": {
+    "url": "photos/activities/kf-matariki-pool-party.jpg",
+    "creator": "Helena Jankovičová Kováčová",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/three-boys-playing-in-a-pool-with-an-inflatable-raft-27594322/"
+  },
+  "kf-decorate-a-felt-critter-2": {
+    "url": "photos/activities/kf-decorate-a-felt-critter-2.jpg",
+    "creator": "Pain'sVoice",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/dolls-of-seasons-of-year-21378243/"
+  },
+  "kf-magic-and-make-believe-day": {
+    "url": "photos/activities/kf-magic-and-make-believe-day.jpg",
+    "creator": "Kampus Production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-girl-sitting-on-the-ground-7965836/"
+  },
+  "kf-cosy-storytimes-7-12-years": {
+    "url": "photos/activities/kf-cosy-storytimes-7-12-years.jpg",
+    "creator": "Artem Podrez",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/photograph-of-siblings-reading-a-book-7494503/"
+  },
+  "kf-creative-cartography-9-16-years": {
+    "url": "photos/activities/kf-creative-cartography-9-16-years.jpg",
+    "creator": "Yan Krukau",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/little-boy-assembling-puzzle-6210331/"
+  },
+  "kf-elements-hot-chocolate-shop-huts": {
+    "url": "photos/activities/kf-elements-hot-chocolate-shop-huts.jpg",
+    "creator": "Jill Wellington",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/white-ceramic-mug-near-brown-pinecones-3334509/"
+  },
+  "kf-free-theatre-kids-holiday-programme-2": {
+    "url": "photos/activities/kf-free-theatre-kids-holiday-programme-2.jpg",
+    "creator": "cottonbro studio",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/family-clapping-with-their-hands-5801567/"
+  },
+  "kf-alice-in-wonderland-tea-party-5-12-years": {
+    "url": "photos/activities/kf-alice-in-wonderland-tea-party-5-12-years.jpg",
+    "creator": "Irene Constantino",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/whimsical-alice-in-wonderland-tea-party-scene-38243714/"
+  },
+  "kf-kids-fest-cooking-day-at-alliance-francaise": {
+    "url": "photos/activities/kf-kids-fest-cooking-day-at-alliance-francaise.jpg",
+    "creator": "Kampus Production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/young-children-making-pizza-8511864/"
+  },
+  "kf-makey-makey-music-with-scratch-8-10-years-3": {
+    "url": "photos/activities/kf-makey-makey-music-with-scratch-8-10-years-3.jpg",
+    "creator": "RDNE Stock project",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/smiling-child-playing-toy-piano-10566472/"
+  },
+  "kf-rc-race-cars-imagination-station-te-hapua-halswell-centre": {
+    "url": "photos/activities/kf-rc-race-cars-imagination-station-te-hapua-halswell-centre.jpg",
+    "creator": "DS stories",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/yellow-and-black-monster-truck-toy-9227215/"
+  },
+  "kf-spike-prime-battlebots-imagination-station-te-hapua-halswell-cntr": {
+    "url": "photos/activities/kf-spike-prime-battlebots-imagination-station-te-hapua-halswell-cntr.jpg",
+    "creator": "Vanessa Loring",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-person-holding-a-robotic-toy-7868824/"
+  },
+  "kf-movie-making-with-lego-imagination-station-te-hapua-halswell-cntr": {
+    "url": "photos/activities/kf-movie-making-with-lego-imagination-station-te-hapua-halswell-cntr.jpg",
+    "creator": "Ahsanjaya",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/red-and-blue-lego-minifig-on-tree-trunk-8365826/"
+  },
+  "kf-try-taekwondo": {
+    "url": "photos/activities/kf-try-taekwondo.jpg",
+    "creator": "Martin.que",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/taekwondo-class-outdoors-in-buenos-aires-30777332/"
+  },
+  "kf-crafty-cat-2": {
+    "url": "photos/activities/kf-crafty-cat-2.jpg",
+    "creator": "Gustavo Fring",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/children-playing-with-paint-in-kindergarten-4172988/"
+  },
+  "kf-rock-candy-making": {
+    "url": "photos/activities/kf-rock-candy-making.jpg",
+    "creator": "Daisy Anderson",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/kids-wrapping-candies-in-an-orange-paper-5584285/"
+  },
+  "kf-disneys-finding-nemo-jr": {
+    "url": "photos/activities/kf-disneys-finding-nemo-jr.jpg",
+    "creator": "Ipek Townsend",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/photograph-of-a-cartoon-character-stuffed-toy-10215306/"
+  },
+  "kf-rollickin-gelato-classes-kidsfest": {
+    "url": "photos/activities/kf-rollickin-gelato-classes-kidsfest.jpg",
+    "creator": "PNW Production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-family-eating-ice-cream-8576029/"
+  },
+  "kf-tiny-town-live-at-the-palms": {
+    "url": "photos/activities/kf-tiny-town-live-at-the-palms.jpg",
+    "creator": "Uğur Hamzayev",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/children-playing-in-a-fun-indoor-activity-35573005/"
+  },
+  "kf-active-kids-kickboxing-age-10-15": {
+    "url": "photos/activities/kf-active-kids-kickboxing-age-10-15.jpg",
+    "creator": "Ketut Subiyanto",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/a-man-doing-kickboxing-4804068/"
+  },
+  "kf-kiwivolley-school-holiday-programme-2": {
+    "url": "photos/activities/kf-kiwivolley-school-holiday-programme-2.jpg",
+    "creator": "Kampus Production",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/boy-in-blue-uniform-holding-a-soccer-ball-8941579/"
+  },
+  "kf-dungeons-and-dragons-dnd-have-a-go": {
+    "url": "photos/activities/kf-dungeons-and-dragons-dnd-have-a-go.jpg",
+    "creator": "Nika Benedictova",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/black-and-gray-dice-on-white-board-game-7150646/"
+  },
+  "kf-survival-quest-a-bear-grylls-inspired-adventure": {
+    "url": "photos/activities/kf-survival-quest-a-bear-grylls-inspired-adventure.jpg",
+    "creator": "Ahmed akacha",
+    "license": "Pexels",
+    "source": "https://www.pexels.com/photo/little-children-playing-at-a-refugee-campsite-19264468/"
   }
 }
