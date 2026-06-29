@@ -860,6 +860,7 @@ input, select { font: inherit; color: var(--ink); }
 
 /* ============================ Playgrounds ============================ */
 
+.play-controls { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-bottom: 0.85rem; flex-wrap: wrap; }
 .play-list { display: flex; flex-direction: column; gap: 0.85rem; }
 .play-card { padding: 1rem 1.1rem; }
 .play-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.6rem; }

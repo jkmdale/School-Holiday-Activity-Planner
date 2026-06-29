@@ -374,7 +374,7 @@ function applyUpcoming() {
       <p class="empty-sub">Try widening your filters or turning off interest matching.</p>
     </div>
 
-    <MapView v-else-if="resultView === 'map'" :activities="results" />
+    <MapView v-else-if="resultView === 'map'" :points="results" selectable @select="openActivity" />
 
     <TransitionGroup v-else name="list" tag="div">
       <ActivityCard
