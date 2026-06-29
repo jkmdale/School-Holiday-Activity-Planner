@@ -10,6 +10,7 @@
  */
 import type { Activity, HolidaySet, Place } from '../types'
 import activitiesSeed from '../data/activities.json'
+import activityPhotos from '../data/activityPhotos.json'
 import holidaysSeed from '../data/holidays.json'
 import playgroundsSeed from '../data/playgrounds.json'
 import poolsSeed from '../data/pools.json'
@@ -17,7 +18,17 @@ import librariesSeed from '../data/libraries.json'
 
 export async function getActivities(): Promise<Activity[]> {
   // Future: return (await fetch('/api/activities')).json()
-  return activitiesSeed as Activity[]
+  // Overlay per-activity related photos (kept separate so `npm run import`,
+  // which only writes activities.json, never clobbers them).
+  const photos = activityPhotos as Record<
+    string,
+    { url: string; creator: string; license: string; source: string }
+  >
+  return (activitiesSeed as Activity[]).map((a) => {
+    const p = photos[a.id]
+    if (!p || a.image) return a
+    return { ...a, image: p.url, imageCredit: { creator: p.creator, license: p.license, source: p.source } }
+  })
 }
 
 export async function getHolidaySets(): Promise<HolidaySet[]> {

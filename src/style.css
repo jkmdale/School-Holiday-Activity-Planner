@@ -508,7 +508,8 @@ input, select { font: inherit; color: var(--ink); }
 .event-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .event-img-gen { width: 100%; height: 100%; display: grid; place-items: center; opacity: 0.85; }
 .card-banner { margin: -1rem -1.1rem 0.8rem; border-radius: var(--r) var(--r) 0 0; }
-.detail-banner { margin: 0 0 0.9rem; border-radius: 16px; }
+.detail-banner { margin: 0 0 0.4rem; border-radius: 16px; }
+.photo-credit { display: block; font-size: 0.72rem; color: var(--muted); margin: 0 0 0.8rem; }
 .activity:hover { box-shadow: var(--shadow); background: rgba(255, 255, 255, 0.66); }
 .activity:active { transform: scale(0.992); }
 

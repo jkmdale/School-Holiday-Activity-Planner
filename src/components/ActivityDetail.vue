@@ -66,6 +66,13 @@ async function deleteEvent() {
 
         <div class="sheet-body">
           <EventImage :activity="activity" :height="170" class="detail-banner" />
+          <a
+            v-if="activity.imageCredit"
+            :href="activity.imageCredit.source"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="photo-credit"
+          >Photo: {{ activity.imageCredit.creator }} ({{ activity.imageCredit.license }})</a>
           <h2 class="detail-title">
             {{ activity.name }}
             <span v-if="activity.custom" class="mine-badge">Yours</span>

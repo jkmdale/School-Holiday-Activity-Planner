@@ -63,10 +63,12 @@ export interface Activity {
    */
   weather?: 'indoor' | 'outdoor' | 'any'
   /**
-   * Optional photo URL. When absent, the UI shows a generated category visual,
-   * so every event still has an attractive header.
+   * Optional photo URL. When absent, the UI shows a representative category
+   * photo, so every event still has a photographic header.
    */
   image?: string
+  /** Attribution for `image` when it comes from a CC-licensed source. */
+  imageCredit?: { creator: string; license: string; source: string }
   /**
    * Who the activity is for. 'all' (default) unless it's explicitly gendered
    * (e.g. a "Boys…" workshop), so suggestions don't propose a poor fit.
